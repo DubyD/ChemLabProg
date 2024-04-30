@@ -1,4 +1,4 @@
-package src.example.frontend;
+package com.example.frontend;
 
 public class ScreenGui {
     
