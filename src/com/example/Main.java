@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.frontend.SceneSwitcher;
+
 import javax.swing.JFrame;
 
 public class Main {
@@ -12,6 +14,8 @@ public class Main {
 
         // Set the default close operation
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        new SceneSwitcher(frame);
 
         // Set the visibility of the frame
         frame.setVisible(true);
