@@ -26,6 +26,7 @@ and
 - [Victor Serra](https://github.com/vserra3192)
 - [Eric Lim](https://github.com/PieTw3lve)
 - [Augstus Warmington](https://github.com/guswarmington)
+- [Alex Comeau](https://github.com/Alexm622)
 - [Ian Chung](https://github.com/2annnnnnnn)
 - [Eve Totman](https://github.com/Eevie1421)
 - [Christopher Duran](https://github.com/Vrypel)
