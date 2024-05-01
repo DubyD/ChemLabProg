@@ -1,4 +1,226 @@
 package com.example.backend;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class User {
+
+    private String username;
+    private String password;
+    private String email;
+    private boolean privileges;
+    private String securityQ; 
+    private String securityA;
+    private String signature;
+    private List<TakeOutSlip> takeOutSlips;
+    private boolean isActive;
+    private LocalDate lastLogin;
+    private int failedLoginAttempts;
+
+    /**
+     * Creates a new user with default values.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     */
+    public User() {
+        this.username = null;
+        this.password = null;
+        this.email = null;
+        this.privileges = false;
+        this.securityQ = null;
+        this.securityA = null;
+        this.signature = null;
+        this.takeOutSlips = null;
+        this.isActive = false;
+        this.lastLogin = null;
+        this.failedLoginAttempts = 0;
+    }
+
+    /**
+     * Creates a new user with the provided username and password.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @param username The username of the user.
+     * @param password The password of the user.
+     */
+    public User(String username, String password) {
+        login(username, password);
+    }
+    
+    /**
+     * Logs in the user with the provided username and password.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @param username The username of the user.
+     * @param password The password of the user.
+     * @return True if the login is successful, false otherwise.
+     */
+    public boolean login(String username, String password) {
+        // Fetch user information from the database
+
+        // Update User class information
+        updateInfo(username, password, email, securityQ, securityA, signature, takeOutSlips, true, LocalDate.now());
+
+        // Return true if the login is successful
+        return false;
+    }
+
+    /**
+     * Logs out the user.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @return True if the logout is successful, false otherwise.
+     */
+    public boolean logout() {
+        // Update User class information
+        updateInfo(username, password, email, securityQ, securityA, signature, takeOutSlips, false, LocalDate.now());
+
+        // Store user information in the database
+
+        // Return true if the login is successful
+        return false;
+    }
+
+    /**
+     * Resets the password of the user.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @param password The new password of the user.
+     * @return True if the password is reset successfully, false otherwise.
+     */
+    public boolean resetPassword(String password) {
+        return false;
+    }
+
+    /**
+     * Asks the user a security question.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @return True if the security question was successfully answered, false otherwise.
+     */
+    public boolean askSecurityQuestion() {
+        return false;
+    }
+
+    /**
+     * Updates the information of the user.
+     * <p>
+     * 4/30/2024 - Implemented method EL
+     * 
+     * @param username The username of the user.
+     * @param password The password of the user.
+     * @param email The email of the user.
+     * @param securityQ The security question of the user.
+     * @param securityA The security answer of the user.
+     * @param signature The signature of the user.
+     * @param takeOutSlips The take out slips of the user.
+     * @param isActive The status of the user.
+     * @return True if the information is updated successfully, false otherwise.
+     */
+    public boolean updateInfo(String username, String password, String email, String securityQ, String securityA, String signature, List<TakeOutSlip> takeOutSlips, boolean isActive, LocalDate lastLogin) {
+        return false;
+    }
+
+    // Getters and setters for all attributes
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isPrivileges() {
+        return this.privileges;
+    }
+
+    public boolean getPrivileges() {
+        return this.privileges;
+    }
+
+    public void setPrivileges(boolean privileges) {
+        this.privileges = privileges;
+    }
+
+    public String getSecurityQ() {
+        return this.securityQ;
+    }
+
+    public void setSecurityQ(String securityQ) {
+        this.securityQ = securityQ;
+    }
+
+    public String getSecurityA() {
+        return this.securityA;
+    }
+
+    public void setSecurityA(String securityA) {
+        this.securityA = securityA;
+    }
+
+    public String getSignature() {
+        return this.signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
+
+    public List<TakeOutSlip> getTakeOutSlips() {
+        return this.takeOutSlips;
+    }
+
+    public void setTakeOutSlips(List<TakeOutSlip> takeOutSlips) {
+        this.takeOutSlips = takeOutSlips;
+    }
+
+    public boolean isIsActive() {
+        return this.isActive;
+    }
+
+    public boolean getIsActive() {
+        return this.isActive;
+    }
+
+    public void setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+
+    public LocalDate getLastLogin() {
+        return this.lastLogin;
+    }
+
+    public void setLastLogin(LocalDate lastLogin) {
+        this.lastLogin = lastLogin;
+    }
+
+    public int getFailedLoginAttempts() {
+        return this.failedLoginAttempts;
+    }
+
+    public void setFailedLoginAttempts(int failedLoginAttempts) {
+        this.failedLoginAttempts = failedLoginAttempts;
+    }
 }
