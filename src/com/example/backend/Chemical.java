@@ -1,6 +1,5 @@
 /**This is the first draft for chemical class-Sukhdeep Singh */
 
-
 package com.example.backend;
 
 import java.util.List;
@@ -18,29 +17,32 @@ public class Chemical {
     private String purchaseDate;
     private String expirationDate;
 
-    public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable, List<Room> roomsStoredAt, List<Shelf> shelvesStoredAt, String sdsSheet, String manufacturer, String purchaseDate, String expirationDate) {
-        
-         // We can add more validation logic for hazards, etc., in futurer
+    // TODO add an attribute for the amount of jars
+    public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable,
+            List<Room> roomsStoredAt, List<Shelf> shelvesStoredAt, String sdsSheet, String manufacturer,
+            String purchaseDate, String expirationDate) {
+
+        // We can add more validation logic for hazards, etc., in futurer
         if (!isPositiveSize(size)) {
             throw new IllegalArgumentException("Size must be a positive number.");
         } else if (!isValidSizeUnit(sizeUnit)) {
             throw new IllegalArgumentException("Size unit must be either 'ml' or 'gm'.");
-        } 
-    
-    else {
-       
+        }
 
-        this.name = name;
-        this.size = size;
-        this.sizeUnit = sizeUnit;
-        this.hazards = hazards;
-        this.flammable = flammable;
-        this.roomsStoredAt = roomsStoredAt;
-        this.shelvesStoredAt = shelvesStoredAt;
-        this.sdsSheet = sdsSheet;
-        this.manufacturer = manufacturer;
-        this.purchaseDate = purchaseDate;
-        this.expirationDate = expirationDate;}
+        else {
+
+            this.name = name;
+            this.size = size;
+            this.sizeUnit = sizeUnit;
+            this.hazards = hazards;
+            this.flammable = flammable;
+            this.roomsStoredAt = roomsStoredAt;
+            this.shelvesStoredAt = shelvesStoredAt;
+            this.sdsSheet = sdsSheet;
+            this.manufacturer = manufacturer;
+            this.purchaseDate = purchaseDate;
+            this.expirationDate = expirationDate;
+        }
     }
 
     // Getters and setters for all attributes
@@ -67,7 +69,6 @@ public class Chemical {
     public void setExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
     }
-
 
     public String getName() {
         return name;
@@ -125,8 +126,6 @@ public class Chemical {
         this.shelvesStoredAt = shelvesStoredAt;
     }
 
-    
-
     public String getSdsSheet() {
         return sdsSheet;
     }
@@ -148,9 +147,47 @@ public class Chemical {
             throw new IllegalArgumentException("Size must be a positive number.");
         }
     }
-    
+
     // Validation method for sizeUnit
     private boolean isValidSizeUnit(String sizeUnit) {
-    return sizeUnit.equalsIgnoreCase("ml") || sizeUnit.equalsIgnoreCase("gm");
+        return sizeUnit.equalsIgnoreCase("ml") || sizeUnit.equalsIgnoreCase("gm");
     }
+
+    // needed for RoomPanel
+    // made by Alex Comeau
+    public boolean hasSDS() {
+        return sdsSheet != null;
+    }
+
+    public String[] asArray() {
+        return new String[] { hasSDS() ? "Yes" : "No", name, manufacturer, roomsStoredAt.toString(),
+                shelvesStoredAt.toString(), "Amount of Jars", String.valueOf(size), sizeUnit, "CAS #s", hazards };
+
+    }
+
+    // TODO these are all stubs, please implement them
+    public double getCount() {
+        return 1;
+    }
+
+    public void setCount() {
+
+    }
+
+    public String getCASNumber() {
+        return "1";
+    }
+
+    public void setCASNumber() {
+
+    }
+
+    public String getHazard() {
+        return "Hazard";
+    }
+
+    public void setHazard() {
+
+    }
+
 }
