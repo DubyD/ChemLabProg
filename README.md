@@ -16,7 +16,7 @@ and
 3. Run the `Main` class.
 
 ### UML Design:
-<img src="https://github.com/DubyD/ChemLabProg/blob/main/UML/combination_UML.jpg" width="800">
+<img src="https://github.com/DubyD/ChemLabProg/blob/master/UML/combination_UML.jpg" width="800">
 
 ### Contributors:
 - [Will Duby](https://github.com/DubyD)
