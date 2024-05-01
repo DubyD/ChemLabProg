@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 public class Main {
     public static void main(String[] args) {
         // Create a new JFrame
-        JFrame frame = new JFrame("Swing Application");
+        JFrame frame = new JFrame("Science Department Inventory");
 
         // Set the size of the frame
         frame.setSize(400, 300);
