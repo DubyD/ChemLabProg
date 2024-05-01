@@ -69,7 +69,7 @@ public class adminScene {
         runScene();
     }
     private void runScene(){
-        unapprovedUsers.add(new User("Gus", "password", false));
+        unapprovedUsers.add(new User("Gus", "password"));
         //Temporary test user
         
         JButton approveUserButton = new JButton("Approve");
@@ -143,9 +143,9 @@ public class adminScene {
         frame.add(panel);
         frame.revalidate();
     }
-    public void createNewUser(String username, String password, boolean adminPriveleges){
+    public void createNewUser(String username, String password){
         //Not implemented yet
-        User user = new User(username, password, adminPriveleges);
+        User user = new User(username, password);
         unapprovedUsers.add(user);
         
     }{
