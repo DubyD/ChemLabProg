@@ -50,4 +50,8 @@ public class Shelf {
     public List<Chemical> getChemicals() {
         return chemicals;
     }
+
+    public String toString() {
+        return "Shelf number: " + shelfNumber + ", capacity: " + capacity;
+    }
 }

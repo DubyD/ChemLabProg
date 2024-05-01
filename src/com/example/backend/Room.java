@@ -49,5 +49,9 @@ public class Room {
     public List<TakeOutSlip> getSlips() {
         return slips;
     }
+
+    public String toString() {
+        return "Room number: " + roomNumber + ", capacity: " + capacity;
+    }
 }
 
