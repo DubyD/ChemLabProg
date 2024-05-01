@@ -1,3 +1,7 @@
+/*
+ * Prototype for RoomPanel - Alex Comeau
+ * 
+ */
 package com.example.frontend;
 
 import java.awt.BorderLayout;
