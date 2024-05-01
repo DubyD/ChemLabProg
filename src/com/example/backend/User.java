@@ -2,6 +2,7 @@ package com.example.backend;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class User {
 
@@ -16,6 +17,10 @@ public class User {
     private boolean isActive;
     private LocalDate lastLogin;
     private int failedLoginAttempts;
+    private static final int MIN_PASSWORD_LENGTH = 6;
+    private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+    private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
+
 
     /**
      * Creates a new user with default values.
@@ -56,7 +61,7 @@ public class User {
      * @param username The username of the user.
      * @param password The password of the user.
      * @return True if the login is successful, false otherwise.
-     */
+     
     public boolean login(String username, String password) {
         // Fetch user information from the database
 
@@ -65,8 +70,24 @@ public class User {
 
         // Return true if the login is successful
         return false;
+    } **/
+    
+    public boolean login(String username, String password) {
+        // Simulated check for correct username and password
+        if ("admin".equals(username) && "password123".equals(password)) {
+            // Update last login time
+            setLastLogin(LocalDate.now());
+            // Reset failed login attempts
+            setFailedLoginAttempts(0);
+            return true; // Successful login
+        } else {
+            // Handle failed login attempt
+            handleFailedLoginAttempt();
+            return false; // Failed login
+        }
     }
-
+    
+    
     /**
      * Logs out the user.
      * <p>
@@ -89,11 +110,16 @@ public class User {
      * <p>
      * 4/30/2024 - Implemented method EL
      * 
-     * @param password The new password of the user.
+     * @param newPassword The new password of the user.
      * @return True if the password is reset successfully, false otherwise.
      */
-    public boolean resetPassword(String password) {
-        return false;
+    public boolean resetPassword(String newPassword) {
+        if (isValidPasswordLength(newPassword)) {
+            setPassword(newPassword);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -105,6 +131,27 @@ public class User {
      */
     public boolean askSecurityQuestion() {
         return false;
+    }
+
+    // Method to validate password length
+    private boolean isValidPasswordLength(String password) {
+        return password.length() >= MIN_PASSWORD_LENGTH;
+    }
+
+    // Method to validate email format
+    private boolean isValidEmailFormat(String email) {
+        return EMAIL_PATTERN.matcher(email).matches();
+    }
+
+    // Method to handle failed login attempts
+    public void handleFailedLoginAttempt() {
+        failedLoginAttempts++;
+    }
+
+    // Method to validate security question and answer
+    private boolean isValidSecurityQA(String securityQ, String securityA) {
+        return securityQ != null && !securityQ.isEmpty() &&
+               securityA != null && !securityA.isEmpty();
     }
 
     /**
@@ -122,9 +169,25 @@ public class User {
      * @param isActive The status of the user.
      * @return True if the information is updated successfully, false otherwise.
      */
-    public boolean updateInfo(String username, String password, String email, String securityQ, String securityA, String signature, List<TakeOutSlip> takeOutSlips, boolean isActive, LocalDate lastLogin) {
-        return false;
+    public boolean updateInfo(String username, String password, String email, String securityQ, String securityA,
+                              String signature, List<TakeOutSlip> takeOutSlips, boolean isActive, LocalDate lastLogin) {
+        // Validate inputs
+        if (isValidEmailFormat(email) && isValidSecurityQA(securityQ, securityA)) {
+            setUsername(username);
+            setPassword(password);
+            setEmail(email);
+            setSecurityQ(securityQ);
+            setSecurityA(securityA);
+            setSignature(signature);
+            setTakeOutSlips(takeOutSlips);
+            setIsActive(isActive);
+            setLastLogin(lastLogin);
+            return true;
+        } else {
+            return false;
+        }
     }
+
 
     // Getters and setters for all attributes
 
