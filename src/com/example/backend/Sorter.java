@@ -12,8 +12,7 @@ public static class Sorter(){
 
 
             //These three are the same format and can use the same function
-            //We need to separate column 10 into it's separate hazards. in order to
-            //extract flammability and corrosiveness
+            //We need to search through column 10 in order to extract flammability and corrosiveness
 //----------------------------------------------------------------------------------------------------------------------
         //For 534_inventory, the columns are set up as so: (skip line 1)
         //SDS,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard

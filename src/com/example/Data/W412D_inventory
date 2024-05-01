@@ -1,331 +1,331 @@
-Unnamed: 0,Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard ,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14
-,Silica Gel,Flinn Scientific Inc,412D,1,1,450.0,g,112926-00-8,Skin and eye irritant,,,,,
-,Silica Gel Sorbent ,Fisher Chemical,412D,1,1,800.0,g,112926-00-8,Skin and eye irritant,,,,,
-,Dehydrated Agar Powder,Fisher Scientific,412D,2,1,250.0,g,9002-18-0,Harmful if ingested/hygroscopic,,,,,
-,Dehydrated Agar Powder,Cynmar Corporation,412D,2,1,250.0,g,9002-18-0,Harmful if ingested/hygroscopic,,,,,
-,Agarose,Bio-Rad Laboratories,412D,2,1,150.0,g,9012-36-6,Skin and eye irritant,,,,,
-,Albumin,Ward's Science,412D,2,1,375.0,g,9006-59-1,,,,,,
-,"Starch, extra pure, potato, powder",Acros Organics,412D,2,1,1.5,kg,9005-25-8,,,,,,
-,D-Fructose,Fisher Science Education,412D,2,2,500.0,g,57-48-7,Skin irritant,,,,,
-,D-Fructose,Ward's Science,412D,2,2,400.0,g,57-48-7,Skin irritant,,,,,
-,"D-Glucose, anhydrous",Carolina,412D,2,3,15.0,g,50-99-7,,,,,,
-,"D-Glucose, anhydrous (packet)",Carolina,412D,2,1,5.0,g,50-99-7,,,,,,
-,Glucose,Ward's Science,412D,2,1,1.5,kg,50-99-7,,,,,,
-,D(+)Maltose,Scholar Chemistry,412D,2,1,250.0,g,6363-53-7,,,,,,
-,Maltose,Glass bottle,412D,2,2,10.0,g,6363-53-7,"Skin, eye, respiratory system irritant. Mucous membrane and upper respiratory tract irritant.",,,,,
-,Maltose Monohydrate,Fisher Chemical,412D,2,1,20.0,g,6363-53-7,"Skin, eye, respiratory system irritant. Mucous membrane and upper respiratory tract irritant.",,,,,
-,Lactose,Flinn Scientific Inc,412D,2,2,500.0,g,63-42-3,,,,,,
-,Lactose Monohydrate (packet),Carolina,412D,2,2,10.0,g,63-42-3,,,,,,
-,Lactose (packet),Carolina,412D,2,1,5.0,g,63-42-3,,,,,,
-,Lactase Enzyme,Ward's Science,412D,2,1,0.1,g,9031-112,"Skin, eye, respiratory irritant",,,,,
-,Sucrose,Glass bottle,412D,2,2,300.0,g,57-50-1,,,,,,
-,Sucrose (packet),Carolina,412D,2,3,15.0,g,57-50-1,,,,,,
-,Sucrose,Sigma-Aldrich,412D,Floor,1,5.0,kg,57-50-1,,,,,,
-,Sucrose,EMD,412D,Floor,1,200.0,g,57-50-1,,,,,,
-,Sucrose,Ward's Science,412D,Floor,1,1.9,kg,57-50-1,,,,,,
-,Sucrose,Carolina,412D,Floor,1,1.9,kg,57-50-1,,,,,,
-,Ammonium Phosphate Dibasic,Scholar Chemistry,412D,3,1,450.0,g,77893-28-0,Skin and eye irritant,,,,,
-,Potassium Phosphate,Flinn Scientific Inc,412D,3,2,600.0,g,7778-77-0,Skin and eye irritant,,,,,
-,Sodium Phosphate,Flinn Scientific Inc,412D,3,2,650.0,g,7601-54-9,Skin and eye irritant,,,,,
-,Sodium Phosphate,Scholar Chemistry,412D,3,1,250.0,g,7601-54-9,Skin and eye irritant,,,,,
-,"Sodium Phosphate Dibasic, Anhyrous ",Scholar Chemistry,412D,3,1,350.0,g,7558-79-4,Skin and eye irritant,,,,,
-,Sodium Phosphate Dibasic Heptahydrate,Acros Organics,412D,3,1,250.0,g,7782-85-6,Skin and eye irritant,,,,,
-,Sodium Phosphate Monobasic Monohydrate,Acros Organics,412D,3,1,400.0,g,7558-80-7,Skin and eye irritant,,,,,
-,Ammonium Carbonate,Sigma-Aldrich,412D,4,1,50.0,g,506-87-6,"Skin and eye damage, corrosion, or irritation (Category 2, 2B)",,,,,
-,Calcium Carbonate,Flinn Scientific Inc,412D,4,1,1.5,kg,471-34-1,Body tissue irritant,,,,,
-,Calcium Carbonate,Carolina,412D,4,1,5.0,g,471-34-1,Body tissue irritant,,,,,
-,Calcium Carbonate,Glass bottle,412D,4,12,150.0,g,471-34-1,Body tissue irritant,,,,,
-,Calcium Carbonate-Ammonium Chloride Mixture,Glass bottle,412D,4,1,10.0,g,-,Body tissue irritant,,,,,
-,Calcium Carbonate-Copper Sulfate Mixture,Glass bottle,412D,4,2,20.0,g,-,Body tissue irritant,,,,,
-,Copper (II) Carbonate,Glass bottle,412D,4,7,250.0,g,12069-69-1,"Skin, digestive system, and respiratory track irritant",,,,,
-,Sodium Bicarbonate-Sodium Carbonate Mixture,Glass bottle,412D,4,1,100.0,g,-,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Sodium Carbonate,Flinn Scientific Inc,412D,4,1,450.0,g,497-19-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Sodium Carbonate,Glass bottle,412D,4,3,125.0,g,497-19-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Sodium Bicarbonate,Glass bottle,412D,5,8,350.0,g,144-55-8,,,,,,
-,Sodium Bicarbonate,Carolina,412D,4,3,3.4,kg,144-55-8,,,,,,
-,Sodium Bicarbonate,Ward's Science,412D,4,1,40.0,g,144-55-8,,,,,,
-,Activated Charcoal,Glass bottle,412D,5,5,100.0,g,7440-44-0,,,,,,
-,Charcoal/Activated Carbon,Carolina,412D,5,1,350.0,g,7440-44-0,,,,,,
-,Calcium Hydroxide,Glass bottle,412D,6,3,75.0,g,1305-62-0,"Skin irritation, serious eye damage, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard",,,,,
-,Calcium Oxide,Flinn Scientific Inc,412D,6,1,30.0,g,1305-78-8,"Skin corrosion/irritation, eye damage/irritation, respiratory irritation",,,,,
-,Calcium Oxide,Glass bottle,412D,6,10,50.0,g,1305-78-8,"Skin corrosion/irritation, eye damage/irritation, respiratory irritation",,,,,
-,Copper (II) Oxide,Glass bottle,412D,6,6,150.0,g,1317-38-0,"Acute oral and inhalation toxicity, skin corrosion/irritation, eye irritation, chronic aquatic hazard",,,,,
-,Iron (III) Oxide,Sigma-Aldrich,412D,6,1,50.0,g,1309-37-1,,,,,,
-,Manganese (IV) Oxide,Glass bottle,412D,6,8,100.0,g,1313-13-9,"Oxidizer, organ damage through prolonged or repeated exposure, harmful if swallowed/inhaled",,,,,
-,Magnesium Oxide Light Powder,Scholar Chemistry,412D,6,1,250.0,g,1309-48-4,,,,,,
-,Potassium Hydroxide,Sigma-Aldrich,412D,6,2,750.0,g,1310-58-3,"Corrosive to metals, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Potassium Hydroxide,Carolina,412D,6,1,150.0,g,1310-58-3,"Corrosive to metals, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Sodium Hydroxide,Glass bottle,412D,6,5,175.0,g,1310-73-2,"Corrosive to metals, causes severe skin burns, causes serious eye damage",,,,,
-,Sodium Hydroxide,Sigma-Aldrich,412D,6,1,700.0,g,1310-73-2,"Corrosive to metals, causes severe skin burns, causes serious eye damage",,,,,
-,Potassium Phthalate Monobasic,Sigma-Aldrich,412D,6,1,1.0,kg,877-24-7,,,,,,
-,Potassium Hydrogen Phthalate,Glass bottle,412D,6,12,500.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. ",,,,,
-,Potassium Hydrogen Phthalate,Flinn Scientific Inc,412D,6,1,150.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. ",,,,,
-,Potassium Hydrogen Tartarate,Glass bottle,412D,6,5,450.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. ",,,,,
-,Ammonium Sulfate,Sigma-Aldrich,412D,7,1,500.0,g,7783-20-2,Short-term aquatic hazard,,,,,
-,Barium Sulfate,Glass bottle,412D,7,1,75.0,g,7727-43-7,,,,,,
-,Barium Sulfate,Carolina,412D,7,1,300.0,g,7727-43-7,,,,,,
-,Calcium Sulfate,Glass bottle,412D,7,3,200.0,g,7778-18-9,,,,,,
-,Calcium Sulfate Hemihydrate,Carolina,412D,7,1,250.0,g,10034-76-1,,,,,,
-,Copper (II) Sulfate,Glass bottle,412D,7,2,100.0,g,7758-98-7,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Copper (II) Sulfate,Flinn Scientific Inc,412D,7,1,250.0,g,7758-98-7,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Copper (II) Sulfate Pentahydrate,Sigma-Aldrich,412D,7,1,500.0,g,7758-99-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation",,,,,
-,Iron (II) Sulfide,Flinn Scientific Inc,412D,7,1,75.0,g,1317-37-9,,,,,,
-,Iron (III) Sulfate,Glass bottle,412D,7,1,75.0,g,15244-10-7,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation",,,,,
-,Iron (III) Sulfate Heptahydrate,Acros Organics,412D,7,1,350.0,g,10028-22-5,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation",,,,,
-,Iron (III) Sulfate Pentahydrate,Glass bottle,412D,7,1,300.0,g,142906-29-4,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation",,,,,
-,Ferric Sulfate Hydrate,VWR Life Sciences,412D,7,1,500.0,g,15244-10-7,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation",,,,,
-,Magnesium Sulfate,Flinn Scientific Inc,412D,7,1,500.0,g,7487-88-9,,,,,,
-,Magnesium Sulfate Heptahydrate,Glass bottle,412D,7,1,150.0,g,10034-99-8,,,,,,
-,Potassium Sulfate,Glass bottle,412D,7,2,100.0,g,7778-80-5,,,,,,
-,Potassium Sulfate,Carolina,412D,7,1,250.0,g,7778-80-5,,,,,,
-,Sodium Bisulfate,Scholar Chemistry,412D,7,1,400.0,g,7681-38-1,Causes serious eye damage,,,,,
-,Sodium Sulfate,Glass bottle,412D,7,2,100.0,g,7757-82-6,May be harmful in contact with skin,,,,,
-,Sodium Sulfide,Spectrum,412D,7,1,200.0,g,1313-82-2,"May form combustible dust concentrations in air, may be corrosive to metals, causes severe skin burns and eye damage, toxic if swallowed or in contact with skin",,,,,
-,Sodium Sulfide Nonahydrate,Sigma-Aldrich,412D,7,1,100.0,g,1313-84-4,"Causes severe skin burns and eye damage, toxic in contact with skin, harmful if swallowed, very toxic to aquatic life with long lasting effects",,,,,
-,Sodium Sulfite,Glass bottle,412D,7,1,50.0,g,7757-83-7,"Skin irritation, serious eye damage",,,,,
-,Aluminum Chloride,Glass bottle,412D,8,1,5.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Aluminum Chloride,Flinn Scientific Inc,412D,8,1,200.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Aluminum Chloride,Sigma-Aldrich,412D,8,1,500.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Aluminum Chloride,Acros Organics,412D,8,1,400.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Ammonium Chloride,Glass bottle,412D,8,2,6.0,g,12125-02-9,"Harmful if swallowed, causes serious eye irritation",,,,,
-,Ammonium Chloride,Carolina,412D,8,1,200.0,g,12125-02-9,"Harmful if swallowed, causes serious eye irritation",,,,,
-,Barium Chloride Anhydrous,Scholar Chemistry,412D,8,1,400.0,g,10361-37-2,"Acute oral toxicity, acute inhalation toxicity ",,,,,
-,Barium Chloride Dihydrate,Glass bottle,412D,8,1,4.0,g,10326-27-9,"Toxic if swallowed, harmful if inhaled",,,,,
-,Barium Chloride Dihydrate,Scholar Chemistry,412D,8,1,150.0,g,10326-27-9,"Toxic if swallowed, harmful if inhaled",,,,,
-,Calcium Chloride,Glass bottle,412D,8,7,150.0,g,10043-52-4,"May form combustible dust concentrations in air, causes serious eye irritation",,,,,
-,Calcium Chloride Anhydrous,Sigma-Aldrich,412D,8,2,350.0,g,10043-52-4,"May form combustible dust concentrations in air, causes serious eye irritation",,,,,
-,Calcium Chloride Anhydrous,Spectrum,412D,8,1,400.0,g,10035-04-8,Causes serious eye irriration,,,,,
-,Calcium Chloride Dihydrate,Sigma-Aldrich,412D,8,1,400.0,g,10035-04-8,Causes serious eye irriration,,,,,
-,Cobalt Chloride Hexahydrate,Glass bottle,412D,8,2,6.0,g,7791-13-1,"Acute oral toxicity, acute inhalation toxicity, respiratory sensitization, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity",,,,,
-,Cobalt (II) Chloride Anhydrous,Acros Organics,412D,8,1,500.0,g,7646-79-9,"Causes eye irritation, causes skin irritation, may cause skin sensitization or allergic reaction, harmful if swallowed (causes gastrointestinal tract irritation), causes respiratory tract irritation, may cuase asthmatic attacks, may cause cancer",,,,,
-,Copper (II) Chloride,Sigma-Aldrich,412D,8,1,500.0,g,7447-39-4,"Causes skin irritation, causes serious eye damage, harmful if swallowed or in contact with skin",,,,,
-,Cuperic Chloride Dihydrate,Carolina,412D,8,1,300.0,g,10125-13-0,"Acute oral and dermal toxicity, causes skin irritation, serious eye damage, short- and long-term aquatic hazard",,,,,
-,Iron (III) Chloride,Glass bottle,412D,8,1,20.0,g,7705-08-0,"Corrosive to metals, acute oral toxicity, skin irritant, causes serious eye damage",,,,,
-,Lithium Chloride Anhydrous,Carolina,412D,8,1,40.0,g,7447-41-8,"Harmful if swallowed, cuases skin irritation, causes serious eye irritation",,,,,
-,Magnesium Chloride,Flinn Scientific Inc,412D,8,1,250.0,g,7786-30-3,,,,,,
-,Nicaelous Chloride Hexahydrate,JT Baker,412D,8,1,125.0,g,,,,,,,
-,Zinc Chloride,Sigma-Aldrich,412D,8,1,250.0,g,7646-85-7,"Acute oral toxicity, skin corrosion, serious eye damage, specific target organ toxicity (respiratory system), short- and long-term aquatic hazard",,,,,
-,Potassium Bromate,Flinn Scientific Inc,412D,8,2,60.0,g,7758-012,"May cause fire or explosion; strong oxidizer, toxic if swallowed, suspected of causing cancer, may cause respiratory irritation, may cause drowsiness or dizziness, may cause damage to organs through prolonged or repeated exposure",,,,,
-,Potassium Bromide,Glass bottle,412D,8,1,100.0,g,7758-023,May cause serious eye irritation,,,,,
-,Potassium Bromide,Scholar Chemistry,412D,8,1,100.0,g,7758-023,May cause serious eye irritation,,,,,
-,Potassium Chloride,Glass bottle,412D,8,3,65.0,g,7447-40-7,,,,,,
-,Potassium Chloride,Alpha Azar,412D,8,1,700.0,g,7447-40-7,,,,,,
-,Sodium Acetate,Scholar Chemistry,412D,8,1,400.0,g,127-09-3,"Causes mild skin irritation, causes eye irritation, may be harmful if inhaled",,,,,
-,Sodium Acetate,Fisher Chemicals,412D,8,1,200.0,g,127-09-3,"Causes mild skin irritation, causes eye irritation, may be harmful if inhaled",,,,,
-,Sodium Bromide,Glass bottle,412D,8,11,255.0,g,7647-15-6,,,,,,
-,Sodium Bromide,Scholar Chemistry,412D,8,1,500.0,g,7647-15-6,,,,,,
-,Sodium Chloride,Glass bottle,412D,8,9,500.0,g,7647-14-5,,,,,,
-,Sodium Chloride,Sigma-Aldrich,412D,8,2,625.0,g,7647-14-5,,,,,,
-,Sodium Hypoclorite Solution,Flinn Scientific Inc,412D,8,1,1.0,L,7681-52-9,"Corrosive to metals, skin corrosion, serious eye damage, short- and long-term aquatic hazard",,,,,
-,"Sodium Sulfite, anhydrous",Acros ,412D,8,1,1.0,kg,7757-83-7,,,,,,
-,Sodium Thiosulfate Pentahydrate,Fisher Chemical,412D,8,1,1.5,kg,10102-17-7,,,,,,
-,Sodium Thiosulfate Pentahydrate,Flinn Scientific,412D,8,1,150.0,g,10102-17-7,,,,,,
-,Sodium Thiosulfate Pentahydrate,Glass bottle,412D,8,1,75.0,g,10102-17-7,,,,,,
-,Strontium Chloride X-Hydrate,Glass bottle,412D,8,1,100.0,g,10476-85-4,"Causes serious eye damage, may cause respiratory irritation",,,,,
-,Strontium Chloride,Alpha Azar,412D,8,1,400.0,g,10476-85-4,"Causes serious eye damage, may cause respiratory irritation",,,,,
-,Ammonium Dichromate,Glass bottle,412D,9,4,80.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity",,,,,
-,Ammonium Dichromate,Sigma-Aldrich,412D,9,5,370.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity",,,,,
-,Ammonium Dichromate,Flinn Scientific Inc,412D,9,1,400.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity",,,,,
-,Manganese Dioxide,Flinn Scientific Inc,412D,9,1,500.0,g,1313-13-9,"Acute toxicity (oral, dermal, inhalation)",,,,,
-,Potassium Dichromate,Carolina,412D,9,1,200.0,g,7778-50-9,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage, respiratory and skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity, specific and target organ toxicity (single and repeated exposure; respiratory system, liver, kidney, blood)",,,,,
-,Potassium Chlorate,EMD,412D,9,1,400.0,g,3811-049,"Strong oxidizer, harmful if swallowed or inhaled, toxic to aquatic life with long lasting effects",,,,,
-,Potassium Chlorate,Glass bottle,412D,9,6,115.0,g,3811-049,"Strong oxidizer, harmful if swallowed or inhaled, toxic to aquatic life with long lasting effects",,,,,
-,Potassium Chromate,Carolina,412D,9,1,100.0,g,7789-00-6,"Skin corrosion/irritation, serious eye damage/irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, specific target organ toxicity (single exposure - respiratory system; repeated exposure - kidney, liver, blood)",,,,,
-,Aluminum Nitrate Nonahydrate,Sigma-Aldrich,412D,10,1,20.0,g,7784-27-2,Causes serious eye damage,,,,,
-,Aluminum Nitrate Nonahydrate,GFS Chemicals,412D,10,1,500.0,g,7784-27-2,Causes serious eye damage,,,,,
-,Ammonium Nitrate,Flinn Scientific Inc,412D,10,1,350.0,g,6484-52-2,"Oxidizer, causes serious eye irritation",,,,,
-,Ceric Ammonium Nitrate,Fisher Scientific ,412D,10,1,500.0,g,16774-21-3,"Oxidizer, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation, may cause an allergic skin reaction",,,,,
-,Barium Nitrate,Sigma-Aldrich,412D,10,1,50.0,g,10022-31-8,"Oxidizer, toxic if swallowed, causes serious eye irritation, harmful if inhaled",,,,,
-,Calcium Nitrate,Flinn Scientific,412D,10,1,450.0,g,13477-34-4,"Harmful if swallowed, causes serious eye damage",,,,,
-,Calcium Nitrate,Carolina,412D,10,1,200.0,g,13477-34-4,"Harmful if swallowed, causes serious eye damage",,,,,
-,Cobalt Nitrate 6-Hydrate,Scholar Chemistry,412D,10,1,500.0,g,10026-22-9,"Oxidizer, harmful if swallowed, suspected of causing genetic defects, may cause cancer, may damage fertility or the unborn child, very toxic to aquatic life with long lasting effects",,,,,
-,Copper (II) Nitrate Tri-Hydrate,Wards Scientific,412D,10,1,500.0,g,10031-43-3,"Oxidizer, causes severe skin burns and eye damage, may cause respiratory irritation",,,,,
-,Iron (III) Nitrate Nonahydrate,Sigma Aldrich,412D,10,1,500.0,g,7782-61-8,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation",,,,,
-,Lead (II) Nitrate,Scholar Chemistry,412D,10,1,200.0,g,10099-74-8,"Oxidizer, acute toxicity (inhalation, oral), serious eye damage, skin sensitization, carcinogenicity, reproductive toxicity, specific target organ toxicity (repeated exposure - blood, central nervous system, immune system, kidney), acture aquatic hazard",,,,,
-,Lead (II) Nitrate,Alpha Azar,412D,10,1,100.0,g,10099-74-8,"Oxidizer, acute toxicity (inhalation, oral), serious eye damage, skin sensitization, carcinogenicity, reproductive toxicity, specific target organ toxicity (repeated exposure - blood, central nervous system, immune system, kidney), acture aquatic hazard",,,,,
-,Nickel Nitrate ,Scholar Chemistry,412D,10,1,150.0,g,13478-00-7,"Oxidizer, acute toxicity (oral and inhalation), skin corrosion or irritation, serious eye damage, reproductive toxicity, specific target organ toxicity",,,,,
-,Potassium Nitrate,Glass bottle,412D,10,2,80.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation",,,,,
-,Potassium Nitrate,Sigma Aldrich,412D,10,1,500.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation",,,,,
-,Potassium Nitrate,Sigma Aldrich,412D,10,1,500.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation",,,,,
-,Silver Nitrate,Carolina,412D,10,3,30.0,g,7761-88-8,"Causes skin irritation, causes severe skin burns and eye damage, toxic to aquatic life with long lasting effects",,,,,
-,Sodium Nitrate,Glass bottle,412D,10,3,30.0,g,7631-99-4,"Oxidizer, causes serious eye irritation",,,,,
-,Sodium Nitrate,Flinn Scientific,412D,10,1,400.0,g,7631-99-4,"Oxidizer, causes serious eye irritation",,,,,
-,Sodium Nitrite,Glass bottle,412D,10,1,15.0,g,7632-00-0,"Oxidizing solids, acute oral toxicity, eye irritation, acute aquatic hazard",,,,,
-,Sodium Nitrite,Carolina,412D,10,1,50.0,g,7632-00-0,"Oxidizing solids, acute oral toxicity, eye irritation, acute aquatic hazard",,,,,
-,Stronium Nitrate,Glass bottle,412D,10,4,40.0,g,10042-76-9,"Strong oxidizer, causes serious eye damage",,,,,
-,Zinc Nitrate Hexahydrate,Sigma Aldrich,412D,10,3,300.0,g,10196-18-6,"Oxidizing solids, acute toxicity (oral), skin corrosion/irritation, serious eye damage/irritation, respiratory system toxicity (single exposure)",,,,,
-,Iodine,Glass bottle,412D,12,6,200.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled",,,,,
-,Iodine,Carolina,412D,12,1,100.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled",,,,,
-,"Iodine, crystalline",Flinn Scientific,412D,12,1,500.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled",,,,,
-,Iodine,"Beantown, California",412D,12,1,10.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled",,,,,
-,Iodine (0.05 M),Carolina,412D,12,1,500.0,mL,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled",,,,,
-,Iodine-Potassium Iodide Solution,Flinn Scientific,412D,12,4,1900.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life",,,,,
-,Iodine-Potassium Iodide,Carolina,412D,12,1,100.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life",,,,,
-,Lugol's Solution,Glass bottle,412D,12,1,50.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life",,,,,
-,Lugol's Solution,Carolina,412D,12,1,500.0,mL, ,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life",,,,,
-,Potassium Iodate,Glass bottle,412D,12,6,210.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed),,,,,
-,Potassium Iodide,Supple Co,412D,12,1,500.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed),,,,,
-,Potassium Iodide,Sigma Aldrich,412D,12,2,1000.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed),,,,,
-,Potassium Permanganate,Glass bottle,412D,12,3,35.0,g,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage",,,,,
-,Potassium Permanganate,Acros ,412D,12,1,300.0,g,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage",,,,,
-,Potassium Permanganate 0.04 M,Glass bottle,412D,12,2,1300.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage",,,,,
-,Potassium Permanganate 0.1M,Glass bottle,412D,12,1,80.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage",,,,,
-,Potassium Permanganate,Flinn Scientific,412D,12,2,800.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage",,,,,
-,Sodium Iodide,BDH,412D,12,1,100.0,g,7681-82-5,"Causes skin irritation, causes serious eye irritation, causes damage to organs through prolonged or repeated exposure",,,,,
-,Hydogen Peroxide,Flinn Scientific,412D,13,1,200.0,mL,7722-84-1,"Eyes, nose, skin, and throat irritation",,,,,
-,Hydrogen Peroxide,Sigma Aldrich,412D,13,2,750.0,mL,7722-84-1,"Eyes, nose, skin, and throat irritation",,,,,
-,3% Hydrogen Peroxide,TopCare Health,412D,13,1,0.75,quarts,7722-84-1,"Eyes, nose, skin, and throat irritation",,,,,
-,"4-Amino-1-naphthalenesulfonic acid, sodium salt hydrate",Alrich Chemical Company,412D,15,1,500.0,g,84-86-6,"Skin corrosion, serious eye damage",,,,,
-,Glycine,Scholar Chemistry,412D,15,1,200.0,g,56-40-6,,,,,,
-,Clove Oil,Flinn Scientific,412D,15,1,245.0,mL,8000-34-8,"Causes skin irritation, causes serious eye irritation, may cause an allergic skin reaction, may cause respiratory irritation",,,,,
-,Methyl Salicylate,Sigma Aldrich,412D,15,1,250.0,mL,119-36-8,"Acute oral toxicity, serious eye damage/irritation, skin sensitization, reproductive toxicity",,,,,
-,Mineral Oil,JT Baker,412D,15,1,200.0,mL,8042-47-5,,,,,,
-,Mineral Oil,Glass bottle,412D,15,8,350.0,mL,8042-47-5,,,,,,
-,Peppermint Oil,Glass bottle,412D,15,1,15.0,mL,8006-90-4,"Cuases serious eye irritation, may cause allergic skin reaction, combustible liquid",,,,,
-,Peppermint Oil,Flinn Scientific,412D,15,2,15.0,mL,8006-90-4,"Cuases serious eye irritation, may cause allergic skin reaction, combustible liquid",,,,,
-,Silicone Oil,Acros Organic,412D,15,1,30.0,mL,63148-62-9,"Extremely flammable aerosol, may cause drowsiness or dizziness, toxic to aquatic life with long lasting effects",,,,,
-,Aluminum,Glass bottle,412D,16,1,25.0,g,7429-90-5,Not classified,,,,,
-,"Ammonium Metavanadate, ACS Reagent",Acros Organics,412D,16,1,25.0,g,7803-55-6,"Suspect of damaging the unborn child, toxic if swallowed, causes serious eye irritation, harmful if inhaled, causes damage to organs through prolonged or repeated exposure",,,,,
-,Anthranilic Acid,Sigma Aldrich,412D,16,1,500.0,g,118-92-3,Serious eye irritant,,,,,
-,Benedict's Solution Qualitative,Carolina,412D,16,2,2000.0,mL,,,,,,,
-,Boric Acid,Alpha Azar,412D,16,1,1.0,kg,10043-35-3,"May damage fertility, may damage the unborn child",,,,,
-,Congo Red,Sargent Welch ,412D,16,1,0.5,g,573-58-0,"May cause cancer, suspected of damaging the unborn child",,,,,
-,"D(-)-Aspartic Acid, D(-)-Asparaginsaure",Acros Organics,412D,16,1,2.5,g,1783-96-6,,,,,,
-,DL-Alanine,Acros Organics,412D,16,1,50.0,g,302-72-7,,,,,,
-,DL-Leucine,Acros Organics,412D,16,1,10.0,g,328-39-2,,,,,,
-,DL-Phenylalanine,Acros Organics,412D,16,1,10.0,g,150-30-1,Not classified,,,,,
-,DL-Valine,Acros Organics,412D,16,1,25.0,g,203784-63-8,,,,,,
-,(+)-Gibberellic Acid,Flinn Scientific,412D,16,1,10.0,g,77-06-5,Not classified,,,,,
-,Gelatin,Aldrich Chemical Company,412D,16,1,500.0,g,9000-70-8,,,,,,
-,Glycerol,Glass Bottle,412D,16,9,1100.0,mL,56-81-5,,,,,,
-,Guaiacol,Sigma Aldrich,412D,16,1,100.0,g,90-05-1,"Flammable, acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation",,,,,
-,L(+)-Ascorbic Acid,Wards Scientific,412D,16,1,1.0,g,50-81-7,,,,,,
-,Lime Water Tablets,Flinn Scientific,412D,16,1,10.0,g,,,,,,,
-,Polyvinyl Alcohol Solution,Scholar Chemistry,412D,16,1,700.0,mL,9002-89-5,,,,,,
-,Salicylic Acid,Glass Bottle,412D,16,1,50.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity",,,,,
-,Silicon Dioxide (Sand),Glass Bottle,412D,16,1,250.0,g,7631-86-9,,,,,,
-,Tween 20,Sigma Life Science,412D,16,1,700.0,mL,9005-64-5,,,,,,
-,Potassium Ferrocyanide,Carolina,412D,16,1,400.0,g,14459-95-1,Harmful to aquatic life with long lasting effects,,,,,
-,Potassium Thiocyanate,Scholar Chemistry,412D,16,1,400.0,g,333-20-0,"Acute toxicity (oral, inhalation, dermal), serious eye damage, short- and long-term aquatic hazard",,,,,
-,Triethanolamine,Scholar Chemistry,412D,16,2,200.0,mL,,,,,,,
-,Triethanolamine,Glass bottle,412D,16,9,450.0,mL,,,,,,,
-,Bromophenol Blue,Fisher Scientific,412D,17,2,7.0,g,115-39-9,,,,,,
-,Bromothymol Blue,Carolina,412D,17,1,2.0,g,34722-90-2,,,,,,
-,Carmine,Flinn Scientific,412D,17,2,0.5,g,1390-65-4,,,,,,
-,Congo Red,Ward's Science,412D,17,1,1.0,g,573-58-0,"May cause cancer, suspected of damaging the unborn child",,,,,
-,Congo Red,Sargent Welch,412D,17,1,0.05,g,573-58-0,"May cause cancer, suspected of damaging the unborn child",,,,,
-,Eosin B,Fisher Scientific,412D,17,1,10.0,g,548-24-3,Causes serious eye damage,,,,,
-,Fast Green FCF,Eastman,412D,17,1,20.0,g,2353-45-9,Suspected of causing genetic defects (if exposed),,,,,
-,Litmus,Flinn Scientific,412D,17,1,10.0,g,1393-92-6,,,,,,
-,Litmus,Ward's Science,412D,17,1,10.0,g,1393-92-6,,,,,,
-,Methylene Blue,Fisher Scientific,412D,17,1,3.0,g,61-73-4,Harmful if swallowed,,,,,
-,Methyl Violet,Sargent Welch,412D,17,1,5.0,g,8004-87-3,"Harmful if swallowed, suspected of causing cancer, very toxic to aquatic life with long lasting effects",,,,,
-,Methyl Violet,Fisher Science,412D,17,1,7.0,g,8004-87-3,"Harmful if swallowed, suspected of causing cancer, very toxic to aquatic life with long lasting effects",,,,,
-,Phenol Red,Fisher Scientific,412D,17,1,2.5,g,143-74-8,"Causes skin irritation, may cause respiratory irritation",,,,,
-,"Thymol Blue, ACS",Alfa Aesar,412D,17,1,40.0,g,76-61-9,May form combustible dust concentrations in the air,,,,,
-,"Thymol Blue, Sodium Salt",Fisher Science,412D,17,1,3.0,g,62625-21-2,May form combustible dust concentrations in the air,,,,,
-,FDC Blue 1 Food Dye,Flinn Scientific,412D,17,1,0.5,g,3844-45-9,,,,,,
-,FDC Blue 2 Food Dye,Flinn Scientific,412D,17,1,2.0,g,860-22-0,Acute oral toxicity,,,,,
-,FD&C Blue #1,Spectrum,412D,17,1,100.0,g,3844-45-9,,,,,,
-,FD&C Blue #2,Spectrum,412D,17,1,30.0,g,860-22-0,Acute oral toxicity,,,,,
-,FDC Red 3 Food Dye,Flinn Scientific,412D,17,1,0.5,g,16423-68-0,Acute oral toxicity,,,,,
-,FDC Red 40 Food Dye,Flinn Scientific,412D,17,1,2.0,g,25956-17-6,,,,,,
-,FD&C Red #3,Spectrum,412D,17,1,25.0,g,16423-68-0,Acute oral toxicity,,,,,
-,FD&C Green 3 Food Dye,Flinn Scientific,412D,17,1,2.0,g,2353-45-9,"Germ cell mutagenicity, suspected of causing genetic defects, acute oral toxicity",,,,,
-,FD&C Green #3,Spectrum,412D,17,1,75.0,g,2353-45-9,"Germ cell mutagenicity, suspected of causing genetic defects, acute oral toxicity",,,,,
-,FDC Yellow 5 Food Dye,Flinn Scientific,412D,17,1,0.5,g,1934-21-0,"Skin sensitization, respiratory sensitization",,,,,
-,FDC Yellow 6 Food Dye,Flinn Scientific,412D,17,1,1.0,g,2783-94-0,"Skin and serious eye damage, corrosion, or irritation, specific target organ toxicity (single exposure: respiratory tract)",,,,,
-,FD&C Yellow #5,Spectrum,412D,17,1,90.0,g,1934-21-0,"Respiratory sesnsitization, skin sensitization, combustible dust",,,,,
-,4-Acetamidophenol,Aldrich,412D,Organics,1,70.0,g,103-90-2,Acute oral toxicity,,,,,
-,4-Acetamidophenol,Glass bottle,412D,Organics,2,5.0,g,103-90-2,Acute oral toxicity,,,,,
-,Acetamide,Glass bottle,412D,Organics,3,50.0,g,60-35-5,Suspect of causing cancer,,,,,
-,Acetanilide,Flinn Scientific,412D,Organics,1,30.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Acetanilide,Sigma Aldrich,412 D,Organics,1,500.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Acetanilide Reference,Glass bottle,412D,Organics,1,15.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Acrylamide,Sigma Aldrich,412D,Organics,1,25.0,g,79-06-1,"Acute oral, dermal, and inhalation toxicity, skin and eye irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity ",,,,,
-,Acrylamide,Glass bottle,412D,Organics,1,5.0,g,79-06-1,"Acute oral, dermal, and inhalation toxicity, skin and eye irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity ",,,,,
-,Anthracene,J.T. Baker,412D,Organics,1,30.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard",,,,,
-,Anthracene,Acros Organics,412D,Organics,1,20.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard",,,,,
-,Anthracene,Glass bottle,412D,Organics,1,10.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard",,,,,
-,Aspirin Powder,J.T. Baker,412D,Organics,1,75.0,g,50-78-2,Acute toxicity (oral),,,,,
-,Aspirin Powder,Glass bottle,412D,Organics,1,5.0,g,50-78-2,Acute toxicity (oral),,,,,
-,Impure Aspirin,Glass bottle,412D,Organics,1,15.0,g,50-78-2,Acute toxicity (oral),,,,,
-,Aurintricarboxylic Acid,Sargent Welch,412D,Organics,1,15.0,g,4431-00-9,Skin irritant,,,,,
-,Benzopinacolone,Alfa Aesar,412D,Organics,3,30.0,g,466-37-5,,,,,,
-,Benzopinacol,Alfa Aesar,412D,Organics,1,10.0,g,464-72-2,,,,,,
-,Benzopinacol,Acros Organics,412D,Organics,1,80.0,g,464-72-2,,,,,,
-,Benzamide,Sigma Aldrich,412D,Organics,2,255.0,g,55-21-0,"Acute oral toxicity, germ cell mutagenicity",,,,,
-,Benzophenone,Glass bottle,412D,Organics,1,5.0,g,119-61-9,"Carcinogen, specific target organ toxicity (repeated exposure: oral, liver, kidney), short- and long-term aquatic hazard",,,,,
-,Biphenyl,Acros Organics,412D,Organics,1,100.0,g,92-52-4,"Skin and eye irritant, specific targen organ toxicity (single exposure: respiratory system), short- and long-term aquatic hazard",,,,,
-,Biphenyl,Glass bottle,412D,Organics,1,5.0,g,92-52-4,"Skin and eye irritant, specific targen organ toxicity (single exposure: respiratory system), short- and long-term aquatic hazard",,,,,
-,Caffeine,Scholar Chemistry,412D,Organics,1,40.0,g,58-08-2,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Caffeine,Glass bottle,412D,Organics,2,5.0,g,58-08-2,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Catechol,Sigma,412D,Organics,1,20.0,g,120-80-9,"Acute oral, dermal, and inhalation toxicity, skin corrosion/irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, combustible dust",,,,,
-,Cetyl Alcohol,Glass bottle,412D,Organics,1,100.0,g,36653-82-4,,,,,,
-,Coumarin,MP Biomedicals,412D,Organics,1,20.0,g,91-64-5,"Acute oral toxicity, skin sensitization, chronic aquatic hazard",,,,,
-,Coumarin,Glass bottle,412D,Organics,1,5.0,g,91-64-5,"Acute oral toxicity, skin sensitization, chronic aquatic hazard",,,,,
-,"2,6 Dichloroindophenol, Sodium Salt",Flinn Scientific,412D,Organics,1,2.0,g,620-45-1,Combustible dust,,,,,
-,"Diphenylamine, crystal",J.T. Baker,412D,Organics,1,500.0,g,122-39-4,"Acute oral, inhalation, and dermal toxicity, specific target organ toxicity (repeated exposure: kidney, liver, spleen), short- and long-term aquatic hazard",,,,,
-,"Diphenylamine, crystal",Glass bottle,412D,Organics,1,5.0,g,122-39-4,"Acute oral, inhalation, and dermal toxicity, specific target organ toxicity (repeated exposure: kidney, liver, spleen), short- and long-term aquatic hazard",,,,,
-,"Diphenylamine-4-sulfonic acid, Sodium Salt",Aldrich,412D,Organics,1,5.0,g,6152-67-6,"Skin corrosion/irritation, serious eye damage/irritation, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,Ethylenediamine Tetraacetic Acid (EDTA),Flinn Scientific,412D,Organics,1,40.0,g,60-00-4,Causes serious eye irritation,,,,,
-,Ethylenediamine Tetraacetic Acid (EDTA),Glass bottle,412D,Organics,1,40.0,g,60-00-4,Causes serious eye irritation,,,,,
-,9-Fluorenol,Alfa Aesar,412D,Organics,1,20.0,g,1689-64-1,,,,,,
-,9-Fluorenone,Alfa Aesar,412D,Organics,1,50.0,g,486-25-9,Serious eye damage/eye irritation, ,,,,
-,Hydroquinone,J.T. Baker,412D,Organics,1,400.0,g,123-31-9,"Acute oral toxicity, serious eye damage, skin sensitization, germ cell mutagenicity, carcinogenicity, short- and long-term aquatic hazard",,,,,
-,Hydroquinone,Glass bottle,412D,Organics,1,25.0,g,123-31-9,"Acute oral toxicity, serious eye damage, skin sensitization, germ cell mutagenicity, carcinogenicity, short- and long-term aquatic hazard",,,,,
-,4-Hydroxylacetophenone,Sigma Aldrich,412D,Organics,1,100.0,g,99-93-4,"Eye irritant, short- and long-term aquatic hazard",,,,,
-,Hydroxylamine Hydrochloride,Sigma Aldrich,412D,Organics,1,40.0,g,5470-111,"Corrosive to metals, acute oral and dermal toxicity, skin and eye irritation, skin sensitization, carcinogenicity, specific target organ toxicity (repeated exposure: oral, spleen), short- and long-term aquatic hazard",,,,,
-,Phthalic anhydride,Aldrich,412D,Organics,1,800.0,g,85-44-9,"Acute oral toxicity, skin irritation, serious eye damage, respiratory sensitization, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard",,,,,
-,Phthalic anhydride,Glass bottle,412D,Organics,2,50.0,g,85-44-9,"Acute oral toxicity, skin irritation, serious eye damage, respiratory sensitization, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard",,,,,
-,1-Naphthol,Scholar Chemistry,412D,Organics,3,100.0,g,90-15-3,"Acute oral and dermal toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,1-Naphthol,Glass bottle,412D,Organics,10,50.0,g,90-15-3,"Acute oral and dermal toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,2-Naphthol,Aldrich,412D,Organics,1,5.0,g,135-19-3,"Acute oral and inhalation toxicity, serious eye damage, skin sensitization, acute aquatic hazard",,,,,
-,Naphthalene,Glass bottle,412D,Organics,4,20.0,g,90-20-3,"Flammable solids, acute oral toxicity, carcinogenicity, short- and long-term aquatic hazard",,,,,
-,2-Nitrophenol,Acros Organics,412D,Organics,1,25.0,g,88-75-5,"Acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory tract)",,,,,
-,2-Nitrophenol,Glass bottle,412D,Organics,2,25.0,g,88-75-5,"Acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory tract)",,,,,
-,Salicylamide,Alfa Aesar,412D,Organics,1,125.0,g,65-45-2,"Acute oral toxicity, skin and eye irritation, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,Sulfuryl Chloride,Sigma-Aldrich,412D,Organics,1,25.0,ml,7791-25-5,"Acute inhalation toxicity, skin corrosion, serious eye damage, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,Trans-stilbene,Sigma-Aldrich,412D,Organics,1,20.0,g,103-30-0,"Acute oral toxicity, serious eye damage/eye irriation, chronic aquatic hazard",,,,,
-,Tetraethylenepentamine,TCL,412D,Organics,1,25.0,g,112-57-2,"Harmful if swallowed or in contact with skin, causes severe skin burns and eye damage, may cause an allergic skin reaction, chronic aquatic hazard",,,,,
-,p-Toluidine,Sigma-Aldrich,412D,Organics,1,125.0,g,106-49-0,"Acute oral, dermal, and inhalation toxicity, serious eye damage/eye irritation, skin sensitization, carcinogenicity",,,,,
-,Trizmabase,Sigma,412D,Organics,1,500.0,g,77-86-1,,,,,,
-,Resorcinol,Scholar Chemistry,412D,Organics,2,100.0,g,108-46-3,"Acute oral toxicity, skin irritation, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: oral, central nervous system, blood, respiratory system), short- and long-term aquatic hazard",,,,,
-,Resorcinol,Glass bottle,412D,Organics,12,200.0,g,108-46-3,"Acute oral toxicity, skin irritation, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: oral, central nervous system, blood, respiratory system), short- and long-term aquatic hazard",,,,,
-,Urea,Ward's Science,412D,Organics,1,300.0,g,57-13-6,,,,,,
-,Urea,Sigma Aldrich,412D,Organics,1,100.0,g,57-13-6,,,,,,
-,Urea,Glass bottle,412D,Organics,2,10.0,g,57-13-6,,,, ,,
-,Urethane,Sigma Aldrich,412D,Organics,1,75.0,g,51-79-6,"Acute oral toxicity, carcinogenicity",,,,,
-,Vanillin,Glass bottle,412D,Organics,1,5.0,g,121-33-5,"Eye irritant, acute aquatic hazard",,,,,
-,Acetylsalicylic Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,50-78-2,Acute oral toxicity,,,,,
-,Acetylsalicylic Acid,Glass bottle,412D,Carboxylic Acids,3,3.0,g,50-78-2,Acute oral toxicity,,,,,
-,Acetanilide,Acros Organics,412D,Carboxylic Acids,1,200.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard",,,,,
-,Acetoacetanilide,Aldrich,412D,Carboxylic Acids,1,300.0,g,102-01-2,,,,,,
-,4-Acetamidobenzenesulfonamide,TCL,412D,Carboxylic Acids,1,20.0,g,121-61-9,"Acute toxicity (oral, dermal, inhalation), skin and eye irritant, specific target organ toxicity (single exposure)",,,,,
-,Benzophenone,Acros Organics,412D,Carboxylic Acids,1,300.0,g,119-61-9,"Carcinogen, specific target organ toxicity (repeated exposure: oral, liver, kidney), short- and long-term aquatic hazard",,,,,
-,Benzoic Acid,Flinn Scientific,412D,Carboxylic Acids,2,400.0,g,65-85-0,"Skin irritant, serious eye damage, specific target organ toxicity (repeated exposure: inhalation, lungs), short-term aquatic hazard",,,,,
-,Benzoic Acid,Glass bottle,412D,Carboxylic Acids,2,75.0,g,65-85-0,"Skin irritant, serious eye damage, specific target organ toxicity (repeated exposure: inhalation, lungs), short-term aquatic hazard",,,,,
-,Citric Acid,Flinn Scientific,412D,Carboxylic Acids,2,500.0,g,77-92-9,"Eye irritant, specific target organ toxicity (single exposure: respiratory system)",,,,,
-,Cinnamic Acid,Glass bottle,412D,Carboxylic Acids,1,15.0,g,140-10-3,"Eye irritant, short-term aquatic hazard",,,,,
-,"1,5-Diphenylpenta 1,4-dien-one",HD Ark Pharm,412D,Carboxylic Acids,1,50.0,g,35225-79-7,"Specific target organ toxicity (single exposure: respiratory tract), skin corrosion/irritation, serious eye damage/irritation",,,,,
-,Fumaric Acid,Acros Organic,412D,Carboxylic Acids,1,800.0,g,110-17-8,Eye irritant,,,,,
-,Glycolic Acid,Acros Organic,412D,Carboxylic Acids,1,25.0,g,79-14-1,"Acute toxicity (inhilation), skin corrosion, serious eye damage, acute aquatic hazard",,,,,
-,Lauric Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,143-07-7,"Causes serious eye damage, toxic to aquatic life",,,,,
-,Lauric Acid,Glass bottle,412D,Carboxylic Acids,1,50.0,g,143-07-7,"Causes serious eye damage, toxic to aquatic life",,,,,
-,Maleic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,110-16-7,"Acute oral and dermal toxicity, skin corrosion, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard",,,,,
-,Maleic Acid,Glass bottle,412D,Carboxylic Acids,1,20.0,g,110-16-7,"Acute oral toxicity, skin corrosion, serious eye damage, respiratory sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard",,,,,
-,Maleic Anhydride Pellets,Acros Organic,412D,Carboxylic Acids,1,10.0,g,108-31-6,"Acute oral and dermal toxicity, skin corrosion, serious eye damage, skin sensitization, specific target organ toxicity (repeated exposure: inhalation, respiratory system), acute aquatic hazard",,,,,
-,DL-Mandelic Acid,Acros Organic,412D,Carboxylic Acids,1,40.0,g,90-64-2,Serious eye damage,,,,,
-,Oxalic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,144-62-7,"Acute oral and dermal toxicity, serious eye damage, acute aquatic hazard",,,,,
-,Phthalic Acid,Baker,412D,Carboxylic Acids,1,100.0,g,88-99-3,Causes serious eye damage,,,,,
-,Salicylic Acid,Flinn Scientific,412D,Carboxylic Acids,1,350.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity",,,,,
-,Salicylic Acid,Glass bottle,412D,Carboxylic Acids,2,50.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity",,,,,
-,Sebacic Acid,Aldrich,412D,Carboxylic Acids,1,220.0,g,111-206,,,,,,
-,Stearic Acid,Glass bottle,412D,Carboxylic Acids,8,300.0,g,57-11-4,Irritant,,,,,
-,Stearic Acid,Flinn Scientific,412D,Carboxylic Acids,1,250.0,g,57-11-4,Irritant,,,,,
-,Succinic Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,110-15-6,Serious eye damage,,,,,
-,Tannic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,1401-55-4,,,,,,
-,Tannic Acid,Glass bottle,412D,Carboxylic Acids,1,50.0,g,1401-55-4,,,,,,
-,p-Toluic Acid,Aldrich,412D,Carboxylic Acids,1,60.0,g,99-94-5,"Skin sensitization, acute aquatic hazard",,,,,
-,"Rhodizonic Acid, Disodium Salt",Acros Organic,412D,Carboxylic Acids,1,20.0,g,523-21-7,,,,,,
-,Allyl Bromide,Sigma Aldrich,412D,Fridge,2,200.0,g,106-95-6,"Flammable, acute oral and inhalation toxicity, skin corrosion, serious eye damage, germ cell mutagenicity, carcinocenicity, acute aquatic hazard",,,,,
+,Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard
+,Silica Gel,Flinn Scientific Inc,412D,1,1,450.0,g,112926-00-8,Skin and eye irritant
+,Silica Gel Sorbent ,Fisher Chemical,412D,1,1,800.0,g,112926-00-8,Skin and eye irritant
+,Dehydrated Agar Powder,Fisher Scientific,412D,2,1,250.0,g,9002-18-0,Harmful if ingested/hygroscopic
+,Dehydrated Agar Powder,Cynmar Corporation,412D,2,1,250.0,g,9002-18-0,Harmful if ingested/hygroscopic
+,Agarose,Bio-Rad Laboratories,412D,2,1,150.0,g,9012-36-6,Skin and eye irritant
+,Albumin,Ward's Science,412D,2,1,375.0,g,9006-59-1,
+,"Starch, extra pure, potato, powder",Acros Organics,412D,2,1,1.5,kg,9005-25-8,
+,D-Fructose,Fisher Science Education,412D,2,2,500.0,g,57-48-7,Skin irritant
+,D-Fructose,Ward's Science,412D,2,2,400.0,g,57-48-7,Skin irritant
+,"D-Glucose, anhydrous",Carolina,412D,2,3,15.0,g,50-99-7,
+,"D-Glucose, anhydrous (packet)",Carolina,412D,2,1,5.0,g,50-99-7,
+,Glucose,Ward's Science,412D,2,1,1.5,kg,50-99-7,
+,D(+)Maltose,Scholar Chemistry,412D,2,1,250.0,g,6363-53-7,
+,Maltose,Glass bottle,412D,2,2,10.0,g,6363-53-7,"Skin, eye, respiratory system irritant. Mucous membrane and upper respiratory tract irritant."
+,Maltose Monohydrate,Fisher Chemical,412D,2,1,20.0,g,6363-53-7,"Skin, eye, respiratory system irritant. Mucous membrane and upper respiratory tract irritant."
+,Lactose,Flinn Scientific Inc,412D,2,2,500.0,g,63-42-3,
+,Lactose Monohydrate (packet),Carolina,412D,2,2,10.0,g,63-42-3,
+,Lactose (packet),Carolina,412D,2,1,5.0,g,63-42-3,
+,Lactase Enzyme,Ward's Science,412D,2,1,0.1,g,9031-112,"Skin, eye, respiratory irritant"
+,Sucrose,Glass bottle,412D,2,2,300.0,g,57-50-1,
+,Sucrose (packet),Carolina,412D,2,3,15.0,g,57-50-1,
+,Sucrose,Sigma-Aldrich,412D,Floor,1,5.0,kg,57-50-1,
+,Sucrose,EMD,412D,Floor,1,200.0,g,57-50-1,
+,Sucrose,Ward's Science,412D,Floor,1,1.9,kg,57-50-1,
+,Sucrose,Carolina,412D,Floor,1,1.9,kg,57-50-1,
+,Ammonium Phosphate Dibasic,Scholar Chemistry,412D,3,1,450.0,g,77893-28-0,Skin and eye irritant
+,Potassium Phosphate,Flinn Scientific Inc,412D,3,2,600.0,g,7778-77-0,Skin and eye irritant
+,Sodium Phosphate,Flinn Scientific Inc,412D,3,2,650.0,g,7601-54-9,Skin and eye irritant
+,Sodium Phosphate,Scholar Chemistry,412D,3,1,250.0,g,7601-54-9,Skin and eye irritant
+,"Sodium Phosphate Dibasic, Anhyrous ",Scholar Chemistry,412D,3,1,350.0,g,7558-79-4,Skin and eye irritant
+,Sodium Phosphate Dibasic Heptahydrate,Acros Organics,412D,3,1,250.0,g,7782-85-6,Skin and eye irritant
+,Sodium Phosphate Monobasic Monohydrate,Acros Organics,412D,3,1,400.0,g,7558-80-7,Skin and eye irritant
+,Ammonium Carbonate,Sigma-Aldrich,412D,4,1,50.0,g,506-87-6,"Skin and eye damage, corrosion, or irritation (Category 2, 2B)"
+,Calcium Carbonate,Flinn Scientific Inc,412D,4,1,1.5,kg,471-34-1,Body tissue irritant
+,Calcium Carbonate,Carolina,412D,4,1,5.0,g,471-34-1,Body tissue irritant
+,Calcium Carbonate,Glass bottle,412D,4,12,150.0,g,471-34-1,Body tissue irritant
+,Calcium Carbonate-Ammonium Chloride Mixture,Glass bottle,412D,4,1,10.0,g,-,Body tissue irritant
+,Calcium Carbonate-Copper Sulfate Mixture,Glass bottle,412D,4,2,20.0,g,-,Body tissue irritant
+,Copper (II) Carbonate,Glass bottle,412D,4,7,250.0,g,12069-69-1,"Skin, digestive system, and respiratory track irritant"
+,Sodium Bicarbonate-Sodium Carbonate Mixture,Glass bottle,412D,4,1,100.0,g,-,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Sodium Carbonate,Flinn Scientific Inc,412D,4,1,450.0,g,497-19-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Sodium Carbonate,Glass bottle,412D,4,3,125.0,g,497-19-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Sodium Bicarbonate,Glass bottle,412D,5,8,350.0,g,144-55-8,
+,Sodium Bicarbonate,Carolina,412D,4,3,3.4,kg,144-55-8,
+,Sodium Bicarbonate,Ward's Science,412D,4,1,40.0,g,144-55-8,
+,Activated Charcoal,Glass bottle,412D,5,5,100.0,g,7440-44-0,
+,Charcoal/Activated Carbon,Carolina,412D,5,1,350.0,g,7440-44-0,
+,Calcium Hydroxide,Glass bottle,412D,6,3,75.0,g,1305-62-0,"Skin irritation, serious eye damage, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard"
+,Calcium Oxide,Flinn Scientific Inc,412D,6,1,30.0,g,1305-78-8,"Skin corrosion/irritation, eye damage/irritation, respiratory irritation"
+,Calcium Oxide,Glass bottle,412D,6,10,50.0,g,1305-78-8,"Skin corrosion/irritation, eye damage/irritation, respiratory irritation"
+,Copper (II) Oxide,Glass bottle,412D,6,6,150.0,g,1317-38-0,"Acute oral and inhalation toxicity, skin corrosion/irritation, eye irritation, chronic aquatic hazard"
+,Iron (III) Oxide,Sigma-Aldrich,412D,6,1,50.0,g,1309-37-1,
+,Manganese (IV) Oxide,Glass bottle,412D,6,8,100.0,g,1313-13-9,"Oxidizer, organ damage through prolonged or repeated exposure, harmful if swallowed/inhaled"
+,Magnesium Oxide Light Powder,Scholar Chemistry,412D,6,1,250.0,g,1309-48-4,
+,Potassium Hydroxide,Sigma-Aldrich,412D,6,2,750.0,g,1310-58-3,"Corrosive to metals, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation"
+,Potassium Hydroxide,Carolina,412D,6,1,150.0,g,1310-58-3,"Corrosive to metals, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation"
+,Sodium Hydroxide,Glass bottle,412D,6,5,175.0,g,1310-73-2,"Corrosive to metals, causes severe skin burns, causes serious eye damage"
+,Sodium Hydroxide,Sigma-Aldrich,412D,6,1,700.0,g,1310-73-2,"Corrosive to metals, causes severe skin burns, causes serious eye damage"
+,Potassium Phthalate Monobasic,Sigma-Aldrich,412D,6,1,1.0,kg,877-24-7,
+,Potassium Hydrogen Phthalate,Glass bottle,412D,6,12,500.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. "
+,Potassium Hydrogen Phthalate,Flinn Scientific Inc,412D,6,1,150.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. "
+,Potassium Hydrogen Tartarate,Glass bottle,412D,6,5,450.0,g,877-24-7,"Potential to cause eye, skin, digestive tract, and respiratory tract irritation. "
+,Ammonium Sulfate,Sigma-Aldrich,412D,7,1,500.0,g,7783-20-2,Short-term aquatic hazard
+,Barium Sulfate,Glass bottle,412D,7,1,75.0,g,7727-43-7,
+,Barium Sulfate,Carolina,412D,7,1,300.0,g,7727-43-7,
+,Calcium Sulfate,Glass bottle,412D,7,3,200.0,g,7778-18-9,
+,Calcium Sulfate Hemihydrate,Carolina,412D,7,1,250.0,g,10034-76-1,
+,Copper (II) Sulfate,Glass bottle,412D,7,2,100.0,g,7758-98-7,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Copper (II) Sulfate,Flinn Scientific Inc,412D,7,1,250.0,g,7758-98-7,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Copper (II) Sulfate Pentahydrate,Sigma-Aldrich,412D,7,1,500.0,g,7758-99-8,"Acute oral toxicity, skin corrosion or irritation, can cause serious eye damage or irritation"
+,Iron (II) Sulfide,Flinn Scientific Inc,412D,7,1,75.0,g,1317-37-9,
+,Iron (III) Sulfate,Glass bottle,412D,7,1,75.0,g,15244-10-7,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation"
+,Iron (III) Sulfate Heptahydrate,Acros Organics,412D,7,1,350.0,g,10028-22-5,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation"
+,Iron (III) Sulfate Pentahydrate,Glass bottle,412D,7,1,300.0,g,142906-29-4,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation"
+,Ferric Sulfate Hydrate,VWR Life Sciences,412D,7,1,500.0,g,15244-10-7,"Corrosive to metals, acute oral toxicity, skin corrosion/irritation, serious eye damage/irritation"
+,Magnesium Sulfate,Flinn Scientific Inc,412D,7,1,500.0,g,7487-88-9,
+,Magnesium Sulfate Heptahydrate,Glass bottle,412D,7,1,150.0,g,10034-99-8,
+,Potassium Sulfate,Glass bottle,412D,7,2,100.0,g,7778-80-5,
+,Potassium Sulfate,Carolina,412D,7,1,250.0,g,7778-80-5,
+,Sodium Bisulfate,Scholar Chemistry,412D,7,1,400.0,g,7681-38-1,Causes serious eye damage
+,Sodium Sulfate,Glass bottle,412D,7,2,100.0,g,7757-82-6,May be harmful in contact with skin
+,Sodium Sulfide,Spectrum,412D,7,1,200.0,g,1313-82-2,"May form combustible dust concentrations in air, may be corrosive to metals, causes severe skin burns and eye damage, toxic if swallowed or in contact with skin"
+,Sodium Sulfide Nonahydrate,Sigma-Aldrich,412D,7,1,100.0,g,1313-84-4,"Causes severe skin burns and eye damage, toxic in contact with skin, harmful if swallowed, very toxic to aquatic life with long lasting effects"
+,Sodium Sulfite,Glass bottle,412D,7,1,50.0,g,7757-83-7,"Skin irritation, serious eye damage"
+,Aluminum Chloride,Glass bottle,412D,8,1,5.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation"
+,Aluminum Chloride,Flinn Scientific Inc,412D,8,1,200.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation"
+,Aluminum Chloride,Sigma-Aldrich,412D,8,1,500.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation"
+,Aluminum Chloride,Acros Organics,412D,8,1,400.0,g,7446-70-0,"Causes severe skin burns and eye damage, may cause respiratory irritation"
+,Ammonium Chloride,Glass bottle,412D,8,2,6.0,g,12125-02-9,"Harmful if swallowed, causes serious eye irritation"
+,Ammonium Chloride,Carolina,412D,8,1,200.0,g,12125-02-9,"Harmful if swallowed, causes serious eye irritation"
+,Barium Chloride Anhydrous,Scholar Chemistry,412D,8,1,400.0,g,10361-37-2,"Acute oral toxicity, acute inhalation toxicity "
+,Barium Chloride Dihydrate,Glass bottle,412D,8,1,4.0,g,10326-27-9,"Toxic if swallowed, harmful if inhaled"
+,Barium Chloride Dihydrate,Scholar Chemistry,412D,8,1,150.0,g,10326-27-9,"Toxic if swallowed, harmful if inhaled"
+,Calcium Chloride,Glass bottle,412D,8,7,150.0,g,10043-52-4,"May form combustible dust concentrations in air, causes serious eye irritation"
+,Calcium Chloride Anhydrous,Sigma-Aldrich,412D,8,2,350.0,g,10043-52-4,"May form combustible dust concentrations in air, causes serious eye irritation"
+,Calcium Chloride Anhydrous,Spectrum,412D,8,1,400.0,g,10035-04-8,Causes serious eye irriration
+,Calcium Chloride Dihydrate,Sigma-Aldrich,412D,8,1,400.0,g,10035-04-8,Causes serious eye irriration
+,Cobalt Chloride Hexahydrate,Glass bottle,412D,8,2,6.0,g,7791-13-1,"Acute oral toxicity, acute inhalation toxicity, respiratory sensitization, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity"
+,Cobalt (II) Chloride Anhydrous,Acros Organics,412D,8,1,500.0,g,7646-79-9,"Causes eye irritation, causes skin irritation, may cause skin sensitization or allergic reaction, harmful if swallowed (causes gastrointestinal tract irritation), causes respiratory tract irritation, may cuase asthmatic attacks, may cause cancer"
+,Copper (II) Chloride,Sigma-Aldrich,412D,8,1,500.0,g,7447-39-4,"Causes skin irritation, causes serious eye damage, harmful if swallowed or in contact with skin"
+,Cuperic Chloride Dihydrate,Carolina,412D,8,1,300.0,g,10125-13-0,"Acute oral and dermal toxicity, causes skin irritation, serious eye damage, short- and long-term aquatic hazard"
+,Iron (III) Chloride,Glass bottle,412D,8,1,20.0,g,7705-08-0,"Corrosive to metals, acute oral toxicity, skin irritant, causes serious eye damage"
+,Lithium Chloride Anhydrous,Carolina,412D,8,1,40.0,g,7447-41-8,"Harmful if swallowed, cuases skin irritation, causes serious eye irritation"
+,Magnesium Chloride,Flinn Scientific Inc,412D,8,1,250.0,g,7786-30-3,
+,Nicaelous Chloride Hexahydrate,JT Baker,412D,8,1,125.0,g,,
+,Zinc Chloride,Sigma-Aldrich,412D,8,1,250.0,g,7646-85-7,"Acute oral toxicity, skin corrosion, serious eye damage, specific target organ toxicity (respiratory system), short- and long-term aquatic hazard"
+,Potassium Bromate,Flinn Scientific Inc,412D,8,2,60.0,g,7758-012,"May cause fire or explosion; strong oxidizer, toxic if swallowed, suspected of causing cancer, may cause respiratory irritation, may cause drowsiness or dizziness, may cause damage to organs through prolonged or repeated exposure"
+,Potassium Bromide,Glass bottle,412D,8,1,100.0,g,7758-023,May cause serious eye irritation
+,Potassium Bromide,Scholar Chemistry,412D,8,1,100.0,g,7758-023,May cause serious eye irritation
+,Potassium Chloride,Glass bottle,412D,8,3,65.0,g,7447-40-7,
+,Potassium Chloride,Alpha Azar,412D,8,1,700.0,g,7447-40-7,
+,Sodium Acetate,Scholar Chemistry,412D,8,1,400.0,g,127-09-3,"Causes mild skin irritation, causes eye irritation, may be harmful if inhaled"
+,Sodium Acetate,Fisher Chemicals,412D,8,1,200.0,g,127-09-3,"Causes mild skin irritation, causes eye irritation, may be harmful if inhaled"
+,Sodium Bromide,Glass bottle,412D,8,11,255.0,g,7647-15-6,
+,Sodium Bromide,Scholar Chemistry,412D,8,1,500.0,g,7647-15-6,
+,Sodium Chloride,Glass bottle,412D,8,9,500.0,g,7647-14-5,
+,Sodium Chloride,Sigma-Aldrich,412D,8,2,625.0,g,7647-14-5,
+,Sodium Hypoclorite Solution,Flinn Scientific Inc,412D,8,1,1.0,L,7681-52-9,"Corrosive to metals, skin corrosion, serious eye damage, short- and long-term aquatic hazard"
+,"Sodium Sulfite, anhydrous",Acros ,412D,8,1,1.0,kg,7757-83-7,
+,Sodium Thiosulfate Pentahydrate,Fisher Chemical,412D,8,1,1.5,kg,10102-17-7,
+,Sodium Thiosulfate Pentahydrate,Flinn Scientific,412D,8,1,150.0,g,10102-17-7,
+,Sodium Thiosulfate Pentahydrate,Glass bottle,412D,8,1,75.0,g,10102-17-7,
+,Strontium Chloride X-Hydrate,Glass bottle,412D,8,1,100.0,g,10476-85-4,"Causes serious eye damage, may cause respiratory irritation"
+,Strontium Chloride,Alpha Azar,412D,8,1,400.0,g,10476-85-4,"Causes serious eye damage, may cause respiratory irritation"
+,Ammonium Dichromate,Glass bottle,412D,9,4,80.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity"
+,Ammonium Dichromate,Sigma-Aldrich,412D,9,5,370.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity"
+,Ammonium Dichromate,Flinn Scientific Inc,412D,9,1,400.0,g,7789-095,"Specific target organ toxicity following repeated exposure, respiratory sensitization, carcinogenicity, germ cell mutagenicity, reproductive toxicity, skin corrosion, serious eye damage, skin sensitization, acute toxicity, acute and chronic hazards to the aquatic environment, oxidizing solids. acute toxicity"
+,Manganese Dioxide,Flinn Scientific Inc,412D,9,1,500.0,g,1313-13-9,"Acute toxicity (oral, dermal, inhalation)"
+,Potassium Dichromate,Carolina,412D,9,1,200.0,g,7778-50-9,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage, respiratory and skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity, specific and target organ toxicity (single and repeated exposure; respiratory system, liver, kidney, blood)"
+,Potassium Chlorate,EMD,412D,9,1,400.0,g,3811-049,"Strong oxidizer, harmful if swallowed or inhaled, toxic to aquatic life with long lasting effects"
+,Potassium Chlorate,Glass bottle,412D,9,6,115.0,g,3811-049,"Strong oxidizer, harmful if swallowed or inhaled, toxic to aquatic life with long lasting effects"
+,Potassium Chromate,Carolina,412D,9,1,100.0,g,7789-00-6,"Skin corrosion/irritation, serious eye damage/irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, specific target organ toxicity (single exposure - respiratory system; repeated exposure - kidney, liver, blood)"
+,Aluminum Nitrate Nonahydrate,Sigma-Aldrich,412D,10,1,20.0,g,7784-27-2,Causes serious eye damage
+,Aluminum Nitrate Nonahydrate,GFS Chemicals,412D,10,1,500.0,g,7784-27-2,Causes serious eye damage
+,Ammonium Nitrate,Flinn Scientific Inc,412D,10,1,350.0,g,6484-52-2,"Oxidizer, causes serious eye irritation"
+,Ceric Ammonium Nitrate,Fisher Scientific ,412D,10,1,500.0,g,16774-21-3,"Oxidizer, harmful if swallowed, causes severe skin burns and eye damage, may cause respiratory irritation, may cause an allergic skin reaction"
+,Barium Nitrate,Sigma-Aldrich,412D,10,1,50.0,g,10022-31-8,"Oxidizer, toxic if swallowed, causes serious eye irritation, harmful if inhaled"
+,Calcium Nitrate,Flinn Scientific,412D,10,1,450.0,g,13477-34-4,"Harmful if swallowed, causes serious eye damage"
+,Calcium Nitrate,Carolina,412D,10,1,200.0,g,13477-34-4,"Harmful if swallowed, causes serious eye damage"
+,Cobalt Nitrate 6-Hydrate,Scholar Chemistry,412D,10,1,500.0,g,10026-22-9,"Oxidizer, harmful if swallowed, suspected of causing genetic defects, may cause cancer, may damage fertility or the unborn child, very toxic to aquatic life with long lasting effects"
+,Copper (II) Nitrate Tri-Hydrate,Wards Scientific,412D,10,1,500.0,g,10031-43-3,"Oxidizer, causes severe skin burns and eye damage, may cause respiratory irritation"
+,Iron (III) Nitrate Nonahydrate,Sigma Aldrich,412D,10,1,500.0,g,7782-61-8,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation"
+,Lead (II) Nitrate,Scholar Chemistry,412D,10,1,200.0,g,10099-74-8,"Oxidizer, acute toxicity (inhalation, oral), serious eye damage, skin sensitization, carcinogenicity, reproductive toxicity, specific target organ toxicity (repeated exposure - blood, central nervous system, immune system, kidney), acture aquatic hazard"
+,Lead (II) Nitrate,Alpha Azar,412D,10,1,100.0,g,10099-74-8,"Oxidizer, acute toxicity (inhalation, oral), serious eye damage, skin sensitization, carcinogenicity, reproductive toxicity, specific target organ toxicity (repeated exposure - blood, central nervous system, immune system, kidney), acture aquatic hazard"
+,Nickel Nitrate ,Scholar Chemistry,412D,10,1,150.0,g,13478-00-7,"Oxidizer, acute toxicity (oral and inhalation), skin corrosion or irritation, serious eye damage, reproductive toxicity, specific target organ toxicity"
+,Potassium Nitrate,Glass bottle,412D,10,2,80.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation"
+,Potassium Nitrate,Sigma Aldrich,412D,10,1,500.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation"
+,Potassium Nitrate,Sigma Aldrich,412D,10,1,500.0,g,7757-79-1,"Oxidizer, causes skin irritation, causes serious eye irritation, may cause respiratory irritation"
+,Silver Nitrate,Carolina,412D,10,3,30.0,g,7761-88-8,"Causes skin irritation, causes severe skin burns and eye damage, toxic to aquatic life with long lasting effects"
+,Sodium Nitrate,Glass bottle,412D,10,3,30.0,g,7631-99-4,"Oxidizer, causes serious eye irritation"
+,Sodium Nitrate,Flinn Scientific,412D,10,1,400.0,g,7631-99-4,"Oxidizer, causes serious eye irritation"
+,Sodium Nitrite,Glass bottle,412D,10,1,15.0,g,7632-00-0,"Oxidizing solids, acute oral toxicity, eye irritation, acute aquatic hazard"
+,Sodium Nitrite,Carolina,412D,10,1,50.0,g,7632-00-0,"Oxidizing solids, acute oral toxicity, eye irritation, acute aquatic hazard"
+,Stronium Nitrate,Glass bottle,412D,10,4,40.0,g,10042-76-9,"Strong oxidizer, causes serious eye damage"
+,Zinc Nitrate Hexahydrate,Sigma Aldrich,412D,10,3,300.0,g,10196-18-6,"Oxidizing solids, acute toxicity (oral), skin corrosion/irritation, serious eye damage/irritation, respiratory system toxicity (single exposure)"
+,Iodine,Glass bottle,412D,12,6,200.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled"
+,Iodine,Carolina,412D,12,1,100.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled"
+,"Iodine, crystalline",Flinn Scientific,412D,12,1,500.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled"
+,Iodine,"Beantown, California",412D,12,1,10.0,g,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled"
+,Iodine (0.05 M),Carolina,412D,12,1,500.0,mL,7553-56-2,"Causes skin irritation, causes serious eye irritation, may cause respiratory irritation, causes damage to organs through prolonged or repeated exposure, harmful if swallowed/in contact with skin or if inhaled"
+,Iodine-Potassium Iodide Solution,Flinn Scientific,412D,12,4,1900.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life"
+,Iodine-Potassium Iodide,Carolina,412D,12,1,100.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life"
+,Lugol's Solution,Glass bottle,412D,12,1,50.0,mL,,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life"
+,Lugol's Solution,Carolina,412D,12,1,500.0,mL, ,"Causes skin irritation, may cause serious skin reaction, causes serious eye irritation, toxic to aquatic life"
+,Potassium Iodate,Glass bottle,412D,12,6,210.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed)
+,Potassium Iodide,Supple Co,412D,12,1,500.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed)
+,Potassium Iodide,Sigma Aldrich,412D,12,2,1000.0,g,7681-11-0,Causes damage to organs (thyroid gland) through prolonged or repeated exposure (if swallowed)
+,Potassium Permanganate,Glass bottle,412D,12,3,35.0,g,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage"
+,Potassium Permanganate,Acros ,412D,12,1,300.0,g,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage"
+,Potassium Permanganate 0.04 M,Glass bottle,412D,12,2,1300.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage"
+,Potassium Permanganate 0.1M,Glass bottle,412D,12,1,80.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage"
+,Potassium Permanganate,Flinn Scientific,412D,12,2,800.0,mL,7722-64-7,"Oxidizing solids, acute toxicity (oral, dermal, inhalation), chronic and acute hazards to the aquatic environment, skin corrosion, serious eye damage"
+,Sodium Iodide,BDH,412D,12,1,100.0,g,7681-82-5,"Causes skin irritation, causes serious eye irritation, causes damage to organs through prolonged or repeated exposure"
+,Hydogen Peroxide,Flinn Scientific,412D,13,1,200.0,mL,7722-84-1,"Eyes, nose, skin, and throat irritation"
+,Hydrogen Peroxide,Sigma Aldrich,412D,13,2,750.0,mL,7722-84-1,"Eyes, nose, skin, and throat irritation"
+,3% Hydrogen Peroxide,TopCare Health,412D,13,1,0.75,quarts,7722-84-1,"Eyes, nose, skin, and throat irritation"
+,"4-Amino-1-naphthalenesulfonic acid, sodium salt hydrate",Alrich Chemical Company,412D,15,1,500.0,g,84-86-6,"Skin corrosion, serious eye damage"
+,Glycine,Scholar Chemistry,412D,15,1,200.0,g,56-40-6,
+,Clove Oil,Flinn Scientific,412D,15,1,245.0,mL,8000-34-8,"Causes skin irritation, causes serious eye irritation, may cause an allergic skin reaction, may cause respiratory irritation"
+,Methyl Salicylate,Sigma Aldrich,412D,15,1,250.0,mL,119-36-8,"Acute oral toxicity, serious eye damage/irritation, skin sensitization, reproductive toxicity"
+,Mineral Oil,JT Baker,412D,15,1,200.0,mL,8042-47-5,
+,Mineral Oil,Glass bottle,412D,15,8,350.0,mL,8042-47-5,
+,Peppermint Oil,Glass bottle,412D,15,1,15.0,mL,8006-90-4,"Cuases serious eye irritation, may cause allergic skin reaction, combustible liquid"
+,Peppermint Oil,Flinn Scientific,412D,15,2,15.0,mL,8006-90-4,"Cuases serious eye irritation, may cause allergic skin reaction, combustible liquid"
+,Silicone Oil,Acros Organic,412D,15,1,30.0,mL,63148-62-9,"Extremely flammable aerosol, may cause drowsiness or dizziness, toxic to aquatic life with long lasting effects"
+,Aluminum,Glass bottle,412D,16,1,25.0,g,7429-90-5,Not classified
+,"Ammonium Metavanadate, ACS Reagent",Acros Organics,412D,16,1,25.0,g,7803-55-6,"Suspect of damaging the unborn child, toxic if swallowed, causes serious eye irritation, harmful if inhaled, causes damage to organs through prolonged or repeated exposure"
+,Anthranilic Acid,Sigma Aldrich,412D,16,1,500.0,g,118-92-3,Serious eye irritant
+,Benedict's Solution Qualitative,Carolina,412D,16,2,2000.0,mL,,
+,Boric Acid,Alpha Azar,412D,16,1,1.0,kg,10043-35-3,"May damage fertility, may damage the unborn child"
+,Congo Red,Sargent Welch ,412D,16,1,0.5,g,573-58-0,"May cause cancer, suspected of damaging the unborn child"
+,"D(-)-Aspartic Acid, D(-)-Asparaginsaure",Acros Organics,412D,16,1,2.5,g,1783-96-6,
+,DL-Alanine,Acros Organics,412D,16,1,50.0,g,302-72-7,
+,DL-Leucine,Acros Organics,412D,16,1,10.0,g,328-39-2,
+,DL-Phenylalanine,Acros Organics,412D,16,1,10.0,g,150-30-1,Not classified
+,DL-Valine,Acros Organics,412D,16,1,25.0,g,203784-63-8,
+,(+)-Gibberellic Acid,Flinn Scientific,412D,16,1,10.0,g,77-06-5,Not classified
+,Gelatin,Aldrich Chemical Company,412D,16,1,500.0,g,9000-70-8,
+,Glycerol,Glass Bottle,412D,16,9,1100.0,mL,56-81-5,
+,Guaiacol,Sigma Aldrich,412D,16,1,100.0,g,90-05-1,"Flammable, acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation"
+,L(+)-Ascorbic Acid,Wards Scientific,412D,16,1,1.0,g,50-81-7,
+,Lime Water Tablets,Flinn Scientific,412D,16,1,10.0,g,,
+,Polyvinyl Alcohol Solution,Scholar Chemistry,412D,16,1,700.0,mL,9002-89-5,
+,Salicylic Acid,Glass Bottle,412D,16,1,50.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity"
+,Silicon Dioxide (Sand),Glass Bottle,412D,16,1,250.0,g,7631-86-9,
+,Tween 20,Sigma Life Science,412D,16,1,700.0,mL,9005-64-5,
+,Potassium Ferrocyanide,Carolina,412D,16,1,400.0,g,14459-95-1,Harmful to aquatic life with long lasting effects
+,Potassium Thiocyanate,Scholar Chemistry,412D,16,1,400.0,g,333-20-0,"Acute toxicity (oral, inhalation, dermal), serious eye damage, short- and long-term aquatic hazard"
+,Triethanolamine,Scholar Chemistry,412D,16,2,200.0,mL,,
+,Triethanolamine,Glass bottle,412D,16,9,450.0,mL,,
+,Bromophenol Blue,Fisher Scientific,412D,17,2,7.0,g,115-39-9,
+,Bromothymol Blue,Carolina,412D,17,1,2.0,g,34722-90-2,
+,Carmine,Flinn Scientific,412D,17,2,0.5,g,1390-65-4,
+,Congo Red,Ward's Science,412D,17,1,1.0,g,573-58-0,"May cause cancer, suspected of damaging the unborn child"
+,Congo Red,Sargent Welch,412D,17,1,0.05,g,573-58-0,"May cause cancer, suspected of damaging the unborn child"
+,Eosin B,Fisher Scientific,412D,17,1,10.0,g,548-24-3,Causes serious eye damage
+,Fast Green FCF,Eastman,412D,17,1,20.0,g,2353-45-9,Suspected of causing genetic defects (if exposed)
+,Litmus,Flinn Scientific,412D,17,1,10.0,g,1393-92-6,
+,Litmus,Ward's Science,412D,17,1,10.0,g,1393-92-6,
+,Methylene Blue,Fisher Scientific,412D,17,1,3.0,g,61-73-4,Harmful if swallowed
+,Methyl Violet,Sargent Welch,412D,17,1,5.0,g,8004-87-3,"Harmful if swallowed, suspected of causing cancer, very toxic to aquatic life with long lasting effects"
+,Methyl Violet,Fisher Science,412D,17,1,7.0,g,8004-87-3,"Harmful if swallowed, suspected of causing cancer, very toxic to aquatic life with long lasting effects"
+,Phenol Red,Fisher Scientific,412D,17,1,2.5,g,143-74-8,"Causes skin irritation, may cause respiratory irritation"
+,"Thymol Blue, ACS",Alfa Aesar,412D,17,1,40.0,g,76-61-9,May form combustible dust concentrations in the air
+,"Thymol Blue, Sodium Salt",Fisher Science,412D,17,1,3.0,g,62625-21-2,May form combustible dust concentrations in the air
+,FDC Blue 1 Food Dye,Flinn Scientific,412D,17,1,0.5,g,3844-45-9,
+,FDC Blue 2 Food Dye,Flinn Scientific,412D,17,1,2.0,g,860-22-0,Acute oral toxicity
+,FD&C Blue #1,Spectrum,412D,17,1,100.0,g,3844-45-9,
+,FD&C Blue #2,Spectrum,412D,17,1,30.0,g,860-22-0,Acute oral toxicity
+,FDC Red 3 Food Dye,Flinn Scientific,412D,17,1,0.5,g,16423-68-0,Acute oral toxicity
+,FDC Red 40 Food Dye,Flinn Scientific,412D,17,1,2.0,g,25956-17-6,
+,FD&C Red #3,Spectrum,412D,17,1,25.0,g,16423-68-0,Acute oral toxicity
+,FD&C Green 3 Food Dye,Flinn Scientific,412D,17,1,2.0,g,2353-45-9,"Germ cell mutagenicity, suspected of causing genetic defects, acute oral toxicity"
+,FD&C Green #3,Spectrum,412D,17,1,75.0,g,2353-45-9,"Germ cell mutagenicity, suspected of causing genetic defects, acute oral toxicity"
+,FDC Yellow 5 Food Dye,Flinn Scientific,412D,17,1,0.5,g,1934-21-0,"Skin sensitization, respiratory sensitization"
+,FDC Yellow 6 Food Dye,Flinn Scientific,412D,17,1,1.0,g,2783-94-0,"Skin and serious eye damage, corrosion, or irritation, specific target organ toxicity (single exposure: respiratory tract)"
+,FD&C Yellow #5,Spectrum,412D,17,1,90.0,g,1934-21-0,"Respiratory sesnsitization, skin sensitization, combustible dust"
+,4-Acetamidophenol,Aldrich,412D,Organics,1,70.0,g,103-90-2,Acute oral toxicity
+,4-Acetamidophenol,Glass bottle,412D,Organics,2,5.0,g,103-90-2,Acute oral toxicity
+,Acetamide,Glass bottle,412D,Organics,3,50.0,g,60-35-5,Suspect of causing cancer
+,Acetanilide,Flinn Scientific,412D,Organics,1,30.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard"
+,Acetanilide,Sigma Aldrich,412 D,Organics,1,500.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard"
+,Acetanilide Reference,Glass bottle,412D,Organics,1,15.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard"
+,Acrylamide,Sigma Aldrich,412D,Organics,1,25.0,g,79-06-1,"Acute oral, dermal, and inhalation toxicity, skin and eye irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity "
+,Acrylamide,Glass bottle,412D,Organics,1,5.0,g,79-06-1,"Acute oral, dermal, and inhalation toxicity, skin and eye irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, reproductive toxicity "
+,Anthracene,J.T. Baker,412D,Organics,1,30.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard"
+,Anthracene,Acros Organics,412D,Organics,1,20.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard"
+,Anthracene,Glass bottle,412D,Organics,1,10.0,g,120-12-7,"Eye irritation, acute and chronic aquatic hazard"
+,Aspirin Powder,J.T. Baker,412D,Organics,1,75.0,g,50-78-2,Acute toxicity (oral)
+,Aspirin Powder,Glass bottle,412D,Organics,1,5.0,g,50-78-2,Acute toxicity (oral)
+,Impure Aspirin,Glass bottle,412D,Organics,1,15.0,g,50-78-2,Acute toxicity (oral)
+,Aurintricarboxylic Acid,Sargent Welch,412D,Organics,1,15.0,g,4431-00-9,Skin irritant
+,Benzopinacolone,Alfa Aesar,412D,Organics,3,30.0,g,466-37-5,
+,Benzopinacol,Alfa Aesar,412D,Organics,1,10.0,g,464-72-2,
+,Benzopinacol,Acros Organics,412D,Organics,1,80.0,g,464-72-2,
+,Benzamide,Sigma Aldrich,412D,Organics,2,255.0,g,55-21-0,"Acute oral toxicity, germ cell mutagenicity"
+,Benzophenone,Glass bottle,412D,Organics,1,5.0,g,119-61-9,"Carcinogen, specific target organ toxicity (repeated exposure: oral, liver, kidney), short- and long-term aquatic hazard"
+,Biphenyl,Acros Organics,412D,Organics,1,100.0,g,92-52-4,"Skin and eye irritant, specific targen organ toxicity (single exposure: respiratory system), short- and long-term aquatic hazard"
+,Biphenyl,Glass bottle,412D,Organics,1,5.0,g,92-52-4,"Skin and eye irritant, specific targen organ toxicity (single exposure: respiratory system), short- and long-term aquatic hazard"
+,Caffeine,Scholar Chemistry,412D,Organics,1,40.0,g,58-08-2,"Acute oral toxicity, acute aquatic hazard"
+,Caffeine,Glass bottle,412D,Organics,2,5.0,g,58-08-2,"Acute oral toxicity, acute aquatic hazard"
+,Catechol,Sigma,412D,Organics,1,20.0,g,120-80-9,"Acute oral, dermal, and inhalation toxicity, skin corrosion/irritation, skin sensitization, germ cell mutagenicity, carcinogenicity, combustible dust"
+,Cetyl Alcohol,Glass bottle,412D,Organics,1,100.0,g,36653-82-4,
+,Coumarin,MP Biomedicals,412D,Organics,1,20.0,g,91-64-5,"Acute oral toxicity, skin sensitization, chronic aquatic hazard"
+,Coumarin,Glass bottle,412D,Organics,1,5.0,g,91-64-5,"Acute oral toxicity, skin sensitization, chronic aquatic hazard"
+,"2,6 Dichloroindophenol, Sodium Salt",Flinn Scientific,412D,Organics,1,2.0,g,620-45-1,Combustible dust
+,"Diphenylamine, crystal",J.T. Baker,412D,Organics,1,500.0,g,122-39-4,"Acute oral, inhalation, and dermal toxicity, specific target organ toxicity (repeated exposure: kidney, liver, spleen), short- and long-term aquatic hazard"
+,"Diphenylamine, crystal",Glass bottle,412D,Organics,1,5.0,g,122-39-4,"Acute oral, inhalation, and dermal toxicity, specific target organ toxicity (repeated exposure: kidney, liver, spleen), short- and long-term aquatic hazard"
+,"Diphenylamine-4-sulfonic acid, Sodium Salt",Aldrich,412D,Organics,1,5.0,g,6152-67-6,"Skin corrosion/irritation, serious eye damage/irritation, specific target organ toxicity (single exposure: respiratory system)"
+,Ethylenediamine Tetraacetic Acid (EDTA),Flinn Scientific,412D,Organics,1,40.0,g,60-00-4,Causes serious eye irritation
+,Ethylenediamine Tetraacetic Acid (EDTA),Glass bottle,412D,Organics,1,40.0,g,60-00-4,Causes serious eye irritation
+,9-Fluorenol,Alfa Aesar,412D,Organics,1,20.0,g,1689-64-1,
+,9-Fluorenone,Alfa Aesar,412D,Organics,1,50.0,g,486-25-9,Serious eye damage/eye irritation,
+,Hydroquinone,J.T. Baker,412D,Organics,1,400.0,g,123-31-9,"Acute oral toxicity, serious eye damage, skin sensitization, germ cell mutagenicity, carcinogenicity, short- and long-term aquatic hazard"
+,Hydroquinone,Glass bottle,412D,Organics,1,25.0,g,123-31-9,"Acute oral toxicity, serious eye damage, skin sensitization, germ cell mutagenicity, carcinogenicity, short- and long-term aquatic hazard"
+,4-Hydroxylacetophenone,Sigma Aldrich,412D,Organics,1,100.0,g,99-93-4,"Eye irritant, short- and long-term aquatic hazard"
+,Hydroxylamine Hydrochloride,Sigma Aldrich,412D,Organics,1,40.0,g,5470-111,"Corrosive to metals, acute oral and dermal toxicity, skin and eye irritation, skin sensitization, carcinogenicity, specific target organ toxicity (repeated exposure: oral, spleen), short- and long-term aquatic hazard"
+,Phthalic anhydride,Aldrich,412D,Organics,1,800.0,g,85-44-9,"Acute oral toxicity, skin irritation, serious eye damage, respiratory sensitization, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard"
+,Phthalic anhydride,Glass bottle,412D,Organics,2,50.0,g,85-44-9,"Acute oral toxicity, skin irritation, serious eye damage, respiratory sensitization, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard"
+,1-Naphthol,Scholar Chemistry,412D,Organics,3,100.0,g,90-15-3,"Acute oral and dermal toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory system)"
+,1-Naphthol,Glass bottle,412D,Organics,10,50.0,g,90-15-3,"Acute oral and dermal toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory system)"
+,2-Naphthol,Aldrich,412D,Organics,1,5.0,g,135-19-3,"Acute oral and inhalation toxicity, serious eye damage, skin sensitization, acute aquatic hazard"
+,Naphthalene,Glass bottle,412D,Organics,4,20.0,g,90-20-3,"Flammable solids, acute oral toxicity, carcinogenicity, short- and long-term aquatic hazard"
+,2-Nitrophenol,Acros Organics,412D,Organics,1,25.0,g,88-75-5,"Acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory tract)"
+,2-Nitrophenol,Glass bottle,412D,Organics,2,25.0,g,88-75-5,"Acute oral toxicity, skin corrosion/irritation, serious eye damage/eye irritation, specific target organ toxicity (single exposure: respiratory tract)"
+,Salicylamide,Alfa Aesar,412D,Organics,1,125.0,g,65-45-2,"Acute oral toxicity, skin and eye irritation, specific target organ toxicity (single exposure: respiratory system)"
+,Sulfuryl Chloride,Sigma-Aldrich,412D,Organics,1,25.0,ml,7791-25-5,"Acute inhalation toxicity, skin corrosion, serious eye damage, specific target organ toxicity (single exposure: respiratory system)"
+,Trans-stilbene,Sigma-Aldrich,412D,Organics,1,20.0,g,103-30-0,"Acute oral toxicity, serious eye damage/eye irriation, chronic aquatic hazard"
+,Tetraethylenepentamine,TCL,412D,Organics,1,25.0,g,112-57-2,"Harmful if swallowed or in contact with skin, causes severe skin burns and eye damage, may cause an allergic skin reaction, chronic aquatic hazard"
+,p-Toluidine,Sigma-Aldrich,412D,Organics,1,125.0,g,106-49-0,"Acute oral, dermal, and inhalation toxicity, serious eye damage/eye irritation, skin sensitization, carcinogenicity"
+,Trizmabase,Sigma,412D,Organics,1,500.0,g,77-86-1,
+,Resorcinol,Scholar Chemistry,412D,Organics,2,100.0,g,108-46-3,"Acute oral toxicity, skin irritation, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: oral, central nervous system, blood, respiratory system), short- and long-term aquatic hazard"
+,Resorcinol,Glass bottle,412D,Organics,12,200.0,g,108-46-3,"Acute oral toxicity, skin irritation, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: oral, central nervous system, blood, respiratory system), short- and long-term aquatic hazard"
+,Urea,Ward's Science,412D,Organics,1,300.0,g,57-13-6,
+,Urea,Sigma Aldrich,412D,Organics,1,100.0,g,57-13-6,
+,Urea,Glass bottle,412D,Organics,2,10.0,g,57-13-6,
+,Urethane,Sigma Aldrich,412D,Organics,1,75.0,g,51-79-6,"Acute oral toxicity, carcinogenicity"
+,Vanillin,Glass bottle,412D,Organics,1,5.0,g,121-33-5,"Eye irritant, acute aquatic hazard"
+,Acetylsalicylic Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,50-78-2,Acute oral toxicity
+,Acetylsalicylic Acid,Glass bottle,412D,Carboxylic Acids,3,3.0,g,50-78-2,Acute oral toxicity
+,Acetanilide,Acros Organics,412D,Carboxylic Acids,1,200.0,g,103-84-4,"Acute oral toxicity, acute aquatic hazard"
+,Acetoacetanilide,Aldrich,412D,Carboxylic Acids,1,300.0,g,102-01-2,
+,4-Acetamidobenzenesulfonamide,TCL,412D,Carboxylic Acids,1,20.0,g,121-61-9,"Acute toxicity (oral, dermal, inhalation), skin and eye irritant, specific target organ toxicity (single exposure)"
+,Benzophenone,Acros Organics,412D,Carboxylic Acids,1,300.0,g,119-61-9,"Carcinogen, specific target organ toxicity (repeated exposure: oral, liver, kidney), short- and long-term aquatic hazard"
+,Benzoic Acid,Flinn Scientific,412D,Carboxylic Acids,2,400.0,g,65-85-0,"Skin irritant, serious eye damage, specific target organ toxicity (repeated exposure: inhalation, lungs), short-term aquatic hazard"
+,Benzoic Acid,Glass bottle,412D,Carboxylic Acids,2,75.0,g,65-85-0,"Skin irritant, serious eye damage, specific target organ toxicity (repeated exposure: inhalation, lungs), short-term aquatic hazard"
+,Citric Acid,Flinn Scientific,412D,Carboxylic Acids,2,500.0,g,77-92-9,"Eye irritant, specific target organ toxicity (single exposure: respiratory system)"
+,Cinnamic Acid,Glass bottle,412D,Carboxylic Acids,1,15.0,g,140-10-3,"Eye irritant, short-term aquatic hazard"
+,"1,5-Diphenylpenta 1,4-dien-one",HD Ark Pharm,412D,Carboxylic Acids,1,50.0,g,35225-79-7,"Specific target organ toxicity (single exposure: respiratory tract), skin corrosion/irritation, serious eye damage/irritation"
+,Fumaric Acid,Acros Organic,412D,Carboxylic Acids,1,800.0,g,110-17-8,Eye irritant
+,Glycolic Acid,Acros Organic,412D,Carboxylic Acids,1,25.0,g,79-14-1,"Acute toxicity (inhilation), skin corrosion, serious eye damage, acute aquatic hazard"
+,Lauric Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,143-07-7,"Causes serious eye damage, toxic to aquatic life"
+,Lauric Acid,Glass bottle,412D,Carboxylic Acids,1,50.0,g,143-07-7,"Causes serious eye damage, toxic to aquatic life"
+,Maleic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,110-16-7,"Acute oral and dermal toxicity, skin corrosion, serious eye damage, skin sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard"
+,Maleic Acid,Glass bottle,412D,Carboxylic Acids,1,20.0,g,110-16-7,"Acute oral toxicity, skin corrosion, serious eye damage, respiratory sensitization, specific target organ toxicity (single exposure: respiratory system), acute aquatic hazard"
+,Maleic Anhydride Pellets,Acros Organic,412D,Carboxylic Acids,1,10.0,g,108-31-6,"Acute oral and dermal toxicity, skin corrosion, serious eye damage, skin sensitization, specific target organ toxicity (repeated exposure: inhalation, respiratory system), acute aquatic hazard"
+,DL-Mandelic Acid,Acros Organic,412D,Carboxylic Acids,1,40.0,g,90-64-2,Serious eye damage
+,Oxalic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,144-62-7,"Acute oral and dermal toxicity, serious eye damage, acute aquatic hazard"
+,Phthalic Acid,Baker,412D,Carboxylic Acids,1,100.0,g,88-99-3,Causes serious eye damage
+,Salicylic Acid,Flinn Scientific,412D,Carboxylic Acids,1,350.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity"
+,Salicylic Acid,Glass bottle,412D,Carboxylic Acids,2,50.0,g,69-72-7,"Acute oral toxicity, serious eye damage, reproductive toxicity"
+,Sebacic Acid,Aldrich,412D,Carboxylic Acids,1,220.0,g,111-206,
+,Stearic Acid,Glass bottle,412D,Carboxylic Acids,8,300.0,g,57-11-4,Irritant
+,Stearic Acid,Flinn Scientific,412D,Carboxylic Acids,1,250.0,g,57-11-4,Irritant
+,Succinic Acid,Flinn Scientific,412D,Carboxylic Acids,1,100.0,g,110-15-6,Serious eye damage
+,Tannic Acid,Scholar Chemistry,412D,Carboxylic Acids,1,100.0,g,1401-55-4,
+,Tannic Acid,Glass bottle,412D,Carboxylic Acids,1,50.0,g,1401-55-4,
+,p-Toluic Acid,Aldrich,412D,Carboxylic Acids,1,60.0,g,99-94-5,"Skin sensitization, acute aquatic hazard"
+,"Rhodizonic Acid, Disodium Salt",Acros Organic,412D,Carboxylic Acids,1,20.0,g,523-21-7,
+,Allyl Bromide,Sigma Aldrich,412D,Fridge,2,200.0,g,106-95-6,"Flammable, acute oral and inhalation toxicity, skin corrosion, serious eye damage, germ cell mutagenicity, carcinocenicity, acute aquatic hazard"
