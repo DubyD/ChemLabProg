@@ -15,156 +15,156 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 
-public class adminScene {
+public class AdminScene {
     private JFrame frame;
     private JPanel panel;
     private ArrayList<User> unapprovedUsers;
     private ArrayList<User> approvedUsers;
     private JButton returnButton;
 
-    private JList cUserList;
-    private JList pUserList;
+    private JList<User> cUserList;
+    private JList<User> pUserList;
     private JScrollPane cListScroller;
     private JScrollPane pListScroller;
-    public adminScene(JFrame frame, ArrayList unapprovedUsers, ArrayList approvedUsers){
+
+    public AdminScene(JFrame frame, ArrayList<User> unapprovedUsers, ArrayList<User> approvedUsers) {
         this.frame = frame;
         panel = new JPanel();
-        
-        if(unapprovedUsers == null){
+
+        if (unapprovedUsers == null) {
             this.unapprovedUsers = new ArrayList<>();
+        } else {
+            this.unapprovedUsers = unapprovedUsers;
         }
-        else {
-        this.unapprovedUsers = unapprovedUsers;    
-        }
-        if(approvedUsers == null){
+        if (approvedUsers == null) {
             this.approvedUsers = new ArrayList<>();
+        } else {
+            this.approvedUsers = approvedUsers;
         }
-        else{
-          this.approvedUsers = approvedUsers;  
-        }
-              
-        
+
         runScene();
     }
-    public adminScene(JFrame frame){
+
+    public AdminScene(JFrame frame) {
         this.frame = frame;
         panel = new JPanel();
-        
+
         this.unapprovedUsers = new ArrayList<>();
         this.approvedUsers = new ArrayList<>();
-        
-       
+
         runScene();
     }
-    public adminScene(){
+
+    public AdminScene() {
         this.frame = new JFrame("User Management");
         panel = new JPanel();
-        
+
         this.unapprovedUsers = new ArrayList<>();
-       
+
         this.approvedUsers = new ArrayList<>();
-        
-        
-        
+
         runScene();
     }
-    private void runScene(){
+
+    private void runScene() {
         unapprovedUsers.add(new User("Gus", "password"));
-        //Temporary test user
-        
+        // Temporary test user
+
         JButton approveUserButton = new JButton("Approve");
         approveUserButton.setVisible(false);
         JButton denyUserButton = new JButton("Deny");
         denyUserButton.setVisible(false);
-        
-        cUserList = new JList(approvedUsers.toArray());
+
+        cUserList = new JList<User>((User[]) approvedUsers.toArray());
         cUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        pUserList = new JList(unapprovedUsers.toArray());
+        pUserList = new JList<User>((User[]) unapprovedUsers.toArray());
         pUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        
-        
+
         cListScroller = new JScrollPane(cUserList);
         cListScroller.setWheelScrollingEnabled(true);
         cListScroller.createVerticalScrollBar();
         cListScroller.setPreferredSize(new Dimension(200, 70));
         cListScroller.setVisible(false);
-        
+
         pListScroller = new JScrollPane(pUserList);
         pListScroller.setWheelScrollingEnabled(true);
         pListScroller.createVerticalScrollBar();
         pListScroller.setPreferredSize(new Dimension(200, 70));
         pListScroller.setVisible(false);
-        /* pUserList.addListSelectionListener(event ->{
-        approveUserButton.setVisible(true);
-        denyUserButton.setVisible(true);
-        });*/
-        
-        JButton currentUsersButton = new JButton("Active Users (" + approvedUsers.size() +")" );
-        currentUsersButton.addActionListener(event ->{
-        if(cListScroller.isVisible()){
-            cListScroller.setVisible(false);
-        }
-        else{
-            cListScroller.setVisible(true);
-        }
+        /*
+         * pUserList.addListSelectionListener(event ->{
+         * approveUserButton.setVisible(true);
+         * denyUserButton.setVisible(true);
+         * });
+         */
+
+        JButton currentUsersButton = new JButton("Active Users (" + approvedUsers.size() + ")");
+        currentUsersButton.addActionListener(event -> {
+            if (cListScroller.isVisible()) {
+                cListScroller.setVisible(false);
+            } else {
+                cListScroller.setVisible(true);
+            }
             pListScroller.setVisible(false);
             approveUserButton.setVisible(false);
             denyUserButton.setVisible(false);
-            
+
             frame.revalidate();
         });
-        
-        JButton pendingUsersButton = new JButton("Pending Users (" + unapprovedUsers.size() +")" );
-        pendingUsersButton.addActionListener(event ->{
-        if(pListScroller.isVisible()){
-            pListScroller.setVisible(false);
-            approveUserButton.setVisible(false);
-            denyUserButton.setVisible(false);
-        }
-        else{
-            pListScroller.setVisible(true);
-            approveUserButton.setVisible(true);
-            denyUserButton.setVisible(true);
-        }   
+
+        JButton pendingUsersButton = new JButton("Pending Users (" + unapprovedUsers.size() + ")");
+        pendingUsersButton.addActionListener(event -> {
+            if (pListScroller.isVisible()) {
+                pListScroller.setVisible(false);
+                approveUserButton.setVisible(false);
+                denyUserButton.setVisible(false);
+            } else {
+                pListScroller.setVisible(true);
+                approveUserButton.setVisible(true);
+                denyUserButton.setVisible(true);
+            }
             cListScroller.setVisible(false);
             frame.revalidate();
         });
-        
+
         panel.add(currentUsersButton);
         panel.add(pendingUsersButton);
         panel.add(cListScroller);
         panel.add(pListScroller);
         panel.add(approveUserButton);
         panel.add(denyUserButton);
-        
+
         returnButton = new JButton("Return");
-        
+
         panel.add(returnButton);
         frame.add(panel);
         frame.revalidate();
     }
-    public void createNewUser(String username, String password){
-        //Not implemented yet
+
+    public void createNewUser(String username, String password) {
+        // Not implemented yet
         User user = new User(username, password);
         unapprovedUsers.add(user);
-        
-    }{
-        
-   
+
     }
-    private void saveNewUser(User user){
-        //Not implemented yet
+
+    {
+
+    }
+
+    private void saveNewUser(User user) {
+        // Not implemented yet
         approvedUsers.add(user);
         unapprovedUsers.remove(user);
-        
-        
+
     }
-    
-    public JButton getReturnButton(){
+
+    public JButton getReturnButton() {
         return returnButton;
     }
-    public String toString(){
+
+    public String toString() {
         return "This class holds a user management screen.";
-                //Perhaps add user count
+        // Perhaps add user count
     }
 }

@@ -60,7 +60,7 @@ public class SceneSwitcher {
 
         manageButton.addActionListener(event ->{
             frame.getContentPane().removeAll();
-            adminScene adminScreen = new adminScene(frame);
+            AdminScene adminScreen = new AdminScene(frame);
             adminScreen.getReturnButton().addActionListener(internalEvent ->{
             frame.getContentPane().removeAll();
             showSearchScreen();
