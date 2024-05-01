@@ -53,6 +53,22 @@ public class SceneSwitcher {
         this.searchPanel.setLayout(new BorderLayout());
         this.searchPanel.add(this.searchScreen, BorderLayout.CENTER);
 
+        
+        //Added by AW 5/1/2024
+        //Adding manage users function, is not restricted to just admin accounts yet
+        JButton manageButton = new JButton("Manage Users");
+
+        manageButton.addActionListener(event ->{
+            frame.getContentPane().removeAll();
+            adminScene adminScreen = new adminScene(frame);
+            adminScreen.getReturnButton().addActionListener(internalEvent ->{
+            frame.getContentPane().removeAll();
+            showSearchScreen();
+
+        });
+        });
+
+        this.searchPanel.add(manageButton, BorderLayout.NORTH);
         this.frame.setContentPane(searchPanel);
         this.frame.revalidate();
     }
