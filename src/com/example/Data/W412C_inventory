@@ -1,0 +1,119 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
+,(R)-(-)-Carvone ,Alfa Aesar,412,412C,1,250,g ,6485-40-1,Flammable
+,(S)-(+)-Carvone,Alfa Aesar,412,412C,2,100,g,2244-16-8,Flammable
+,1-2-Diethoxyethane 98%,Alfa Aesar,412,412C,1,500,ml,629-14-1,Flammable
+,1-Bromobutane,Alfa Aesar,412,412C,1,500,g,109-65-9,Flammable
+,1-Butanol,Glass jar,412,412C,2,glass jar,,71-36-3,Flammable
+,1-Chlorobutane,Alfa Aesar,412,412C,1,250,ml,109-69-3,Flammable
+,1-Dodecanol,TCI,412,412C,1,25,g,112-53-8,Flammable
+,1-Octyne,Aldrich,412,412C,1,100,g,629-05-0,Flammable
+,1-Propanol,Droplet bottle,412,412C,2,droplet bottle,,71-23-8,Flammable
+,2-Butanone,Beantown Chemical,412,412C,1,4,L,78-93-3,Flammable
+,2-Butanone,Glass jar,412,412C,3,glass jar,,78-93-3,Flammable
+,2-chloro-2-methylpropane,EMD Millipore Corporation,412,412C,1,1,L,507-20-0,Flammable
+,2-chlorobutane 99%,ACROS,412,412C,1,250,ml,78-86-4,Flammable
+,2-Ethoxyethanol,TCI,412,412C,1,500,ml,110-80-5,Flammable
+,2-Ethoxyethanol,Empty Glass jar,412,412C,1,glass jar,,110-80-5,Flammable
+,2-Hexanone,ACROS,412,412C,1,100,ml,591-78-6,Flammable
+,2-Hexanone,Glass jar,412,412C,1,glass jar,,591-78-6,Flammable
+,2-Iodobutane,TCI,412,412C,2,25,g,513-48-4,Flammable
+,2-Pentanone,TCI,412,412C,1,500,ml,107-87-9,Flammable
+,2-Propanol,Fisher Scientific,412,412C,1,4,L,67-63-0,Flammable
+,2-Propanol,Droplet bottle,412,412C,1,droplet bottle,,67-63-0,Flammable
+,2-Propanol 70%,Carolina,412,412C,1,3.8,L,67-63-0,Flammable
+,4-methyl-2-pentanone,Alfa Aesar,412,412C,1,500,ml,108-10-0,Flammable
+,4-methyl-2-pentanone,Glass jar,412,412C,2,glass jar,,108-10-1,Flammable
+,Acetic Anhydride,,412,412C,10,,,108-24-7,Flammable
+,Acetic Anhydride,Alfa Aesar,412,412C,1,500,ml,108-24-7,Flammable
+,Acetone,Glass jar,412,412C,1,glass jar,,67-64-1,Flammable
+,Acetone,Droplet bottle,412,412C,4,droplet bottle,,67-64-1,Flammable
+,Acetone,Flinn Scientific,412,412C,1,4,L,67-64-1,Flammable
+,Aniline,ScholAR Chemistry,412,412C,1,500,ml,62-53-3,Flammable
+,Benzaldehyde,Sigma-Aldrich,412,412C,1,1,kg,100-52-7,Flammable
+,Bromoethane,Alfa Aesar,412,412C,1,100,g,74-96-4,Flammable
+,Butane ,Lucienne,412,412C,19,100,ml,106-97-8,Flammable
+,Butyraldehyde,Glass jar,412,412C,1,glass jar,,123-72-8 ,Flammable
+,Butyraldehyde,Glass jar,412,412C,1,glass jar,,123-72-8,Flammable
+,Butyric Acid,,412,412C,5,glass jar,,107-92-6,Flammable
+,Butyric Acid,Aldrich,412,412C,1,500,ml,107-92-6,Flammable
+,Camphor,Aldrich,412,412C,1,500,g,76-22-2,Flammable
+,Caraway Oil,Spectrum,412,412C,1,500,ml,8000-42-8,Flammable
+,Chloroform,ACROS,412,412C,1,1,L,67-66-3,Flammable
+,Chloroform,Fisher Scientific,412,412C,1,1,L,67-66-3,Flammable
+,Chloroform,Flinn Scientific,412,412C,1,500,ml,67-66-3,Flammable
+,Chromatography Solvent,Carolina,412,412C,5,120,ml,67-64-1; 8032-32-4,Flammable
+,Chromatography Solvent,Ward's Science,412,412C,24,30,ml,67-64-1; 8032-32-4,Flammable
+,Chromatography Solvent,Carolina,412,412C,3,25,ml,67-64-1; 8032-32-4,Flammable
+,Chromatography Solvent,Ward's Science,412,412C,3,500,ml,67-64-1; 8032-32-4,Flammable
+,Chromatography Solvent II,Aldon,412,412C,2,30,ml,67-64-1; 8032-32-4,Flammable
+,Crotyl Chloride,TCI,412,412C,1,25,ml,591-97-9,Flammable
+,Cyclohexane,Fisher Scientific,412,412C,1,500,ml,110-82-7,Flammable
+,Cyclohexane,Glass jar,412,412C,3,glass jar,,110-82-7,Flammable
+,Cyclohexanol,Sigma-Aldrich,412,412C,1,1,L,108-93-0,Flammable
+,Cyclohexanol,Droplet bottle,412,412C,2,droplet bottle,,108-93-0,Flammable
+,Cyclohexanol,Glass jar,412,412C,1,glass jar,,108-93-0,Flammable
+,Cyclohexanone,Sigma-Aldrich,412,412C,1,1,L,108-94-1,Flammable
+,Cyclohexanone,Glass jar,412,412C,2,glass jar,,108-94-1,Flammable
+,Cyclohexene,Sigma-Aldrich,412,412C,1,1,L,110-83-8,Flammable
+,Cyclohexene,Glass jar,412,412C,1,glass jar,,110-83-8 ,Flammable
+,Developing Solvent Mixture,AMEP,412,412C,6,1,oz,540-84-1; 67-64-1,Flammable
+,Dichloromethane,Macron Fine Chemicals,412,412C,1,500,ml,75-09-2,Flammable
+,Dilweed Oil,Sigma-Aldrich,412,412C,1,10,ml,8006-75-5,Flammable
+,Dimethyl Sulfoxide,Fisher Chemical,412,412C,1,500,ml,67-68-5,Flammable
+,Ethanol (70%),Carolina,412,412C,1,30,ml,64-17-5,Flammable
+,Ethanol (95%),Glass jar,412,412C,2,glass jar,,64-17-5,Flammable
+,Ethanol (95%),Droplet bottle,412,412C,10,droplet bottle,,64-17-5,Flammable
+,Ethanol (95%),Droplet bottle,412,412C,4,droplet bottle,,64-17-5,Flammable
+,Ethanol 200 Proof,Decon Laboratories,412,412C,2,2,Gallon,64-17-5,Flammable
+,Ethyl Acetate,Fisher Chemical,412,412C,1,500,ml,141-78-6,Flammable
+,Ethyl Acetate Petroleum Ether 1:2 Solution,Carolina,412,412C,6,120,ml ,141-78-6; 8032-32-4,Flammable
+,Ethyl Alcohol 100%,Glass jar,412,412C,1,glass jar,,64-17-5,Flammable
+,Ethyl Alcohol 200 Proof,EMD Millipore Corporation,412,412C,1,4,L,64-17-5,Flammable
+,Ethyl Alcohol 80%,Glass jar,412,412C,2,glass jar,,64-17-5,Flammable
+,Ethyl Alcohol 95%,Ward's Science,412,412C,3,500,ml,64-17-5,Flammable
+,Ethyl Bromide in Ethanol (0.4 M),Glass jar,412,412C,1,glass jar,,74-96-4,Flammable
+,Ethylene Glycol,Droplet bottle,412,412C,2,droplet bottle,,107-21-0,Flammable
+,Ethylene Glycol,ScholAR Chemistry,412,412C,1,3.8,L,107-21-0,Flammable
+,Ethylene Glycol,Glass jar,412,412C,1,glass jar,,107-21-0,Flammable
+,Ethylene glycol diethyl ether,Sigma-Aldrich,412,412C,1,100,ml,629-14-1,Flammable
+,Glycerine,Droplet bottle,412,412C,2,droplet bottle,,56-81-5,Flammable
+,Glycerol,Carolina,412,412C,2,500,ml,56-81-5,Flammable
+,Hexane,BDH ,412,412C,1,4,L,110-54-3,Flammable
+,Hexane-Ethyl Acetate,Glass jar,412,412C,1,glass jar,,141-78-6,Flammable
+,Hexane-isoPropanol (Chromatography Solvent),Glass jar,412,412C,2,glass jar,,67-64-1,Flammable
+,Indole,Alfa Aesar,412,412C,1,250,g,120-72-9,Flammable
+,Iodine in Ethanol,Glass jar,412,412C,1,glass jar,,,Flammable
+,Isopropanol,Glass jar,412,412C,1,glass jar,,67-63-0,Flammable
+,Isopropyl Alcohol,Droplet bottle,412,412C,1,droplet bottle,,67-63-0,Flammable
+,Methanol,Fisher Scientific,412,412C,1,4,L,67-56-1,Flammable
+,Methanol,Glass jar,412,412C,2,glass jar,,67-56-1,Flammable
+,Methanol (0.05 M),Glass jar,412,412C,1,glass jar,,67-56-1,Flammable
+,Methyl benzoate,Glass jar,412,412C,1,glass jar,,93-58-3,Flammable
+,Methyl benzoate,Glass jar,412,412C,3,glass jar,,93-58-3,Flammable
+,Methyl Ethyl Ketone,Ward's Science,412,412C,1,500,ml,78-93-3,Flammable
+,Methyl-tert-butyl-ether,Oakwood Chemical,412,412C,1,2.5,kg,1634-04-4,Flammable
+,n-butyl-alcohol,Flinn Scientific,412,412C,1,500,ml ,71-36-3,Flammable
+,n-butyl-bromide,,412,412C,3,,glass jar,109-65-9,Flammable
+,n-Butylamine,Fisher Chemical,412,412C,1,500,ml,109-73-9,Flammable
+,N-Propyl Alcohol,ScholAR Chemistry,412,412C,1,500,ml,71-23-8,Flammable
+,Napthalene,ScholAR Chemistry,412,412C,1,500,g,91-20-3,Flammable
+,p-Dicholorobenzene,Flinn Scientific,412,412C,1,500,g,106-46-7,Flammable
+,p-Toluenesulfonyl chloride,TCI,412,412C,2,25,g,98-59-9,Flammable
+,Pentane,Alfa Aesar,412,412C,1,1000,ml,109-66-0,Flammable
+,Petroleum ether 35/60,Alfa Aesar,412,412C,1,1,L,8032-32-4,Flammable
+,Phenol,Glass jar,412,412C,3,glass jar,,108-95-2,Flammable
+,Potassium Hydroxide (10%) in 95% EtOH,Droplet bottle,412,412C,5,droplet bottle,,1310-58-3,Flammable
+,Propylene Glycol,ScholAR Chemistry,412,412C,1,500,ml,57-55-6,Flammable
+,Pyridine,Flinn Scientific,412,412C,2,100,ml,110-86-1,Flammable
+,Reagent Alcohol,Sigma-Aldrich,412,412C,1,1,Gallon,64-17-5; 67-63-0; 67-56-1,Flammable
+,Sodium Iodide in Acetone,Glass jar,412,412C,1,glass jar,,,Flammable
+,t-Butanol,Droplet bottle,412,412C,2,droplet bottle,,75-65-0,Flammable
+,Tert-Butyl Alcohol,EMD Millipore Corporation,412,412C,1,0.78,kg,75-65-0,Flammable
+,tert-Butyl Chloride,Flinn Scientific,412,412C,1,25,ml,507-20-0,Flammable
+,Toluene,BDH ,412,412C,1,4,L,108-88-3,Flammable
+,"Unknown (50% NaCl, 40% Sand, 10% Napthalene)",,412,412C,2,glass jar,,,Flammable
+,Vanillin Ethanol Solution,TCI,412,412C,1,500,ml,121-33-5,Flammable
+,Vanillin Spray Reagent,Glass jar,412,412C,1,glass jar,,,Flammable
+,Xylene,ScholAR Chemistry,412,412C,1,500,ml,1330-20-7,Flammable
+,Xylene,Glass jar,412,412C,1,glass jar,,1330-20-7 ,Flammable
