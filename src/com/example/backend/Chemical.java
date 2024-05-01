@@ -18,6 +18,7 @@ public class Chemical {
     private String purchaseDate;
     private String expirationDate;
 
+    //TODO add an attribute for the amount of jars
     public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable, List<Room> roomsStoredAt, List<Shelf> shelvesStoredAt, String sdsSheet, String manufacturer, String purchaseDate, String expirationDate) {
         
          // We can add more validation logic for hazards, etc., in futurer
@@ -153,4 +154,36 @@ public class Chemical {
     private boolean isValidSizeUnit(String sizeUnit) {
     return sizeUnit.equalsIgnoreCase("ml") || sizeUnit.equalsIgnoreCase("gm");
     }
+
+    public boolean hasSDS() {
+        return sdsSheet != null;
+    }
+
+    
+    // TODO these are all stubs, please implement them
+    public double getCount() {
+        return 1;
+    }
+
+    public void setCount(){
+    
+    }
+
+    public String getCASNumber(){
+        return "1";
+    }
+
+    public void setCASNumber(){
+    
+    }
+
+    public String getHazard(){
+        return "Hazard";
+    }
+
+    public void setHazard(){
+    
+    }
+
+
 }
