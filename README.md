@@ -35,7 +35,7 @@ and
 - [Arjenis Montenegro](https://github.com/Amontenegro20)
 - [Ahmed Khan](https://github.com/ahmkhn)
 - [Yunjin Seo](https://github.com/yunjinseo)
-- [Johnathan Murphy](https://github.com/RealJonMurphOfficial)
+- [Jonathan Murphy](https://github.com/RealJonMurphOfficial)
 - [Sukhdeep Singh](https://github.com/sukhdeepsingtoor7)
 - [Augustus Warmington](https://github.com/guswarmington)
 - [Salim Jday](https://github.com/SalimJday)
