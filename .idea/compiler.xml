@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="myproject" />
-        <module name="ChemLabProg" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myproject" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
