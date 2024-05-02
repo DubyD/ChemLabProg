@@ -2,7 +2,7 @@ package com.example.backend;
 
 //Author WD
 
-import java.util.sortingarrayList;
+
 import java.util.List;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -52,11 +52,8 @@ public class Sorter{
             //Need to figure out a chemical obj. before i finish
             public static void writeInv(String [] paths){
 
-
-                //Initiating variables
+                    //Initiating variables
                 List<String> working = new ArrayList<String>();
-
-
 
                 try {
                     //loops through each file
