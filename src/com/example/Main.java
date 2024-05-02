@@ -10,7 +10,7 @@ public class Main {
         JFrame frame = new JFrame("Science Department Inventory");
 
         // Set the size of the frame
-        frame.setSize(800, 600);
+        frame.setSize(1200, 800);
 
         // Set the default close operation
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
