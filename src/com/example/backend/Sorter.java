@@ -52,8 +52,7 @@ public class Sorter{
 
 
 
-                //Writes to a file to save inventory numbers
-                //Need to figure out a chemical obj. before i finish
+
             public static void writeInv(String [] paths String ){
 
                     //Initiating variables
@@ -62,14 +61,13 @@ public class Sorter{
                 try {
                         //loops through each file
                     for (String path : paths) {
-                        String filePath = path;
                         working.addAll(readInv(path));
                     }
 
                     working.sort(String::compareToIgnoreCase);
 
                         //Create a FileWriter with the specified file path
-                    FileWriter fileWriter = new FileWriter("../Data/updated_data.csv");
+                    FileWriter fileWriter = new FileWriter("..\\Data\\updated_data.csv");
 
                         //Wrap the FileWriter in a BufferedWriter for efficient writing
                     try(BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
@@ -87,8 +85,7 @@ public class Sorter{
                 }
             }
 
-        //Reads the old data to write to new file
-        //Once this is complete we can rework this to read from the inventory to boot up
+
         public static List<String> readInv(String filePath){
 
             List<String> reply = new ArrayList<String>();
