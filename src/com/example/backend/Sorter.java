@@ -50,15 +50,15 @@ public class Sorter{
 
 
 
-            //Writes to a file to save inventory numbers
-            //Need to figure out a chemical obj. before i finish
-            public static void writeInv(String [] paths){
+                //Writes to a file to save inventory numbers
+                //Need to figure out a chemical obj. before i finish
+            public static void writeInv(String [] paths String ){
 
                     //Initiating variables
                 List<String> working = new ArrayList<String>();
 
                 try {
-                    //loops through each file
+                        //loops through each file
                     for (String path : paths) {
                         String filePath = path;
                         working.addAll(readInv(path));
@@ -66,20 +66,19 @@ public class Sorter{
 
                     working.sort(String::compareToIgnoreCase);
 
-                    //Create a FileWriter with the specified file path
+                        //Create a FileWriter with the specified file path
                     FileWriter fileWriter = new FileWriter("../Data/updated_data.csv");
 
-                    //Wrap the FileWriter in a BufferedWriter for efficient writing
-                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                        //Wrap the FileWriter in a BufferedWriter for efficient writing
+                    try(BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
 
-                    // Write the content to the file
-                    for (String line : working) {
-                        bufferedWriter.write(line);
-                        bufferedWriter.newLine();
+                        // Write the content to the file
+                        for (String line : working) {
+                            bufferedWriter.write(line);
+                            bufferedWriter.newLine();
+                        }
                     }
-                    // Close the BufferedWriter
-                    bufferedWriter.close();
 
                 }catch(IOException e){
 
