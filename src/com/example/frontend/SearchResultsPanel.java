@@ -1,5 +1,5 @@
 /*
- * Prototype for RoomPanel - Alex Comeau
+ * Prototype for SearchResultsPanel - Alex Comeau
  * 
  */
 package com.example.frontend;
@@ -18,14 +18,14 @@ import com.example.backend.Chemical;
 import com.example.backend.Room;
 import com.example.backend.Shelf;
 
-public class RoomPanel extends JPanel {
+public class SearchResultsPanel extends JPanel {
 
     private ArrayList<Chemical> chemicals;
     private String[][] data;
     private JTable table;
     private JScrollPane scrollPane;
 
-    public RoomPanel(ArrayList<Chemical> chemicals) {
+    public SearchResultsPanel(ArrayList<Chemical> chemicals) {
         // Set the layout of the panel
         this.chemicals = chemicals;
         setLayout(new BorderLayout());
@@ -72,11 +72,11 @@ public class RoomPanel extends JPanel {
 
         //print as array
         System.out.print(Arrays.toString(getExampleData().get(0).asArray()));
-        // Create a new RoomPanel
-        RoomPanel roomPanel = new RoomPanel(getExampleData());
+        // Create a new SearchResultsPanel
+        SearchResultsPanel SearchResultsPanel = new SearchResultsPanel(getExampleData());
 
-        // Add the RoomPanel to the frame
-        frame.add(roomPanel);
+        // Add the SearchResultsPanel to the frame
+        frame.add(SearchResultsPanel);
 
         // Set the visibility of the frame
         frame.setVisible(true);

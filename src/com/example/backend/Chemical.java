@@ -145,7 +145,7 @@ public class Chemical {
         return sizeUnit.equalsIgnoreCase("ml") || sizeUnit.equalsIgnoreCase("gm");
     }
 
-    // needed for RoomPanel
+    // needed for SearchResultsPanel
     // made by Alex Comeau
     public boolean hasSDS() {
         return sdsSheet != null;
