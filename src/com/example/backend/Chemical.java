@@ -17,35 +17,43 @@ public class Chemical {
     private String purchaseDate;
     private String expirationDate;
 
-    // TODO add an attribute for the amount of jars
-    public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable,
-            List<Room> roomsStoredAt, List<Shelf> shelvesStoredAt, String sdsSheet, String manufacturer,
-            String purchaseDate, String expirationDate) {
+    public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable, String sdsSheet, String manufacturer, String purchaseDate, String expirationDate) {
+        this.name = name;
+        this.size = size;
+        this.sizeUnit = sizeUnit;
+        this.hazards = hazards;
+        this.flammable = flammable;
+        this.roomsStoredAt = new ArrayList<>();
+        this.shelvesStoredAt = new ArrayList<>();
+        this.sdsSheet = sdsSheet;
+        this.manufacturer = manufacturer;
+        this.purchaseDate = purchaseDate;
+        this.expirationDate = expirationDate;
 
-        // We can add more validation logic for hazards, etc., in futurer
-        if (!isPositiveSize(size)) {
-            throw new IllegalArgumentException("Size must be a positive number.");
-        } else if (!isValidSizeUnit(sizeUnit)) {
-            throw new IllegalArgumentException("Size unit must be either 'ml' or 'gm'.");
-        }
-
-        else {
-
-            this.name = name;
-            this.size = size;
-            this.sizeUnit = sizeUnit;
-            this.hazards = hazards;
-            this.flammable = flammable;
-            this.roomsStoredAt = roomsStoredAt;
-            this.shelvesStoredAt = shelvesStoredAt;
-            this.sdsSheet = sdsSheet;
-            this.manufacturer = manufacturer;
-            this.purchaseDate = purchaseDate;
-            this.expirationDate = expirationDate;
-        }
+        validateSize(size);
+        validateSizeUnit(sizeUnit);
     }
 
     // Getters and setters for all attributes
+
+
+    public List<Room> getRoomsStoredAt() {
+        return roomsStoredAt;
+    }
+
+    public void addRoomStoredAt(Room room) {
+        roomsStoredAt.add(room);
+    }
+
+    public List<Shelf> getShelvesStoredAt() {
+        return shelvesStoredAt;
+    }
+
+    public void addShelfStoredAt(Shelf shelf) {
+        shelvesStoredAt.add(shelf);
+    }
+
+
     public String getManufacturer() {
         return manufacturer;
     }
@@ -108,22 +116,6 @@ public class Chemical {
 
     public void setFlammable(boolean flammable) {
         this.flammable = flammable;
-    }
-
-    public List<Room> getRoomsStoredAt() {
-        return roomsStoredAt;
-    }
-
-    public void setRoomsStoredAt(List<Room> roomsStoredAt) {
-        this.roomsStoredAt = roomsStoredAt;
-    }
-
-    public List<Shelf> getShelvesStoredAt() {
-        return shelvesStoredAt;
-    }
-
-    public void setShelvesStoredAt(List<Shelf> shelvesStoredAt) {
-        this.shelvesStoredAt = shelvesStoredAt;
     }
 
     public String getSdsSheet() {
