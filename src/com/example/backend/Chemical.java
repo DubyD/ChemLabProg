@@ -5,81 +5,38 @@ package com.example.backend;
 import java.util.List;
 
 public class Chemical {
-
-    private String sdsSheet;
     private String name;
-    private String manufacturer;
-    private String roomsStoredAt;
-    private String shelvesStoredAt;
-    private int containers;
     private double size;
     private String sizeUnit;
-    private String casNum;
     private String hazards;
     private boolean flammable;
-    private boolean corrosive;
-    private boolean skinIrritant;
-    private boolean eyeIrritant;
-    private boolean oralHazard;
-    private boolean combustible;
-    private boolean aquaticHazard;
-    private boolean respitoryHazard;
-
+    private List<Room> roomsStoredAt;
+    private List<Shelf> shelvesStoredAt;
+    private String sdsSheet;
+    private String manufacturer;
     private String purchaseDate;
     private String expirationDate;
 
-
-        //SDS,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
-
-        //Auto Constructor used in sorter class
-    public Chemical(String name, String company, String room, String shelf, int containers, Double amount, String unit, String cas, String hazards){
+    public Chemical(String name, double size, String sizeUnit, String hazards, boolean flammable, String sdsSheet, String manufacturer, String purchaseDate, String expirationDate) {
         this.name = name;
-        this.manufacturer = company;
-        this.containers = containers;
-        this.size = amount;
-        this. sizeUnit = unit;
-        this.casNum = cas;
+        this.size = size;
+        this.sizeUnit = sizeUnit;
         this.hazards = hazards;
-            //Sets specific Hazards
-        this.setHazards(hazards);
+        this.flammable = flammable;
+        this.roomsStoredAt = new ArrayList<>();
+        this.shelvesStoredAt = new ArrayList<>();
+        this.sdsSheet = sdsSheet;
+        this.manufacturer = manufacturer;
+        this.purchaseDate = purchaseDate;
+        this.expirationDate = expirationDate;
 
+        validateSize(size);
+        validateSizeUnit(sizeUnit);
     }
 
     // Getters and setters for all attributes
 
 
-    private void setHazards(String list){
-        String[] pieces = list.split(",");
-        for(String next : pieces){
-            String[] parts = next.split(" ");
-            for(String bits : parts){
-                if(bits.equals("eye")){
-                    this.eyeIrritant = true;
-                }
-                if(bits.equals("skin")){
-                    this.skinIrritant = true;
-                }
-                if(bits.equals("corrosive")){
-                    this.corrosive = true;
-                }
-                if(bits.equals("combustible")){
-                    this.combustible = true;
-                }
-                if(bits.equals("oral") || bits.equals("digestive")){
-                    this.oralHazard = true;
-                }
-                if(bits.equals("flammable")){
-                    this.flammable = true;
-                }
-                if(bits.equals("aquatic")){
-                    this.aquaticHazard = true;
-                }
-                if(bits.equals("respitory")){
-                    this.respitoryHazard = true;
-                }
-            }
-        }
-    }
     public List<Room> getRoomsStoredAt() {
         return roomsStoredAt;
     }

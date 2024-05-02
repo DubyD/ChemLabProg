@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Room {
     private int roomNumber;
-    private List<Shelf> shelves;
+    private ArrayList<Shelf> shelves;
     private int capacity;
-    private List<TakeOutSlip> slips;
+    private ArrayList<TakeOutSlip> slips;
 
     public Room(int roomNumber, int capacity) {
         this.roomNumber = roomNumber;
