@@ -29,10 +29,7 @@ public class Sorter{
             //We need to search through column 10 in order to extract flammability and corrosiveness
             //Hazards are descriptions so they cannot be separated by " ". Save the description
 //----------------------------------------------------------------------------------------------------------------------
-        //For 534_inventory, the columns are set up as so: (skip line 1)
-        //SDS,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
-        //We need columns 2, 3(so the professor can determine if they enjoy the product)
-        //4,5,6, 7, 8, and 10
+
 
         //For W412C_inventory the columns are set up as so: (skip line 1)
         //blank,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
@@ -53,59 +50,100 @@ public class Sorter{
 
 
 
-            public static void writeInv(String [] paths String ){
-
-                    //Initiating variables
-                List<String> working = new ArrayList<String>();
-
-                try {
-                        //loops through each file
-                    for (String path : paths) {
-                        working.addAll(readInv(path));
-                    }
-
-                    working.sort(String::compareToIgnoreCase);
-
-                        //Create a FileWriter with the specified file path
-                    FileWriter fileWriter = new FileWriter("..\\Data\\updated_data.csv");
-
-                        //Wrap the FileWriter in a BufferedWriter for efficient writing
-                    try(BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
 
-                        // Write the content to the file
-                        for (String line : working) {
-                            bufferedWriter.write(line);
-                            bufferedWriter.newLine();
-                        }
-                    }
+    public static void writeInv(String filepath) {
 
-                }catch(IOException e){
+            //Initiating variables
+        List<String> working = new ArrayList<String>();
 
+        try {
+                //loops through each file
+            for (String path : paths) {
+                working.addAll(readInv(path));
+            }
+
+            working.sort(String::compareToIgnoreCase);
+
+                //Create a FileWriter with the specified file path
+            FileWriter fileWriter = new FileWriter("..\\Data\\updated_data.csv");
+
+                //Wrap the FileWriter in a BufferedWriter for efficient writing
+            try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+
+
+                    // Write the content to the file
+                for (String line : working) {
+                    bufferedWriter.write(line);
+
+                    bufferedWriter.newLine();
                 }
             }
 
+        } catch (IOException e) {
 
-        public static List<String> readInv(String filePath){
-
-            List<String> reply = new ArrayList<String>();
-            try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
-
-                String nextLine;
-                while((nextLine = reader.readLine()) != null){
-
-                    reply.add(nextLine);
-
-                }
-
-            }catch(IOException e) {
-
-            }//Autocloses when the BufferedReader is uninitialized
-
-
-            return reply;
         }
 
-        public static 
+    }
+
+
+    public static List<String> readInv(String filePath){
+
+        List<String> reply = new ArrayList<String>();
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+
+            String nextLine;
+            while((nextLine = reader.readLine()) != null){
+
+                reply.add(nextLine);
+
+            }
+
+        }catch(IOException e) {
+
+        }//Autocloses when the BufferedReader is uninitialized
+
+
+        return reply;
+    }
+
+
+
+        //For 534_inventory, the columns are set up as so: (skip line 1)
+        //SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
+        //We need columns 2, 3(so the professor can determine if they enjoy the product)
+        //4,5,6, 7, 8, and 10
+
+        // public Chemical(String name, String company, String room, String shelf,
+        // int containers, Double amount, String unit, String cas, String hazards){
+        public static Chemical chemLab(String line){
+
+            String[] cut = line.split(",", 10);
+
+            int amount = Integer.parseInt(cut[6]);
+            Double size = Double.parseDouble(cut[7]);
+
+            Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], cut[5], amount, size, cut[8], cut[9]);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
