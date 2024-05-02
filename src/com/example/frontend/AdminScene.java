@@ -8,6 +8,7 @@ package com.example.frontend;
 import com.example.backend.User;
 import java.awt.Dimension;
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
@@ -15,11 +16,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 
-public class AdminScene {
+public class AdminScene extends JPanel{
     private JFrame frame;
-    private JPanel panel;
-    private ArrayList<User> unapprovedUsers;
-    private ArrayList<User> approvedUsers;
+    private DefaultListModel<User> unapprovedUsers;
+    private DefaultListModel<User> approvedUsers;
     private JButton returnButton;
 
     private JList<User> cUserList;
@@ -27,17 +27,15 @@ public class AdminScene {
     private JScrollPane cListScroller;
     private JScrollPane pListScroller;
 
-    public AdminScene(JFrame frame, ArrayList<User> unapprovedUsers, ArrayList<User> approvedUsers) {
+    public AdminScene(JFrame frame, DefaultListModel<User> unapprovedUsers, DefaultListModel<User> approvedUsers) {
         this.frame = frame;
-        panel = new JPanel();
-
         if (unapprovedUsers == null) {
-            this.unapprovedUsers = new ArrayList<>();
+            this.unapprovedUsers = new DefaultListModel<>();
         } else {
             this.unapprovedUsers = unapprovedUsers;
         }
         if (approvedUsers == null) {
-            this.approvedUsers = new ArrayList<>();
+            this.approvedUsers = new DefaultListModel<>();
         } else {
             this.approvedUsers = approvedUsers;
         }
@@ -47,37 +45,33 @@ public class AdminScene {
 
     public AdminScene(JFrame frame) {
         this.frame = frame;
-        panel = new JPanel();
-
-        this.unapprovedUsers = new ArrayList<>();
-        this.approvedUsers = new ArrayList<>();
+        this.unapprovedUsers = new DefaultListModel<>();
+        this.approvedUsers = new DefaultListModel<>();
 
         runScene();
     }
 
     public AdminScene() {
         this.frame = new JFrame("User Management");
-        panel = new JPanel();
+        this.unapprovedUsers = new DefaultListModel<>();
 
-        this.unapprovedUsers = new ArrayList<>();
-
-        this.approvedUsers = new ArrayList<>();
+        this.approvedUsers = new DefaultListModel<>();
 
         runScene();
     }
 
     private void runScene() {
-        unapprovedUsers.add(new User("Gus", "password"));
+        unapprovedUsers.add(unapprovedUsers.getSize(), new User("Gus", "password"));
         // Temporary test user
 
         JButton approveUserButton = new JButton("Approve");
         approveUserButton.setVisible(false);
         JButton denyUserButton = new JButton("Deny");
         denyUserButton.setVisible(false);
-
-        cUserList = new JList<User>((User[]) approvedUsers.toArray());
+        
+        cUserList = new JList<>(approvedUsers);
         cUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        pUserList = new JList<User>((User[]) unapprovedUsers.toArray());
+        pUserList = new JList<>(unapprovedUsers);
         pUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
         cListScroller = new JScrollPane(cUserList);
@@ -127,24 +121,24 @@ public class AdminScene {
             frame.revalidate();
         });
 
-        panel.add(currentUsersButton);
-        panel.add(pendingUsersButton);
-        panel.add(cListScroller);
-        panel.add(pListScroller);
-        panel.add(approveUserButton);
-        panel.add(denyUserButton);
+        this.add(currentUsersButton);
+        this.add(pendingUsersButton);
+        this.add(cListScroller);
+        this.add(pListScroller);
+        this.add(approveUserButton);
+        this.add(denyUserButton);
 
         returnButton = new JButton("Return");
 
-        panel.add(returnButton);
-        frame.add(panel);
+        this.add(returnButton);
+        frame.add(this);
         frame.revalidate();
     }
 
     public void createNewUser(String username, String password) {
         // Not implemented yet
         User user = new User(username, password);
-        unapprovedUsers.add(user);
+        unapprovedUsers.add(unapprovedUsers.getSize(), user);
 
     }
 
@@ -154,8 +148,8 @@ public class AdminScene {
 
     private void saveNewUser(User user) {
         // Not implemented yet
-        approvedUsers.add(user);
-        unapprovedUsers.remove(user);
+        approvedUsers.add(unapprovedUsers.getSize(), user);
+        unapprovedUsers.removeElement(user);
 
     }
 
