@@ -2,13 +2,15 @@ package com.example.backend;
 
 //Author WD
 
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVPrinter;
-import org.apache.commons.csv.CSVRecord;
-import java.util.List;
-import java.io.BufferedWriter;
+
+
 import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
     // This class will be used to read and write data entries to the updated_data.csv file
     // All functions related to retrieving or
