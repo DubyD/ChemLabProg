@@ -10,8 +10,12 @@ import java.io.IOException;
 
     // This class will be used to read and write data entries to the updated_data.csv file
     // All functions related to retrieving or
-public static class Sorter{
+public class Sorter{
 
+        //So no one can create an instance of this class
+    private Sorter(){
+
+    }
 
         //no constructor because you cannot creat a static class
 
