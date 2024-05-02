@@ -11,7 +11,7 @@ public class SearchScreen extends JPanel implements ActionListener {
     private JButton logOutButton, searchButton;
     private JTextField searchBar;
     private JComboBox searchMenu;
-    private SearchResultPanel resultPnel;
+    private SearchResultPanel resultPanel;
 
     public SearchScreen() {
         //Jonathan Murphy
