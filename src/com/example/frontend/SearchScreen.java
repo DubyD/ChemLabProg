@@ -88,18 +88,18 @@ public class SearchScreen extends JPanel implements ActionListener {
         shelvesStoredAt.add(new Shelf(1,2));
 
         ArrayList<Chemical> chemicals = new ArrayList<>();
-        chemicals.add(new Chemical("Acetone", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
-        chemicals.add(new Chemical("Ethanol", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
-        chemicals.add(new Chemical("Water", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
-        chemicals.add(new Chemical("Sulfur", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
-        chemicals.add(new Chemical("Tomato", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
-        chemicals.add(new Chemical("Salsa", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-                "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Acetone", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Ethanol", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Water", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Sulfur", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Tomato", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
+        // chemicals.add(new Chemical("Salsa", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
+        //         "purchaseDate", "expirationDate"));
         return chemicals;
     }
 }
