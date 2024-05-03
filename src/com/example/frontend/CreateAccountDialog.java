@@ -7,6 +7,7 @@ package com.example.frontend;
 
 import javax.swing.*;
 
+import com.example.backend.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -80,7 +81,13 @@ public class CreateAccountDialog extends JDialog {
                 System.out.println("Email: " + emailField.getText());
                 System.out.println("Contact Number: " + contactNumberField.getText());
 
-                dispose();
+                // User tester
+                User user = new User();
+                if (!user.createNewUser(nameField.getText(), String.valueOf(passwordField.getPassword()), emailField.getText(), "How are you?", "Bad", false)) {
+                    JOptionPane.showMessageDialog(CreateAccountDialog.this, "Invalid input for field(s).", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
         });
         add(submitButton);
