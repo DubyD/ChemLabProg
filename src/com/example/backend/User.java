@@ -162,7 +162,7 @@ public class User {
     }
 
     private boolean isValidPasswordLength(String password) {
-        return password.length() >= MIN_PASSWORD_LENGTH || !this.password.equals(password);
+        return password.length() >= MIN_PASSWORD_LENGTH;
     }
 
     private boolean isValidEmailFormat(String email) {
