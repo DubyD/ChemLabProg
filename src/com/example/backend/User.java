@@ -11,6 +11,9 @@ import java.util.regex.Pattern;
 
 /**
  * User Class
+ * <p>
+ * Handles user authentication and user data management
+ * @see UserDatabase
  * @author Eric Lim
  */
 public class User {
@@ -93,10 +96,20 @@ public class User {
         return false;
     }
 
+    private String encryptPassword(String password) {
+        // Encrypt the password
+        return password;
+    }
+
+    private static String decryptPassword(String encryptedPassword) {
+        // Decrypt the password
+        return encryptedPassword;
+    }
+
     public String toCsvString() {
         StringBuilder sb = new StringBuilder();
         sb.append(username).append(",");
-        sb.append(password).append(",");
+        sb.append(encryptPassword(password)).append(",");
         sb.append(email).append(",");
         sb.append(securityQ).append(",");
         sb.append(securityA).append(",");
@@ -110,7 +123,7 @@ public class User {
         String[] parts = csv.split(",");
         User user = new User();
         user.setUsername(parts[0]);
-        user.setPassword(parts[1]);
+        user.setPassword(decryptPassword(parts[1]));
         user.setEmail(parts[2]);
         user.setSecurityQ(parts[3]);
         user.setSecurityA(parts[4]);

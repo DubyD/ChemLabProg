@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 
 /**
  * UserDatabase Class
+ * <p>
  * Manages the user database stored in a CSV file
  * @author Eric Lim
  */
