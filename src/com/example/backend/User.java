@@ -98,12 +98,14 @@ public class User {
 
     private String encryptPassword(String password) {
         // Encrypt the password
-        return password;
+        String encryptedPassword = password;
+        return encryptedPassword;
     }
 
     private static String decryptPassword(String encryptedPassword) {
         // Decrypt the password
-        return encryptedPassword;
+        String password = encryptedPassword;
+        return password;
     }
 
     public String toCsvString() {
