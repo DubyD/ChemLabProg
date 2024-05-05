@@ -10,7 +10,7 @@ package com.example.backend;
  */
 public class TakeOutSlip {
     private User user; // spaceholder for the details of the user making changes to chemicals
-    private Chemical chemical // spaceholder for the chemical object to be altered
+    private Chemical chemical; // spaceholder for the chemical object to be altered
     public TakeOutSlip(User userDet, Chemical chemicalInput){
         this.user = userDet;
         this.chemical=chemicalInput;
@@ -19,7 +19,7 @@ public class TakeOutSlip {
     }
 
     public String takeOutDetails(){
-        String details = "User: " + this.user.getUsername + "altered chemical" + this.chemical.getName(); + "by this amount" + "5mL";
+        String details = String.format("User: %s altered chemical %s by this amount 5mL", this.user.getUsername(), this.chemical.getName());
         return details;
         // 5mL is spaceholder amount, will need to make it compare chemical sizes before and after alteration.
         // and return that value - AK

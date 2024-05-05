@@ -16,7 +16,7 @@ import java.util.List;
 public class SearchScreen extends JPanel implements ActionListener {
     private JButton logOutButton, searchButton;
     private JTextField searchBar;
-    private JComboBox searchMenu;
+    private JComboBox<String> searchMenu;
     private SearchResultsPanel resultPanelTest; //test SearchResultPanel
 
     public SearchScreen() {
@@ -31,7 +31,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         searchBar.setPreferredSize(new Dimension(200, 20));
         String[] searchCats = {"Select a Category", "All Chemicals", "Rooms", "Hazards", "Flammable", "Corrosive", "WetLab"};
         //change categories when we figure out the approach we're taking
-        searchMenu = new JComboBox(searchCats);
+        searchMenu = new JComboBox<String>(searchCats);
 
         searchBar.addFocusListener(new FocusListener() {
             @Override
@@ -73,8 +73,9 @@ public class SearchScreen extends JPanel implements ActionListener {
     //Jonathan Murphy
     @Override
     public void actionPerformed(ActionEvent event) {
-        if(event.getSource().equals(searchMenu)) {
-            JComboBox b = (JComboBox) event.getSource();
+        if(event.getSource() instanceof JComboBox) {
+            @SuppressWarnings("unchecked") // TODO this should be removed to minimize possible issues
+            JComboBox<String> b = (JComboBox<String>) event.getSource();
             searchMenu.setSelectedItem(b.getSelectedItem());
         }
     }
