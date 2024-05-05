@@ -37,4 +37,31 @@ public class Hazard{
     public String getDescription(){
         return this.description;
     }
+
+    public String updateStorageRequirements(String s){
+        if(s != null){
+            this.storageRequirements = s;
+            return this.storageRequirements;
+        }
+        else{
+            return this.storageRequirements;
+        }
+    }
+
+    public String getStorageRequirements(){
+        return this.storageRequirements;
+    }
+
+    public String getHazardType(){
+        return this.hazardType;
+    }
+
+    public void addChemical(Chemical c){
+        this.dangers.add(c);
+    }
+
+    public void removeChemical(Chemical c){
+        this.dangers.remove(c);
+    }
+    
 }

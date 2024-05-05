@@ -1,6 +1,5 @@
 package com.example.frontend;
 
-import java.util.Arrays;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;

@@ -1,4 +1,5 @@
 /**This is the first draft for chemical class-Sukhdeep Singh */
+// Class reworked 5/5/24 Alex Comeau
 
 package com.example.backend;
 
@@ -41,7 +42,7 @@ public class Chemical {
 
 
 
-
+        
         //Sets specific Hazards
         this.setHazardFlags(hazards);
 

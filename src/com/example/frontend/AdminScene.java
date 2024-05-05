@@ -7,7 +7,6 @@ package com.example.frontend;
 
 import com.example.backend.User;
 import java.awt.Dimension;
-import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;

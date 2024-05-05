@@ -18,6 +18,7 @@ public class AddChemicalPane extends JPanel{
         button.addActionListener(event -> {
             //send an alert "chemical added"
             JPopupMenu popup = new JPopupMenu();
+            popup.add("Chemical Added");
         });
 
         add(textField, BorderLayout.CENTER);
