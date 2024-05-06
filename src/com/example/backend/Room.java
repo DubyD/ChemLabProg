@@ -1,37 +1,41 @@
 package com.example.backend;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Room {
-    private int roomNumber;
-    private ArrayList<Shelf> shelves;
+    private String roomNumber;
+    private HashMap<String, Shelf> shelves;
     private int capacity;
     private ArrayList<TakeOutSlip> slips;
 
-    public Room(int roomNumber, int capacity) {
+    public Room(String roomNumber, int capacity) {
         this.roomNumber = roomNumber;
         this.capacity = capacity;
-        this.shelves = new ArrayList<>();
+        this.shelves = new HashMap<>(23);
         this.slips = new ArrayList<>();
+    }
+    public Room(String roomNumber){
+        this(roomNumber, 100);
     }
 
     // Method to add a shelf to the room
-    public void addShelf(Shelf shelf) {
-        shelves.add(shelf);
+    public void addShelf(String shelfNum, Shelf shelf) {
+        shelves.put(shelfNum, shelf);
     }
 
     // Method to remove a shelf from the room
-    public void removeShelf(Shelf shelf) {
+    public void removeShelf(String shelf) {
         shelves.remove(shelf);
     }
 
     // Getters and setters for all attributes
-    public int getRoomNumber() {
+    public String getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(int roomNumber) {
+    public void setRoomNumber(String roomNumber) {
         this.roomNumber = roomNumber;
     }
     public int getCapacity() {
@@ -42,11 +46,11 @@ public class Room {
         this.capacity = capacity;
     }
 
-    public List<Shelf> getShelves() {
+    public HashMap getShelves() {
         return shelves;
     }
 
-    public List<TakeOutSlip> getSlips() {
+    public ArrayList<TakeOutSlip> getSlips() {
         return slips;
     }
 

@@ -85,10 +85,10 @@ public class SearchResultsPanel extends JPanel {
     private static ArrayList<Chemical> getExampleData() {
 
         List<Room> roomsStoredAt = new ArrayList<>();
-        roomsStoredAt.add(new Room(1,2));
+        roomsStoredAt.add(new Room("1",2));
 
         List<Shelf> shelvesStoredAt = new ArrayList<>();
-        shelvesStoredAt.add(new Shelf(1,2));
+        shelvesStoredAt.add(new Shelf("1",2));
 
         ArrayList<Chemical> chemicals = new ArrayList<>();
         chemicals.add(new Chemical("Acetone", "Fisher", "Room 1", "Shelf 1", 2, 500.0, "mL", "67-64-1", "flammable, skin, eye"));

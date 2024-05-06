@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shelf {
-    private int shelfNumber;
+    private String shelfNumber;
     private int capacity;
-    private List<Chemical> chemicals;
+    private ArrayList<Chemical> chemicals;
 
-    public Shelf(int shelfNumber, int capacity) {
+    public Shelf(String shelfNumber, int capacity) {
         this.shelfNumber = shelfNumber;
         this.capacity = capacity;
         this.chemicals = new ArrayList<>();
     }
+    //constructor for new shelf with no cap
+    //consult miss web for a good default cap
+    public Shelf(String shelfNumber){
+        this(shelfNumber, 10);
+    }
+
 
     // Method to add a chemical to the shelf
     public void addChemical(Chemical chemical) {
@@ -31,11 +37,11 @@ public class Shelf {
 
     // Getters and setters for all attributes
 
-    public int getShelfNumber() {
+    public String getShelfNumber() {
         return shelfNumber;
     }
 
-    public void setShelfNumber(int shelfNumber) {
+    public void setShelfNumber(String shelfNumber) {
         this.shelfNumber = shelfNumber;
     }
 
@@ -47,7 +53,7 @@ public class Shelf {
         this.capacity = capacity;
     }
 
-    public List<Chemical> getChemicals() {
+    public ArrayList<Chemical> getChemicals() {
         return chemicals;
     }
 

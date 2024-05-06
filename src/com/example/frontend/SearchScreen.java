@@ -83,10 +83,10 @@ public class SearchScreen extends JPanel implements ActionListener {
     private static ArrayList<Chemical> getExampleData() {
 
         java.util.List<Room> roomsStoredAt = new ArrayList<>();
-        roomsStoredAt.add(new Room(1,2));
+        roomsStoredAt.add(new Room("1",2));
 
         List<Shelf> shelvesStoredAt = new ArrayList<>();
-        shelvesStoredAt.add(new Shelf(1,2));
+        shelvesStoredAt.add(new Shelf("1",2));
 
         ArrayList<Chemical> chemicals = new ArrayList<>();
         // chemicals.add(new Chemical("Acetone", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",

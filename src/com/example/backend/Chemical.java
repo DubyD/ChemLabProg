@@ -54,7 +54,7 @@ public class Chemical {
         }
     }
 
-    //Changed to using hash map for hazard vals so
+    //Changed to using hash map for hazard vals
     private void setHazardFlags(String list){
         String[] pieces = list.split(",");
         for(String next : pieces){

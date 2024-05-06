@@ -8,6 +8,7 @@ import java.util.HashMap;
  * Full inventory list of chemicals.
  * Puts chemicals into their correctly
  * sorted categories.
+ * @authors Evelyn T, Will D, Alex C
  */
 public class Department{
     private ArrayList<Chemical> chems;
@@ -20,7 +21,7 @@ public class Department{
     private ArrayList<Chemical> aquaticHazard;
     private ArrayList<Chemical> combustible;
     private ArrayList<Chemical> oralHazard;
-    private HashMap<Integer, Room> rooms;
+    private HashMap<String, Room> rooms;
 
 
     public Department(ArrayList<Chemical> chems){
@@ -35,6 +36,57 @@ public class Department{
         eyeHazard = new ArrayList<>();
         digestiveHazard = new ArrayList<>();
         respiratoryHazard = new ArrayList<>();
+        for(Chemical c : chems){
+            HashMap m = c.getHazardFlags();
+            String room = c.getRoom();
+            String shelf = c.getShelf();
+            if(rooms.containsKey(room)){
+                Room r = (Room) m.get(room);
+                HashMap shelves = r.getShelves();
+                if(shelves.containsKey(shelf)){
+                    Shelf s = (Shelf) shelves.get(shelf);
+                    s.addChemical(c);
+                }
+                else {
+                    Shelf temp = new Shelf(shelf);
+                    temp.addChemical(c);
+                    shelves.put(shelf, temp);
+                }
+            }
+            else {
+                Room r = new Room(room);
+                Shelf s = new Shelf(shelf);
+                r.addShelf(shelf, s);
+                rooms.put(room, r);
+            }
+            if(m.containsKey("eye")){
+                eyeHazard.add(c);
+            }
+            if(m.containsKey("skin")){
+                skinHazard.add(c);
+            }
+            if(m.containsKey("corrosive")){
+                corrosive.add(c);
+            }
+            if(m.containsKey("combustible")){
+                combustible.add(c);
+            }
+            if(m.containsKey("oral")){
+                oralHazard.add(c);
+            }
+            if(m.containsKey("digestive")){
+                digestiveHazard.add(c);
+            }
+            if(m.containsKey("flammable")){
+                flammable.add(c);
+            }
+            if(m.containsKey("aquatic")){
+                aquaticHazard.add(c);
+            }
+            if(m.containsKey("respiratory")){
+                respiratoryHazard.add(c);
+            }
+        }
     }
 
     //getters and setters Alex Comeau
@@ -118,11 +170,11 @@ public class Department{
         this.oralHazard = oralHazard;
     }
 
-    public HashMap<Integer,Room> getRooms() {
+    public HashMap<String,Room> getRooms() {
         return this.rooms;
     }
 
-    public void setRooms(HashMap<Integer,Room> rooms) {
+    public void setRooms(HashMap<String,Room> rooms) {
         this.rooms = rooms;
     }
 
