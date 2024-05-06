@@ -1,5 +1,4 @@
 /**This is the first draft for chemical class-Sukhdeep Singh */
-// Class reworked 5/5/24 Alex Comeau
 
 package com.example.backend;
 
@@ -42,7 +41,7 @@ public class Chemical {
 
 
 
-        
+
         //Sets specific Hazards
         this.setHazardFlags(hazards);
 
@@ -55,34 +54,35 @@ public class Chemical {
         }
     }
 
+    //Changed to using hash map for hazard vals so
     private void setHazardFlags(String list){
         String[] pieces = list.split(",");
         for(String next : pieces){
             String[] parts = next.split(" ");
-            for(String hazard : parts){
-                if(hazard.equals("eye")){
-                    hazardFlags.put("eyeIrritant", true);
+            for(String bits : parts){
+                if(bits.equals("eye")){
+                    hazardFlags.put("eye", true);
                 }
-                if(hazard.equals("skin")){
-                    hazardFlags.put("skinIrritant", true);
+                if(bits.equals("skin")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("corrosive")){
-                    hazardFlags.put("corrosive", true);
+                if(bits.equals("corrosive")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("combustible")){
-                    hazardFlags.put("combustible", true);
+                if(bits.equals("combustible")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("oral") || hazard.equals("digestive")){
-                    hazardFlags.put("oralHazard", true);
+                if(bits.equals("oral") || bits.equals("digestive")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("flammable")){
-                    hazardFlags.put("flammable", true);
+                if(bits.equals("flammable")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("aquatic")){
-                    hazardFlags.put("aquaticHazard", true);
+                if(bits.equals("aquatic")){
+                    hazardFlags.put(bits, true);
                 }
-                if(hazard.equals("respiratory")){
-                    hazardFlags.put("respiratoryHazard", true);
+                if(bits.equals("respitory")){
+                    hazardFlags.put(bits, true);
                 }
             }
         }
