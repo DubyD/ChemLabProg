@@ -88,6 +88,24 @@ public class Chemical {
         }
     }
 
+    public Chemical(String name, String room, String shelf, double size, String sizeUnit){
+        this.name = name;
+        this.room = room;
+        this.shelf = shelf;
+        this.size = size;
+        this.sizeUnit = sizeUnit;
+
+
+        if(size < 0){
+            throw new IllegalArgumentException("Size must be a positive number.");
+        }
+        if(!Arrays.asList(UNITS).contains(sizeUnit) || sizeUnit == null){
+            //default to g
+            sizeUnit = "g";
+        }
+
+    }
+
     public HashMap<String, Boolean> getHazardFlags(){
         return hazardFlags;
     }

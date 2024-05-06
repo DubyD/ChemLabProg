@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Full inventory list of chemicals.
  * Puts chemicals into their correctly
  * sorted categories.
- * @authors Evelyn T, Will D, Alex C
+ * @authors Evelyn T, Will D(minimal), Alex C
  */
 public class Department{
     private ArrayList<Chemical> chems;
