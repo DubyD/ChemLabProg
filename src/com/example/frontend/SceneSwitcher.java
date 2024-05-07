@@ -1,3 +1,6 @@
+/*
+@author Salim Jday
+*/
 package com.example.frontend;
 import javax.swing.*;
 import java.awt.*;
