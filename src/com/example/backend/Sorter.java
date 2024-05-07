@@ -4,11 +4,7 @@ package com.example.backend;
 
 
 
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.BufferedWriter;
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,24 +47,29 @@ public class Sorter{
 
 
 
-    //Split file paths by comma
-    //Fixed this for now let me know if we are using a different splitter
-    public static void writeInv(String filepath) {
-        String[] paths = filepath.split(",");
-        //Initiating variables
-        List<String> working = new ArrayList<String>();
+        //Split file paths by comma
+        //Fixed this for now let me know if we are using a different splitter
+    public static boolean writeInv(String filePath, List<String> working) {
+
+            //Checks to see if a File exists, if not
+        File reading = new File(filePath);
+        if(!reading.exists()){
+            filePath.replace("\\", "/");
+            reading = new File(filePath);
+            if(!reading.exists()){
+                return false;
+            }
+        }
 
         try {
             //loops through each file
-            for (String path : paths) {
-                working.addAll(readInv(path));
-            }
+
+
+                //Create a FileWriter with the specified file path
+
+            FileWriter fileWriter = new FileWriter(filePath);
 
             working.sort(String::compareToIgnoreCase);
-
-            //Create a FileWriter with the specified file path
-            FileWriter fileWriter = new FileWriter("..\\Data\\updated_data.csv");
-
             //Wrap the FileWriter in a BufferedWriter for efficient writing
             try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
@@ -81,6 +82,8 @@ public class Sorter{
                 }
             }
 
+            return true;
+
         } catch (IOException e) {
 
         }
@@ -89,6 +92,14 @@ public class Sorter{
 
 
     public static List<String> readInv(String filePath){
+
+
+            //Checks to see if a File exists
+        File reading = new File(filePath);
+        if(!reading.exists()){
+            filePath.replace("\\", "/");
+            reading = new File(filePath);
+        }
 
         List<String> reply = new ArrayList<String>();
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
@@ -104,6 +115,7 @@ public class Sorter{
 
         }//Autocloses when the BufferedReader is uninitialized
 
+        reply.sort(String::compareToIgnoreCase);
 
         return reply;
     }
@@ -126,6 +138,24 @@ public class Sorter{
 
         Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
         return beaker;
+
+    }
+
+
+        //Name,Quantity,Initials/Date ,Location,Company
+        //These are the attributes of the string in the .csv
+        //Used for the .csv file
+    public static Solution wetLabDoc(String line){
+        String[] cut = line.split(",", 5);
+
+        int amount = Integer.parseInt(cut[6]);
+        Double size = Double.parseDouble(cut[7]);
+
+        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
+        return beaker;
+    }
+
+    public static boolean createSolution(List<Chemical> combinations){
 
     }
 
