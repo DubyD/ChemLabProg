@@ -120,7 +120,7 @@ public class Sorter{
         return reply;
     }
 
-
+//--------------------------------------vvvvvvvvvvvvv---Work Space---vvvvvvvvvvvvvvvv-----------------------------------
 
     //For 534_inventory, the columns are set up as so: (skip line 1)
     //SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
@@ -148,10 +148,23 @@ public class Sorter{
     public static Solution wetLabDoc(String line){
         String[] cut = line.split(",", 5);
 
-        int amount = Integer.parseInt(cut[6]);
-        Double size = Double.parseDouble(cut[7]);
+        String[] extract = cut[2].split();
+        String number;
+        String measurement;
 
-        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
+        for(String piece : extract){
+
+            if(){
+
+            }else{
+
+            }
+        }
+
+        int amount = Integer.parseInt(cut[]);
+        Double size = Double.parseDouble(cut[]);
+
+        Solution beaker = new Solution(cut[], cut[], cut[], cut[], amount, size, cut[], cut[], cut[]);
         return beaker;
     }
 
