@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchScreen extends JPanel implements ActionListener {
-    private JButton searchButton;
+    private JButton logOutButton, searchButton;
     private JTextField searchBar;
     private JComboBox<String> searchMenu;
     private SearchResultsPanel resultPanelTest; //test SearchResultPanel
@@ -23,6 +23,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         //Jonathan Murphy
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
+        logOutButton = new JButton("EXIT");
         searchButton = new JButton("SEARCH");
         searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
@@ -55,10 +56,18 @@ public class SearchScreen extends JPanel implements ActionListener {
         searchPanel.add(searchMenu);
         searchPanel.setBounds(this.getWidth()/2, 200, 500,100);
 
+        JPanel logOutPanel = new JPanel();
+        logOutPanel.add(logOutButton);
+
         this.add(searchPanel, BorderLayout.NORTH);
         //adding to test resultPanel to Search Scene
         this.add(resultPanelTest, BorderLayout.CENTER);
+        this.add(logOutPanel, BorderLayout.PAGE_END);
         this.setVisible(true);
+    }
+
+    public JButton getLogOutButton() {
+        return logOutButton;
     }
 
     //Jonathan Murphy
