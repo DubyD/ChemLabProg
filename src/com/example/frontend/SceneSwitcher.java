@@ -39,14 +39,6 @@ public class SceneSwitcher {
     }
 
     private void showSearchScreen() {
-        //Exits Application
-        mainTabbedPane.getSearchScreen().getLogOutButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
         this.frame.setContentPane(mainTabbedPane);
         this.frame.revalidate();
     }
