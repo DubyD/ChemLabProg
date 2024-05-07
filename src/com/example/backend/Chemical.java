@@ -50,11 +50,11 @@ public class Chemical {
         }
         if(!Arrays.asList(UNITS).contains(sizeUnit) || sizeUnit == null){
             //default to g
-            sizeUnit = "g";
+            this.sizeUnit = "g";
         }
     }
 
-    //Changed to using hash map for hazard vals
+        //Changed to using hash map for hazard vals
     private void setHazardFlags(String list){
         String[] pieces = list.split(",");
         for(String next : pieces){
@@ -102,7 +102,7 @@ public class Chemical {
         }
         if(!Arrays.asList(UNITS).contains(sizeUnit) || sizeUnit == null){
             //default to g
-            sizeUnit = "g";
+            this.sizeUnit = "g";
         }
 
     }
