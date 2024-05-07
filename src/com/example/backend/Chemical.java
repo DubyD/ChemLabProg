@@ -88,6 +88,7 @@ public class Chemical {
         }
     }
 
+        //Constructor used for solution
     public Chemical(String name, String room, String shelf, double size, String sizeUnit){
         this.name = name;
         this.room = room;
