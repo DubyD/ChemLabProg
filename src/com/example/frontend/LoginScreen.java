@@ -3,7 +3,7 @@ change the login screen to make sure t ask for username and passward, create a
 popup for asking create account.
 @author Jin Kim
  */
-
+/*
 package com.example.frontend;
 
 import javax.swing.*;
@@ -85,29 +85,29 @@ public class LoginScreen extends JPanel{
 
     }
 }
+*/
 
 /*
-
-//Some other version of code, mostly for testing. By SJ
-
+@author Salim Jday
+*/
 package com.example.frontend;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 public class LoginScreen extends JPanel {
     private JTextField userField;
     private JPasswordField passField;
     private JButton loginButton;
-    private JLabel messageLabel; // For displaying login status messages
+    private JButton createAccountButton;
+    private JButton exitButton;
+    private JLabel messageLabel;
 
-    public LoginScreen() {
-        initializeUI();
+    public LoginScreen(JFrame frame) {
+        initializeUI(frame);
     }
 
-    private void initializeUI() {
+    private void initializeUI(JFrame frame) {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
@@ -122,44 +122,32 @@ public class LoginScreen extends JPanel {
         add(userLabel, gbc);
 
         userField = new JTextField(15);
-        userField.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                checkFields();
-            }
-        });
-        userField.setBorder(BorderFactory.createCompoundBorder(
-                userField.getBorder(),
-                BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         add(userField, gbc);
 
         JLabel passwordLabel = new JLabel("Password:");
         add(passwordLabel, gbc);
 
         passField = new JPasswordField(15);
-        passField.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                checkFields();
-            }
-        });
-        passField.setBorder(BorderFactory.createCompoundBorder(
-                passField.getBorder(),
-                BorderFactory.createEmptyBorder(5, 5, 5, 5)));
         add(passField, gbc);
 
+        JPanel buttonPanel = new JPanel(new FlowLayout());
+
         loginButton = new JButton("Login");
-        loginButton.setEnabled(false); // Initially disabled
-        add(loginButton, gbc);
+        buttonPanel.add(loginButton);
+
+        createAccountButton = new JButton("Create Account");
+        createAccountButton.addActionListener(e -> new CreateAccountDialog(frame));
+        buttonPanel.add(createAccountButton);
+
+        exitButton = new JButton("Exit");
+        exitButton.addActionListener(e -> System.exit(0));
+        buttonPanel.add(exitButton);
+
+        add(buttonPanel, gbc);
 
         messageLabel = new JLabel("");
         messageLabel.setHorizontalAlignment(JLabel.CENTER);
         add(messageLabel, gbc);
-    }
-
-    private void checkFields() {
-        // Enable the login button only if both fields have some text
-        loginButton.setEnabled(userField.getText().length() > 0 && passField.getPassword().length > 0);
     }
 
     public JTextField getUserField() {
@@ -174,8 +162,15 @@ public class LoginScreen extends JPanel {
         return loginButton;
     }
 
+    public JButton getCreateAccountButton() {
+        return createAccountButton;
+    }
+
+    public JButton getExitButton() {
+        return exitButton;
+    }
+
     public JLabel getMessageLabel() {
         return messageLabel;
     }
 }
-*/
