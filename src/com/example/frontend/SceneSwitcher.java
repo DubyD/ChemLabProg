@@ -43,7 +43,8 @@ public class SceneSwitcher {
         mainTabbedPane.getSearchScreen().getLogOutButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                loginScreen.loginArea();
+                frame.setContentPane(loginScreen);
             }
         });
 

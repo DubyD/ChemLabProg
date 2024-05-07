@@ -23,7 +23,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         //Jonathan Murphy
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
-        logOutButton = new JButton("EXIT");
+        logOutButton = new JButton("Log Out");
         searchButton = new JButton("SEARCH");
         searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
