@@ -179,8 +179,16 @@ public class Sorter{
 
 
 
-
-
+    //adding space for department related sort methods.
+    //Would like to have a static sort method that sorts an arraylist
+    //of chemicals alphabetically.
+    /**
+     * takes in an unsorted arraylist of chems and returns one sorted
+     * alphabetically
+     */
+    public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
+        return list;
+    }
 
 
 

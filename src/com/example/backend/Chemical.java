@@ -38,6 +38,7 @@ public class Chemical {
         this.casNum = cas;
 
         this.hazards = hazards;
+        hazardFlags = new HashMap<>(23);
 
 
 

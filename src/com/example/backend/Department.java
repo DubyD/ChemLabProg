@@ -22,11 +22,21 @@ public class Department{
     private ArrayList<Chemical> combustible;
     private ArrayList<Chemical> oralHazard;
     private HashMap<String, Room> rooms;
+    private ArrayList<String> roomNums;
 
 
+    /**
+     * Class department initializes with a full list of chemicals.
+     * Constructor initializes rooms and puts the chemicals
+     * in the correct room, shelf, as well as hazard categories
+     * @param chems - chemical objects list
+     * @author - Evelyn Totman
+     */
     public Department(ArrayList<Chemical> chems){
+        //initialize lists
         this.chems = chems;
         rooms = new HashMap<>(23);
+        roomNums = new ArrayList<>();
         flammable = new ArrayList<>();
         combustible = new ArrayList<>();
         oralHazard = new ArrayList<>();
@@ -36,13 +46,17 @@ public class Department{
         eyeHazard = new ArrayList<>();
         digestiveHazard = new ArrayList<>();
         respiratoryHazard = new ArrayList<>();
+
         for(Chemical c : chems){
             HashMap m = c.getHazardFlags();
             String room = c.getRoom();
             String shelf = c.getShelf();
+            //initializes rooms and shelves
+            //if room or shelf already exists
+            //add chem to it
             if(rooms.containsKey(room)){
                 Room r = (Room) m.get(room);
-                HashMap shelves = r.getShelves();
+                HashMap<String, Shelf> shelves = r.getShelves();
                 if(shelves.containsKey(shelf)){
                     Shelf s = (Shelf) shelves.get(shelf);
                     s.addChemical(c);
@@ -58,6 +72,7 @@ public class Department{
                 Shelf s = new Shelf(shelf);
                 r.addShelf(shelf, s);
                 rooms.put(room, r);
+                roomNums.add(room);
             }
             if(m.containsKey("eye")){
                 eyeHazard.add(c);
@@ -87,6 +102,10 @@ public class Department{
                 respiratoryHazard.add(c);
             }
         }
+    }
+
+    public Department(){
+        this(new ArrayList<>());
     }
 
     //getters and setters Alex Comeau
@@ -178,5 +197,22 @@ public class Department{
         this.rooms = rooms;
     }
 
+    //to string and equals only check
+    //full list as of now
+    //Evelyn
+    @Override
+    public String toString() {
+        return chems.toString();
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(obj == this) return true;
+        if(obj.getClass().isInstance(new Department())){
+            Department t = (Department) obj;
+            return chems.equals(t.chems);
+        }
+        return false;
+    }
 }
