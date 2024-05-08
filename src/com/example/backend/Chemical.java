@@ -52,6 +52,26 @@ public class Chemical {
         }
     }
 
+        //Constructor used for solution
+    public Chemical(String name, String room, String shelf, double size, String sizeUnit){
+        this.name = name;
+        this.room = room;
+        this.shelf = shelf;
+        this.size = size;
+        this.sizeUnit = sizeUnit;
+
+        hazardFlags = new HashMap<>(23);
+
+        if(size < 0){
+            throw new IllegalArgumentException("Size must be a positive number.");
+        }
+        if(!Arrays.asList(UNITS).contains(sizeUnit) || sizeUnit == null){
+            //default to g
+            this.sizeUnit = "g";
+        }
+
+    }
+
         //Changed to using hash map for hazard vals
     private void setHazardFlags(String list){
         String[] pieces = list.split(",");
@@ -86,24 +106,6 @@ public class Chemical {
         }
     }
 
-        //Constructor used for solution
-    public Chemical(String name, String room, String shelf, double size, String sizeUnit){
-        this.name = name;
-        this.room = room;
-        this.shelf = shelf;
-        this.size = size;
-        this.sizeUnit = sizeUnit;
-
-
-        if(size < 0){
-            throw new IllegalArgumentException("Size must be a positive number.");
-        }
-        if(!Arrays.asList(UNITS).contains(sizeUnit) || sizeUnit == null){
-            //default to g
-            this.sizeUnit = "g";
-        }
-
-    }
 
     public HashMap<String, Boolean> getHazardFlags(){
         return hazardFlags;
@@ -262,6 +264,6 @@ public class Chemical {
     public void setCASNumber() {
 
     }
-    
+
 
 }

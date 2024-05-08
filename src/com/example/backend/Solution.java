@@ -30,17 +30,16 @@ public class Solution extends Chemical{
             this.dateAndInitials = dateAndInitials;
             this.captainPlanet = new ArrayList<Chemical>();
 
-
-
+                //inherits the hazards from the combinations of chemicals
+            this.setCombinations(combination);
         }
 
             //Used to set the chemical combination of this solution
         public void setCombinations(List<Chemical> combination){
             this.captainPlanet.addAll(combination);
             for(Chemical next : this.captainPlanet){
-                hazardFlags = new HashMap<>(23);
-
-                //Sets specific Hazards
+                
+                    //Sets specific Hazards
                 this.setHazardFlags(next.getHazards());
             }
 
