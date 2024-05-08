@@ -2,14 +2,17 @@
 @author Salim Jday
 */
 package com.example.frontend;
+import com.example.Main;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SceneSwitcher {
     private JFrame frame;
-    private JPanel searchPanel;
     private LoginScreen loginScreen;
-    private SearchScreen searchScreen;
+    private MainTabbedPane mainTabbedPane;
 
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
@@ -23,12 +26,13 @@ public class SceneSwitcher {
         frame.revalidate();
         frame.repaint();
         frame.setVisible(true);
+        mainTabbedPane = new MainTabbedPane();
     }
 
     private void setupLoginScreenActions() {
         loginScreen.getLoginButton().addActionListener(e -> {
             if (authenticate(loginScreen.getUserField().getText(), new String(loginScreen.getPassField().getPassword()))) {
-                showSearchScreen();
+                showMainTabbedPane();
             } else {
                 loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
             }
@@ -39,13 +43,8 @@ public class SceneSwitcher {
         return "admin".equals(username) && "password".equals(password);
     }
 
-    private void showSearchScreen() {
-        if (this.searchScreen == null) {
-            this.searchScreen = new SearchScreen();
-        }
-        this.searchPanel = new JPanel(new BorderLayout());
-        this.searchPanel.add(this.searchScreen, BorderLayout.CENTER);
-        this.frame.setContentPane(searchPanel);
+    private void showMainTabbedPane() {
+        this.frame.setContentPane(mainTabbedPane);
         this.frame.revalidate();
         this.frame.repaint();
     }

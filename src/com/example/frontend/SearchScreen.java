@@ -89,18 +89,18 @@ public class SearchScreen extends JPanel implements ActionListener {
         shelvesStoredAt.add(new Shelf("1",2));
 
         ArrayList<Chemical> chemicals = new ArrayList<>();
-        // chemicals.add(new Chemical("Acetone", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
-        // chemicals.add(new Chemical("Ethanol", 500, "ml", "Flammable", true, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
-        // chemicals.add(new Chemical("Water", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
-        // chemicals.add(new Chemical("Sulfur", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
-        // chemicals.add(new Chemical("Tomato", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
-        // chemicals.add(new Chemical("Salsa", 500, "ml", "Non-flammable", false, "sdsSheet", "manufacturer",
-        //         "purchaseDate", "expirationDate"));
+        //chemicals.add(new Chemical("Acetone", "500", "412", "1", 10, 2.7, "ml",
+        //        "1678", "Acidic"));
+        //chemicals.add(new Chemical("Ethanol", "Connecticut", "208", "1", 30, 3.8, "ml",
+        //        "12896", "Acidic"));
+        //chemicals.add(new Chemical("Water", "Earth", "312", "2", 100, 5.5, "ml",
+        //        "3450976", "wet"));
+        //chemicals.add(new Chemical("Sulfur", "florida", "110", "2", 12, 200.2, "ml",
+        //        "501346789", "Acidic"));
+        //chemicals.add(new Chemical("Tomato", "Mississippi", "19", "3", 7, 108.0, "ml",
+        //        "23786", "saucy"));
+        //chemicals.add(new Chemical("Salsa", "May 5th", "1738", "3", 14, 12.0, "ml",
+        //        "266359", "spicy"));
         return chemicals;
     }
 }

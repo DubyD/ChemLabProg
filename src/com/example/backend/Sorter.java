@@ -165,30 +165,63 @@ public class Sorter{
             }
         }
 
-
+            //Company
         String company = cut[4];
-        if(!company.equals("")){
+            //To check for effectively empty boxes
+            //Or unintended spaces. ex. " "
+        String temp = company;
+        temp.replace(" ", "");
+        if(temp.equals("")){
 
-        }else if(company)
+           company = "MassBay Chemistry Dept.";
 
+        }
 
-
-
-            //values
-        int amount = 1;
-        Double size = Double.parseDouble(number);
 
 
                 //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
                 //constructor (chem)( name, room, shelf, size, sizeUnit)
-        Solution beaker = new Solution(cut[0], "Solutions Cabinet", cut[3], amount, sizeUnit, cut[2], company);
+        Solution beaker = new Solution(cut[0], "Solutions Cabinet", cut[3], Double.parseDouble(number), sizeUnit, cut[2], company);
         return beaker;
     }
 
-    public static boolean createSolution(List<Chemical> combinations){
 
+        //Used for creating a new Solution
+    public static boolean createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
 
+        boolean reply;
 
+            //Checks to see if the solution is outsourced
+        String company;
+        String temp = input;
+        temp.replace(" ", "");
+        if(temp.equals("")){
+
+            company = "MassBay Chemistry Dept.";
+
+        }else{
+            company = input;
+        }
+            //Makes sure that the size is a number amount
+        try {
+
+            double size = Double.parseDouble(amount);
+            Solution beaker = new Solution(name, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials, company);
+
+                //Checks to make sure that the solution is created
+            if(beaker != null){
+
+                reply = true;
+            }else{
+                reply = false;
+            }
+
+                //Checks to make sure a number is formatted to the size variable
+        }catch(NumberFormatException e){
+            reply = false;
+        }
+
+        return reply;
 
     }
 
