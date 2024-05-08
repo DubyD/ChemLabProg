@@ -38,7 +38,7 @@ public class Solution extends Chemical{
         public void setCombinations(List<Chemical> combination){
             this.captainPlanet.addAll(combination);
             for(Chemical next : this.captainPlanet){
-                
+
                     //Sets specific Hazards
                 this.setHazardFlags(next.getHazards());
             }
