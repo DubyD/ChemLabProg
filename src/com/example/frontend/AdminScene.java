@@ -6,7 +6,11 @@ The adminScene class provides an exclusive scene for admins only, to add and rem
 package com.example.frontend;
 
 import com.example.backend.User;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,9 +18,15 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
 
+/**
+ *
+ * @author Gus Warmington
+ */
 public class AdminScene extends JPanel{
     private JFrame frame;
+    private JPanel userPanel;
     private DefaultListModel<User> unapprovedUsers;
     private DefaultListModel<User> approvedUsers;
     private JButton returnButton;
@@ -74,6 +84,8 @@ public class AdminScene extends JPanel{
         
         JButton currentUsersButton = new JButton("Active Users (" + approvedUsers.getSize() +")" );
         currentUsersButton.addActionListener(event ->{
+            cUserList.clearSelection();
+            pUserList.clearSelection();
         if(cListScroller.isVisible()){
             cListScroller.setVisible(false);
             removeUserButton.setVisible(false);
@@ -88,11 +100,21 @@ public class AdminScene extends JPanel{
             approveUserButton.setVisible(false);
             denyUserButton.setVisible(false);
             
+             if(userPanel !=null){
+                this.remove(userPanel);
+                userPanel = null;
+            }
+
+            this.revalidate();
+            this.repaint();
             frame.revalidate();
         });
         
+        
         JButton pendingUsersButton = new JButton("Pending Users (" + unapprovedUsers.getSize() +")" );
         pendingUsersButton.addActionListener(event ->{
+            cUserList.clearSelection();
+            pUserList.clearSelection();
         if(pListScroller.isVisible()){
             pListScroller.setVisible(false);
             approveUserButton.setVisible(false);
@@ -107,12 +129,19 @@ public class AdminScene extends JPanel{
             removeUserButton.setVisible(false);
             makeAdminButton.setVisible(false);
             cListScroller.setVisible(false);
+            if(userPanel !=null){
+                 this.remove(userPanel);
+                 userPanel = null;                 
+            }
+            
+            this.repaint();
+            this.revalidate();
             frame.revalidate();
         });
 
         //Current User List {
         cUserList = new JList(approvedUsers);
-        cUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        cUserList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         
        cListScroller = new JScrollPane(cUserList);
         cListScroller.setWheelScrollingEnabled(true);
@@ -120,9 +149,10 @@ public class AdminScene extends JPanel{
         cListScroller.setPreferredSize(new Dimension(200, 70));
         cListScroller.setVisible(false);
         //}
+        
         //Pending User List {
         pUserList = new JList(unapprovedUsers);
-        pUserList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        pUserList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         
         pListScroller = new JScrollPane(pUserList);
         pListScroller.setWheelScrollingEnabled(true);
@@ -140,10 +170,14 @@ public class AdminScene extends JPanel{
                     saveNewUser((User) unapprovedUsers.get(i));
                     }
                 }
-                pUserList.clearSelection();
                 pendingUsersButton.setText("Pending Users (" + unapprovedUsers.getSize() +")" );
                 currentUsersButton.setText("Active Users (" + approvedUsers.getSize() +")" );
                 pendingUsersButton.repaint();
+                 if(userPanel !=null){
+                    this.remove(userPanel);
+                    userPanel = null;
+                }
+                pUserList.clearSelection();
                 this.revalidate();
                 this.repaint();
             }
@@ -154,6 +188,7 @@ public class AdminScene extends JPanel{
                     if(i >= 0 && unapprovedUsers.getSize() > 0){
                     unapprovedUsers.remove(i);
                     pUserList.remove(i);
+
                     }
                 }
 
@@ -161,6 +196,10 @@ public class AdminScene extends JPanel{
                 pendingUsersButton.setText("Pending Users (" + unapprovedUsers.getSize() +")" );
                 
                 pendingUsersButton.repaint();
+                if(userPanel !=null){
+                    this.remove(userPanel);
+                    userPanel = null;
+                }
                 this.revalidate();
                 this.repaint();
             }
@@ -178,6 +217,10 @@ public class AdminScene extends JPanel{
                 cUserList.clearSelection();
                 currentUsersButton.setText("Active Users (" + approvedUsers.getSize() +")" );
                 currentUsersButton.repaint();
+                if(userPanel !=null){
+                    this.remove(userPanel);
+                    userPanel = null;
+                }              
                 this.revalidate();
                 this.repaint();
         });
@@ -189,39 +232,67 @@ public class AdminScene extends JPanel{
                     makeAdmin(approvedUsers.get(i));
                     }
                 }
-
+                if(userPanel !=null){
+                    userPanel.repaint();
+                    userPanel.revalidate();
+                }  
+                
                 this.revalidate();
                 this.repaint();
                 
             }
         });
-        
-        
-        
-        
 
-        /* pUserList.addListSelectionListener(event ->{
-        approveUserButton.setVisible(true);
-        denyUserButton.setVisible(true);
-        });*/
-        
+        JButton infoButton = new JButton("Display Info");
+        infoButton.addActionListener(event ->{
+            
+            if(userPanel == null){
+                if(cUserList.isVisible()){
+                    if(!cUserList.isSelectionEmpty()){
+                    showUserInfo(cUserList.getSelectedValue());
+                    }
+                }
+                if(pUserList.isVisible()){
+                    
+                    if(!pUserList.isSelectionEmpty()){
+                        showUserInfo(pUserList.getSelectedValue());
+                    }
+                }
+            }
+            else{
+                this.remove(userPanel);
+                userPanel = null;
+            }
+                this.revalidate();
+                this.repaint();
+        });
 
-        
         this.add(currentUsersButton);
         this.add(pendingUsersButton);
         this.add(cListScroller);
         this.add(pListScroller);
+        this.add(infoButton);
         this.add(approveUserButton);
         this.add(denyUserButton);
         this.add(makeAdminButton);
         this.add(removeUserButton);
         
-        /*        returnButton = new JButton("Return");
         
-        this.add(returnButton);*/
         frame.add(this);
         frame.revalidate();
     
+    }
+    private void showUserInfo(User user){
+        if(userPanel !=null){
+        this.remove(userPanel);
+        }
+        userPanel = new JPanel();
+        userPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        userPanel.setPreferredSize(new Dimension(600, 400));
+        this.add(userPanel);
+        this.revalidate();
+        frame.revalidate();
+        
     }
 
     public void createNewUser(String username, String password){
@@ -245,8 +316,10 @@ public class AdminScene extends JPanel{
     return returnButton;
     }*/
 
+    @Override
     public String toString() {
         return "This class holds a user management screen.";
         // Perhaps add user count
     }
+
 }
