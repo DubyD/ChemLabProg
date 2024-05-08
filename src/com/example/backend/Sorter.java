@@ -187,15 +187,26 @@ public class Sorter{
 
 
         //Used for creating a new Solution
-    public static boolean createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, List<Chemical> combinations){
+    public static boolean createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
 
         boolean reply;
-        String
 
+            //Checks to see if the solution is outsourced
+        String company;
+        String temp = input;
+        temp.replace(" ", "");
+        if(temp.equals("")){
+
+            company = "MassBay Chemistry Dept.";
+
+        }else{
+            company = input;
+        }
+            //Makes sure that the size is a number amount
         try {
 
             double size = Double.parseDouble(amount);
-            Solution beaker = new Solution(name, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials, );
+            Solution beaker = new Solution(name, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials, company);
 
                 //Checks to make sure that the solution is created
             if(beaker != null){

@@ -40,10 +40,7 @@ public class Chemical {
         this.hazards = hazards;
         hazardFlags = new HashMap<>(23);
 
-
-
-
-        //Sets specific Hazards
+            //Sets specific Hazards
         this.setHazardFlags(hazards);
 
         if(size < 0){
@@ -265,13 +262,6 @@ public class Chemical {
     public void setCASNumber() {
 
     }
-
-    public String getHazard() {
-        return "Hazard";
-    }
-
-    public void setHazard() {
-
-    }
+    
 
 }
