@@ -6,6 +6,7 @@ package com.example.backend;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // This class will be used to read and write data entries to the updated_data.csv file
@@ -69,7 +70,6 @@ public class Sorter{
 
             FileWriter fileWriter = new FileWriter(filePath);
 
-            working.sort(String::compareToIgnoreCase);
             //Wrap the FileWriter in a BufferedWriter for efficient writing
             try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
@@ -115,7 +115,7 @@ public class Sorter{
 
         }//Autocloses when the BufferedReader is uninitialized
 
-        reply.sort(String::compareToIgnoreCase);
+
 
         return reply;
     }
@@ -148,27 +148,47 @@ public class Sorter{
     public static Solution wetLabDoc(String line){
         String[] cut = line.split(",", 5);
 
-        String[] extract = cut[2].split();
+            //Extracts the amount from the sizeUnit
+        String[] extract = cut[1].split();
         String number;
-        String measurement;
+        String sizeUnit;
 
         for(String piece : extract){
 
-            if(){
+            try{
 
-            }else{
+                Integer.parseInt(piece);
+                number = number + piece;
+            }catch (NumberFormatException e){
 
+                sizeUnit= sizeUnit + piece;
             }
         }
 
-        int amount = Integer.parseInt(cut[]);
-        Double size = Double.parseDouble(cut[]);
 
-        Solution beaker = new Solution(cut[], cut[], cut[], cut[], amount, size, cut[], cut[], cut[]);
+        String company = cut[4];
+        if(!company.equals("")){
+
+        }else if(company)
+
+
+
+
+            //values
+        int amount = 1;
+        Double size = Double.parseDouble(number);
+
+
+                //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
+                //constructor (chem)( name, room, shelf, size, sizeUnit)
+        Solution beaker = new Solution(cut[0], "Solutions Cabinet", cut[3], amount, sizeUnit, cut[2], company);
         return beaker;
     }
 
     public static boolean createSolution(List<Chemical> combinations){
+
+
+
 
     }
 
@@ -187,6 +207,13 @@ public class Sorter{
      * alphabetically
      */
     public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
+
+            //Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
+            //Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
+            //Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
+        Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
+
+            //Returns altered List.
         return list;
     }
 
