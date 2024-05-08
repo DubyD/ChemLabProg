@@ -6,19 +6,24 @@ The adminScene class provides an exclusive scene for admins only, to add and rem
 package com.example.frontend;
 
 import com.example.backend.User;
-import java.awt.Color;
+import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.Box.Filler;
+import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
-import javax.swing.event.ListSelectionEvent;
+import javax.swing.border.Border;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.TitledBorder;
 
 /**
  *
@@ -29,7 +34,6 @@ public class AdminScene extends JPanel{
     private JPanel userPanel;
     private DefaultListModel<User> unapprovedUsers;
     private DefaultListModel<User> approvedUsers;
-    private JButton returnButton;
 
     private JList<User> cUserList;
     private JList<User> pUserList;
@@ -70,8 +74,11 @@ public class AdminScene extends JPanel{
     }
 
     private void runScene() {
+        
          unapprovedUsers.add(unapprovedUsers.getSize(), new User("Gus", "password"));
         //Temporary test user
+        
+        //Approve and Deny buttons, appear when Pending Users is selected
         JButton approveUserButton = new JButton("Approve");
         approveUserButton.setVisible(false);
         JButton denyUserButton = new JButton("Deny");
@@ -160,7 +167,8 @@ public class AdminScene extends JPanel{
         pListScroller.setPreferredSize(new Dimension(200, 70));
         pListScroller.setVisible(false);
         //}
-        
+                 
+         pListScroller.createVerticalScrollBar();
 
         
         approveUserButton.addActionListener(event ->{
@@ -242,54 +250,113 @@ public class AdminScene extends JPanel{
                 
             }
         });
-
         JButton infoButton = new JButton("Display Info");
+        
+        JPanel topArea = new JPanel();
+        BoxLayout topBoxLayout = new BoxLayout(topArea, BoxLayout.X_AXIS);
+        topArea.setLayout(topBoxLayout);
+        
+        topArea.add(currentUsersButton);
+        topArea.add(pendingUsersButton);
+        topArea.add(infoButton);
+        topArea.add(approveUserButton);
+        topArea.add(denyUserButton);
+        topArea.add(makeAdminButton);
+        topArea.add(removeUserButton);
+        
+        JPanel botArea = new JPanel();
+        BoxLayout botBoxLayout = new BoxLayout(botArea, BoxLayout.X_AXIS);
+        botArea.setLayout(botBoxLayout);
+        JComponent boxFillerLeft= new Box.Filler(new Dimension(200, 500),new Dimension(200, 500),new Dimension(200, 500));
+        JComponent boxFillerRight = new Box.Filler(new Dimension(200, 500),new Dimension(200, 500),new Dimension(200, 500));
+        botArea.add(boxFillerLeft);
+        botArea.add(cListScroller, BorderLayout.PAGE_START);
+        botArea.add(pListScroller, BorderLayout.PAGE_START);
+        cListScroller.setPreferredSize(new Dimension(200, 200));
+        pListScroller.setPreferredSize(new Dimension(200, 200));
+        
+        BoxLayout mainBoxLayout = new BoxLayout(this, BoxLayout.Y_AXIS);
+        
+        botArea.add(boxFillerRight);
         infoButton.addActionListener(event ->{
             
             if(userPanel == null){
                 if(cUserList.isVisible()){
                     if(!cUserList.isSelectionEmpty()){
-                    showUserInfo(cUserList.getSelectedValue());
+                        showUserInfo(cUserList.getSelectedValue());
+                        botArea.remove(boxFillerRight);
+                        botArea.add(userPanel);
                     }
                 }
                 if(pUserList.isVisible()){
                     
                     if(!pUserList.isSelectionEmpty()){
                         showUserInfo(pUserList.getSelectedValue());
+                        botArea.remove(boxFillerRight);
+                        botArea.add(userPanel);
                     }
                 }
             }
             else{
-                this.remove(userPanel);
+                botArea.remove(userPanel);
+                botArea.add(boxFillerRight);
+                
                 userPanel = null;
             }
                 this.revalidate();
                 this.repaint();
         });
-
-        this.add(currentUsersButton);
-        this.add(pendingUsersButton);
-        this.add(cListScroller);
-        this.add(pListScroller);
-        this.add(infoButton);
-        this.add(approveUserButton);
-        this.add(denyUserButton);
-        this.add(makeAdminButton);
-        this.add(removeUserButton);
         
+        this.setLayout(mainBoxLayout);
         
+        this.add(topArea, BorderLayout.NORTH);
+        this.add(botArea, BorderLayout.SOUTH);
         frame.add(this);
         frame.revalidate();
     
     }
     private void showUserInfo(User user){
-        if(userPanel !=null){
-        this.remove(userPanel);
-        }
+        
+
         userPanel = new JPanel();
-        userPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        userPanel.setPreferredSize(new Dimension(600, 400));
-        this.add(userPanel);
+        
+        //Creating boxLayout, PAGE_AXIS for vertical placement
+        BoxLayout boxLayout = new BoxLayout(userPanel, BoxLayout.PAGE_AXIS);
+        userPanel.setLayout(boxLayout);
+        
+        //Creating border for Info with centered "Info" text and a lowered etched border
+        Border lowerEtchBorder = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
+        TitledBorder titleBorder = BorderFactory.createTitledBorder(lowerEtchBorder, "Info");
+        titleBorder.setTitleJustification(TitledBorder.CENTER); //center title
+        userPanel.setBorder(titleBorder);
+        userPanel.setPreferredSize(new Dimension(200, 500)); 
+        
+        JLabel usernameLabel = new JLabel("Username: " +user.getUsername());
+        JLabel passwordLabel = new JLabel("Password: " + user.getPassword());
+        JLabel emailLabel = new JLabel("Email: " + user.getEmail());
+        JLabel securityQLabel = new JLabel("Question: " + user.getSecurityQ());
+        JLabel securityALabel = new JLabel("Answer: " + user.getSecurityA());
+        JLabel adminLabel = new JLabel("Admin: " + user.isAdmin());
+        JLabel lastLoginLabel = new JLabel("Last Login: " + user.getLastLogin());
+        
+        //adding components to the userPanel
+        //createRigidArea adds in some space between each item
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(usernameLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(passwordLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(emailLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(securityQLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(securityALabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(adminLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        userPanel.add(lastLoginLabel, BorderLayout.LINE_START);
+        userPanel.add(Box.createRigidArea(new Dimension(5, 5)));
+        
         this.revalidate();
         frame.revalidate();
         
