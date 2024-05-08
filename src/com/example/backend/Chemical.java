@@ -73,7 +73,7 @@ public class Chemical {
     }
 
         //Changed to using hash map for hazard vals
-    private void setHazardFlags(String list){
+        public void setHazardFlags(String list){
         String[] pieces = list.split(",");
         for(String next : pieces){
             String[] parts = next.split(" ");
