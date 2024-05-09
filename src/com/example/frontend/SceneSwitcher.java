@@ -3,6 +3,8 @@
 */
 package com.example.frontend;
 import com.example.Main;
+import com.example.backend.User;
+import com.example.backend.UserDatabase;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +16,8 @@ public class SceneSwitcher {
     private LoginScreen loginScreen;
     private MainTabbedPane mainTabbedPane;
 
+    private UserDatabase userSheet;
+
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
         initializeScreens();
@@ -21,12 +25,14 @@ public class SceneSwitcher {
     }
 
     private void initializeScreens() {
-        this.loginScreen = new LoginScreen(frame);
-        this.frame.setContentPane(loginScreen);
+        this.loginScreen = new LoginScreen(this.frame);
+        this.frame.setContentPane(this.loginScreen);
         this.frame.revalidate();
         this.frame.repaint();
         this.frame.setVisible(true);
         this.mainTabbedPane = new MainTabbedPane();
+
+        this.userSheet = new userSheet();
 
     }
 
@@ -40,14 +46,11 @@ public class SceneSwitcher {
         });
     }
 
+
+        //UserDataBase has a verify log in method
     private boolean authenticate(String username, String password) {
 
-
-        if(("admin".equals(username) && "password".equals(password)) || (.equals(username) && .equals(password))){
-            return true;
-        }else{
-            return false;
-        }
+        return this.userSheet.verifyLogin(username, password);
 
     }
 
@@ -55,6 +58,14 @@ public class SceneSwitcher {
         this.frame.setContentPane(mainTabbedPane);
         this.frame.revalidate();
         this.frame.repaint();
+    }
+
+        //returns the user sheet for the admin
+    public UserDatabase getUserSheet(){
+
+
+
+        return this.userSheet;
     }
 }
 

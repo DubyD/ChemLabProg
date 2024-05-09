@@ -52,7 +52,7 @@ public class User {
             return false;
         }
 
-        setUsername(name);
+        this.setUsername(name);
         setPassword(password);
         setEmail(email);
         setSecurityQ(securityQ);

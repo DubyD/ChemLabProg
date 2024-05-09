@@ -200,6 +200,10 @@ public class Department{
     //to string and equals only check
     //full list as of now
     //Evelyn
+
+    public void setUser(String lineFromFile){
+
+    }
     @Override
     public String toString() {
         return chems.toString();
