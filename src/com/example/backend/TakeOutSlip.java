@@ -44,4 +44,11 @@ public class TakeOutSlip {
         // i.e User Larry altered chemical W by this amount, 0mL
         return details;
     }
+    
+    public User getUser(){
+        return this.user;
+    }
+    public Chemical getChemical(){
+        return this.chemical;
+    }
 }
