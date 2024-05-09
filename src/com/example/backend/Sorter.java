@@ -86,6 +86,7 @@ public class Sorter{
 
         } catch (IOException e) {
 
+            return false;
         }
 
     }
@@ -150,8 +151,8 @@ public class Sorter{
 
             //Extracts the amount from the sizeUnit
         String[] extract = cut[1].split("");
-        String number;
-        String sizeUnit;
+        String number = "";
+        String sizeUnit = "";
 
         for(String piece : extract){
 
