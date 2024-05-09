@@ -1,0 +1,98 @@
+import java.net.URL;
+import java.util.List;
+
+/**
+ * @author yunjin, ian
+ */
+public class Chemical {
+    private String name;
+    private URL sdsLink;
+    private String location;
+    private int quantity;
+    private String casNumber;
+    private String bottleSize;
+    private List<Hazard> hazards;
+
+    public Chemical(String name, URL sdsLink, String location, int quantity, String casNumber, String bottleSize, List<Hazard> hazards) {
+        this.name = name;
+        this.sdsLink = sdsLink;
+        this.location = location;
+        this.quantity = quantity;
+        this.casNumber = casNumber;
+        this.bottleSize = bottleSize;
+        this.hazards = hazards;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public URL getSdsLink() {
+        return sdsLink;
+    }
+
+    public void setSdsLink(URL sdsLink) {
+        this.sdsLink = sdsLink;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getCasNumber() {
+        return casNumber;
+    }
+
+    public void setCasNumber(String casNumber) {
+        this.casNumber = casNumber;
+    }
+
+    public String getBottleSize() {
+        return bottleSize;
+    }
+
+    public void setBottleSize(String bottleSize) {
+        this.bottleSize = bottleSize;
+    }
+
+    public List<Hazard> getHazards() {
+        return hazards;
+    }
+
+    public void setHazards(List<Hazard> hazards) {
+        this.hazards = hazards;
+    }
+
+    public URL getSDS() {
+        return this.sdslink;
+    }
+
+    @Override
+    public String toString() {
+        return "Chemical{" +
+                "name='" + name + '\'' +
+                ", sdsLink=" + sdsLink +
+                ", location='" + location + '\'' +
+                ", quantity=" + quantity +
+                ", casNumber='" + casNumber + '\'' +
+                ", bottleSize='" + bottleSize + '\'' +
+                ", hazards=" + hazards +
+                '}';
+    }
+}
