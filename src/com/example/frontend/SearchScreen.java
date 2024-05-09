@@ -16,6 +16,7 @@ import java.util.List;
 public class SearchScreen extends JPanel implements ActionListener {
     private JButton logOutButton, searchButton;
     private JTextField searchBar;
+    private JLabel userName;
     private JComboBox<String> searchMenu;
     private SearchResultsPanel resultPanelTest; //test SearchResultPanel
 
@@ -25,6 +26,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         this.setLayout(new BorderLayout());
         logOutButton = new JButton("Log Out");
         searchButton = new JButton("SEARCH");
+        userName = new JLabel("Sample Text");//this will need to implement a way to get the real username
         searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
         resultPanelTest = new SearchResultsPanel(getExampleData());
@@ -36,13 +38,14 @@ public class SearchScreen extends JPanel implements ActionListener {
         searchBar.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
-                if(searchBar.getText().equals("Search Chemical")) {
+                if (searchBar.getText().equals("Search Chemical")) {
                     searchBar.setText("");
                 }
             }
+
             @Override
             public void focusLost(FocusEvent e) {
-                if(searchBar.getText().equals("")) {
+                if (searchBar.getText().equals("")) {
                     searchBar.setText("Search Chemical");
                 }
             }
@@ -50,19 +53,25 @@ public class SearchScreen extends JPanel implements ActionListener {
         searchMenu.setSelectedIndex(0);
         searchMenu.addActionListener(this);
 
+        JPanel logOutPanel = new JPanel();
+        logOutPanel.setLayout(new FlowLayout(2));
+        logOutPanel.add(userName);
+        logOutPanel.add(logOutButton);
+        logOutPanel.setPreferredSize(new Dimension(350, 40));
+
         JPanel searchPanel = new JPanel();
+        searchPanel.setLayout(new FlowLayout(2));
         searchPanel.add(searchBar);
         searchPanel.add(searchButton);
         searchPanel.add(searchMenu);
-        searchPanel.setBounds(this.getWidth()/2, 200, 500,100);
+        searchPanel.add(logOutPanel);
 
-        JPanel logOutPanel = new JPanel();
-        logOutPanel.add(logOutButton);
+        searchPanel.setBounds(this.getWidth() / 2, 200, 500, 100);
 
         this.add(searchPanel, BorderLayout.NORTH);
         //adding to test resultPanel to Search Scene
         this.add(resultPanelTest, BorderLayout.CENTER);
-        this.add(logOutPanel, BorderLayout.PAGE_END);
+        //this.add(logOutPanel, BorderLayout.PAGE_END);
         this.setVisible(true);
     }
 
@@ -73,20 +82,21 @@ public class SearchScreen extends JPanel implements ActionListener {
     //Jonathan Murphy
     @Override
     public void actionPerformed(ActionEvent event) {
-        if(event.getSource() instanceof JComboBox) {
+        if (event.getSource() instanceof JComboBox) {
             @SuppressWarnings("unchecked") // TODO this should be removed to minimize possible issues
             JComboBox<String> b = (JComboBox<String>) event.getSource();
             searchMenu.setSelectedItem(b.getSelectedItem());
         }
     }
+
     //Example data for showcase
     private static ArrayList<Chemical> getExampleData() {
 
         java.util.List<Room> roomsStoredAt = new ArrayList<>();
-        roomsStoredAt.add(new Room("1",2));
+        roomsStoredAt.add(new Room("1", 2));
 
         List<Shelf> shelvesStoredAt = new ArrayList<>();
-        shelvesStoredAt.add(new Shelf("1",2));
+        shelvesStoredAt.add(new Shelf("1", 2));
 
         ArrayList<Chemical> chemicals = new ArrayList<>();
         //chemicals.add(new Chemical("Acetone", "500", "412", "1", 10, 2.7, "ml",
@@ -104,27 +114,3 @@ public class SearchScreen extends JPanel implements ActionListener {
         return chemicals;
     }
 }
-
-    /*public static void main(String[] args) {
-        // Create a new JFrame
-        JFrame frame = new JFrame("Science Department Inventory");
-
-        // Set the size of the frame
-        frame.setSize(800, 600);
-
-        // Set the default close operation
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //new SceneSwitcher(frame);
-        SearchScreen n = new SearchScreen();
-        frame.setContentPane(n);
-        // Set the visibility of the frame
-        frame.setVisible(true);
-        frame.revalidate();
-
-        // TODO make and trigger the login here
-
-        // post login
-
-        //setup the screen
-    }*/
