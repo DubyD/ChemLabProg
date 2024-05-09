@@ -13,18 +13,18 @@ public class Admin {
     }
 
     public boolean addStudent(String username, String password) {
-        for (User student : students) {
+        for (User student : this.students) {
             if (student.getUsername().equals(username)) {
                 return false; // Student already exists
             }
         }
         User newStudent = new User(username, password);
-        students.add(newStudent);
+        this.students.add(newStudent);
         return true; // Student added successfully
     }
 
     public boolean removeStudent(String username) {
-        for (User student : students) {
+        for (User student : this.students) {
             if (student.getUsername().equals(username)) {
                 students.remove(student);
                 return true; // Student removed successfully
@@ -54,7 +54,7 @@ public class Admin {
     }
 
     public List<User> getStudents() {
-        return students;
+        return this.students;
     }
 
     public void setStudents(List<User> students) {

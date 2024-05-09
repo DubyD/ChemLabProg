@@ -35,17 +35,17 @@ public class Department{
     public Department(ArrayList<Chemical> chems){
         //initialize lists
         this.chems = chems;
-        rooms = new HashMap<>(23);
-        roomNums = new ArrayList<>();
-        flammable = new ArrayList<>();
-        combustible = new ArrayList<>();
-        oralHazard = new ArrayList<>();
-        aquaticHazard = new ArrayList<>();
-        corrosive = new ArrayList<>();
-        skinHazard = new ArrayList<>();
-        eyeHazard = new ArrayList<>();
-        digestiveHazard = new ArrayList<>();
-        respiratoryHazard = new ArrayList<>();
+        this.rooms = new HashMap<>(23);
+        this.roomNums = new ArrayList<>();
+        this.flammable = new ArrayList<>();
+        this.combustible = new ArrayList<>();
+        this.oralHazard = new ArrayList<>();
+        this.aquaticHazard = new ArrayList<>();
+        this.corrosive = new ArrayList<>();
+        this.skinHazard = new ArrayList<>();
+        this.eyeHazard = new ArrayList<>();
+        this.digestiveHazard = new ArrayList<>();
+        this.respiratoryHazard = new ArrayList<>();
 
         for(Chemical c : chems){
             HashMap m = c.getHazardFlags();

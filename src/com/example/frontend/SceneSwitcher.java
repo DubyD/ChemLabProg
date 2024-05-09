@@ -22,25 +22,33 @@ public class SceneSwitcher {
 
     private void initializeScreens() {
         this.loginScreen = new LoginScreen(frame);
-        frame.setContentPane(loginScreen);
-        frame.revalidate();
-        frame.repaint();
-        frame.setVisible(true);
-        mainTabbedPane = new MainTabbedPane();
+        this.frame.setContentPane(loginScreen);
+        this.frame.revalidate();
+        this.frame.repaint();
+        this.frame.setVisible(true);
+        this.mainTabbedPane = new MainTabbedPane();
+
     }
 
     private void setupLoginScreenActions() {
-        loginScreen.getLoginButton().addActionListener(e -> {
-            if (authenticate(loginScreen.getUserField().getText(), new String(loginScreen.getPassField().getPassword()))) {
+        this.loginScreen.getLoginButton().addActionListener(e -> {
+            if (authenticate(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
                 showMainTabbedPane();
             } else {
-                loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
+                this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
             }
         });
     }
 
     private boolean authenticate(String username, String password) {
-        return "admin".equals(username) && "password".equals(password);
+
+
+        if(("admin".equals(username) && "password".equals(password)) || (.equals(username) && .equals(password))){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     private void showMainTabbedPane() {
