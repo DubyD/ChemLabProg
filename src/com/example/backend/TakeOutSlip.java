@@ -13,11 +13,12 @@ public class TakeOutSlip {
     private Chemical chemical;
     private double updatedAmount;
     private String decision="";
+    private String unitSize="";
     public TakeOutSlip(User userDet, Chemical chemicalInput){
         this.user = userDet;
         this.chemical=chemicalInput;
     }
-    public void alterChemical(int amount){
+    public void alterChemical(double amount){
         // amount will be the new value for the chemical
         double previousAmount = this.chemical.getSize();
         this.chemical.updateSize(amount);
@@ -34,10 +35,11 @@ public class TakeOutSlip {
             this.decision="altered";
             this.updatedAmount = amount;
         }
+        this.unitSize = this.chemical.getSizeUnit();
     }
 
     public String takeOutDetails(){
-        String details = String.format("User: %s %s chemical %s by this amount, %d", this.user.getUsername(), this.chemical.getName(),this.decision,this.updatedAmount);
+        String details = String.format("User: %s %s chemical %s by this amount, %f %s", this.user.getUsername(),this.decision,this.chemical.getName(),this.updatedAmount,this.unitSize);
         // i.e User John decreased chemical X by this amount, 5mL
         // i.e User Jerry increased chemical Y by this amount, 100mL
         // i.e User Larry altered chemical W by this amount, 0mL
