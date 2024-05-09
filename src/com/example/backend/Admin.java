@@ -5,11 +5,12 @@ import java.util.List;
 /**
  *@author Yunjin
  */
-public class Admin {
+public class Admin extends User {
     private List<User> students;
 
     public Admin() {
         this.students = new ArrayList<>();
+
     }
 
     public boolean addStudent(String username, String password) {
