@@ -3,8 +3,6 @@ import java.time.LocalDateTime;
  *@author Yunjin 
  */ 
 
-import java.time.LocalDateTime;
-
 public class History {
     private static String historyFileName;
     private User who;
@@ -53,7 +51,6 @@ public class History {
         this.where = where;
     }
 
-
     public int getAmount() {
         return amount;
     }
@@ -69,7 +66,6 @@ public class History {
     public void setLastUpdated(LocalDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
-
 
     @Override
     public String toString() {
