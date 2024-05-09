@@ -149,7 +149,7 @@ public class Sorter{
         String[] cut = line.split(",", 5);
 
             //Extracts the amount from the sizeUnit
-        String[] extract = cut[1].split();
+        String[] extract = cut[1].split("");
         String number;
         String sizeUnit;
 
