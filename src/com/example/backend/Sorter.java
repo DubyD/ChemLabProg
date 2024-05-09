@@ -181,7 +181,7 @@ public class Sorter{
 
                 //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
                 //constructor (chem)( name, room, shelf, size, sizeUnit)
-        Solution beaker = new Solution(cut[0], "Solutions Cabinet", cut[3], Double.parseDouble(number), sizeUnit, cut[2], company);
+        Solution beaker = new Solution(cut[0], company, "Solutions Cabinet", cut[3], Double.parseDouble(number), sizeUnit, cut[2]);
         return beaker;
     }
 
@@ -206,7 +206,7 @@ public class Sorter{
         try {
 
             double size = Double.parseDouble(amount);
-            Solution beaker = new Solution(name, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials, company);
+            Solution beaker = new Solution(name, company, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials);
 
                 //Checks to make sure that the solution is created
             if(beaker != null){
