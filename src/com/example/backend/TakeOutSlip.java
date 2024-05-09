@@ -9,15 +9,13 @@ package com.example.backend;
  * for which action.
  */
 public class TakeOutSlip {
-    private User user; // spaceholder for the details of the user making changes to chemicals
-    private Chemical chemical; // spaceholder for the chemical object to be altered
+    private User user;
+    private Chemical chemical;
     private int updatedAmount;
     private String decision="";
     public TakeOutSlip(User userDet, Chemical chemicalInput){
         this.user = userDet;
         this.chemical=chemicalInput;
-
-        // need to setup method to alter the chemicals based on specification
     }
     public void alterChemical(int amount){
         // amount will be the new value for the chemical
@@ -36,12 +34,14 @@ public class TakeOutSlip {
             this.decision="altered";
             this.updatedAmount = amount;
         }
+        updatedAmount=updatedAmount+this.chemical.getSizeUnit();
     }
 
     public String takeOutDetails(){
-        String details = String.format("User: %s altered chemical %s by this amount 5mL", this.user.getUsername(), this.chemical.getName());
+        String details = String.format("User: %s %s chemical %s by this amount, %d", this.user.getUsername(), this.chemical.getName(),this.decision,this.updatedAmount);
+        // i.e User John decreased chemical X by this amount, 5mL
+        // i.e User Jerry increased chemical Y by this amount, 100mL
+        // i.e User Larry altered chemical W by this amount, 0mL
         return details;
-        // 5mL is spaceholder amount, will need to make it compare chemical sizes before and after alteration.
-        // and return that value - AK
     }
 }
