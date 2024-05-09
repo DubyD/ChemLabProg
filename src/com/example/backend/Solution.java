@@ -16,17 +16,17 @@ public class Solution extends Chemical{
         //Constructor used for solution's super()-
         //(String 'name', String 'room',String 'shelf',
         //double 'size', String 'sizeUnit')
-        public Solution(String name, String room, String shelf, double size, String sizeUnit, String dateAndInitials){
+        public Solution(String name, String company, String room, String shelf, double size, String sizeUnit, String dateAndInitials){
 
-            super(name,room,shelf,size,sizeUnit);
+            super(name, company, room, shelf, size, sizeUnit);
 
             this.dateAndInitials = dateAndInitials;
             this.captainPlanet = new ArrayList<Chemical>();
         }
 
-        public Solution(String name, String room, String shelf, double size, String sizeUnit, String dateAndInitials, List<Chemical> combination){
+        public Solution(String name, String company, String room, String shelf, double size, String sizeUnit, String dateAndInitials,  List<Chemical> combination){
 
-            super(name,room,shelf,size,sizeUnit);
+            super(name, company, room, shelf, size, sizeUnit);
             this.dateAndInitials = dateAndInitials;
             this.captainPlanet = new ArrayList<Chemical>();
 
@@ -37,12 +37,14 @@ public class Solution extends Chemical{
             //Used to set the chemical combination of this solution
         public void setCombinations(List<Chemical> combination){
             this.captainPlanet.addAll(combination);
+            String hazards = "";
             for(Chemical next : this.captainPlanet){
 
                     //Sets specific Hazards
-                this.setHazardFlags(next.getHazards());
+                hazards = hazards + next.getHazards();
             }
 
+            this.setHazardFlags(hazards);
 
         }
 }

@@ -26,7 +26,7 @@ public class Chemical {
     final String[] UNITS = {"ml", "g","oz","lb","mg","l","kg","gal","qt","pt","cup","tbsp","tsp","fl oz","mL","L","g","mg","kg","oz","lb","gal","qt","pt","cup","tbsp","tsp","fl oz"};
 
     //Auto Constructor used in sorter class
-    public Chemical(String name, String company, String room, String shelf, int containers, Double amount, String unit, String cas, String hazards){
+    public Chemical(String name, String company, String room, String shelf, int containers, double amount, String unit, String cas, String hazards){
 
         this.name = name;
         this.manufacturer = company;
@@ -53,8 +53,9 @@ public class Chemical {
     }
 
         //Constructor used for solution
-    public Chemical(String name, String room, String shelf, double size, String sizeUnit){
+    public Chemical(String name, String company, String room, String shelf, double size, String sizeUnit){
         this.name = name;
+        this.manufacturer = company;
         this.room = room;
         this.shelf = shelf;
         this.size = size;
