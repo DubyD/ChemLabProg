@@ -11,7 +11,7 @@ package com.example.backend;
 public class TakeOutSlip {
     private User user;
     private Chemical chemical;
-    private int updatedAmount;
+    private double updatedAmount;
     private String decision="";
     public TakeOutSlip(User userDet, Chemical chemicalInput){
         this.user = userDet;
@@ -19,7 +19,7 @@ public class TakeOutSlip {
     }
     public void alterChemical(int amount){
         // amount will be the new value for the chemical
-        int previousAmount = this.chemical.getSize();
+        double previousAmount = this.chemical.getSize();
         this.chemical.updateSize(amount);
         if(previousAmount>amount){
             // decreased amount
@@ -34,7 +34,6 @@ public class TakeOutSlip {
             this.decision="altered";
             this.updatedAmount = amount;
         }
-        updatedAmount=updatedAmount+this.chemical.getSizeUnit();
     }
 
     public String takeOutDetails(){
