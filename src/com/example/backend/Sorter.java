@@ -145,7 +145,7 @@ public class Sorter{
         int amount = Integer.parseInt(cut[6]);
         double size = Double.parseDouble(cut[7]);
 
-        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
+        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[7], cut[8], cut[9]);
 
         if(!cut[0].equals("")) {
             beaker.setSdsSheet(true);
@@ -160,10 +160,17 @@ public class Sorter{
     public static String spaghettifyChem(Chemical deconstruct){
 
         String reply = "";
+        int endCut = 0;
 
         for(String next : deconstruct.asArray()){
-            reply = reply + next + ",";
+            reply = reply + next;
+
+            if(endCut < 9){
+                reply = reply  + ",";
+            }
+            endCut = endCut + 1;
         }
+
         return reply;
     }
 
