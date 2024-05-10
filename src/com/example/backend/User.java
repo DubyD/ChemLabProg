@@ -69,6 +69,8 @@ public class User {
         setSecurityA(securityA);
         setAdmin(admin);
         
+        // Make the first user an admin if no admin exists
+        setAdmin(!DATABASE.hasAdminUser() || admin);
         DATABASE.addUser(this);
 
         return true;
