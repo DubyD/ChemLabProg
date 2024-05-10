@@ -103,4 +103,20 @@ public class UserDatabase {
         }
         return false;
     }
+    
+    public boolean hasAdminUser() {
+        // Check if there is any user with admin
+        try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                User user = User.parseCsv(line);
+                if (user.isAdmin()) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
