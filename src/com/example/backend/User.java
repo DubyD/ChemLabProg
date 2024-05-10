@@ -52,6 +52,12 @@ public class User {
     }
     
     public boolean createNewUser(String name, String password, String email, String securityQ, String securityA, boolean admin) {
+        // Check if the username already exists
+        if (DATABASE.userExists(name)) {
+            System.out.println("Username already exists. Please choose a different username.");
+            return false;
+        }
+        
         if (!isValidPasswordLength(password) || !isValidEmailFormat(email) || !isValidSecurityQA(securityQ, securityA)) {
             return false;
         }

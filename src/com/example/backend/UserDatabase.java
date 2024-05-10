@@ -88,4 +88,19 @@ public class UserDatabase {
         }
         return false;
     }
+    
+    public boolean userExists(String username) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                User user = User.parseCsv(line);
+                if (user.getUsername().equalsIgnoreCase(username)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
