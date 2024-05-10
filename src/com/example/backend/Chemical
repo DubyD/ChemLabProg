@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * The Chemical class represents a chemical substance in the system, with its properties and associated hazards.
+ * @author yunjin, ian
  */
 public class Chemical {
     private String name; 
