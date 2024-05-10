@@ -37,8 +37,9 @@ public class SceneSwitcher {
     }
 
     private void setupLoginScreenActions() {
+        User user = new User();
         this.loginScreen.getLoginButton().addActionListener(e -> {
-            if (authenticate(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
+            if (user.login(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
                 showMainTabbedPane();
             } else {
                 this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
@@ -48,11 +49,11 @@ public class SceneSwitcher {
 
 
         //UserDataBase has a verify log in method
-    private boolean authenticate(String username, String password) {
+    /*private boolean authenticate(String username, String password) {
 
         return this.userSheet.verifyLogin(username, password);
 
-    }
+    }*/
 
     private void showMainTabbedPane() {
         this.frame.setContentPane(mainTabbedPane);
