@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Chemical {
 
-    private String sdsSheet;
+    private boolean sdsSheet;
     private String name;
     private String manufacturer;
     private String room;
@@ -36,6 +36,7 @@ public class Chemical {
         this.size = amount;
         this.sizeUnit = unit;
         this.casNum = cas;
+        this.sdsSheet = false;
 
         this.hazards = hazards;
         hazardFlags = new HashMap<>(23);
@@ -176,11 +177,11 @@ public class Chemical {
         this.flammable = flammable;
     }
 
-    public String getSdsSheet() {
-        return sdsSheet;
+    public boolean getSdsSheet() {
+        return this.sdsSheet;
     }
 
-    public void setSdsSheet(String sdsSheet) {
+    public void setSdsSheet(boolean sdsSheet) {
         this.sdsSheet = sdsSheet;
     }
 
@@ -240,7 +241,7 @@ public class Chemical {
     // needed for SearchResultsPanel
     // made by Alex Comeau
     public boolean hasSDS() {
-        return sdsSheet != null;
+        return this.sdsSheet;
     }
 
     public String[] asArray() {
@@ -257,14 +258,5 @@ public class Chemical {
     public void setCount() {
 
     }
-
-    public String getCASNumber() {
-        return "1";
-    }
-
-    public void setCASNumber() {
-
-    }
-
 
 }

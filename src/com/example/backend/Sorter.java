@@ -46,6 +46,9 @@ public class Sorter{
         //Fixed this for now let me know if we are using a different splitter
     public static boolean writeInv(String filePath, List<String> working) {
 
+            //Maintaining the original header to not delete the first chemical from the code
+            //anytime this program is used
+        String header = ",Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard";
             //Checks to see if a File exists, if not
         File reading = new File(filePath);
         if(!reading.exists()){
@@ -61,14 +64,17 @@ public class Sorter{
 
 
                 //Create a FileWriter with the specified file path
-
+                //It will overwrite what is currently in the file
             FileWriter fileWriter = new FileWriter(filePath, false);
 
             //Wrap the FileWriter in a BufferedWriter for efficient writing
             try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
+                    //Makes sure the code will be reread without deleting the
+                    //first chemical during reading
+                bufferedWriter.write(header);
 
-                // Write the content to the file
+                    // Write the content to the file
                 for (String line : working) {
                     bufferedWriter.write(line);
 
@@ -92,18 +98,26 @@ public class Sorter{
             //Checks to see if a File exists
         File reading = new File(filePath);
         if(!reading.exists()){
-            filePath.replace("\\", "/");
-            reading = new File(filePath);
+            String temp = filePath.replace("\\", "/");
+            reading = new File(temp);
         }
 
         List<String> reply = new ArrayList<String>();
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
 
+                //Used to track the header
             String nextLine;
+            int skipLineOne = 0;
+
             while((nextLine = reader.readLine()) != null){
 
-                reply.add(nextLine);
+                    //skips the header
+                if(skipLineOne == 0){
 
+                    skipLineOne = skipLineOne + 1;
+                    continue;
+                }
+                reply.add(nextLine);
             }
 
         }catch(IOException e) {
@@ -117,7 +131,6 @@ public class Sorter{
 
 //--------------------------------------vvvvvvvvvvvvv---Work Space---vvvvvvvvvvvvvvvv-----------------------------------
 
-    //For 534_inventory, the columns are set up as so: (skip line 1)
     //SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
     //We need columns 2, 3(so the professor can determine if they enjoy the product)
     //4,5,6, 7, 8, and 10
@@ -129,9 +142,13 @@ public class Sorter{
         String[] cut = line.split(",", 10);
 
         int amount = Integer.parseInt(cut[6]);
-        Double size = Double.parseDouble(cut[7]);
+        double size = Double.parseDouble(cut[7]);
 
         Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
+
+        if(cut[0] != null) {
+            beaker.setSdsSheet();
+        }
         return beaker;
 
     }
@@ -182,7 +199,10 @@ public class Sorter{
 
 
         //Used for creating a new Solution
-    public static boolean createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
+        //----------------vvvvvvv--------------working------------vvvvvvvvvvvvv
+        //rewrites the wetlab doc
+        //while also adding it to the Solution List in department
+    public static String createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
 
         boolean reply;
 
@@ -221,6 +241,24 @@ public class Sorter{
     }
 
 
+    //We can reconfigure chem to match the deconstruction
+    //        int amount = Integer.parseInt(cut[6]);
+    //        Double size = Double.parseDouble(cut[7]);
+    //
+    //        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
+    public String spaghetifyChem(Chemical deconstruct){
+
+        String reply = "";
+            //This "," sets the cut[0] until we can connect SDS sheets
+            //
+        if(deconstruct.getSdsSheet()){
+            reply = "X";
+        }else{
+            reply = ",";
+        }
+
+
+    }
 
 
 
