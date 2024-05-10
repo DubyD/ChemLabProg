@@ -67,10 +67,8 @@ public class User {
         setEmail(email);
         setSecurityQ(securityQ);
         setSecurityA(securityA);
-        setAdmin(admin);
-        
-        // Make the first user an admin if no admin exists
         setAdmin(!DATABASE.hasAdminUser() || admin);
+
         DATABASE.addUser(this);
 
         return true;
