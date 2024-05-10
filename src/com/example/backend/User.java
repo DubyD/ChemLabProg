@@ -8,6 +8,8 @@ package com.example.backend;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Pattern;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * User Class
@@ -22,6 +24,8 @@ public class User {
     private static final int MIN_PASSWORD_LENGTH = 6;
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
+    private static final String AES = "AES";
+    private static final String ENCRYPTION_KEY = "1234567891234567"; // AES key must be 16 characters
 
     private String username;
     private String password;
@@ -96,16 +100,43 @@ public class User {
         return false;
     }
 
+    /**
+     * Encrypts the given password using the AES algorithm.
+     *
+     * @param password  The plaintext password
+     * @return          The encrypted password, or null if encryption fails
+     */
     private String encryptPassword(String password) {
-        // Encrypt the password
-        String encryptedPassword = password;
-        return encryptedPassword;
+        try {
+            Cipher cipher = Cipher.getInstance(AES);
+            cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(ENCRYPTION_KEY.getBytes(), AES));
+
+            byte[] encrypted = cipher.doFinal(password.getBytes());
+            return Base64.getEncoder().encodeToString(encrypted);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
+    /**
+     * Decrypts the given encrypted password using the AES algorithm.
+     *
+     * @param encryptedPassword  The encrypted password in Base64 format
+     * @return                   The decrypted plaintext password, or null if decryption fails
+     */
     private static String decryptPassword(String encryptedPassword) {
-        // Decrypt the password
-        String password = encryptedPassword;
-        return password;
+        try {
+            Cipher cipher = Cipher.getInstance(AES);
+            cipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(ENCRYPTION_KEY.getBytes(), AES));
+
+            byte[] decodedPassword = Base64.getDecoder().decode(encryptedPassword);
+            byte[] decrypted = cipher.doFinal(decodedPassword);
+            return new String(decrypted);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public String toCsvString() {

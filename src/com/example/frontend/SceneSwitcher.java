@@ -49,11 +49,11 @@ public class SceneSwitcher {
 
 
         //UserDataBase has a verify log in method
-    private boolean authenticate(String username, String password) {
+    /*private boolean authenticate(String username, String password) {
 
         return this.userSheet.verifyLogin(username, password);
 
-    }
+    }*/
 
     private void showMainTabbedPane() {
         this.frame.setContentPane(mainTabbedPane);
