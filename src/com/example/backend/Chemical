@@ -138,7 +138,7 @@ public class Chemical {
         this.hazards = hazards;
     }
 
-    /**
+      /**
      * Overrides the toString method to provide a string representation of the Chemical object.
      * @return String representation of the Chemical object.
      */
@@ -150,4 +150,8 @@ public class Chemical {
                 ", location='" + location + '\'' +
                 ", quantity=" + quantity +
                 ", casNumber='" + casNumber + '\'' +
-                ", bottleSize
+                ", bottleSize='" + bottleSize + '\'' +
+                ", hazards=" + hazards +
+                '}';
+    }
+}
