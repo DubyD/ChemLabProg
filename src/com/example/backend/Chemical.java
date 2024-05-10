@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Chemical {
 
-    private String sdsSheet;
+    private boolean sdsSheet;
     private String name;
     private String manufacturer;
     private String room;
@@ -17,8 +17,8 @@ public class Chemical {
     private String sizeUnit;
     private String casNum;
     private String hazards;
-    private boolean flammable = false;
     private HashMap<String, Boolean> hazardFlags = new HashMap<String, Boolean>();
+    private boolean runningLow;
 
     private String purchaseDate;
     private String expirationDate;
@@ -36,6 +36,8 @@ public class Chemical {
         this.size = amount;
         this.sizeUnit = unit;
         this.casNum = cas;
+        this.sdsSheet = false;
+        this.getRunningLow();
 
         this.hazards = hazards;
         hazardFlags = new HashMap<>(23);
@@ -107,6 +109,7 @@ public class Chemical {
         }
     }
 
+//-------------------------------------------------Getters and setters------------------------
 
     public HashMap<String, Boolean> getHazardFlags(){
         return hazardFlags;
@@ -168,31 +171,13 @@ public class Chemical {
         this.hazards = hazards;
     }
 
-    public boolean isFlammable() {
-        return flammable;
+    public boolean getSdsSheet() {
+        return this.sdsSheet;
     }
 
-    public void setFlammable(boolean flammable) {
-        this.flammable = flammable;
-    }
-
-    public String getSdsSheet() {
-        return sdsSheet;
-    }
-
-    public void setSdsSheet(String sdsSheet) {
+    public void setSdsSheet(boolean sdsSheet) {
         this.sdsSheet = sdsSheet;
     }
-
-    public void updateSize(double newSize) {
-        if (size > 0) {
-            this.size = newSize;
-        } else {
-            // Handle invalid size
-            throw new IllegalArgumentException("Size must be a positive number.");
-        }
-    }
-
 
     public String getRoom() {
         return this.room;
@@ -226,45 +211,63 @@ public class Chemical {
         this.casNum = casNum;
     }
 
-    public boolean getFlammable() {
-        return this.flammable;
+        //Used to mark chemical panes with a red border
+        //if they happen to be running low on stock
+    public boolean getRunningLow(){
+        if(this.size < 2){
+            this.runningLow = true;
+        }else{
+           this.runningLow = false;
+        }
+        return runningLow;
     }
 
-
-    public String[] getUNITS() {
-        return this.UNITS;
+        //
+    public void setRunningLow(boolean isIt){
+        this.runningLow = isIt;
     }
+//-----------------------------------------------------------------------------
 
+    public void updateSize(double newSize) {
+        if (size >= 0) {
+            this.size = newSize;
 
+        } else {
+            // Handle invalid size
+            throw new IllegalArgumentException("Size must be a positive number.");
+        }
+    }
 
     // needed for SearchResultsPanel
     // made by Alex Comeau
     public boolean hasSDS() {
-        return sdsSheet != null;
+        return this.sdsSheet;
     }
 
     public String[] asArray() {
-        return new String[] { hasSDS() ? "Yes" : "No", name, manufacturer, room,
-                shelf, "Amount of Jars", String.valueOf(size), sizeUnit, "CAS #s", hazards };
+
+        String hasSafety = "";
+        if(this.sdsSheet){
+            hasSafety = "X";
+        }
+
+        return new String[] { hasSafety, this.name, this.manufacturer, this.room,
+                this.shelf, String.valueOf(this.containers), String.valueOf(size), this.sizeUnit, this.casNum, this.hazards};
 
     }
 
-    // TODO these are all stubs, please implement them
-    public double getCount() {
-        return 1;
+    @Override
+    public String toString() {
+        return "Chemical{\n" +
+                "name= " + this.name + '\n' +
+                "company= "+ this.manufacturer + '\n' +
+                "location= " + this.room + '\n' +
+                "shelf= " + this.shelf + '\n' +
+                "units= " + this.containers + '\n' +
+                "amount= " + this.size + this.sizeUnit + '\n' +
+                "casNumber= " + this.casNum + '\n' +
+                "hazards= " + hazards + '\n' +
+                "}";
     }
-
-    public void setCount() {
-
-    }
-
-    public String getCASNumber() {
-        return "1";
-    }
-
-    public void setCASNumber() {
-
-    }
-
 
 }

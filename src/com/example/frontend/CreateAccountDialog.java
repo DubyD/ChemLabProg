@@ -14,11 +14,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CreateAccountDialog extends JDialog {
-    private JTextField nameField;
-    private JTextField loginIdField;
+    private JTextField usernameField;
     private JPasswordField passwordField;
     private JTextField emailField;
-    private JTextField contactNumberField;
+    private JComboBox<String> securityQuestionComboBox;
+    private JTextField securityAnswerField;
 
     public CreateAccountDialog(JFrame parent) {
         super(parent, "Create Account", true);
@@ -28,64 +28,71 @@ public class CreateAccountDialog extends JDialog {
 
         JLabel nameLabel = new JLabel("Username:");
         nameLabel.setBounds(50, 30, 80, 25);
-        add(nameLabel);
+        this.add(nameLabel);
 
-        nameField = new JTextField();
-        nameField.setBounds(150, 30, 200, 25);
-        add(nameField);
+        usernameField = new JTextField();
+        usernameField.setBounds(150, 30, 200, 25);
+        this.add(usernameField);
 
         JLabel loginIdLabel = new JLabel("Password:");
         loginIdLabel.setBounds(50, 70, 80, 25);
-        add(loginIdLabel);
+        this.add(loginIdLabel);
 
-        loginIdField = new JTextField();
-        loginIdField.setBounds(150, 70, 200, 25);
-        add(loginIdField);
+        passwordField = new JPasswordField();
+        passwordField.setBounds(150, 70, 200, 25);
+        this.add(passwordField);
 
         JLabel passwordLabel = new JLabel("Email:");
         passwordLabel.setBounds(50, 110, 80, 25);
-        add(passwordLabel);
-
-        passwordField = new JPasswordField();
-        passwordField.setBounds(150, 110, 200, 25);
-        add(passwordField);
-
-        JLabel emailLabel = new JLabel("Security Question:");
-        emailLabel.setBounds(50, 150, 80, 25);
-        add(emailLabel);
+        this.add(passwordLabel);
 
         emailField = new JTextField();
-        emailField.setBounds(150, 150, 200, 25);
-        add(emailField);
+        emailField.setBounds(150, 110, 200, 25);
+        this.add(emailField);
 
-        JLabel contactNumberLabel = new JLabel("Security Answer:");
-        contactNumberLabel.setBounds(50, 190, 100, 25);
-        add(contactNumberLabel);
+        JLabel securityQuestionLabel = new JLabel("Security Question:");
+        securityQuestionLabel.setBounds(50, 150, 80, 25);
+        this.add(securityQuestionLabel);
 
-        contactNumberField = new JTextField();
-        contactNumberField.setBounds(150, 190, 200, 25);
-        add(contactNumberField);
+
+        //Options for Security questions
+        String[] options ={"What model is your first car?",
+                "What is your mother's maiden name?",
+                "The name of your first pet?",
+                "Name of your favorite teacher?",
+                "What was your highschool mascot?",
+                "Who is your favorite family member?",
+                "What is your all-time favorite song?"
+        };
+        securityQuestionComboBox = new JComboBox<>(options);
+        securityQuestionComboBox.setBounds(150, 150, 200, 25);
+        this.add(securityQuestionComboBox);
+
+        JLabel securityAnswerLabel = new JLabel("Security Answer:");
+        securityAnswerLabel.setBounds(50, 190, 100, 25);
+        this.add(securityAnswerLabel);
+
+        securityAnswerField = new JTextField();
+        securityAnswerField.setBounds(150, 190, 200, 25);
+        this.add(securityAnswerField);
 
         JButton submitButton = new JButton("Submit");
         submitButton.setBounds(150, 230, 100, 30);
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Here you can save the account information
-                // System.out.println("Name: " + nameField.getText());
-                // System.out.println("Login ID: " + loginIdField.getText());
-                // Get password securely
-                char[] passwordChars = passwordField.getPassword();
-                String password = new String(passwordChars);
-                // System.out.println("Password: " + password);
-                // System.out.println("Email: " + emailField.getText());
-                // System.out.println("Contact Number: " + contactNumberField.getText());
+                String username = usernameField.getText();
+                String password = new String(passwordField.getPassword());
+                String email = emailField.getText();
+                String securityQuestion = securityQuestionComboBox.getSelectedItem().toString();
+                String securityAnswer = securityAnswerField.getText();
+                boolean isAdmin = false;
 
                 // User tester (please remove later)
                 // Variable names are incorrect
                 // They should be username, password, email, securityQ, securityA
                 User user = new User();
-                if (user.createNewUser(nameField.getText(), loginIdField.getText(), password, emailField.getText(), contactNumberField.getText(), false)) {
+                if ((user.createNewUser(username, password, email, securityQuestion, securityAnswer, isAdmin))) {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Invalid input for field(s).", "Error", JOptionPane.ERROR_MESSAGE);

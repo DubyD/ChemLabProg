@@ -3,16 +3,18 @@ import java.net.URL;
 import java.util.List;
 
 /**
+ * The Chemical class represents a chemical substance in the system, with its properties and associated hazards.
  * @author yunjin, ian
  */
 public class Chemical {
-    private String name;
-    private URL sdsLink;
-    private String location;
-    private int quantity;
-    private String casNumber;
-    private String bottleSize;
-    private List<Hazard> hazards;
+    private String name; 
+    private URL sdsLink; 
+    private String location; 
+    private int quantity; 
+    private String casNumber; 
+    private String bottleSize; 
+    private List<Hazard> hazards; 
+
 
     public Chemical(String name, URL sdsLink, String location, int quantity, String casNumber, String bottleSize, List<Hazard> hazards) {
         this.name = name;
@@ -24,66 +26,122 @@ public class Chemical {
         this.hazards = hazards;
     }
 
+    /**
+     * Gets the name of the chemical.
+     * @return The name of the chemical.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the name of the chemical.
+     * @param name The name of the chemical.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets the URL link to the Safety Data Sheet (SDS) of the chemical.
+     * @return The URL link to the SDS.
+     */
     public URL getSdsLink() {
         return sdsLink;
     }
 
+    /**
+     * Sets the URL link to the Safety Data Sheet (SDS) of the chemical.
+     * @param sdsLink The URL link to the SDS.
+     */
     public void setSdsLink(URL sdsLink) {
         this.sdsLink = sdsLink;
     }
 
+    /**
+     * Gets the location where the chemical is stored.
+     * @return The location of the chemical.
+     */
     public String getLocation() {
         return location;
     }
 
+    /**
+     * Sets the location where the chemical is stored.
+     * @param location The location of the chemical.
+     */
     public void setLocation(String location) {
         this.location = location;
     }
 
+    /**
+     * Gets the quantity of the chemical available.
+     * @return The quantity of the chemical.
+     */
     public int getQuantity() {
         return quantity;
     }
 
+    /**
+     * Sets the quantity of the chemical available.
+     * @param quantity The quantity of the chemical.
+     */
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
+    /**
+     * Gets the CAS (Chemical Abstracts Service) number of the chemical.
+     * @return The CAS number of the chemical.
+     */
     public String getCasNumber() {
         return casNumber;
     }
 
+    /**
+     * Sets the CAS (Chemical Abstracts Service) number of the chemical.
+     * @param casNumber The CAS number of the chemical.
+     */
     public void setCasNumber(String casNumber) {
         this.casNumber = casNumber;
     }
 
+    /**
+     * Gets the bottle size of the chemical.
+     * @return The bottle size of the chemical.
+     */
     public String getBottleSize() {
         return bottleSize;
     }
 
+    /**
+     * Sets the bottle size of the chemical.
+     * @param bottleSize The bottle size of the chemical.
+     */
     public void setBottleSize(String bottleSize) {
         this.bottleSize = bottleSize;
     }
 
+    /**
+     * Gets the list of hazards associated with the chemical.
+     * @return The list of hazards associated with the chemical.
+     */
     public List<Hazard> getHazards() {
         return hazards;
     }
 
+    /**
+     * Sets the list of hazards associated with the chemical.
+     * @param hazards The list of hazards associated with the chemical.
+     */
     public void setHazards(List<Hazard> hazards) {
         this.hazards = hazards;
     }
 
-    public URL getSDS() {
-        return this.sdslink;
-    }
-
+      /**
+     * Overrides the toString method to provide a string representation of the Chemical object.
+     * @return String representation of the Chemical object.
+     */
     @Override
     public String toString() {
         return "Chemical{" +

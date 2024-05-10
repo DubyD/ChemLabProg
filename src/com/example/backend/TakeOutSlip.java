@@ -35,6 +35,8 @@ public class TakeOutSlip {
             this.decision="altered";
             this.updatedAmount = amount;
         }
+            //Sets the chemical to running low if low inv on return
+        this.chemical.setRunningLow(this.chemical.getRunningLow());
         this.unitSize = this.chemical.getSizeUnit();
     }
 

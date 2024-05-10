@@ -1,8 +1,6 @@
 package com.example.frontend;
 
-import com.example.backend.Chemical;
-import com.example.backend.Room;
-import com.example.backend.Shelf;
+import com.example.backend.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,24 +16,29 @@ public class SearchScreen extends JPanel implements ActionListener {
     private JTextField searchBar;
     private JLabel userName;
     private JComboBox<String> searchMenu;
-    private SearchResultsPanel resultPanelTest; //test SearchResultPanel
+    private SearchResultsPanel resultPanel; //test SearchResultPanel
+    private Department chemLab;
 
     public SearchScreen() {
         //Jonathan Murphy
+        this.chemLab = new Department();
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
-        logOutButton = new JButton("Log Out");
-        searchButton = new JButton("SEARCH");
-        userName = new JLabel("Sample Text");//this will need to implement a way to get the real username
-        searchBar = new JTextField("Search Chemical");
+        this.logOutButton = new JButton("Log Out");
+        this.searchButton = new JButton("SEARCH");
+        this.userName = new JLabel("Sample Text");//this will need to implement a way to get the real username
+        this.searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
-        resultPanelTest = new SearchResultsPanel(getExampleData());
-        searchBar.setPreferredSize(new Dimension(200, 20));
-        String[] searchCats = {"Select a Category", "All Chemicals", "Rooms", "Hazards", "Flammable", "Corrosive", "WetLab"};
+        this.searchBar.setPreferredSize(new Dimension(200, 20));
+        this.resultPanel = new SearchResultsPanel(this.chemLab.getChems());
+        String[] searchCats = {"Select a Category", "All Chemicals", "Rooms",
+                "Hazards", "Flammable", "Corrosive", "Skin Hazard", "Eye Hazard",
+                "Digestive Hazard","Respiratory Hazard","Aquatic Hazard",
+                "Combustible","Oral Hazard","WetLab-Solutions"};
         //change categories when we figure out the approach we're taking
-        searchMenu = new JComboBox<String>(searchCats);
+        this.searchMenu = new JComboBox<String>(searchCats);
 
-        searchBar.addFocusListener(new FocusListener() {
+        this.searchBar.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
                 if (searchBar.getText().equals("Search Chemical")) {
@@ -50,8 +53,9 @@ public class SearchScreen extends JPanel implements ActionListener {
                 }
             }
         });
-        searchMenu.setSelectedIndex(0);
-        searchMenu.addActionListener(this);
+
+        this.searchMenu.setSelectedIndex(0);
+        this.searchMenu.addActionListener(this);
 
         JPanel logOutPanel = new JPanel();
         logOutPanel.setLayout(new FlowLayout(2));
@@ -70,7 +74,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
         this.add(searchPanel, BorderLayout.NORTH);
         //adding to test resultPanel to Search Scene
-        this.add(resultPanelTest, BorderLayout.CENTER);
+        this.add(resultPanel, BorderLayout.CENTER);
         //this.add(logOutPanel, BorderLayout.PAGE_END);
         this.setVisible(true);
     }
@@ -88,7 +92,7 @@ public class SearchScreen extends JPanel implements ActionListener {
             searchMenu.setSelectedItem(b.getSelectedItem());
         }
     }
-
+/*
     //Example data for showcase
     private static ArrayList<Chemical> getExampleData() {
 
@@ -98,7 +102,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         List<Shelf> shelvesStoredAt = new ArrayList<>();
         shelvesStoredAt.add(new Shelf("1", 2));
 
-        ArrayList<Chemical> chemicals = new ArrayList<>();
+        ArrayList<Chemical> chemicals = Sorter.readInv();
         //chemicals.add(new Chemical("Acetone", "500", "412", "1", 10, 2.7, "ml",
         //        "1678", "Acidic"));
         //chemicals.add(new Chemical("Ethanol", "Connecticut", "208", "1", 30, 3.8, "ml",
@@ -113,4 +117,6 @@ public class SearchScreen extends JPanel implements ActionListener {
         //        "266359", "spicy"));
         return chemicals;
     }
+    */
+
 }

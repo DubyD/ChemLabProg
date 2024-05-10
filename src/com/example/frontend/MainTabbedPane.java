@@ -8,27 +8,25 @@ import javax.swing.JTabbedPane;
 
 public class MainTabbedPane extends JPanel{
     private SearchScreen searchScreen;
+    private JTabbedPane tabbedPane;
 
     public MainTabbedPane(){
         // Set the layout of the panel
         setLayout(new BorderLayout());
         
         // Create the tabbed pane
-        JTabbedPane tabbedPane = new JTabbedPane();
+        this.tabbedPane = new JTabbedPane();
         
         // Create the panels
         this.searchScreen = new SearchScreen();
         AddChemicalPane addChemicalPane = new AddChemicalPane();
-        AdminScene adminScene = new AdminScene();
-
         
         // Add the panels to the tabbed pane
-        tabbedPane.addTab("Search", searchScreen);
-        tabbedPane.addTab("Add Chemical", addChemicalPane);
-        tabbedPane.addTab("Admin Settings", adminScene);
+        this.tabbedPane.addTab("Search", searchScreen);
+        this.tabbedPane.addTab("Add Chemical", addChemicalPane);
         
         // Add the tabbed pane to the panel
-        add(tabbedPane);
+        this.add(tabbedPane);
     }
 
      // basic testing stub
@@ -50,6 +48,11 @@ public class MainTabbedPane extends JPanel{
 
         // Set the visibility of the frame
         frame.setVisible(true);
+    }
+
+    public void addAdminPane(){
+        AdminScene adminScene = new AdminScene();
+        this.tabbedPane.addTab("Admin Settings", adminScene);
     }
     //needed for SceneSwitcher.java
     public SearchScreen getSearchScreen() {

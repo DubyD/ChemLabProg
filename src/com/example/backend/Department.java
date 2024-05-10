@@ -1,5 +1,6 @@
 package com.example.backend;
 
+import javax.xml.validation.Schema;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,8 +11,11 @@ import java.util.HashMap;
  * sorted categories.
  * @authors Evelyn T, Will D(minimal), Alex C
  */
+
+
 public class Department{
     private ArrayList<Chemical> chems;
+    private ArrayList<Solution> comboChem;
     private ArrayList<Chemical> flammable;
     private ArrayList<Chemical> corrosive;
     private ArrayList<Chemical> skinHazard;
@@ -25,6 +29,10 @@ public class Department{
     private ArrayList<String> roomNums;
 
 
+    public static final String chemFile = "com/example/Data/updated_data.csv";
+    public static final String solutionFile = "com/example/Data/new_solutions_Cab.csv";
+
+
     /**
      * Class department initializes with a full list of chemicals.
      * Constructor initializes rooms and puts the chemicals
@@ -32,9 +40,21 @@ public class Department{
      * @param chems - chemical objects list
      * @author - Evelyn Totman
      */
-    public Department(ArrayList<Chemical> chems){
-        //initialize lists
-        this.chems = chems;
+    public Department(){
+
+            //initialize list then adds Chems from the .csv file
+        this.chems = new ArrayList<>();
+        for(String next: Sorter.readInv(chemFile)){
+            Chemical polymorph = Sorter.chemLab(next);
+            this.chems.add(polymorph);
+        }
+            //initializes list then adds Solutions from .csv file
+        this.comboChem = new ArrayList<>();
+        for(String next: Sorter.readInv(solutionFile)){
+            Solution polymorph = Sorter.wetLabDoc(next);
+            this.comboChem.add(polymorph);
+        }
+
         this.rooms = new HashMap<>(23);
         this.roomNums = new ArrayList<>();
         this.flammable = new ArrayList<>();
@@ -47,7 +67,19 @@ public class Department{
         this.digestiveHazard = new ArrayList<>();
         this.respiratoryHazard = new ArrayList<>();
 
-        for(Chemical c : chems){
+            //Hashmaps the two lists to appropriate Arrays
+        for(Solution next : this.comboChem){
+            this.chems.add((Chemical) next);
+        }
+        this.cartographer(this.chems);
+
+    }
+
+
+        //Evee I moved your work down here so I can
+        //recreate the mapping with solutions
+    private void cartographer(ArrayList<Chemical> workingSpace){
+        for(Chemical c : workingSpace){
             HashMap m = c.getHazardFlags();
             String room = c.getRoom();
             String shelf = c.getShelf();
@@ -104,73 +136,123 @@ public class Department{
         }
     }
 
-    public Department(){
-        this(new ArrayList<>());
-    }
 
-    //getters and setters Alex Comeau
+//getters and setters Alex Comeau---------------------------------------------------------
     public ArrayList<Chemical> getChems() {
         return this.chems;
     }
-
     public void setChems(ArrayList<Chemical> chems) {
         this.chems = chems;
+    }
+    public void addChem(Chemical chem){
+        this.chems.add(chem);
+    }
+        //Removes it from everylist
+    public void removeChem(Chemical chem){
+        this.eyeHazard.remove(chem);
+        this.skinHazard.remove(chem);
+        this.corrosive.remove(chem);
+        this.flammable.remove(chem);
+        this.aquaticHazard.remove(chem);
+        this.combustible.remove(chem);
+        this.digestiveHazard.remove(chem);
+        this.oralHazard.remove(chem);
+        this.respiratoryHazard.remove(chem);
+        this.rooms.remove(chem);
+        this.roomNums.remove(chem);
+        this.chems.remove(chem);
     }
 
     public ArrayList<Chemical> getFlammable() {
         return this.flammable;
     }
-
     public void setFlammable(ArrayList<Chemical> flammable) {
         this.flammable = flammable;
+    }
+    public void addFlammable(Chemical chem){
+        this.flammable.add(chem);
+    }
+    public void removeFlammable(Chemical chem){
+        this.flammable.remove(chem);
     }
 
     public ArrayList<Chemical> getCorrosive() {
         return this.corrosive;
     }
-
     public void setCorrosive(ArrayList<Chemical> corrosive) {
         this.corrosive = corrosive;
+    }
+    public void addCorrosive(Chemical chem){
+        this.corrosive.add(chem);
+    }
+    public void removeCorrosive(Chemical chem){
+        this.corrosive.remove(chem);
     }
 
     public ArrayList<Chemical> getSkinHazard() {
         return this.skinHazard;
     }
-
     public void setSkinHazard(ArrayList<Chemical> skinHazard) {
         this.skinHazard = skinHazard;
+    }
+    public void addSkinHazard(Chemical chem){
+        this.skinHazard.add(chem);
+    }
+    public void removeSkinHazard(Chemical chem){
+        this.skinHazard.remove(chem);
     }
 
     public ArrayList<Chemical> getEyeHazard() {
         return this.eyeHazard;
     }
-
     public void setEyeHazard(ArrayList<Chemical> eyeHazard) {
         this.eyeHazard = eyeHazard;
+    }
+    public void addEyeHazard(Chemical chem){
+        this.eyeHazard.add(chem);
+    }
+    public void removeEyeHazard(Chemical chem){
+        this.eyeHazard.remove(chem);
     }
 
     public ArrayList<Chemical> getDigestiveHazard() {
         return this.digestiveHazard;
     }
-
     public void setDigestiveHazard(ArrayList<Chemical> digestiveHazard) {
         this.digestiveHazard = digestiveHazard;
     }
+    public void addDigestiveHazard(Chemical chem){
+        this.digestiveHazard.add(chem);
+    }
+    public void removeDigestiveHazard(Chemical chem){
+        this.digestiveHazard.remove(chem);
+    }
+
 
     public ArrayList<Chemical> getRespiratoryHazard() {
         return this.respiratoryHazard;
     }
-
     public void setRespiratoryHazard(ArrayList<Chemical> respiratoryHazard) {
         this.respiratoryHazard = respiratoryHazard;
+    }
+    public void addRespiratoryHazard(Chemical chem){
+        this.respiratoryHazard.add(chem);
+    }
+    public void removeRespiratoryHazard(Chemical chem){
+        this.respiratoryHazard.remove(chem);
     }
 
     public ArrayList<Chemical> getAquaticHazard() {
         return this.aquaticHazard;
     }
-
     public void setAquaticHazard(ArrayList<Chemical> aquaticHazard) {
         this.aquaticHazard = aquaticHazard;
+    }
+    public void addAquaticHazard(Chemical chem){
+        this.aquaticHazard.add(chem);
+    }
+    public void removeAquaticHazard(Chemical chem){
+        this.aquaticHazard.remove(chem);
     }
 
     public ArrayList<Chemical> getCombustible() {
@@ -180,30 +262,52 @@ public class Department{
     public void setCombustible(ArrayList<Chemical> combustible) {
         this.combustible = combustible;
     }
+    public void addcombustible(Chemical chem){
+        this.combustible.add(chem);
+    }
+    public void removecombustible(Chemical chem){
+        this.combustible.remove(chem);
+    }
 
     public ArrayList<Chemical> getOralHazard() {
         return this.oralHazard;
     }
-
     public void setOralHazard(ArrayList<Chemical> oralHazard) {
         this.oralHazard = oralHazard;
+    }
+    public void addOralHazard(Chemical chem){
+        this.oralHazard.add(chem);
+    }
+    public void removeOralHazard(Chemical chem){
+        this.oralHazard.remove(chem);
     }
 
     public HashMap<String,Room> getRooms() {
         return this.rooms;
     }
-
     public void setRooms(HashMap<String,Room> rooms) {
         this.rooms = rooms;
+    }
+
+    public void setComboChem(ArrayList<Solution> setting){
+        this.comboChem = setting;
+    }
+    public ArrayList<Solution> getComboChem(){
+        return this.comboChem;
+    }
+    public void addCombo(Solution adding){
+        this.comboChem.add(adding);
+    }
+    public void removeCombo(Solution removing){
+        this.comboChem.remove(removing);
     }
 
     //to string and equals only check
     //full list as of now
     //Evelyn
+//--------------------------------------------------------------------------
+        //Adds solutions separately due to a lack of
 
-    public void setUser(String lineFromFile){
-
-    }
     @Override
     public String toString() {
         return chems.toString();

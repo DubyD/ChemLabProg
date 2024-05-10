@@ -3,6 +3,8 @@
 */
 package com.example.frontend;
 import com.example.Main;
+import com.example.backend.Department;
+import com.example.backend.Sorter;
 import com.example.backend.User;
 import com.example.backend.UserDatabase;
 
@@ -16,10 +18,11 @@ public class SceneSwitcher {
     private LoginScreen loginScreen;
     private MainTabbedPane mainTabbedPane;
 
-    private UserDatabase userSheet;
+    private UserDatabase users;
 
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
+
         initializeScreens();
         setupLoginScreenActions();
     }
@@ -39,9 +42,12 @@ public class SceneSwitcher {
     private void setupLoginScreenActions() {
         User user = new User();
         this.loginScreen.getLoginButton().addActionListener(e -> {
-            if (user.login(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
-                System.out.println(String.format("User: %s, Password: %s, Email: %s, Security Question: %s, Security Answer: %s, Is Admin: %b",
-                        user.getUsername(), user.getPassword(), user.getEmail(), user.getSecurityQ(), user.getSecurityA(), user.isAdmin()));
+            if (user.login(this.loginScreen.getUserField().getText(), this.loginScreen.getPassField().getText())) {
+
+                if(user.isAdmin()){
+                    this.mainTabbedPane.addAdminPane();
+                }
+
                 showMainTabbedPane();
             } else {
                 this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
@@ -63,13 +69,7 @@ public class SceneSwitcher {
         this.frame.repaint();
     }
 
-        //returns the user sheet for the admin
-    public UserDatabase getUserSheet(){
 
-
-
-        return this.userSheet;
-    }
 }
 
 
