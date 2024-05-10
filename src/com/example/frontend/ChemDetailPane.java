@@ -13,6 +13,7 @@ public class ChemDetailPane extends JPanel {
     //Attributes
     private Chemical chemical;
     private JLabel name, casNum, sdsLink, sdsPrompt, company, unitSize, located, hazards;
+    //private JTextArea hazards;
     //Methods
     public ChemDetailPane(Chemical c) {
         chemical = c;
@@ -22,18 +23,22 @@ public class ChemDetailPane extends JPanel {
         name = new JLabel("Chemical: " + chemical.getName());
         casNum = new JLabel("CAS #: " + chemical.getCasNum());
         sdsPrompt = new JLabel("More Info:");
-        sdsLink = new JLabel(chemical.getSdsSheet());
+        //sdsLink = new JLabel(chemical.getSdsSheet());
+        sdsLink = new JLabel("link broke");
         company = new JLabel("Manufacturer: " + chemical.getManufacturer());
         unitSize = new JLabel("Unit Size: " + chemical.getSize() + " " + chemical.getSizeUnit());
-        located = new JLabel("Location: " + chemical.getRoom() + " " + chemical.getShelf() + ", Count: " + chemical.getContainers());
+        located = new JLabel("Location: " + chemical.getRoom() + " " + chemical.getShelf() + ", Units: " + chemical.getContainers());
         hazards = new JLabel("Warning: " + chemical.getHazards());
+        //hazards = new JTextArea("Warning: " + chemical.getHazards(), 5, 20);
+        //hazards.setPreferredSize(new Dimension(200, 60));
+        //hazards.setEditable(false);
 
         sdsLink.setForeground(Color.BLUE);
         sdsLink.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 try {
-                    Desktop.getDesktop().browse(new URI(chemical.getSdsSheet()));
+                    //Desktop.getDesktop().browse(new URI(chemical.getSdsSheet()));
                 }
                 catch(Exception x) {
                     //something to tell the user there is no working link

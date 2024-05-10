@@ -1,5 +1,7 @@
 package com.example.frontend;
 
+import com.example.backend.Chemical;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -61,11 +63,12 @@ public class AddChemicalPane extends JPanel implements ActionListener {
         //thow a basic text box and button in as a placeholder
         //JTextField textField = new JTextField();
         button = new JButton("Add Chemical");
-        button.addActionListener(event -> {
+        button.addActionListener(this);
+        /*button.addActionListener(event -> {
             //send an alert "chemical added"
             JPopupMenu popup = new JPopupMenu();
             popup.add("Chemical Added");
-        });
+        });*/
 
         panes.get(0).add(labels.get(0));
         panes.get(0).add(name);
@@ -96,7 +99,7 @@ public class AddChemicalPane extends JPanel implements ActionListener {
         //add(space, BorderLayout.NORTH);
         add(center, BorderLayout.CENTER);
         add(button, BorderLayout.SOUTH);
-
+        //add(testOutput, BorderLayout.WEST);
     }
 
     @Override
@@ -106,5 +109,64 @@ public class AddChemicalPane extends JPanel implements ActionListener {
             JComboBox<String> b = (JComboBox<String>) event.getSource();
             unit.setSelectedItem(b.getSelectedItem());
         }
+        if(event.getSource().equals(button)) {
+            //JFrame for testing purposes
+            JFrame frame = new JFrame();
+            try {
+                Chemical c = buildChemical();
+                ChemDetailPane p = new ChemDetailPane(c);
+                frame.getContentPane().add(p);
+            }
+            catch(Exception e) {
+                frame.setPreferredSize(new Dimension(300, 100));
+                frame.getContentPane().add(new JLabel("Ya goofed, dummy"));
+            }
+            frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
+        }
+    }
+    public Chemical buildChemical() {
+        String n = null;
+        String c = null;
+        String r = null;
+        String s = null;
+        int co = -1;
+        double us = -1.0;
+        String ca = null;
+        String h = null;
+
+        if(!name.getText().equals("")) {
+            n = name.getText();
+        }
+        if(!company.getText().equals("")) {
+            c = company.getText();
+        }
+        if(!room.getText().equals("")) {
+            r = room.getText();
+        }
+        if(!shelf.getText().equals("")) {
+            s = shelf.getText();
+        }
+        try {
+            co = Integer.parseInt(count.getText());
+        }
+        catch(Exception e) {
+            //something idk
+        }
+        try {
+            us = Double.parseDouble(uSize.getText());
+        }
+        catch(Exception e) {
+            //something idk
+        }
+        String u = (String) unit.getSelectedItem();
+        if(!cas.getText().equals("")) {
+            ca = cas.getText();
+        }
+        if(!hazards.getText().equals("")) {
+            h = hazards.getText();
+        }
+        return new Chemical(n, c, r, s, co, us, u, ca, h);
     }
 }
