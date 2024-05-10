@@ -42,14 +42,14 @@ public class Department{
             //initialize list then adds Chems from the .csv file
         this.chems = new ArrayList<>();
         for(String next: Sorter.readInv(chemFile)){
-            Chemical polymorph = Sorter.chemLab(next);
+            Solution polymorph = Sorter.createNewSolution(next);
             this.chems.add(polymorph);
         }
             //initializes list then adds Solutions from .csv file
         this.comboChem = new ArrayList<>();
         for(String next: Sorter.readInv(solutionFile)){
-            Chemical polymorph = Sorter.chemLab(next);
-            comboChem.add(polymorph);
+            Chemical polymorph = Sorter.wetLabDoc(next);
+            this.comboChem.add(polymorph);
         }
 
         this.rooms = new HashMap<>(23);
@@ -69,9 +69,6 @@ public class Department{
         this.cartographer(this.comboChem);
     }
 
-    public Department(){
-        this(new ArrayList<>());
-    }
 
         //Evee I moved your work down here so I can
         //recreate the mapping with solutions
@@ -134,7 +131,7 @@ public class Department{
     }
 
 
-    //getters and setters Alex Comeau
+//getters and setters Alex Comeau---------------------------------------------------------
     public ArrayList<Chemical> getChems() {
         return this.chems;
     }

@@ -90,7 +90,7 @@ public class SearchScreen extends JPanel implements ActionListener {
             searchMenu.setSelectedItem(b.getSelectedItem());
         }
     }
-
+/*
     //Example data for showcase
     private static ArrayList<Chemical> getExampleData() {
 
@@ -100,7 +100,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         List<Shelf> shelvesStoredAt = new ArrayList<>();
         shelvesStoredAt.add(new Shelf("1", 2));
 
-        ArrayList<Chemical> chemicals = Sorter.readInv()
+        ArrayList<Chemical> chemicals = Sorter.readInv();
         //chemicals.add(new Chemical("Acetone", "500", "412", "1", 10, 2.7, "ml",
         //        "1678", "Acidic"));
         //chemicals.add(new Chemical("Ethanol", "Connecticut", "208", "1", 30, 3.8, "ml",
@@ -115,4 +115,6 @@ public class SearchScreen extends JPanel implements ActionListener {
         //        "266359", "spicy"));
         return chemicals;
     }
+    */
+
 }

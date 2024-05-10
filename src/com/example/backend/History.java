@@ -162,8 +162,3 @@ public class History {
         return true;
     }
 }
-
-    public static boolean writeHistory(TakeOutSlip takeOutSlip) {
-        return true;
-    }
-}

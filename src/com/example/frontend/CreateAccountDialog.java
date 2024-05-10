@@ -95,7 +95,7 @@ public class CreateAccountDialog extends JDialog {
                 // Variable names are incorrect
                 // They should be username, password, email, securityQ, securityA
                 User user = new User();
-                if (user.createNewUser(nameField.getText(), loginIdField.getText(), password, emailField.getText(), contactNumberField.getText(), false)) {
+                if ((user.createNewUser(nameField.getText(), loginIdField.getText(), password, securityQuestion.getSelectedItem(), securityAnswer.getText(), false)) {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Invalid input for field(s).", "Error", JOptionPane.ERROR_MESSAGE);
