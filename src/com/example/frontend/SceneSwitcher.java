@@ -37,8 +37,9 @@ public class SceneSwitcher {
     }
 
     private void setupLoginScreenActions() {
+        User user = new User();
         this.loginScreen.getLoginButton().addActionListener(e -> {
-            if (authenticate(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
+            if (user.login(this.loginScreen.getUserField().getText(), new String(this.loginScreen.getPassField().getPassword()))) {
                 showMainTabbedPane();
             } else {
                 this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
