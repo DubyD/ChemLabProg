@@ -72,14 +72,14 @@ public class CreateAccountDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Here you can save the account information
-                System.out.println("Name: " + nameField.getText());
-                System.out.println("Login ID: " + loginIdField.getText());
+                // System.out.println("Name: " + nameField.getText());
+                // System.out.println("Login ID: " + loginIdField.getText());
                 // Get password securely
                 char[] passwordChars = passwordField.getPassword();
                 String password = new String(passwordChars);
-                System.out.println("Password: " + password);
-                System.out.println("Email: " + emailField.getText());
-                System.out.println("Contact Number: " + contactNumberField.getText());
+                // System.out.println("Password: " + password);
+                // System.out.println("Email: " + emailField.getText());
+                // System.out.println("Contact Number: " + contactNumberField.getText());
 
                 // User tester (please remove later)
                 // Variable names are incorrect
