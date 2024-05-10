@@ -17,7 +17,7 @@ public class CreateAccountDialog extends JDialog {
     private JTextField nameField;
     private JTextField loginIdField;
     private JPasswordField passwordField;
-    private JTextField emailField;
+    private JComboBox<String> securityQuestion;
     private JTextField contactNumberField;
 
     public CreateAccountDialog(JFrame parent) {
@@ -28,43 +28,53 @@ public class CreateAccountDialog extends JDialog {
 
         JLabel nameLabel = new JLabel("Username:");
         nameLabel.setBounds(50, 30, 80, 25);
-        add(nameLabel);
+        this.add(nameLabel);
 
         nameField = new JTextField();
         nameField.setBounds(150, 30, 200, 25);
-        add(nameField);
+        this.add(nameField);
 
         JLabel loginIdLabel = new JLabel("Password:");
         loginIdLabel.setBounds(50, 70, 80, 25);
-        add(loginIdLabel);
+        this.add(loginIdLabel);
 
         loginIdField = new JTextField();
         loginIdField.setBounds(150, 70, 200, 25);
-        add(loginIdField);
+        this.add(loginIdField);
 
         JLabel passwordLabel = new JLabel("Email:");
         passwordLabel.setBounds(50, 110, 80, 25);
-        add(passwordLabel);
+        this.add(passwordLabel);
 
         passwordField = new JPasswordField();
         passwordField.setBounds(150, 110, 200, 25);
-        add(passwordField);
+        this.add(passwordField);
 
-        JLabel emailLabel = new JLabel("Security Question:");
-        emailLabel.setBounds(50, 150, 80, 25);
-        add(emailLabel);
+        JLabel securityQuestion = new JLabel("Security Question:");
+        securityQuestion.setBounds(50, 150, 80, 25);
+        this.add(securityQuestion);
 
-        emailField = new JTextField();
-        emailField.setBounds(150, 150, 200, 25);
-        add(emailField);
+
+        //Options for Security questions
+        String[] options ={"What model is your first car?",
+                "What is your mother's maiden name?",
+                "The name of your first pet?",
+                "Name of your favorite teacher?",
+                "What was your highschool mascot?",
+                "Who is your favorite family member?",
+                "What is your all-time favorite song?"
+        };
+        securityQuestion = new JComboBox<>(options);
+        securityQuestion.setBounds(150, 150, 200, 25);
+        this.add(securityQuestion);
 
         JLabel contactNumberLabel = new JLabel("Security Answer:");
         contactNumberLabel.setBounds(50, 190, 100, 25);
-        add(contactNumberLabel);
+        this.add(contactNumberLabel);
 
         contactNumberField = new JTextField();
         contactNumberField.setBounds(150, 190, 200, 25);
-        add(contactNumberField);
+        this.add(contactNumberField);
 
         JButton submitButton = new JButton("Submit");
         submitButton.setBounds(150, 230, 100, 30);
