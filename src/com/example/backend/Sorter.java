@@ -24,26 +24,26 @@ public class Sorter{
 //----------------------------------------------------------------------------------------------------------------------
 
 
-    //Reads both:
+    /**Reads both:
+      *For updated_data.csv the columns are set up as so: (skip line 1)
+      *blank,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
+      *We need column 2,3(so the professor can determine if they enjoy the product)
+      *4,5,6, 7, 8 , and 10
 
-    //      For updated_data.csv the columns are set up as so: (skip line 1)
-    //blank,Chemical,Company,Room,Location,Amount of Jars,Amount,Unit,CAS #s,Hazard
-    //We need column 2,3(so the professor can determine if they enjoy the product)
-    //4,5,6, 7, 8 , and 10
-
-    //      For new_solutions_Cab.csv (for cabinet) the columns are set up as so: (skip line 1)
-    //Name,Quantity,Initials/Date ,Location,Company
-    //These are custom chems so may need a subclass of Chemical to store data properly
-    //We need columns 1,2,3,4
+      *For new_solutions_Cab.csv (for cabinet) the columns are set up as so: (skip line 1)
+      *Name,Quantity,Initials/Date ,Location,Company
+      *These are custom chems so may need a subclass of Chemical to store data properly
+      *We need columns 1,2,3,4
+      */
 
 
 //----------------------------------------------------------------------------------------------------------------------
 
 
 
-
-        //Split file paths by comma
-        //Fixed this for now let me know if we are using a different splitter
+        /**Split file paths by comma
+          *Fixed this for now let me know if we are using a different splitter
+          */
     public static boolean writeInv(String filePath, List<Chemical> working) {
 
             //Maintaining the original header to not delete the first chemical from the code
@@ -155,8 +155,8 @@ public class Sorter{
     }
 
         /**deconstructs the chem obj to match how the chems
-         *are stored in the file.
-         */
+          *are stored in the file.
+          */
     public static String spaghettifyChem(Chemical deconstruct){
 
         String reply = "";
@@ -164,23 +164,21 @@ public class Sorter{
         for(String next : deconstruct.asArray()){
             reply = reply + next + ",";
         }
-
         return reply;
-
     }
 
        /**adding space for department related sort methods.
-        *Would like to have a static sort method that sorts an arraylist
-        *of chemicals alphabetically.
-        *
-        *takes in an unsorted arraylist of chems and returns one sorted
-        *alphabetically
-        */
+         *Would like to have a static sort method that sorts an arraylist
+         *of chemicals alphabetically.
+         *takes in an unsorted arraylist of chems and returns one sorted
+         *alphabetically
+         */
     public static List<Chemical> initSort(List<Chemical> list){
 
-        //Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
-        //Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
-        //Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
+        /**Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
+          *Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
+          *Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
+          */
         Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
 
         //Returns altered List.
@@ -223,8 +221,6 @@ public class Sorter{
 
         }
 
-
-
                 //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
                 //constructor (chem)( name, room, shelf, size, sizeUnit)
         Solution beaker = new Solution(cut[0], company, "Solutions Cabinet", cut[3], Double.parseDouble(number), sizeUnit, cut[2]);
@@ -235,61 +231,41 @@ public class Sorter{
         //Used for creating a new Solution
         //rewrites the wetlab doc
         //while also adding it to the Solution List in department
-    public static String createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
+    public static String createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations) {
 
         boolean reply;
 
-            //Checks to see if the solution is outsourced
+        //Checks to see if the solution is outsourced
         String company;
         String temp = input;
         temp.replace(" ", "");
-        if(temp.equals("")){
+        if (temp.equals("")) {
 
             company = "MassBay Chemistry Dept.";
 
-        }else{
+        } else {
             company = input;
         }
-            //Makes sure that the size is a number amount
+        //Makes sure that the size is a number amount
         try {
 
             double size = Double.parseDouble(amount);
             Solution beaker = new Solution(name, company, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials);
 
-                //Checks to make sure that the solution is created
-            if(beaker != null){
+            //Checks to make sure that the solution is created
+            if (beaker != null) {
 
                 reply = true;
-            }else{
+            } else {
                 reply = false;
             }
 
-                //Checks to make sure a number is formatted to the size variable
-        }catch(NumberFormatException e){
+            //Checks to make sure a number is formatted to the size variable
+        } catch (NumberFormatException e) {
             reply = false;
         }
 
         return reply;
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

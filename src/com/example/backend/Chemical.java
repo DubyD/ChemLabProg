@@ -259,7 +259,7 @@ public class Chemical {
 
     @Override
     public String toString() {
-        return "Chemical{" +
+        return "Chemical{\n" +
                 "name= " + this.name + '\n' +
                 "company= "+ this.manufacturer + '\n' +
                 "location= " + this.room + '\n' +
