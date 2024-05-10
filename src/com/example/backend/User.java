@@ -199,9 +199,8 @@ public class User {
     }
 
     private boolean isValidSecurityQA(String securityQ, String securityA) {
-        // return securityQ != null && !securityQ.isEmpty() &&
-        //        securityA != null && !securityA.isEmpty();
-        return true;
+        return securityQ != null && !securityQ.isEmpty() &&
+               securityA != null && !securityA.isEmpty();
     }
 
     // Getters and setters for all attributes
