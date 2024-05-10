@@ -1,9 +1,6 @@
 package com.example.frontend;
 
-import com.example.backend.Chemical;
-import com.example.backend.Room;
-import com.example.backend.Shelf;
-import com.example.backend.Sorter;
+import com.example.backend.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,10 +16,12 @@ public class SearchScreen extends JPanel implements ActionListener {
     private JTextField searchBar;
     private JLabel userName;
     private JComboBox<String> searchMenu;
-    private SearchResultsPanel resultPanelTest; //test SearchResultPanel
+    private SearchResultsPanel resultPanel; //test SearchResultPanel
+    private Department chemLab;
 
     public SearchScreen() {
         //Jonathan Murphy
+        this.chemLab = new chemLab();
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
         this.logOutButton = new JButton("Log Out");
@@ -30,9 +29,12 @@ public class SearchScreen extends JPanel implements ActionListener {
         this.userName = new JLabel("Sample Text");//this will need to implement a way to get the real username
         this.searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
-        this.resultPanelTest = new SearchResultsPanel(Sorter);
         this.searchBar.setPreferredSize(new Dimension(200, 20));
-        String[] searchCats = {"Select a Category", "All Chemicals", "Rooms", "Hazards", "Flammable", "Corrosive", "WetLab"};
+        this.resultPanel = new SearchResultsPanel(this.chemLab.getChems());
+        String[] searchCats = {"Select a Category", "All Chemicals", "Rooms",
+                "Hazards", "Flammable", "Corrosive", "Skin Hazard", "Eye Hazard",
+                "Digestive Hazard","Respiratory Hazard","Aquatic Hazard",
+                "Combustible","Oral Hazard","WetLab-Solutions"};
         //change categories when we figure out the approach we're taking
         this.searchMenu = new JComboBox<String>(searchCats);
 
