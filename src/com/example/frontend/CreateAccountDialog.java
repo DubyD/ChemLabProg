@@ -18,7 +18,7 @@ public class CreateAccountDialog extends JDialog {
     private JTextField loginIdField;
     private JPasswordField passwordField;
     private JComboBox<String> securityQuestion;
-    private JTextField contactNumberField;
+    private JTextField securityAnswer;
 
     public CreateAccountDialog(JFrame parent) {
         super(parent, "Create Account", true);
@@ -50,9 +50,9 @@ public class CreateAccountDialog extends JDialog {
         passwordField.setBounds(150, 110, 200, 25);
         this.add(passwordField);
 
-        JLabel securityQuestion = new JLabel("Security Question:");
-        securityQuestion.setBounds(50, 150, 80, 25);
-        this.add(securityQuestion);
+        JLabel securityQuestionLabel = new JLabel("Security Question:");
+        securityQuestionLabel.setBounds(50, 150, 80, 25);
+        this.add(securityQuestionLabel);
 
 
         //Options for Security questions
@@ -68,13 +68,13 @@ public class CreateAccountDialog extends JDialog {
         securityQuestion.setBounds(150, 150, 200, 25);
         this.add(securityQuestion);
 
-        JLabel contactNumberLabel = new JLabel("Security Answer:");
-        contactNumberLabel.setBounds(50, 190, 100, 25);
-        this.add(contactNumberLabel);
+        JLabel securityAnswerLabel = new JLabel("Security Answer:");
+        securityAnswerLabel.setBounds(50, 190, 100, 25);
+        this.add(securityAnswerLabel);
 
-        contactNumberField = new JTextField();
-        contactNumberField.setBounds(150, 190, 200, 25);
-        this.add(contactNumberField);
+        securityAnswer = new JTextField();
+        securityAnswer.setBounds(150, 190, 200, 25);
+        this.add(securityAnswer);
 
         JButton submitButton = new JButton("Submit");
         submitButton.setBounds(150, 230, 100, 30);
