@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * The Admin class represents an administrator in the system who has the authority to manage students.
  * Admin inherits properties and methods from the User class.
+ * @author yunjin
  */
 public class Admin extends User {
     private List<User> students; // List to store the students managed by the admin.
