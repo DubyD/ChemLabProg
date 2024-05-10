@@ -1,10 +1,10 @@
 package com.example.backend;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+// import java.io.ByteArrayInputStream;
+// import java.io.ByteArrayOutputStream;
+// import java.io.IOException;
+// import java.io.ObjectInputStream;
+// import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -52,7 +52,7 @@ public class User {
             return false;
         }
 
-        this.setUsername(name);
+        setUsername(name);
         setPassword(password);
         setEmail(email);
         setSecurityQ(securityQ);
@@ -109,57 +109,49 @@ public class User {
     }
 
     public String toCsvString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(username).append(",");
-        sb.append(encryptPassword(password)).append(",");
-        sb.append(email).append(",");
-        sb.append(securityQ).append(",");
-        sb.append(securityA).append(",");
-        sb.append(new String(serializeSlips(takeOutSlips))).append(",");
-        sb.append(",");
-        sb.append(admin);
-        return sb.toString();
+        String csvString = String.format("%s,%s,%s,%s,%s,%s,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin);
+        return csvString;
     }
 
     public static User parseCsv(String csv) {
-        String[] parts = csv.split(",");
+        String[] values = csv.split(",");
         User user = new User();
-        user.setUsername(parts[0]);
-        user.setPassword(decryptPassword(parts[1]));
-        user.setEmail(parts[2]);
-        user.setSecurityQ(parts[3]);
-        user.setSecurityA(parts[4]);
-        user.setTakeOutSlips(deserializeSlips(parts[5].getBytes()));
-        user.setAdmin(Boolean.parseBoolean(parts[parts.length - 1]));
+        user.setUsername(values[0]);
+        user.setPassword(decryptPassword(values[1]));
+        user.setEmail(values[2]);
+        user.setSecurityQ(values[3]);
+        user.setSecurityA(values[4]);
+        user.setTakeOutSlips(new ArrayList<>());
+        user.setAdmin(Boolean.parseBoolean(values[6]));
         return user;
     }
 
-    private byte[] serializeSlips(List<TakeOutSlip> slips) {
-        // Serialize the list of TakeOutSlip objects
-        try {
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            ObjectOutputStream oos = new ObjectOutputStream(baos);
-            oos.writeObject(getTakeOutSlips());
-            byte[] serializedSlips = baos.toByteArray();
-            return serializedSlips;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+    // private byte[] serializeSlips(List<TakeOutSlip> slips) {
+    //     // Serialize the list of TakeOutSlip objects
+    //     try {
+    //         ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    //         ObjectOutputStream oos = new ObjectOutputStream(baos);
+    //         oos.writeObject(getTakeOutSlips());
+    //         byte[] serializedSlips = baos.toByteArray();
+    //         return serializedSlips;
+    //     } catch (IOException e) {
+    //         e.printStackTrace();
+    //     }
+    //     return null;
+    // }
 
-    @SuppressWarnings("unchecked")
-    private static List<TakeOutSlip> deserializeSlips(byte[] serializedSlips) {
-        try {
-            // Deserialize the serialized data back into a List<TakeOutSlip>
-            ByteArrayInputStream bais = new ByteArrayInputStream(serializedSlips);
-            ObjectInputStream ois = new ObjectInputStream(bais);
-            return (List<TakeOutSlip>) ois.readObject();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+    // @SuppressWarnings("unchecked")
+    // private static List<TakeOutSlip> deserializeSlips(byte[] serializedSlips) {
+    //     try {
+    //         // Deserialize the serialized data back into a List<TakeOutSlip>
+    //         ByteArrayInputStream bais = new ByteArrayInputStream(serializedSlips);
+    //         ObjectInputStream ois = new ObjectInputStream(bais);
+    //         return (List<TakeOutSlip>) ois.readObject();
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    //     return null;
+    // }
 
     private boolean isValidPasswordLength(String password) {
         return password.length() >= MIN_PASSWORD_LENGTH;

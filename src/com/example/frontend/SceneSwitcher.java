@@ -32,7 +32,7 @@ public class SceneSwitcher {
         this.frame.setVisible(true);
         this.mainTabbedPane = new MainTabbedPane();
 
-        this.userSheet = new userSheet();
+        // this.userSheet = new userSheet();
 
     }
 
