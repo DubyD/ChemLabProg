@@ -36,6 +36,10 @@ public class User {
     private LocalDate lastLogin;
     private List<TakeOutSlip> takeOutSlips;
 
+    /**
+     * Default constructor for the User class.
+     * Initializes a new User object with default values.
+     */
     public User() {
         this.username = null;
         this.password = null;
@@ -47,10 +51,28 @@ public class User {
         this.admin = false;
     }
 
+    /**
+     * Overloaded constructor for the User class.
+     * Initializes a new User object with the provided username and password.
+     * 
+     * @param username  The username for the new User
+     * @param password  The password for the new User
+     */
     public User(String username, String password) {
         login(username, password);
     }
     
+    /**
+     * Creates a new user with the provided details.
+     * 
+     * @param name       The name of the new user
+     * @param password   The password for the new user
+     * @param email      The email address of the new user
+     * @param securityQ  The security question for the new user
+     * @param securityA  The answer to the security question for the new user
+     * @param admin      Whether the new user is an admin
+     * @return           True if the user was successfully created, false otherwise
+     */
     public boolean createNewUser(String name, String password, String email, String securityQ, String securityA, boolean admin) {
         if (!isValidPasswordLength(password) || !isValidEmailFormat(email) || !isValidSecurityQA(securityQ, securityA)) {
             return false;
@@ -74,6 +96,13 @@ public class User {
         return true;
     }
 
+    /**
+     * Logs in a user with the provided username and password.
+     *
+     * @param username  The username of the user
+     * @param password  The password of the user
+     * @return          True if the login was successful, false otherwise
+     */
     public boolean login(String username, String password) {
         if (DATABASE.verifyLogin(username, password)) {
             User temp = DATABASE.fetchUser(username);
@@ -92,12 +121,23 @@ public class User {
         return false;
     }
     
+    /**
+     * Logs out the current user.
+     *
+     * @return  True if the logout was successful, false otherwise
+     */
     public boolean logout() {
         setLastLogin(LocalDate.now());
         DATABASE.updateUser(this);
         return true;
     }
 
+    /**
+     * Resets the password of the current user.
+     *
+     * @param newPassword  The new password for the user
+     * @return             True if the password was successfully reset, false otherwise
+     */
     public boolean resetPassword(String newPassword) {
         if (!isValidPasswordLength(newPassword)) {
             setPassword(newPassword);
@@ -106,6 +146,11 @@ public class User {
         return false;
     }
 
+    /**
+     * Deletes the account of the current user.
+     *
+     * @return  True if the account was successfully deleted, false otherwise
+     */
     public boolean deleteAccount() {
         return DATABASE.deleteUser(username, password);
     }
@@ -149,11 +194,22 @@ public class User {
         return null;
     }
 
+    /**
+     * Converts the current User object to a CSV string.
+     *
+     * @return  The CSV string representation of the User object
+     */
     public String toCsvString() {
         String csvString = String.format("%s,%s,%s,%s,%s,%s,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin);
         return csvString;
     }
 
+    /**
+     * Parses a User object from a CSV string.
+     *
+     * @param csv  The CSV string to parse
+     * @return     The parsed User object, or null if parsing fails
+     */
     public static User parseCsv(String csv) {
         String[] values = csv.split(",");
         User user = new User();
