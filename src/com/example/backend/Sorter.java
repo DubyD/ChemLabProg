@@ -173,7 +173,7 @@ public class Sorter{
          *takes in an unsorted arraylist of chems and returns one sorted
          *alphabetically
          */
-    public static ArrayList<Chemical> initSort(List<Chemical> list){
+    public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
 
         /**Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
           *Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values

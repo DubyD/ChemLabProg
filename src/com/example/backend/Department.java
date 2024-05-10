@@ -45,13 +45,13 @@ public class Department{
             //initialize list then adds Chems from the .csv file
         this.chems = new ArrayList<>();
         for(String next: Sorter.readInv(chemFile)){
-            Solution polymorph = Sorter.chemLab(next);
+            Chemical polymorph = Sorter.chemLab(next);
             this.chems.add(polymorph);
         }
             //initializes list then adds Solutions from .csv file
         this.comboChem = new ArrayList<>();
         for(String next: Sorter.readInv(solutionFile)){
-            Chemical polymorph = Sorter.wetLabDoc(next);
+            Solution polymorph = Sorter.wetLabDoc(next);
             this.comboChem.add(polymorph);
         }
 
@@ -68,8 +68,11 @@ public class Department{
         this.respiratoryHazard = new ArrayList<>();
 
             //Hashmaps the two lists to appropriate Arrays
+        for(Solution next : this.comboChem){
+            this.chems.add((Chemical) next);
+        }
         this.cartographer(this.chems);
-        this.cartographer(this.comboChem);
+
     }
 
 
