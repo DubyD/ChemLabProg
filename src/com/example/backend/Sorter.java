@@ -62,7 +62,7 @@ public class Sorter{
 
                 //Create a FileWriter with the specified file path
 
-            FileWriter fileWriter = new FileWriter(filePath);
+            FileWriter fileWriter = new FileWriter(filePath, false);
 
             //Wrap the FileWriter in a BufferedWriter for efficient writing
             try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
