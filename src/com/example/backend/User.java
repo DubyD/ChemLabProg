@@ -106,6 +106,10 @@ public class User {
         return false;
     }
 
+    public boolean deleteAccount() {
+        return DATABASE.deleteUser(username, password);
+    }
+
     /**
      * Encrypts the given password using the AES algorithm.
      *
