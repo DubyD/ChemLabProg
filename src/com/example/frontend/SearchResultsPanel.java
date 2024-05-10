@@ -70,8 +70,6 @@ public class SearchResultsPanel extends JPanel {
         // Set the default close operation
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //print as array
-        System.out.print(Arrays.toString(getExampleData().get(0).asArray()));
         // Create a new SearchResultsPanel
         SearchResultsPanel SearchResultsPanel = new SearchResultsPanel(getExampleData());
 

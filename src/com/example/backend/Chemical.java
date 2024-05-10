@@ -17,8 +17,8 @@ public class Chemical {
     private String sizeUnit;
     private String casNum;
     private String hazards;
-    private boolean flammable = false;
     private HashMap<String, Boolean> hazardFlags = new HashMap<String, Boolean>();
+    private boolean runningLow;
 
     private String purchaseDate;
     private String expirationDate;
@@ -37,6 +37,7 @@ public class Chemical {
         this.sizeUnit = unit;
         this.casNum = cas;
         this.sdsSheet = false;
+        this.getRunningLow();
 
         this.hazards = hazards;
         hazardFlags = new HashMap<>(23);
@@ -108,6 +109,7 @@ public class Chemical {
         }
     }
 
+//-------------------------------------------------Getters and setters------------------------
 
     public HashMap<String, Boolean> getHazardFlags(){
         return hazardFlags;
@@ -169,14 +171,6 @@ public class Chemical {
         this.hazards = hazards;
     }
 
-    public boolean isFlammable() {
-        return flammable;
-    }
-
-    public void setFlammable(boolean flammable) {
-        this.flammable = flammable;
-    }
-
     public boolean getSdsSheet() {
         return this.sdsSheet;
     }
@@ -184,16 +178,6 @@ public class Chemical {
     public void setSdsSheet(boolean sdsSheet) {
         this.sdsSheet = sdsSheet;
     }
-
-    public void updateSize(double newSize) {
-        if (size > 0) {
-            this.size = newSize;
-        } else {
-            // Handle invalid size
-            throw new IllegalArgumentException("Size must be a positive number.");
-        }
-    }
-
 
     public String getRoom() {
         return this.room;
@@ -227,16 +211,32 @@ public class Chemical {
         this.casNum = casNum;
     }
 
-    public boolean getFlammable() {
-        return this.flammable;
+        //Used to mark chemical panes with a red border
+        //if they happen to be running low on stock
+    public boolean getRunningLow(){
+        if(this.size < 2){
+            this.runningLow = true;
+        }else{
+           this.runningLow = false;
+        }
+        return runningLow;
     }
 
-
-    public String[] getUNITS() {
-        return this.UNITS;
+        //
+    public void setRunningLow(boolean isIt){
+        this.runningLow = isIt;
     }
+//-----------------------------------------------------------------------------
 
+    public void updateSize(double newSize) {
+        if (size >= 0) {
+            this.size = newSize;
 
+        } else {
+            // Handle invalid size
+            throw new IllegalArgumentException("Size must be a positive number.");
+        }
+    }
 
     // needed for SearchResultsPanel
     // made by Alex Comeau
@@ -255,7 +255,6 @@ public class Chemical {
                 this.shelf, String.valueOf(this.containers), String.valueOf(size), this.sizeUnit, this.casNum, this.hazards};
 
     }
-
 
     @Override
     public String toString() {

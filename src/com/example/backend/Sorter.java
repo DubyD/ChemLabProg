@@ -231,9 +231,8 @@ public class Sorter{
         //Used for creating a new Solution
         //rewrites the wetlab doc
         //while also adding it to the Solution List in department
-    public static String createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations) {
+    public static Solution createNewSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input) {
 
-        boolean reply;
 
         //Checks to see if the solution is outsourced
         String company;
@@ -246,26 +245,10 @@ public class Sorter{
         } else {
             company = input;
         }
-        //Makes sure that the size is a number amount
-        try {
 
-            double size = Double.parseDouble(amount);
-            Solution beaker = new Solution(name, company, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials);
-
-            //Checks to make sure that the solution is created
-            if (beaker != null) {
-
-                reply = true;
-            } else {
-                reply = false;
-            }
-
-            //Checks to make sure a number is formatted to the size variable
-        } catch (NumberFormatException e) {
-            reply = false;
-        }
-
-        return reply;
+        double size = Double.parseDouble(amount);
+        Solution beaker = new Solution(name, company, "Solutions Cabinet", shelf, size, sizeUnit, dateAndInitials);
+        return beaker;
     }
 
 }

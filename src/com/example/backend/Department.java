@@ -12,6 +12,7 @@ import java.util.HashMap;
  */
 public class Department{
     private ArrayList<Chemical> chems;
+    private ArrayList<Solution> comboChem;
     private ArrayList<Chemical> flammable;
     private ArrayList<Chemical> corrosive;
     private ArrayList<Chemical> skinHazard;
@@ -25,6 +26,10 @@ public class Department{
     private ArrayList<String> roomNums;
 
 
+    public static final String chemFile = "com/example/Data/updated_data.csv";
+    public static final String solutionFile = "com/example/Data/new_solutions_Cab.csv";
+
+
     /**
      * Class department initializes with a full list of chemicals.
      * Constructor initializes rooms and puts the chemicals
@@ -32,9 +37,21 @@ public class Department{
      * @param chems - chemical objects list
      * @author - Evelyn Totman
      */
-    public Department(ArrayList<Chemical> chems){
-        //initialize lists
-        this.chems = chems;
+    public Department(){
+
+            //initialize list then adds Chems from the .csv file
+        this.chems = new ArrayList<>();
+        for(String next: Sorter.readInv(chemFile)){
+            Chemical polymorph = Sorter.chemLab(next);
+            this.chems.add(polymorph);
+        }
+            //initializes list then adds Solutions from .csv file
+        this.comboChem = new ArrayList<>();
+        for(String next: Sorter.readInv(solutionFile)){
+            Chemical polymorph = Sorter.chemLab(next);
+            comboChem.add(polymorph);
+        }
+
         this.rooms = new HashMap<>(23);
         this.roomNums = new ArrayList<>();
         this.flammable = new ArrayList<>();
@@ -47,7 +64,19 @@ public class Department{
         this.digestiveHazard = new ArrayList<>();
         this.respiratoryHazard = new ArrayList<>();
 
-        for(Chemical c : chems){
+            //Hashmaps the two lists to appropriate Arrays
+        this.cartographer(this.chems);
+        this.cartographer(this.comboChem);
+    }
+
+    public Department(){
+        this(new ArrayList<>());
+    }
+
+        //Evee I moved your work down here so I can
+        //recreate the mapping with solutions
+    private void cartographer(ArrayList<Chemical> workingSpace){
+        for(Chemical c : workingSpace){
             HashMap m = c.getHazardFlags();
             String room = c.getRoom();
             String shelf = c.getShelf();
@@ -104,9 +133,6 @@ public class Department{
         }
     }
 
-    public Department(){
-        this(new ArrayList<>());
-    }
 
     //getters and setters Alex Comeau
     public ArrayList<Chemical> getChems() {
@@ -201,9 +227,12 @@ public class Department{
     //full list as of now
     //Evelyn
 
-    public void setUser(String lineFromFile){
 
+        //Adds solutions separately due to a lack of
+    public void addSolutions(Solution comboChem){
+        this.comboChem.add(comboChem);
     }
+
     @Override
     public String toString() {
         return chems.toString();

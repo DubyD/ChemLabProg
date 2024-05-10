@@ -3,6 +3,8 @@
 */
 package com.example.frontend;
 import com.example.Main;
+import com.example.backend.Department;
+import com.example.backend.Sorter;
 import com.example.backend.User;
 import com.example.backend.UserDatabase;
 
@@ -15,10 +17,12 @@ public class SceneSwitcher {
     private JFrame frame;
     private LoginScreen loginScreen;
     private MainTabbedPane mainTabbedPane;
-    private UserDatabase userSheet;
+
+    private UserDatabase users;
 
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
+
         initializeScreens();
         setupLoginScreenActions();
     }
@@ -60,10 +64,7 @@ public class SceneSwitcher {
         this.frame.repaint();
     }
 
-        //returns the user sheet for the admin
-    public UserDatabase getUserSheet(){
-        return this.userSheet;
-    }
+
 }
 
 

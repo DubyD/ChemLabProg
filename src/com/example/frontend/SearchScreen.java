@@ -30,7 +30,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         this.userName = new JLabel("Sample Text");//this will need to implement a way to get the real username
         this.searchBar = new JTextField("Search Chemical");
         //instantiating tester resultsPanel with example data
-        this.resultPanelTest = new SearchResultsPanel(getExampleData());
+        this.resultPanelTest = new SearchResultsPanel(Sorter);
         this.searchBar.setPreferredSize(new Dimension(200, 20));
         String[] searchCats = {"Select a Category", "All Chemicals", "Rooms", "Hazards", "Flammable", "Corrosive", "WetLab"};
         //change categories when we figure out the approach we're taking
