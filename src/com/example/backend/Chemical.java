@@ -245,18 +245,30 @@ public class Chemical {
     }
 
     public String[] asArray() {
-        return new String[] { hasSDS() ? "Yes" : "No", name, manufacturer, room,
-                shelf, "Amount of Jars", String.valueOf(size), sizeUnit, "CAS #s", hazards };
+
+        String hasSafety = "";
+        if(this.sdsSheet){
+            hasSafety = "X";
+        }
+
+        return new String[] { hasSafety, this.name, this.manufacturer, this.room,
+                this.shelf, String.valueOf(this.containers), String.valueOf(size), this.sizeUnit, this.casNum, this.hazards};
 
     }
 
-    // TODO these are all stubs, please implement them
-    public double getCount() {
-        return 1;
-    }
 
-    public void setCount() {
-
+    @Override
+    public String toString() {
+        return "Chemical{" +
+                "name= " + this.name + '\n' +
+                "company= "+ this.manufacturer + '\n' +
+                "location= " + this.room + '\n' +
+                "shelf= " + this.shelf + '\n' +
+                "units= " + this.containers + '\n' +
+                "amount= " + this.size + this.sizeUnit + '\n' +
+                "casNumber= " + this.casNum + '\n' +
+                "hazards= " + hazards + '\n' +
+                "}";
     }
 
 }

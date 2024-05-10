@@ -44,7 +44,7 @@ public class Sorter{
 
         //Split file paths by comma
         //Fixed this for now let me know if we are using a different splitter
-    public static boolean writeInv(String filePath, List<String> working) {
+    public static boolean writeInv(String filePath, List<Chemical> working) {
 
             //Maintaining the original header to not delete the first chemical from the code
             //anytime this program is used
@@ -75,8 +75,9 @@ public class Sorter{
                 bufferedWriter.write(header);
 
                     // Write the content to the file
-                for (String line : working) {
-                    bufferedWriter.write(line);
+                for (Chemical next : working) {
+
+                    bufferedWriter.write(Sorter.spaghettifyChem(next));
 
                     bufferedWriter.newLine();
                 }
@@ -129,14 +130,14 @@ public class Sorter{
         return reply;
     }
 
-//--------------------------------------vvvvvvvvvvvvv---Work Space---vvvvvvvvvvvvvvvv-----------------------------------
 
-    //SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
-    //We need columns 2, 3(so the professor can determine if they enjoy the product)
-    //4,5,6, 7, 8, and 10
 
-    // public Chemical(String name, String company, String room, String shelf,
-    // int containers, Double amount, String unit, String cas, String hazards){
+        /**SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
+          *We need columns 2, 3(so the professor can determine if they enjoy the product)
+          *4,5,6, 7, 8, and 10
+          *public Chemical(String name, String company, String room, String shelf,
+          *int containers, Double amount, String unit, String cas, String hazards){
+          */
     public static Chemical chemLab(String line){
 
         String[] cut = line.split(",", 10);
@@ -146,14 +147,47 @@ public class Sorter{
 
         Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
 
-        if(cut[0] != null) {
-            beaker.setSdsSheet();
+        if(!cut[0].equals("")) {
+            beaker.setSdsSheet(true);
         }
         return beaker;
 
     }
 
+        /**deconstructs the chem obj to match how the chems
+         *are stored in the file.
+         */
+    public static String spaghettifyChem(Chemical deconstruct){
 
+        String reply = "";
+
+        for(String next : deconstruct.asArray()){
+            reply = reply + next + ",";
+        }
+
+        return reply;
+
+    }
+
+       /**adding space for department related sort methods.
+        *Would like to have a static sort method that sorts an arraylist
+        *of chemicals alphabetically.
+        *
+        *takes in an unsorted arraylist of chems and returns one sorted
+        *alphabetically
+        */
+    public static List<Chemical> initSort(List<Chemical> list){
+
+        //Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
+        //Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
+        //Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
+        Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
+
+        //Returns altered List.
+        return list;
+    }
+
+//-------------------------------vvvvvvv--------------working------------vvvvvvvvvvvvv
         //Name,Quantity,Initials/Date ,Location,Company
         //These are the attributes of the string in the .csv
         //Used for the .csv file
@@ -199,7 +233,6 @@ public class Sorter{
 
 
         //Used for creating a new Solution
-        //----------------vvvvvvv--------------working------------vvvvvvvvvvvvv
         //rewrites the wetlab doc
         //while also adding it to the Solution List in department
     public static String createSolution(String name, String shelf, String amount, String sizeUnit, String dateAndInitials, String input, List<Chemical> combinations){
@@ -241,47 +274,14 @@ public class Sorter{
     }
 
 
-    //We can reconfigure chem to match the deconstruction
-    //        int amount = Integer.parseInt(cut[6]);
-    //        Double size = Double.parseDouble(cut[7]);
-    //
-    //        Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[5], cut[8], cut[9]);
-    public String spaghetifyChem(Chemical deconstruct){
-
-        String reply = "";
-            //This "," sets the cut[0] until we can connect SDS sheets
-            //
-        if(deconstruct.getSdsSheet()){
-            reply = "X";
-        }else{
-            reply = ",";
-        }
-
-
-    }
 
 
 
 
 
 
-    //adding space for department related sort methods.
-    //Would like to have a static sort method that sorts an arraylist
-    //of chemicals alphabetically.
-    /**
-     * takes in an unsorted arraylist of chems and returns one sorted
-     * alphabetically
-     */
-    public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
 
-            //Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
-            //Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
-            //Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
-        Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
 
-            //Returns altered List.
-        return list;
-    }
 
 
 
