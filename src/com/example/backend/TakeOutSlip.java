@@ -14,9 +14,11 @@ public class TakeOutSlip {
     private double updatedAmount;
     private String decision="";
     private String unitSize="";
+    private boolean activeSlip;
     public TakeOutSlip(User userDet, Chemical chemicalInput){
         this.user = userDet;
         this.chemical=chemicalInput;
+        this.activeSlip = true;
     }
 
     public void alterChemical(double amount){
@@ -56,8 +58,15 @@ public class TakeOutSlip {
         return this.chemical;
     }
 
+        //return chem
+    public void returnChem(double amount){
+        this.activeSlip = false;
+        alterChemical(amount);
 
-    //
+    }
+
+
+        //
     public String[] array(){
         String[] new {this.user.getUsername(), this.decision, this.chemical.getName(), this.updatedAmount}
     }
