@@ -3,18 +3,40 @@ package com.example.backend;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a shelf within a room, designed to store chemicals.
+ * Each shelf has a number, a capacity, and can hold a list of chemicals up to its capacity.
+ *
+ * @author 
+ */
+
 public class Shelf {
     private String shelfNumber;
     private int capacity;
     private ArrayList<Chemical> chemicals;
+
+
+    /**
+     * Constructs a Shelf with a specified number and capacity.
+     * Initializes an empty list for storing chemicals.
+     *
+     * @param shelfNumber The unique identifier for the shelf
+     * @param capacity The maximum number of chemicals the shelf can hold
+     */
 
     public Shelf(String shelfNumber, int capacity) {
         this.shelfNumber = shelfNumber;
         this.capacity = capacity;
         this.chemicals = new ArrayList<>();
     }
-    //constructor for new shelf with no cap
-    //consult miss web for a good default cap
+
+
+    /**
+     * Constructs a Shelf with a default capacity.
+     * The default capacity is set to 10, based on a recommended value.
+     *
+     * @param shelfNumber The unique identifier for the shelf
+     */
     public Shelf(String shelfNumber){
         this(shelfNumber, 10);
     }
@@ -57,6 +79,11 @@ public class Shelf {
         return chemicals;
     }
 
+    /**
+     * Provides a string representation of the shelf with its basic details.
+     *
+     * @return String that represents the shelf's basic information
+     */
     public String toString() {
         return "Shelf number: " + shelfNumber + ", capacity: " + capacity;
     }
