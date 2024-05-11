@@ -13,16 +13,18 @@ import com.example.backend.User;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class CreateAccountDialog extends JDialog {
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JTextField emailField;
     private JComboBox<String> securityQuestionComboBox;
     private JTextField securityAnswerField;
+    private JTextField adminCodeField;
 
     public CreateAccountDialog(JFrame parent) {
         super(parent, "Create Account", true);
-        setSize(400, 300);
+        setSize(400, 400);
         setLocationRelativeTo(parent);
         setLayout(null);
 
@@ -76,8 +78,16 @@ public class CreateAccountDialog extends JDialog {
         securityAnswerField.setBounds(150, 190, 200, 25);
         this.add(securityAnswerField);
 
+        JLabel adminCodeLabel = new JLabel("Admin Code:"); // Label for admin code
+        adminCodeLabel.setBounds(50, 230, 120, 25); // Adjusted position
+        this.add(adminCodeLabel);
+
+        adminCodeField = new JTextField(); // Text field for admin code
+        adminCodeField.setBounds(150, 230, 200, 25); // Adjusted position
+        this.add(adminCodeField);
+
         JButton submitButton = new JButton("Submit");
-        submitButton.setBounds(150, 230, 100, 30);
+        submitButton.setBounds(150, 280, 100, 30);
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,13 +96,16 @@ public class CreateAccountDialog extends JDialog {
                 String email = emailField.getText();
                 String securityQuestion = securityQuestionComboBox.getSelectedItem().toString();
                 String securityAnswer = securityAnswerField.getText();
+                String adminCode = adminCodeField.getText(); // Retrieve admin code
                 boolean isAdmin = false;
 
-                // User tester (please remove later)
-                // Variable names are incorrect
-                // They should be username, password, email, securityQ, securityA
+                // Check if the admin code is correct (assuming a specific code for demonstration)
+                if ("admin123".equals(adminCode)) {
+                    isAdmin = true;
+                }
+
                 User user = new User();
-                if ((user.createNewUser(username, password, email, securityQuestion, securityAnswer, isAdmin))) {
+                if (user.createNewUser(username, password, email, securityQuestion, securityAnswer, isAdmin)) {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Invalid input for field(s).", "Error", JOptionPane.ERROR_MESSAGE);
