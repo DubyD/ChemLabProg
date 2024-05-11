@@ -16,6 +16,7 @@ public class AddChemicalPane extends JPanel implements ActionListener {
     private JComboBox<String> unit;
     private ArrayList<JLabel> labels;
     private JButton button;
+    private Chemical c;
 
     //Methods
     public AddChemicalPane() {
@@ -117,7 +118,7 @@ public class AddChemicalPane extends JPanel implements ActionListener {
             JFrame frame = new JFrame();
             JPanel p;
             try {
-                Chemical c = buildChemical();
+                this.c = buildChemical();
                 p = new ChemDetailPane(c);
                 frame.getContentPane().add(p);
             }
@@ -132,6 +133,8 @@ public class AddChemicalPane extends JPanel implements ActionListener {
             frame.setVisible(true);
         }
     }
+
+
     public Chemical buildChemical() throws Exception {
         String n = name.getText();
         String c = company.getText();
@@ -177,5 +180,13 @@ public class AddChemicalPane extends JPanel implements ActionListener {
             throw new Exception("Hazards field was left blank.");
         }
         return new Chemical(n, c, r, s, co, us, u, ca, h);
+    }
+
+    public JButton getChemButton(){
+        return button;
+    }
+
+    public Chemical getC(){
+        return this.c;
     }
 }
