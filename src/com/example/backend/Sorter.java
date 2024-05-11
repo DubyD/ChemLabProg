@@ -95,26 +95,8 @@ public class Sorter{
 
     }
 
-    public static ArrayList<Chemical> chemList() {
-        ArrayList<Chemical> temp = new ArrayList<Chemical>();
-        for(String next: Sorter.readInv(chemFile)){
 
-
-
-            Chemical polymorph = Sorter.chemLab(next);
-            for(String piece : polymorph.asArray()){
-                System.out.print(piece + ",");
-            }
-            System.out.print("\n");
-            temp.add(polymorph);
-
-        }
-        ArrayList<Chemical> working = new ArrayList<>();
-        working.addAll(Sorter.initSort(temp));
-        Sorter.writeInv(chemFile, working);
-        return working;
-    }
-
+        //Reads a File line by line
     public static List<String> readInv(String filePath){
 
 
@@ -152,6 +134,33 @@ public class Sorter{
         return reply;
     }
 
+        //Puts Chemicals into a list
+    public static ArrayList<Chemical> chemList() {
+        ArrayList<Chemical> temp = new ArrayList<Chemical>();
+        for(String next: Sorter.readInv(chemFile)){
+            //Adds each chemical creation to a list
+            Chemical polymorph = Sorter.chemLab(next);
+            temp.add(polymorph);
+        }
+        ArrayList<Chemical> working = new ArrayList<>();
+        working.addAll(Sorter.initSort(temp));
+        Sorter.writeInv(chemFile, working);
+        return working;
+    }
+
+        //Puts Solutions into a list
+    public static ArrayList<Chemical> solutionList() {
+        ArrayList<Solution> temp = new ArrayList<Solution>();
+        for(String next: Sorter.readInv(solutionFile)){
+            //Adds each chemical creation to a list
+            Solution polymorph = Sorter.wetLabDoc(next);
+            temp.add(polymorph);
+        }
+        ArrayList<Solution> working = new ArrayList<>();
+        working.addAll(Sorter.initSort(temp));
+        Sorter.writeInv(chemFile, working);
+        return working;
+    }
 
 
         /**SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
@@ -176,45 +185,7 @@ public class Sorter{
 
     }
 
-        /**deconstructs the chem obj to match how the chems
-          *are stored in the file.
-          */
-    public static String spaghettifyChem(Chemical deconstruct){
 
-        String reply = "";
-        int endCut = 0;
-
-        for(String next : deconstruct.asArray()){
-            reply = reply + next;
-
-            if(endCut < 9){
-                reply = reply  + ",";
-            }
-            endCut = endCut + 1;
-        }
-
-        return reply;
-    }
-
-       /**adding space for department related sort methods.
-         *Would like to have a static sort method that sorts an arraylist
-         *of chemicals alphabetically.
-         *takes in an unsorted arraylist of chems and returns one sorted
-         *alphabetically
-         */
-    public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
-
-        /**Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
-          *Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
-          *Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
-          */
-        Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
-
-        //Returns altered List.
-        return list;
-    }
-
-//-------------------------------vvvvvvv--------------working------------vvvvvvvvvvvvv
         //Name,Quantity,Initials/Date ,Location,Company
         //These are the attributes of the string in the .csv
         //Used for the .csv file
@@ -237,7 +208,6 @@ public class Sorter{
                 sizeUnit= sizeUnit + piece;
             }
         }
-
             //Company
         String company = cut[4];
             //To check for effectively empty boxes
@@ -246,15 +216,80 @@ public class Sorter{
         temp.replace(" ", "");
         if(temp.equals("")){
 
-           company = "MassBay Chemistry Dept.";
+            company = "MassBay Chemistry Dept.";
 
         }
-
-                //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
-                //constructor (chem)( name, room, shelf, size, sizeUnit)
+            //constructor (Solution)(name, room, shelf, size, sizeUnit, dateAndInitials, company)
+            //constructor (chem)( name, room, shelf, size, sizeUnit)
         Solution beaker = new Solution(cut[0], company, "Solutions Cabinet", cut[3], Double.parseDouble(number), sizeUnit, cut[2]);
         return beaker;
     }
+
+
+
+
+
+
+    /**deconstructs the chem obj to match how the chems
+          *are stored in the file.
+          */
+    public static String spaghettifyChem(Chemical deconstruct){
+
+        String reply = "";
+        int endCut = 0;
+
+        for(String next : deconstruct.asArray()){
+            reply = reply + next;
+
+            if(endCut <){
+                reply = reply  + ",";
+            }
+            endCut = endCut + 1;
+        }
+
+        return reply;
+    }
+
+        /**deconstructs the chem obj to match how the chems
+          *are stored in the file.
+          */
+    public static String spaghettifySolution(Solution deconstruct){
+
+        String reply = "";
+        int endCut = 0;
+
+        for(String next : deconstruct.asArray()){
+            reply = reply + next;
+
+            if(endCut < 9){
+                reply = reply  + ",";
+            }
+            endCut = endCut + 1;
+        }
+
+        return reply;
+    }
+
+
+
+       /**adding space for department related sort methods.
+         *Would like to have a static sort method that sorts an arraylist
+         *of chemicals alphabetically.
+         *takes in an unsorted arraylist of chems and returns one sorted
+         *alphabetically
+         */
+    public static ArrayList<Chemical> initSort(ArrayList<Chemical> list){
+
+        /**Takes in the List, iterates through the list (nameOne and Two are created as abstract objects)
+          *Takes the name of nameOne, and compares to nameTwo. The built in method will assign them values
+          *Based on where in the alphabet the names compare to (-1, 0, 1) and alters the List accordingly
+          */
+        Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
+
+        //Returns altered List.
+        return list;
+    }
+
 
 
         //Used for creating a new Solution

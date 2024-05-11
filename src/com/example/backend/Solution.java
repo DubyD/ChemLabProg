@@ -47,4 +47,12 @@ public class Solution extends Chemical{
             this.setHazardFlags(hazards);
 
         }
+
+
+            //Name,Quantity,Initials/Date ,Location,Company
+        @Override
+        public String[] asArray(){
+            return String[]{this.getName(), String.valueOf(this.getSize()) + this.getSizeUnit()),
+                            this.dateAndInitials , this.getShelf() , this.getManufacturer()};
+        }
 }
