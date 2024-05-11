@@ -241,7 +241,7 @@ public class Sorter{
         for(String next : deconstruct.asArray()){
             reply = reply + next;
 
-            if(endCut <){
+            if(endCut < 9){
                 reply = reply  + ",";
             }
             endCut = endCut + 1;
