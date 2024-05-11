@@ -1,9 +1,16 @@
-/**This is the first draft for chemical class-Sukhdeep Singh */
+
 
 package com.example.backend;
 
 import java.util.Arrays;
 import java.util.HashMap;
+
+/**
+ * Represents a chemical stored in a facility. It includes details like manufacturer,
+ * storage location, capacity, and safety information.
+ * 
+ * Author: Sukhdeep Singh
+ */
 
 public class Chemical {
 
@@ -25,7 +32,23 @@ public class Chemical {
 
     final String[] UNITS = {"ml", "g","oz","lb","mg","l","kg","gal","qt","pt","cup","tbsp","tsp","fl oz","mL","L","g","mg","kg","oz","lb","gal","qt","pt","cup","tbsp","tsp","fl oz"};
 
-    //Auto Constructor used in sorter class
+
+
+    /**
+     * Constructs a chemical with comprehensive details including hazards.
+     * Throws IllegalArgumentException if the size is negative or the unit is not recognized.
+     *
+     * @param name Name of the chemical
+     * @param company Manufacturer of the chemical
+     * @param room Storage room identifier
+     * @param shelf Shelf identifier
+     * @param containers Number of containers
+     * @param amount Amount of chemical per container
+     * @param unit Unit of measure for the amount
+     * @param cas Chemical Abstracts Service (CAS) number
+     * @param hazards Descriptive string of hazards
+     */
+
     public Chemical(String name, String company, String room, String shelf, int containers, double amount, String unit, String cas, String hazards){
 
         this.name = name;
@@ -54,7 +77,20 @@ public class Chemical {
         }
     }
 
-        //Constructor used for solution
+
+
+    /**
+     * Constructor for creating a chemical without explicit hazard details.
+     * Throws IllegalArgumentException if the size is negative or the unit is not recognized.
+     * Constructor used for solution
+     * 
+     * @param name Name of the chemical
+     * @param company Manufacturer of the chemical
+     * @param room Storage room identifier
+     * @param shelf Shelf identifier
+     * @param size Amount of chemical
+     * @param sizeUnit Unit of measure for the amount
+     */
     public Chemical(String name, String company, String room, String shelf, double size, String sizeUnit){
         this.name = name;
         this.manufacturer = company;
@@ -211,8 +247,12 @@ public class Chemical {
         this.casNum = casNum;
     }
 
-        //Used to mark chemical panes with a red border
-        //if they happen to be running low on stock
+    /**
+     * Calculates if the chemical is running low based on its size.
+     * If the size is less than 2 (units), the chemical is considered running low.
+     *
+     * @return boolean indicating if the chemical is running low.
+     */
     public boolean getRunningLow(){
         if(this.size < 2){
             this.runningLow = true;
@@ -227,6 +267,15 @@ public class Chemical {
         this.runningLow = isIt;
     }
 //-----------------------------------------------------------------------------
+
+
+
+    /**
+     * Updates the amount of chemical remaining.
+     * Throws IllegalArgumentException if the new size is negative.
+     *
+     * @param newSize the new size of the chemical
+     */
 
     public void updateSize(double newSize) {
         if (size >= 0) {
@@ -244,6 +293,15 @@ public class Chemical {
         return this.sdsSheet;
     }
 
+
+
+    /**
+     * Provides an array of the chemical's basic information for display or logging purposes.
+     * Includes safety sheet presence, name, manufacturer, storage location, and other details.
+     *
+     * @return an array of String containing chemical details
+     */
+
     public String[] asArray() {
 
         String hasSafety = "";
@@ -255,6 +313,14 @@ public class Chemical {
                 this.shelf, String.valueOf(this.containers), String.valueOf(size), this.sizeUnit, this.casNum, this.hazards};
 
     }
+
+
+
+    /**
+     * Provides a string representation of the chemical, detailing all relevant information.
+     *
+     * @return formatted string of the chemical's details
+     */
 
     @Override
     public String toString() {
