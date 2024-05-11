@@ -58,41 +58,4 @@ public class SearchResultsPanel extends JPanel {
             data[i] = chemicals.get(i).asArray();
         }
     }
-
-    // basic testing stub
-    public static void main(String[] args) {
-        // Create a new JFrame
-        JFrame frame = new JFrame("Science Department Inventory");
-
-        // Set the size of the frame
-        frame.setSize(400, 300);
-
-        // Set the default close operation
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create a new SearchResultsPanel
-        SearchResultsPanel SearchResultsPanel = new SearchResultsPanel(getExampleData());
-
-        // Add the SearchResultsPanel to the frame
-        frame.add(SearchResultsPanel);
-
-        // Set the visibility of the frame
-        frame.setVisible(true);
-    }
-
-    private static ArrayList<Chemical> getExampleData() {
-
-        List<Room> roomsStoredAt = new ArrayList<>();
-        roomsStoredAt.add(new Room("1",2));
-
-        List<Shelf> shelvesStoredAt = new ArrayList<>();
-        shelvesStoredAt.add(new Shelf("1",2));
-
-        ArrayList<Chemical> chemicals = new ArrayList<>();
-        chemicals.add(new Chemical("Acetone", "Fisher", "Room 1", "Shelf 1", 2, 500.0, "mL", "67-64-1", "flammable, skin, eye"));
-        chemicals.add(new Chemical("Acetone", "Fisher", "Room 1", "Shelf 1", 2, 500.0, "mL", "67-64-1", "flammable, skin, eye"));
-        chemicals.add(new Chemical("Acetone", "Fisher", "Room 1", "Shelf 1", 2, 500.0, "mL", "67-64-1", "flammable, skin, eye"));
-        chemicals.add(new Chemical("Acetone", "Fisher", "Room 1", "Shelf 1", 2, 500.0, "mL", "67-64-1", "flammable, skin, eye"));
-        return chemicals;
-    }
 }
