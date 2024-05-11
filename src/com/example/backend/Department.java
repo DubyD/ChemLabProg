@@ -62,7 +62,7 @@ public class Department{
             //initializes rooms and shelves
             //if room or shelf already exists
             //add chem to it
-            if(rooms.containsKey(room)){
+            if(m != null && m.containsKey(room)) {
                 Room r = (Room) m.get(room);
                 HashMap<String, Shelf> shelves = r.getShelves();
                 if(shelves.containsKey(shelf)){
