@@ -145,4 +145,9 @@ public class SearchScreen extends JPanel implements ActionListener {
             searchCategories.setSelectedItem(b.getSelectedItem());
         }
     }
+
+    public void addChem(Chemical next){
+        this.chemicalsList.add(next);
+    }
+
 }

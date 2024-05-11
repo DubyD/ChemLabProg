@@ -9,6 +9,7 @@ import javax.swing.JTabbedPane;
 public class MainTabbedPane extends JPanel{
     private SearchScreen searchScreen;
     private JTabbedPane tabbedPane;
+    private AddChemicalPane addChemicalPane;
 
     public MainTabbedPane(){
         // Set the layout of the panel
@@ -19,7 +20,8 @@ public class MainTabbedPane extends JPanel{
         
         // Create the panels
         this.searchScreen = new SearchScreen();
-        AddChemicalPane addChemicalPane = new AddChemicalPane();
+        this.addChemicalPane = new AddChemicalPane();
+        this.setChemPaneButton();
         
         // Add the panels to the tabbed pane
         this.tabbedPane.addTab("Search", searchScreen);
@@ -57,5 +59,12 @@ public class MainTabbedPane extends JPanel{
     //needed for SceneSwitcher.java
     public SearchScreen getSearchScreen() {
         return searchScreen;
+    }
+
+    public void setChemPaneButton(){
+        this.addChemicalPane.getChemButton().addActionListener(event ->{
+
+           this.searchScreen.addChem(this.addChemicalPane.getC());
+        });
     }
 }

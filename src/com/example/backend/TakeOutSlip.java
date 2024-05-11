@@ -57,6 +57,7 @@ public class TakeOutSlip {
     }
 
 
+    //
     public String[] array(){
         String[] new {this.user.getUsername(), this.decision, this.chemical.getName(), this.updatedAmount}
     }
