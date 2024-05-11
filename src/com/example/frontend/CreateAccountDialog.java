@@ -123,8 +123,10 @@ public class CreateAccountDialog extends JDialog {
                 User user = new User();
                 if (user.createNewUser(username, password, email, securityQuestion, securityAnswer, isAdmin)) {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    dispose();
                 } else {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Invalid input for field(s).", "Error", JOptionPane.ERROR_MESSAGE);
+                    dispose();
                 }
             }
         });
