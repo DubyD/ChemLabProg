@@ -3,7 +3,6 @@
 */
 package com.example.frontend;
 import com.example.backend.User;
-import com.example.backend.UserDatabase;
 
 import javax.swing.*;
 
@@ -11,8 +10,6 @@ public class SceneSwitcher {
     private JFrame frame;
     private LoginScreen loginScreen;
     private MainTabbedPane mainTabbedPane;
-
-    private UserDatabase users;
 
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
@@ -44,7 +41,9 @@ public class SceneSwitcher {
 
     private void loginToSearch(){
         User user = new User();
-        if (user.login(this.loginScreen.getUserField().getText(), this.loginScreen.getPassField().getText())) {
+        String username = this.loginScreen.getUserField().getText();
+        String password = String.valueOf(this.loginScreen.getPassField().getPassword());
+        if (user.login(username, password)) {
             if(user.isAdmin()){
                 this.mainTabbedPane.addAdminPane();
             }

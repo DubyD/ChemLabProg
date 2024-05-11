@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class SorterTest {
-    private String csvFilePath = "com/example/Data/updated_data.csv";
+    private String csvFilePath = "src/com/example/Data/updated_data.csv";
     private ArrayList<String> CSVLines;
 
     public SorterTest(){
