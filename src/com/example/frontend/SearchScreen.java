@@ -18,14 +18,14 @@ public class SearchScreen extends JPanel implements ActionListener {
     private JComboBox<String> searchCategories;
     private SearchResultsPanel allChemicalsPanel, newSearchPanel; //test SearchResultPanel
     //private Department chemLab;
-    private ArrayList<Chemical> chemicalsList;// = new SorterTest().chemicalArrayList();
+    //private ArrayList<Chemical> chemicalsList;// = new SorterTest().chemicalArrayList();
 
         //using to fix Sorter
-    //private ArrayList<Chemical> chemicalsList = Sorter.chemList();
+    private ArrayList<Chemical> chemicalsList = Sorter.chemList();
 
     public SearchScreen() {
         //Jonathan Murphy
-        this.chemicalsList = Sorter.chemList();
+        //this.chemicalsList = Sorter.chemList();
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
 
