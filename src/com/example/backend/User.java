@@ -90,6 +90,7 @@ public class User {
         setSecurityQ(securityQ);
         setSecurityA(securityA);
         setAdmin(!DATABASE.hasAdminUser() || admin);
+        setLastLogin(LocalDate.now());
 
         DATABASE.addUser(this);
 
@@ -200,7 +201,7 @@ public class User {
      * @return  The CSV string representation of the User object
      */
     public String toCsvString() {
-        String csvString = String.format("%s,%s,%s,%s,%s,%s,%b,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin, LocalDate.now().toString());
+        String csvString = String.format("%s,%s,%s,%s,%s,%s,%b,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin, lastLogin.toString());
         return csvString;
     }
 
