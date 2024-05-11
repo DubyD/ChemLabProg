@@ -1,6 +1,5 @@
 package com.example.backend;
 
-import javax.xml.validation.Schema;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,10 +36,10 @@ public class Department{
      * Class department initializes with a full list of chemicals.
      * Constructor initializes rooms and puts the chemicals
      * in the correct room, shelf, as well as hazard categories
-     * @param chems - chemical objects list
+     *
      * @author - Evelyn Totman
      */
-    public Department(ArrayList<Chemical> chems){
+    public Department(){
 
 
 
