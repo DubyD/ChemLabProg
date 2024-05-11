@@ -91,15 +91,19 @@ public class SearchScreen extends JPanel implements ActionListener {
         });
 
         searchButton.addActionListener(event ->{
+            if(newSearchPanel != null){
+                remove(newSearchPanel);
+            }
             ArrayList<Chemical> searchedChemical = new ArrayList<>();
             String searchResult = searchBar.getText();
-
+            //searches by companies
                 if(Objects.equals(searchCategories.getSelectedItem(), "Company")) {
                     for(Chemical currChem: chemicalsList) {
                         if (currChem.getManufacturer().contains(searchResult)) {
                             searchedChemical.add(currChem);
                         }
                     }
+                    //searches by Rooms
                 } else if (Objects.equals(searchCategories.getSelectedItem(), "Rooms")) {
                     for(Chemical currChem: chemicalsList) {
                         if (currChem.getRoom().contains(searchResult)) {
@@ -107,6 +111,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
                         }
                     }
+                    //searches by Hazards
                 } else if (Objects.equals(searchCategories.getSelectedItem(), "Hazards")) {
                     for(Chemical currChem: chemicalsList){
                         if (currChem.getHazards().contains(searchResult)) {

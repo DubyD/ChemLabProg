@@ -52,7 +52,7 @@ public class Solution extends Chemical{
             //Name,Quantity,Initials/Date ,Location,Company
         @Override
         public String[] asArray(){
-            return new String[]{this.getName(), String.valueOf(this.getSize()) + this.getSizeUnit()),
+            return new String[]{this.getName(), String.valueOf(this.getSize()) + this.getSizeUnit(),
                             this.dateAndInitials , this.getShelf() , this.getManufacturer()};
         }
 }
