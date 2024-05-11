@@ -13,8 +13,8 @@ import java.util.List;
 // All functions related to retrieving or
 public class Sorter{
 
-    public static final String chemFile = "com/example/Data/updated_data.csv";
-    public static final String solutionFile = "com/example/Data/new_solutions_Cab.csv";
+    public static final String chemFile = "src/com/example/Data/updated_data.csv";
+    public static final String solutionFile = "src/com/example/Data/new_solutions_Cab.csv";
 
 
     //no constructor because you cannot creat a static class
