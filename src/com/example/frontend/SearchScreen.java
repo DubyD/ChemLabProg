@@ -21,7 +21,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
     public SearchScreen() {
         //Jonathan Murphy
-        this.chemLab = new Department();
+        this.chemLab = new Department(Sorter.chemList());
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
         this.logOutButton = new JButton("Log Out");

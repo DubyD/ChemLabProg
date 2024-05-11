@@ -13,6 +13,9 @@ import java.util.List;
 // All functions related to retrieving or
 public class Sorter{
 
+    public static final String chemFile = "com/example/Data/updated_data.csv";
+    public static final String solutionFile = "com/example/Data/new_solutions_Cab.csv";
+
 
     //no constructor because you cannot creat a static class
     //So no one can create an instance of this class
@@ -92,6 +95,25 @@ public class Sorter{
 
     }
 
+    public static ArrayList<Chemical> chemList() {
+        ArrayList<Chemical> temp = new ArrayList<Chemical>();
+        for(String next: Sorter.readInv(chemFile)){
+
+
+
+            Chemical polymorph = Sorter.chemLab(next);
+            for(String piece : polymorph.asArray()){
+                System.out.print(piece + ",");
+            }
+            System.out.print("\n");
+            temp.add(polymorph);
+
+        }
+        ArrayList<Chemical> working = new ArrayList<>();
+        working.addAll(Sorter.initSort(temp));
+        Sorter.writeInv(chemFile, working);
+        return working;
+    }
 
     public static List<String> readInv(String filePath){
 
@@ -142,8 +164,8 @@ public class Sorter{
 
         String[] cut = line.split(",", 10);
 
-        int amount = Integer.parseInt(cut[6]);
-        double size = Double.parseDouble(cut[7]);
+        int amount = Integer.parseInt(cut[5]);
+        double size = Double.parseDouble(cut[6]);
 
         Chemical beaker = new Chemical(cut[1], cut[2], cut[3], cut[4], amount, size, cut[7], cut[8], cut[9]);
 

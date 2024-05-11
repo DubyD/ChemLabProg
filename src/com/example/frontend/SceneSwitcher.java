@@ -2,16 +2,10 @@
 @author Salim Jday
 */
 package com.example.frontend;
-import com.example.Main;
-import com.example.backend.Department;
-import com.example.backend.Sorter;
 import com.example.backend.User;
 import com.example.backend.UserDatabase;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SceneSwitcher {
     private JFrame frame;

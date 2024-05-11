@@ -40,20 +40,9 @@ public class Department{
      * @param chems - chemical objects list
      * @author - Evelyn Totman
      */
-    public Department(){
+    public Department(ArrayList<Chemical> chems){
 
-            //initialize list then adds Chems from the .csv file
-        this.chems = new ArrayList<>();
-        for(String next: Sorter.readInv(chemFile)){
-            Chemical polymorph = Sorter.chemLab(next);
-            this.chems.add(polymorph);
-        }
-            //initializes list then adds Solutions from .csv file
-        this.comboChem = new ArrayList<>();
-        for(String next: Sorter.readInv(solutionFile)){
-            Solution polymorph = Sorter.wetLabDoc(next);
-            this.comboChem.add(polymorph);
-        }
+
 
         this.rooms = new HashMap<>(23);
         this.roomNums = new ArrayList<>();
@@ -67,19 +56,7 @@ public class Department{
         this.digestiveHazard = new ArrayList<>();
         this.respiratoryHazard = new ArrayList<>();
 
-            //Hashmaps the two lists to appropriate Arrays
-        for(Solution next : this.comboChem){
-            this.chems.add((Chemical) next);
-        }
-        this.cartographer(this.chems);
-
-    }
-
-
-        //Evee I moved your work down here so I can
-        //recreate the mapping with solutions
-    private void cartographer(ArrayList<Chemical> workingSpace){
-        for(Chemical c : workingSpace){
+        for(Chemical c : chems){
             HashMap m = c.getHazardFlags();
             String room = c.getRoom();
             String shelf = c.getShelf();
@@ -134,6 +111,13 @@ public class Department{
                 respiratoryHazard.add(c);
             }
         }
+    }
+
+
+        //Evee I moved your work down here so I can
+        //recreate the mapping with solutions
+    private void cartographer(ArrayList<Chemical> workingSpace){
+
     }
 
 
