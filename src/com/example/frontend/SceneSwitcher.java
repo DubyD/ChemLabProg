@@ -32,21 +32,26 @@ public class SceneSwitcher {
         // this.userSheet = new userSheet();
 
     }
-
+    //login with both clicking Login and pressing the Enter key on keyboard
     private void setupLoginScreenActions() {
-        User user = new User();
         this.loginScreen.getLoginButton().addActionListener(e -> {
-            if (user.login(this.loginScreen.getUserField().getText(), this.loginScreen.getPassField().getText())) {
-
-                if(user.isAdmin()){
-                    this.mainTabbedPane.addAdminPane();
-                }
-
-                showMainTabbedPane();
-            } else {
-                this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
-            }
+            loginToSearch();
         });
+        this.loginScreen.getPassField().addActionListener(e -> {
+            loginToSearch();
+        });
+    }
+
+    private void loginToSearch(){
+        User user = new User();
+        if (user.login(this.loginScreen.getUserField().getText(), this.loginScreen.getPassField().getText())) {
+            if(user.isAdmin()){
+                this.mainTabbedPane.addAdminPane();
+            }
+            showMainTabbedPane();
+        } else {
+            this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
+        }
     }
 
 
@@ -65,49 +70,7 @@ public class SceneSwitcher {
 
 
 }
-
-
-/*package com.example.frontend;
-//Author VS
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JFrame;
-
-public class SceneSwitcher {
-
-    private JFrame frame;
-
-    private LoginScreen loginScreen;
-    private MainTabbedPane mainTabbedPane;
-
-    public SceneSwitcher(JFrame frame) {
-        this.frame = frame;
-        this.loginScreen = new LoginScreen(frame);
-        this.mainTabbedPane = new MainTabbedPane();
-
-
-        this.loginScreen.getLoginButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                    frame.getContentPane().removeAll();
-                    showSearchScreen();
-            }
-        });
-
-        this.frame.setContentPane(loginScreen);
-        this.frame.setVisible(true);
-        this.loginScreen.loginArea();
-    }
-
-    public SceneSwitcher(){
-        this.frame = null;
-        this.loginScreen = null;
-        this.mainTabbedPane = null;
-    }
-
-    private void showSearchScreen() {
+/**private void showSearchScreen() {
         //Exits Application
         mainTabbedPane.getSearchScreen().getLogOutButton().addActionListener(new ActionListener() {
             @Override
@@ -121,24 +84,4 @@ public class SceneSwitcher {
         this.frame.revalidate();
     }
 }
-        /* moved instantiation to MainTabbedPane.java
-        //Added by AW 5/1/2024
-        //Adding manage users function, is not restricted to just admin accounts yet
-        JButton manageButton = new JButton("Manage Users");
-
-        manageButton.addActionListener(event ->{
-            frame.getContentPane().removeAll();
-            AdminScene adminScreen = new AdminScene(frame);
-            adminScreen.getReturnButton().addActionListener(internalEvent ->{
-            frame.getContentPane().removeAll();
-            showSearchScreen();
-
-        });
-        });
-
-        this.searchPanel.add(manageButton, BorderLayout.NORTH);
-        this.frame.setContentPane(searchPanel);
-        this.frame.revalidate();
-    }
-}
-*/
+ */
