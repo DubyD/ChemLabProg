@@ -4,18 +4,40 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Represents a room in a library.
+ * A room contains shelves and has the capability to manage inventory and track takeout slips.
+ *
+ * @author 
+ */
+
+
 public class Room {
-    private String roomNumber;
-    private HashMap<String, Shelf> shelves;
+    private String roomNumber; 
+    private HashMap<String, Shelf> shelves; 
     private int capacity;
     private ArrayList<TakeOutSlip> slips;
 
+    /**
+     * Constructs a new Room with a specified number and capacity.
+     * Initializes the shelves and slips collections.
+     *
+     * @param roomNumber The unique identifier for the room
+     * @param capacity The maximum number of shelves the room can hold
+     */
     public Room(String roomNumber, int capacity) {
         this.roomNumber = roomNumber;
         this.capacity = capacity;
         this.shelves = new HashMap<>(23);
         this.slips = new ArrayList<>();
     }
+
+
+    /**
+     * Constructs a new Room with a default capacity of 100.
+     *
+     * @param roomNumber The unique identifier for the room
+     */
     public Room(String roomNumber){
         this(roomNumber, 100);
     }
@@ -54,6 +76,13 @@ public class Room {
         return slips;
     }
 
+
+
+    /**
+     * Provides a string representation of the room with its basic details.
+     *
+     * @return String that represents the room's basic information
+     */
     public String toString() {
         return "Room number: " + roomNumber + ", capacity: " + capacity;
     }
