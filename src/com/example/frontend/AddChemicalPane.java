@@ -23,7 +23,9 @@ public class AddChemicalPane extends JPanel implements ActionListener {
         setPreferredSize(new Dimension(800, 600));//just for now
         setLayout(new BorderLayout());
         JPanel center = new JPanel();
-        center.setLayout(new GridLayout(0, 1));
+        center.setLayout(new GridLayout(0, 2));
+        JPanel end = new JPanel();
+        end.setLayout(new FlowLayout());
 
         labels = new ArrayList<>();
         ArrayList<JTextField> boxes = new ArrayList<>();
@@ -90,15 +92,16 @@ public class AddChemicalPane extends JPanel implements ActionListener {
         panes.get(7).add(labels.get(7));
         panes.get(7).add(hazards);
 
-        for (JPanel pane : panes) {
+        for(JPanel pane : panes) {
             center.add(pane);
         }
+        end.add(button);
         //JPanel space = new JPanel();
         //space.setPreferredSize(new Dimension(500, 100));
 
         //add(space, BorderLayout.NORTH);
         add(center, BorderLayout.CENTER);
-        add(button, BorderLayout.SOUTH);
+        add(end, BorderLayout.SOUTH);
         //add(testOutput, BorderLayout.WEST);
     }
 
@@ -112,60 +115,66 @@ public class AddChemicalPane extends JPanel implements ActionListener {
         if(event.getSource().equals(button)) {
             //JFrame for testing purposes
             JFrame frame = new JFrame();
+            JPanel p;
             try {
                 Chemical c = buildChemical();
-                ChemDetailPane p = new ChemDetailPane(c);
+                p = new ChemDetailPane(c);
                 frame.getContentPane().add(p);
             }
             catch(Exception e) {
-                frame.setPreferredSize(new Dimension(300, 100));
-                frame.getContentPane().add(new JLabel("Ya goofed, dummy"));
+                frame.setPreferredSize(new Dimension(400, 100));
+                p = new JPanel();
+                p.add(new JLabel(e.getMessage()));
             }
+            frame.getContentPane().add(p);
             frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
             frame.pack();
             frame.setVisible(true);
         }
     }
-    public Chemical buildChemical() {
-        String n = null;
-        String c = null;
-        String r = null;
-        String s = null;
+    public Chemical buildChemical() throws Exception {
+        String n = name.getText();
+        String c = company.getText();
+        String r = room.getText();
+        String s = shelf.getText();
         int co = -1;
         double us = -1.0;
-        String ca = null;
-        String h = null;
+        String ca = cas.getText();
+        String h = hazards.getText();
 
-        if(!name.getText().equals("")) {
-            n = name.getText();
+        if(n.equals("")) {
+            throw new Exception("Name field was left blank.");
         }
-        if(!company.getText().equals("")) {
-            c = company.getText();
+        if(c.equals("")) {
+            throw new Exception("Manufacturer field was left blank.");
         }
-        if(!room.getText().equals("")) {
-            r = room.getText();
+        if(r.equals("")) {
+            throw new Exception("Room field was left blank.");
         }
-        if(!shelf.getText().equals("")) {
-            s = shelf.getText();
+        if(s.equals("")) {
+            throw new Exception("Shelf field was left blank.");
         }
         try {
             co = Integer.parseInt(count.getText());
         }
         catch(Exception e) {
-            //something idk
+            throw new Exception("Number of Units field must be filled with an integer.");
+        }
+        if(co < 0) {
+            throw new Exception("Number of Units cannot be a negative number.");
         }
         try {
             us = Double.parseDouble(uSize.getText());
         }
         catch(Exception e) {
-            //something idk
+            throw new Exception("Unit Size field must be filled with an integer or decimal.");
         }
         String u = (String) unit.getSelectedItem();
-        if(!cas.getText().equals("")) {
-            ca = cas.getText();
+        if(ca.equals("")) {
+            throw new Exception("CAS Number field was left blank.");
         }
-        if(!hazards.getText().equals("")) {
-            h = hazards.getText();
+        if(h.equals("")) {
+            throw new Exception("Hazards field was left blank.");
         }
         return new Chemical(n, c, r, s, co, us, u, ca, h);
     }
