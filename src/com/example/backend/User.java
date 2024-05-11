@@ -200,7 +200,7 @@ public class User {
      * @return  The CSV string representation of the User object
      */
     public String toCsvString() {
-        String csvString = String.format("%s,%s,%s,%s,%s,%s,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin);
+        String csvString = String.format("%s,%s,%s,%s,%s,%s,%b,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin, LocalDate.now().toString());
         return csvString;
     }
 
@@ -220,6 +220,7 @@ public class User {
         user.setSecurityA(values[4]);
         user.setTakeOutSlips(new ArrayList<>());
         user.setAdmin(Boolean.parseBoolean(values[6]));
+        user.setLastLogin(LocalDate.parse(values[7]));
         return user;
     }
 
