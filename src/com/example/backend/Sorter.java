@@ -149,18 +149,18 @@ public class Sorter{
     }
 
         //Puts Solutions into a list
-    public static ArrayList<Chemical> solutionList() {
-        ArrayList<Solution> temp = new ArrayList<Solution>();
-        for(String next: Sorter.readInv(solutionFile)){
-            //Adds each chemical creation to a list
-            Solution polymorph = Sorter.wetLabDoc(next);
-            temp.add(polymorph);
+        public static ArrayList<Solution> solutionList() {
+            ArrayList<Solution> temp = new ArrayList<Solution>();
+            for(String next: Sorter.readInv(solutionFile)){
+                //Adds each chemical creation to a list
+                Solution polymorph = Sorter.wetLabDoc(next);
+                temp.add(polymorph);
+            }
+            ArrayList<Solution> working = new ArrayList<>();
+            working.addAll(Sorter.initSolution(temp));
+            //Sorter.writeInv(solutionFile, ((ArrayList<Chemical>)working));
+            return working;
         }
-        ArrayList<Solution> working = new ArrayList<>();
-        working.addAll(Sorter.initSort(temp));
-        Sorter.writeInv(chemFile, working);
-        return working;
-    }
 
 
         /**SDS,2 Chemical,3 Company,4 Room,5 Location,6 Amount of Jars,7 Amount,8 Unit,9 CAS #s,10 Hazard
@@ -287,6 +287,12 @@ public class Sorter{
         Collections.sort(list,(nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
 
         //Returns altered List.
+        return list;
+    }
+
+    public static ArrayList<Solution> initSolution(ArrayList<Solution> list) {
+
+        Collections.sort(list, (nameOne, nameTwo) -> nameOne.getName().compareToIgnoreCase(nameTwo.getName()));
         return list;
     }
 
