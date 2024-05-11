@@ -18,6 +18,7 @@ public class TakeOutSlip {
         this.user = userDet;
         this.chemical=chemicalInput;
     }
+
     public void alterChemical(double amount){
         // amount will be the new value for the chemical
         double previousAmount = this.chemical.getSize();
@@ -54,4 +55,11 @@ public class TakeOutSlip {
     public Chemical getChemical(){
         return this.chemical;
     }
+
+
+    public String[] array(){
+        String[] new {this.user.getUsername(), this.decision, this.chemical.getName(), this.updatedAmount}
+    }
+
+
 }
