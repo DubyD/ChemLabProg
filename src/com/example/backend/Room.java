@@ -18,6 +18,17 @@ public class Room {
     private int capacity;
     private ArrayList<TakeOutSlip> slips;
 
+
+    //Default Constructor
+    public Room() {
+        this.roomNumber = "";
+        this.capacity = 100; // Default capacity
+        this.shelves = new HashMap<>(23);
+        this.slips = new ArrayList<>();
+    }
+
+    
+    
     /**
      * Constructs a new Room with a specified number and capacity.
      * Initializes the shelves and slips collections.
