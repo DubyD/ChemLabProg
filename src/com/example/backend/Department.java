@@ -36,7 +36,7 @@ public class Department{
      *
      * @author - Evelyn Totman
      */
-    public Department(ArrayList<Chemical> chems){
+    public Department(){
 
 
         this.chems = chems;
