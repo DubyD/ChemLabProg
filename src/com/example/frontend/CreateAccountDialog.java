@@ -111,12 +111,15 @@ public class CreateAccountDialog extends JDialog {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Passwords do not match.", "Error", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
+
+                User user = new User();
+
                 // Check if the admin code is correct (assuming a specific code for demonstration)
-                if ("admin123".equals(adminCode)) {
+                // Only one admin user can exist at a time
+                if ("admin123".equals(adminCode) && !User.getDatabase().hasAdminUser()) {
                     isAdmin = true;
                 }
 
-                User user = new User();
                 if (user.createNewUser(username, password, email, securityQuestion, securityAnswer, isAdmin)) {
                     JOptionPane.showMessageDialog(CreateAccountDialog.this, "Account created successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
                     dispose();

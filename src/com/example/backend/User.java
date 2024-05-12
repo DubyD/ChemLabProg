@@ -237,6 +237,26 @@ public class User {
 
     // Getters and setters for all attributes
 
+    public static UserDatabase getDatabase() {
+        return DATABASE;
+    }
+
+    public static int getMinPasswordLength() {
+        return MIN_PASSWORD_LENGTH;
+    }
+
+    public static String getEmailRegex() {
+        return EMAIL_REGEX;
+    }
+
+    public static Pattern getEmailPattern() {
+        return EMAIL_PATTERN;
+    }
+
+    public static String getEncryptionKey() {
+        return ENCRYPTION_KEY;
+    }
+
     public String getUsername() {
         return username;
     }
