@@ -16,6 +16,7 @@ public class SearchScreen extends JPanel implements ActionListener {
     private JTextField searchBar;
     private JLabel userName;
     private JComboBox<String> searchCategories;
+    private ImageIcon flask;
     private SearchResultsPanel allChemicalsPanel, newSearchPanel; //test SearchResultPanel
     //private Department chemLab;
     //private ArrayList<Chemical> chemicalsList;// = new SorterTest().chemicalArrayList();
@@ -28,6 +29,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         //this.chemicalsList = Sorter.chemList();
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
+        this.flask = new ImageIcon();
 
         this.backButton = new JButton("<");
         this.logOutButton = new JButton("Log Out");
@@ -70,6 +72,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
         JPanel searchPanel = new JPanel();
         searchPanel.setLayout(new FlowLayout(2));
+        searchPanel.add(this.flask);
         searchPanel.add(backButton);
         searchPanel.add(searchBar);
         searchPanel.add(searchButton);
@@ -154,5 +157,9 @@ public class SearchScreen extends JPanel implements ActionListener {
     public void setUserName(String user){
         this.userName.setText(user);
         revalidate();
+    }
+
+    public void addImageIcon(ImageIcon fun){
+
     }
 }

@@ -72,8 +72,8 @@ public class MainTabbedPane extends JPanel{
         this.searchScreen.setUserName(user);
     }
 
-    /**TO DO adding Image in top Left
-    public void addIcon(ImageIcon fun){
-
-    }*/
+        //adding Image in top Left
+     public void addImageIcon(ImageIcon fun){
+        this.searchScreen.addImageIcon(fun);
+     }
 }
