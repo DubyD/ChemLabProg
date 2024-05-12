@@ -35,7 +35,7 @@ public class LoginScreen extends JPanel {
         JLabel iconLabel = new JLabel(this.flask);
 
         //Changing icon of program
-        frame.setIconImage(flaskIcon.getImage());
+        frame.setIconImage(this.smallFlask.getImage());
 
         add(iconLabel, gbc);
 
