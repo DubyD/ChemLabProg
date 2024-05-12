@@ -28,9 +28,6 @@ public class Department{
     private ArrayList<String> roomNums;
 
 
-    public static final String chemFile = "com/example/Data/updated_data.csv";
-    public static final String solutionFile = "com/example/Data/new_solutions_Cab.csv";
-
 
     /**
      * Class department initializes with a full list of chemicals.
@@ -110,13 +107,6 @@ public class Department{
                 respiratoryHazard.add(c);
             }
         }
-    }
-
-
-        //Evee I moved your work down here so I can
-        //recreate the mapping with solutions
-    private void cartographer(ArrayList<Chemical> workingSpace){
-
     }
 
 

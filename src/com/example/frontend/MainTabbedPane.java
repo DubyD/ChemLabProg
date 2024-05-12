@@ -30,7 +30,7 @@ public class MainTabbedPane extends JPanel{
         // Add the tabbed pane to the panel
         this.add(tabbedPane);
     }
-
+/*
      // basic testing stub
     public static void main(String[] args) {
         // Create a new JFrame
@@ -51,7 +51,7 @@ public class MainTabbedPane extends JPanel{
         // Set the visibility of the frame
         frame.setVisible(true);
     }
-
+*/
     public void addAdminPane(){
         AdminScene adminScene = new AdminScene();
         this.tabbedPane.addTab("Admin Settings", adminScene);
