@@ -98,10 +98,5 @@ public class LoginScreen extends JPanel {
     public JLabel getMessageLabel() {
         return messageLabel;
     }
-    public ImageIcon getBigIcon(){
-        return this.flask;
-    }
-    public ImageIcon getSmallFlask(){
-        return this.smallFlask;
-    }
+
 }
