@@ -36,10 +36,10 @@ public class Department{
      *
      * @author - Evelyn Totman
      */
-    public Department(){
+    public Department(ArrayList<Chemical> chems){
 
 
-
+        this.chems = chems;
         this.rooms = new HashMap<>(23);
         this.roomNums = new ArrayList<>();
         this.flammable = new ArrayList<>();
@@ -51,6 +51,7 @@ public class Department{
         this.eyeHazard = new ArrayList<>();
         this.digestiveHazard = new ArrayList<>();
         this.respiratoryHazard = new ArrayList<>();
+        initializeRoomsAndShelves();
 
         for(Chemical c : chems){
             HashMap m = c.getHazardFlags();
@@ -110,7 +111,10 @@ public class Department{
     }
 
 
-//getters and setters Alex Comeau---------------------------------------------------------
+
+
+
+    //getters and setters Alex Comeau---------------------------------------------------------
     public ArrayList<Chemical> getChems() {
         return this.chems;
     }
@@ -295,5 +299,27 @@ public class Department{
             return chems.equals(t.chems);
         }
         return false;
+    }
+    private void initializeRoomsAndShelves() {
+        for (Chemical chemical : this.chems) {
+            String roomKey = chemical.getRoom();
+            String shelfKey = chemical.getShelf();
+
+            // Check if the room exists
+            Room room = this.rooms.get(roomKey);
+            if (room == null) {
+                room = new Room(roomKey);
+                this.rooms.put(roomKey, room);
+            }
+
+            // Check if the shelf exists in the room
+            Shelf shelf = room.getShelf(shelfKey);
+            if (shelf == null) {
+                shelf = new Shelf(shelfKey);
+                room.addShelf(shelfKey, shelf);
+            }
+            // Add the chemical to the shelf
+            shelf.addChemical(chemical);
+        }
     }
 }

@@ -76,6 +76,11 @@ public class Room {
         return slips;
     }
 
+    public Shelf getShelf(String shelfName) {
+        return shelves.get(shelfName);
+    }
+
+
 
 
     /**
