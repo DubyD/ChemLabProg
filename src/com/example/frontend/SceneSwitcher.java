@@ -49,8 +49,6 @@ public class SceneSwitcher {
             }
                 //Puts the UserName in top right
             this.mainTabbedPane.setUserName(user.getUsername());
-                //adds Icon to SearchPane
-            this.mainTabbedPane.addImageIcon(this.loginScreen.getSmallFlask());
             showMainTabbedPane();
         } else {
             this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
