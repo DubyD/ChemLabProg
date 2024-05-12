@@ -16,6 +16,17 @@ public class History {
     private LocalDateTime lastUpdated; 
 
 
+    //Default constructor
+    public History() {
+        this.who = null;
+        this.what = "";
+        this.where = "";
+        this.amount = 0;
+        this.lastUpdated = null;
+    }
+
+    
+    
     public History(User who, String what, String where, int amount) {
         this.who = who;
         this.what = what;

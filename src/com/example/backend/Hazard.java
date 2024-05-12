@@ -17,6 +17,16 @@ public class Hazard{
     private List<String> emergencyContact;
 
 
+    //Default constructor
+    public Hazard() {
+        this.dangers = new ArrayList<>();
+        this.emergencyContact = new ArrayList<>();
+        this.hazardType = "";
+        this.description = "";
+        this.storageRequirements = "";
+    }
+    
+
     /**
      * Constructor to initialize a hazard with its type, description, and storage requirements.
      *

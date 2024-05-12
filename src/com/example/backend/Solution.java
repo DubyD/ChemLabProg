@@ -11,7 +11,13 @@ public class Solution extends Chemical{
     private List<Chemical> captainPlanet;
     private String dateAndInitials;
 
-
+      //Default constructor
+      public Solution() {
+        super("", "", "", "", 0.0, "");
+        this.dateAndInitials = "";
+        this.captainPlanet = new ArrayList<>();
+    }
+    
 
         //Constructor used for solution's super()-
         //(String 'name', String 'room',String 'shelf',
@@ -55,4 +61,20 @@ public class Solution extends Chemical{
             return new String[]{this.getName(), String.valueOf(this.getSize()) + this.getSizeUnit(),
                             this.dateAndInitials , this.getShelf() , this.getManufacturer()};
         }
+
+
+        @Override
+        public String toString() {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append("Solution{\n");
+            stringBuilder.append("  Name: ").append(this.getName()).append("\n");
+            stringBuilder.append("  Quantity: ").append(this.getSize()).append(" ").append(this.getSizeUnit()).append("\n");
+            stringBuilder.append("  Date and Initials: ").append(this.dateAndInitials).append("\n");
+            stringBuilder.append("  Location: ").append(this.getShelf()).append("\n");
+            stringBuilder.append("  Company: ").append(this.getManufacturer()).append("\n");
+            stringBuilder.append("}");
+
+                return stringBuilder.toString();
+}
+
 }

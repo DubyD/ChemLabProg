@@ -15,6 +15,14 @@ public class Shelf {
     private int capacity;
     private ArrayList<Chemical> chemicals;
 
+    //Default constructor
+    
+    public Shelf() {
+        this.shelfNumber = "";
+        this.capacity = 10; // Default capacity
+        this.chemicals = new ArrayList<>();
+    }
+    
 
     /**
      * Constructs a Shelf with a specified number and capacity.
