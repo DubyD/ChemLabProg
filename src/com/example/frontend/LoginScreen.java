@@ -14,6 +14,8 @@ public class LoginScreen extends JPanel {
     private JButton createAccountButton;
     private JButton exitButton;
     private JLabel messageLabel;
+    private ImageIcon flask;
+    private ImageIcon smallFlask;
 
     public LoginScreen(JFrame frame) {
         initializeUI(frame);
@@ -28,9 +30,9 @@ public class LoginScreen extends JPanel {
         
 
         //Attempting to add image to login
-        ImageIcon flask = new ImageIcon("src/resources/images/flask.png");
-        ImageIcon flaskIcon = new ImageIcon("src/resources/images/flaskIcon.png");
-        JLabel iconLabel = new JLabel(flask);
+        this.flask = new ImageIcon("src/resources/images/flask.png");
+        this.smallFlask = new ImageIcon("src/resources/images/flaskIcon.png");
+        JLabel iconLabel = new JLabel(this.flask);
 
         //Changing icon of program
         frame.setIconImage(flaskIcon.getImage());
@@ -95,5 +97,8 @@ public class LoginScreen extends JPanel {
 
     public JLabel getMessageLabel() {
         return messageLabel;
+    }
+    public ImageIcon getIcon(){
+        return this.
     }
 }
