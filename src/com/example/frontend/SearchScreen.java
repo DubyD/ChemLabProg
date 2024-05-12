@@ -150,4 +150,9 @@ public class SearchScreen extends JPanel implements ActionListener {
         this.chemicalsList.add(next);
     }
 
+        //Puts username in top Right
+    public void setUserName(String user){
+        this.userName.setText(user);
+        revalidate();
+    }
 }

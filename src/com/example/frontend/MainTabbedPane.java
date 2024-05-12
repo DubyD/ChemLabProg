@@ -2,14 +2,13 @@ package com.example.frontend;
 
 import java.awt.BorderLayout;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
+import javax.swing.*;
 
 public class MainTabbedPane extends JPanel{
     private SearchScreen searchScreen;
     private JTabbedPane tabbedPane;
     private AddChemicalPane addChemicalPane;
+    private ImageIcon topLeft;
 
     public MainTabbedPane(){
         // Set the layout of the panel
@@ -67,4 +66,14 @@ public class MainTabbedPane extends JPanel{
            this.searchScreen.addChem(this.addChemicalPane.getC());
         });
     }
+
+        //Puts username in top Right
+    public void setUserName(String user){
+        this.searchScreen.setUserName(user);
+    }
+
+    /**TO DO adding Image in top Left
+    public void addIcon(ImageIcon fun){
+
+    }*/
 }

@@ -45,10 +45,6 @@ public class CreateAccountDialog extends JDialog {
         passwordField.setBounds(150, 70, 200, 25);
         this.add(passwordField);
 
-        JLabel passwordLabel = new JLabel("Email:");
-        passwordLabel.setBounds(50, 110, 80, 25);
-        this.add(passwordLabel);
-
         JLabel reEnterPasswordLabel = new JLabel("Re-enter Password:");
         reEnterPasswordLabel.setBounds(30, 110, 120, 25);
         this.add(reEnterPasswordLabel);

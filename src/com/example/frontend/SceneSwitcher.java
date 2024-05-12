@@ -47,6 +47,8 @@ public class SceneSwitcher {
             if(user.isAdmin()){
                 this.mainTabbedPane.addAdminPane();
             }
+                //Puts the UserName in top right
+            this.mainTabbedPane.setUserName(user.getUsername());
             showMainTabbedPane();
         } else {
             this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
@@ -63,6 +65,7 @@ public class SceneSwitcher {
 
     private void showMainTabbedPane() {
         this.frame.setContentPane(mainTabbedPane);
+
         this.frame.revalidate();
         this.frame.repaint();
     }
