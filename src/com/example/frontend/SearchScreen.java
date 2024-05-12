@@ -72,7 +72,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
         JPanel searchPanel = new JPanel();
         searchPanel.setLayout(new FlowLayout(2));
-        searchPanel.add(this.flask);
+        //searchPanel.add(this.flask);
         searchPanel.add(backButton);
         searchPanel.add(searchBar);
         searchPanel.add(searchButton);

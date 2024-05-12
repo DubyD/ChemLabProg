@@ -50,6 +50,9 @@ public class SceneSwitcher {
                 //Puts the UserName in top right
             this.mainTabbedPane.setUserName(user.getUsername());
             showMainTabbedPane();
+            mainTabbedPane.getLogoutButton().addActionListener(e -> {
+                showLoginScreen();
+            });
         } else {
             this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
         }
@@ -65,6 +68,16 @@ public class SceneSwitcher {
 
     private void showMainTabbedPane() {
         this.frame.setContentPane(mainTabbedPane);
+
+        this.frame.revalidate();
+        this.frame.repaint();
+    }
+
+    private void showLoginScreen() {
+        this.frame.setContentPane(loginScreen);
+        this.mainTabbedPane = new MainTabbedPane();
+        loginScreen.getUserField().setText("");
+        loginScreen.getPassField().setText("");
 
         this.frame.revalidate();
         this.frame.repaint();

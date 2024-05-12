@@ -72,4 +72,7 @@ public class MainTabbedPane extends JPanel{
         this.searchScreen.setUserName(user);
     }
 
+    public JButton getLogoutButton() {
+        return searchScreen.getLogOutButton();
+    }
 }
