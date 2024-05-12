@@ -16,7 +16,7 @@ import javax.crypto.spec.SecretKeySpec;
  * <p>
  * Handles user authentication and user data management
  * @see UserDatabase
- * @author Eric Lim
+ * @author Eric Lim, Arjenis Montenegro
  */
 public class User {
 
@@ -34,7 +34,6 @@ public class User {
     private String securityA;
     private boolean admin;
     private LocalDate lastLogin;
-    private List<TakeOutSlip> takeOutSlips;
 
     /**
      * Default constructor for the User class.
@@ -46,7 +45,6 @@ public class User {
         this.email = null;
         this.securityQ = null;
         this.securityA = null;
-        this.takeOutSlips = new ArrayList<>();
         this.lastLogin = null;
         this.admin = false;
     }
@@ -89,7 +87,8 @@ public class User {
         setEmail(email);
         setSecurityQ(securityQ);
         setSecurityA(securityA);
-        setAdmin(!DATABASE.hasAdminUser() || admin);
+        setAdmin(admin);
+        // setAdmin(!DATABASE.hasAdminUser() || admin);
         setLastLogin(LocalDate.now());
 
         DATABASE.addUser(this);
@@ -113,7 +112,6 @@ public class User {
             setEmail(temp.getEmail());
             setSecurityQ(temp.getSecurityQ());
             setSecurityA(temp.getSecurityA());
-            setTakeOutSlips(temp.getTakeOutSlips());
             setLastLogin(LocalDate.now());
             setAdmin(temp.isAdmin());
 
@@ -201,7 +199,7 @@ public class User {
      * @return  The CSV string representation of the User object
      */
     public String toCsvString() {
-        String csvString = String.format("%s,%s,%s,%s,%s,%s,%b,%s", username, encryptPassword(password), email, securityQ, securityA, "takeOutSlips", admin, lastLogin.toString());
+        String csvString = String.format("%s,%s,%s,%s,%s,%b,%s", username, encryptPassword(password), email, securityQ, securityA, admin, lastLogin.toString());
         return csvString;
     }
 
@@ -219,38 +217,10 @@ public class User {
         user.setEmail(values[2]);
         user.setSecurityQ(values[3]);
         user.setSecurityA(values[4]);
-        user.setTakeOutSlips(new ArrayList<>());
-        user.setAdmin(Boolean.parseBoolean(values[6]));
-        user.setLastLogin(LocalDate.parse(values[7]));
+        user.setAdmin(Boolean.parseBoolean(values[5]));
+        user.setLastLogin(LocalDate.parse(values[6]));
         return user;
     }
-
-    // private byte[] serializeSlips(List<TakeOutSlip> slips) {
-    //     // Serialize the list of TakeOutSlip objects
-    //     try {
-    //         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    //         ObjectOutputStream oos = new ObjectOutputStream(baos);
-    //         oos.writeObject(getTakeOutSlips());
-    //         byte[] serializedSlips = baos.toByteArray();
-    //         return serializedSlips;
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    //     return null;
-    // }
-
-    // @SuppressWarnings("unchecked")
-    // private static List<TakeOutSlip> deserializeSlips(byte[] serializedSlips) {
-    //     try {
-    //         // Deserialize the serialized data back into a List<TakeOutSlip>
-    //         ByteArrayInputStream bais = new ByteArrayInputStream(serializedSlips);
-    //         ObjectInputStream ois = new ObjectInputStream(bais);
-    //         return (List<TakeOutSlip>) ois.readObject();
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //     }
-    //     return null;
-    // }
 
     private boolean isValidPasswordLength(String password) {
         return password.length() >= MIN_PASSWORD_LENGTH;
@@ -313,14 +283,6 @@ public class User {
 
     public void setSecurityA(String securityA) {
         this.securityA = securityA;
-    }
-
-    public List<TakeOutSlip> getTakeOutSlips() {
-        return takeOutSlips;
-    }
-
-    public void setTakeOutSlips(List<TakeOutSlip> takeOutSlips) {
-        this.takeOutSlips = takeOutSlips;
     }
 
     public LocalDate getLastLogin() {

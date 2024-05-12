@@ -13,7 +13,7 @@ import java.nio.file.StandardCopyOption;
  * UserDatabase Class
  * <p>
  * Manages the user database stored in a CSV file
- * @author Eric Lim
+ * @author Eric Lim, Arjenis Montenegro
  */
 public class UserDatabase {
     
@@ -142,26 +142,26 @@ public class UserDatabase {
         return false;
     }
     
-    /**
-     * Checks if there is an admin user in the database.
-     * 
-     * @return true if an admin user exists, false otherwise.
-     */
-    public boolean hasAdminUser() {
-        // Check if there is any user with admin
-        try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                User user = User.parseCsv(line);
-                if (user.isAdmin()) {
-                    return true;
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
+    // /**
+    //  * Checks if there is an admin user in the database.
+    //  * 
+    //  * @return true if an admin user exists, false otherwise.
+    //  */
+    // public boolean hasAdminUser() {
+    //     // Check if there is any user with admin
+    //     try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
+    //         String line;
+    //         while ((line = reader.readLine()) != null) {
+    //             User user = User.parseCsv(line);
+    //             if (user.isAdmin()) {
+    //                 return true;
+    //             }
+    //         }
+    //     } catch (IOException e) {
+    //         e.printStackTrace();
+    //     }
+    //     return false;
+    // }
 
     /**
      * Deletes a user from the database.
