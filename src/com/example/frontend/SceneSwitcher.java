@@ -51,6 +51,7 @@ public class SceneSwitcher {
             this.mainTabbedPane.setUserName(user.getUsername());
             showMainTabbedPane();
             mainTabbedPane.getLogoutButton().addActionListener(e -> {
+                user.logout();
                 showLoginScreen();
             });
         } else {
