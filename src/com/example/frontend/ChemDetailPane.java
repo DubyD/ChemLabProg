@@ -22,7 +22,8 @@ public class ChemDetailPane extends JPanel {
         setLayout(new BorderLayout());
         name = new JLabel("Chemical: " + chemical.getName());
         casNum = new JLabel("CAS #: " + chemical.getCasNum());
-        sdsPrompt = new JLabel("More Info:");
+        //sdsPrompt = new JLabel("More Info:");
+        sdsPrompt = new JLabel("Created Successfully");
         //sdsLink = new JLabel(chemical.getSdsSheet());
         sdsLink = new JLabel("link broke");
         company = new JLabel("Manufacturer: " + chemical.getManufacturer());
@@ -59,7 +60,7 @@ public class ChemDetailPane extends JPanel {
 
         east.setLayout(new GridLayout(0, 1));
         east.add(sdsPrompt);
-        east.add(sdsLink);
+        //east.add(sdsLink);
         east.add(hazards);
 
         add(west, BorderLayout.WEST);
