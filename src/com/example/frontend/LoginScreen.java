@@ -25,7 +25,13 @@ public class LoginScreen extends JPanel {
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(10, 30, 10, 30);
-
+        
+        //Attempting to add image to login
+        ImageIcon icon = new ImageIcon("/src/resources/images/flask.png");
+        JLabel iconLabel = new JLabel();
+        iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/resources/images/flask.png")));
+        add(iconLabel, null);
+        
         JLabel headerLabel = new JLabel("Login to Your Account", JLabel.CENTER);
         headerLabel.setFont(new Font("Serif", Font.BOLD, 24));
         add(headerLabel, gbc);
