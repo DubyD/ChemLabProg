@@ -69,8 +69,8 @@ public class TakeOutSlip {
     //Used to store takeoutslips with users after you log out
     public String[] toArray(){
 
-        double size = this.unitSize;
-        if(this.unitSize == null){
+        double size = this.updatedAmount;
+        if(this.updatedAmount == null){
             size = 0.0;
         }
 
