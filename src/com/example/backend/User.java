@@ -20,7 +20,8 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class User {
 
-    private static final UserDatabase DATABASE = new UserDatabase();
+    private static final UserDatabase DATABASE = new UserDatabase(true);
+    private static final UserDatabase PENDING_DATABASE = new UserDatabase(false);
     private static final int MIN_PASSWORD_LENGTH = 6;
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
@@ -75,7 +76,7 @@ public class User {
         if (!isValidPasswordLength(password) || !isValidEmailFormat(email) || !isValidSecurityQA(securityQ, securityA)) {
             return false;
         }
-
+        
         // Check if the username already exists
         if (DATABASE.userExists(name)) {
             System.out.println("Username already exists. Please choose a different username.");
@@ -90,9 +91,13 @@ public class User {
         setAdmin(admin);
         // setAdmin(!DATABASE.hasAdminUser() || admin);
         setLastLogin(LocalDate.now());
-
+        if(PENDING_DATABASE.userExists(name)){
         DATABASE.addUser(this);
-
+        PENDING_DATABASE.deleteUser(username, password);
+        }
+        else{
+        PENDING_DATABASE.addUser(this);
+        }
         return true;
     }
 
@@ -240,6 +245,9 @@ public class User {
     public static UserDatabase getDatabase() {
         return DATABASE;
     }
+    public static UserDatabase getPendingDatabase(){
+        return PENDING_DATABASE;
+    }
 
     public static int getMinPasswordLength() {
         return MIN_PASSWORD_LENGTH;
@@ -311,5 +319,9 @@ public class User {
 
     public void setLastLogin(LocalDate lastLogin) {
         this.lastLogin = lastLogin;
+    }
+    @Override
+    public String toString(){
+        return this.username;
     }
 }

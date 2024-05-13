@@ -55,7 +55,17 @@ public class SceneSwitcher {
                 showLoginScreen();
             });
         } else {
-            this.loginScreen.getMessageLabel().setText("Invalid credentials, please try again.");
+            if(User.getPendingDatabase().userExists(username)){
+            this.loginScreen.getMessageLabel().setText("<html>Account has not been activated.<br/>Contact the administrator.</html>");    
+            }else{
+                if(User.getDatabase().userExists(username)){
+             this.loginScreen.getMessageLabel().setText("Wrong password, please try again.");
+                }
+                else{
+                    this.loginScreen.getMessageLabel().setText("Account not found, please try again.");
+                }
+            }
+            
         }
     }
 

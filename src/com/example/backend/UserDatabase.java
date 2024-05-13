@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import javax.swing.DefaultListModel;
 
 /**
  * UserDatabase Class
@@ -17,13 +18,19 @@ import java.nio.file.StandardCopyOption;
  */
 public class UserDatabase {
     
-    private static final String CSV_FILE_PATH = "src/com/example/Data/registry.csv";
-
+    private static final String CURRENT_FILE_PATH = "src/com/example/Data/registry.csv";
+    private static final String PENDING_FILE_PATH = "src/com/example/Data/pending_registry.csv";
+    private String CSV_FILE_PATH = CURRENT_FILE_PATH;
+    
+    
     /**
      * Default constructor for UserDatabase.
      * It also checks and creates the CSV file if it does not exist.
+     * @param current whether or not the user database is for current users
      */
-    public UserDatabase() {
+    public UserDatabase(boolean current) {
+        
+        CSV_FILE_PATH = (current) ? CURRENT_FILE_PATH : PENDING_FILE_PATH;
         createCsvFileIfNotExists();
     }
 
@@ -216,5 +223,19 @@ public class UserDatabase {
             }
         }
         return deletedUser != null;
+    }
+    public DefaultListModel<User> getUsers(){
+        DefaultListModel<User> studentList = new DefaultListModel();
+        try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                User user = User.parseCsv(line);
+                studentList.addElement(user);
+                System.out.println(user);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }   
+        return studentList;
     }
 }
