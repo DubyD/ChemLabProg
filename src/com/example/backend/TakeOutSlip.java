@@ -66,9 +66,16 @@ public class TakeOutSlip {
     }
 
 
-        //
-    public String[] array(){
-        String[] new {this.user.getUsername(), this.decision, this.chemical.getName(), this.updatedAmount}
+    //Used to store takeoutslips with users after you log out
+    public String[] toArray(){
+
+        Double size = this.updatedAmount;
+        if(size == null){
+            size = 0.0;
+        }
+
+
+        return new String[] {this.user.getUsername(), this.chemical.getName(), String.valueOf(size), this.decision, this.unitSize};
     }
 
 
