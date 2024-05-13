@@ -15,6 +15,7 @@ public class Sorter{
 
     public static final String chemFile = "src/com/example/Data/updated_data.csv";
     public static final String solutionFile = "src/com/example/Data/new_solutions_Cab.csv";
+    public static final String deletedFile = "src/com/example/Data/recently_deleted.csv";
 
 
     //no constructor because you cannot creat a static class
@@ -47,16 +48,16 @@ public class Sorter{
         /**Split file paths by comma
           *Fixed this for now let me know if we are using a different splitter
           */
-    public static boolean writeInv(String filePath, List<Chemical> working) {
+    public static boolean writeInv(List<Chemical> working) {
 
             //Maintaining the original header to not delete the first chemical from the code
             //anytime this program is used
         String header = ",Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard\n";
             //Checks to see if a File exists, if not
-        File reading = new File(filePath);
+        File reading = new File(chemFile);
         if(!reading.exists()){
-            filePath.replace("\\", "/");
-            reading = new File(filePath);
+            chemFile.replace("\\", "/");
+            reading = new File(chemFile);
             if(!reading.exists()){
                 return false;
             }
@@ -68,7 +69,7 @@ public class Sorter{
 
                 //Create a FileWriter with the specified file path
                 //It will overwrite what is currently in the file
-            FileWriter fileWriter = new FileWriter(filePath, false);
+            FileWriter fileWriter = new FileWriter(chemFile, false);
 
             //Wrap the FileWriter in a BufferedWriter for efficient writing
             try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
@@ -93,6 +94,41 @@ public class Sorter{
             return false;
         }
 
+    }
+    /**Writes new chemicals to the csv file*/
+    public static void addChemToInv(Chemical newChemical) {
+        try {
+            FileWriter fileWriter = new FileWriter(chemFile, true); // true flag for append mode
+
+            // Write the new string to the file
+            fileWriter.write(Sorter.spaghettifyChem(newChemical));
+            fileWriter.write("\n"); // Add a newline if needed
+            fileWriter.close();
+            System.out.println("new Chem Added");
+
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    /**
+     * writes deleted chemicals to the recently_deleted.csv file
+     * @param deletedChem
+     */
+    public static void writeToRecentlyDeleted(Chemical deletedChem){
+        try {
+
+            FileWriter fileWriter = new FileWriter(deletedFile, true); // true flag for append mode
+            // Write the new string to the file
+            fileWriter.write(Sorter.spaghettifyChem(deletedChem));
+            fileWriter.write("\n"); // Add a newline if needed
+            fileWriter.close();
+            System.out.println("new Chem deleted");
+
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
     }
 
 
@@ -144,7 +180,7 @@ public class Sorter{
         }
         ArrayList<Chemical> working = new ArrayList<>();
         working.addAll(Sorter.initSort(temp));
-        Sorter.writeInv(chemFile, working);
+        Sorter.writeInv(working);
         return working;
     }
 

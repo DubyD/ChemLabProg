@@ -12,25 +12,29 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class SearchScreen extends JPanel implements ActionListener {
-    private JButton logOutButton, searchButton, backButton;
+    private JButton logOutButton, searchButton, backButton, deleteButton;
     private JTextField searchBar;
     private JLabel userName;
     private JComboBox<String> searchCategories;
 
     private SearchResultsPanel allChemicalsPanel, newSearchPanel; //test SearchResultPanel
     //private Department chemLab;
-    //private ArrayList<Chemical> chemicalsList;// = new SorterTest().chemicalArrayList();
 
         //using to fix Sorter
     private ArrayList<Chemical> chemicalsList = Sorter.chemList();
+    private ArrayList<Chemical> searchedChemical;
 
+    /**
+     * This is the main screen a user will use. It will display all the data, and allow users to Search through
+     * that data and delete any Chemicals the select. You can Search by ChemicalName, Company, Room, or hazard.
+     * Deleted Chemicals are saved just in case, in a recently_deleted.csv File.
+     */
     public SearchScreen() {
         //Jonathan Murphy
-        //this.chemicalsList = Sorter.chemList();
         setPreferredSize(new Dimension(800, 600));//just for now
         this.setLayout(new BorderLayout());
 
-
+        this.deleteButton = new JButton("delete");
         this.backButton = new JButton("<");
         this.logOutButton = new JButton("Log Out");
         this.searchButton = new JButton("SEARCH");
@@ -73,6 +77,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         JPanel searchPanel = new JPanel();
         searchPanel.setLayout(new FlowLayout(2));
         //searchPanel.add(this.flask);
+        searchPanel.add(deleteButton);
         searchPanel.add(backButton);
         searchPanel.add(searchBar);
         searchPanel.add(searchButton);
@@ -87,17 +92,82 @@ public class SearchScreen extends JPanel implements ActionListener {
         //this.add(logOutPanel, BorderLayout.PAGE_END);
         this.setVisible(true);
 
+        /**used to show allData again after searching*/
         backButton.addActionListener(event ->{
-            remove(newSearchPanel);
+            try {
+                remove(newSearchPanel);
+            }catch (NullPointerException e){
+                System.out.println(e.getMessage());
+            }
             add(allChemicalsPanel, BorderLayout.CENTER);
             revalidate();
         });
 
+        /**Deletes selected chemical and stores into recently_deleted.csv file*/
+        deleteButton.addActionListener(event ->{
+            JPopupMenu deletePopUp = new JPopupMenu("Are you Sure?");
+            try {
+                if (allChemicalsPanel.isDisplayable()) {
+                    int chemicalIndex = allChemicalsPanel.getTable().getSelectedRow();
+                    String chemName = chemicalsList.get(chemicalIndex).getName();
+                    deletePopUp.add(new JLabel("Are you sure you want to delete:" + "\n" + chemName + "?"));
+                    //yes and no buttons
+                    JButton yesButton = new JButton("YES");
+                    yesButton.addActionListener(e1 ->{
+                        Sorter.writeToRecentlyDeleted(chemicalsList.get(chemicalIndex));
+                        chemicalsList.remove(chemicalIndex);
+                        Sorter.writeInv(chemicalsList);
+                        deletePopUp.setVisible(false);
+                        remove(allChemicalsPanel);
+                        allChemicalsPanel = new SearchResultsPanel(chemicalsList);
+                        add(allChemicalsPanel, BorderLayout.CENTER);
+                    });
+                    JButton noButton = new JButton("no");
+                    yesButton.addActionListener(e1 ->{
+                        deletePopUp.setVisible(false);
+                    });
+
+                    deletePopUp.add(yesButton);
+                    deletePopUp.add(noButton);
+                    deletePopUp.setVisible(true);
+                }else if (newSearchPanel.isDisplayable()) {
+                    int chemicalIndex = newSearchPanel.getTable().getSelectedRow();
+                    String chemName = searchedChemical.get(chemicalIndex).getName();
+                    deletePopUp.add(new JLabel("Are you sure you want to delete:" + "\n" + chemName + "?"));
+                    //yes and no buttons
+                    JButton yesButton = new JButton("YES");
+                    yesButton.addActionListener(e1 ->{
+                        Sorter.writeToRecentlyDeleted(chemicalsList.get(chemicalIndex));
+                        chemicalsList.remove(searchedChemical.get(chemicalIndex));
+                        searchedChemical.remove(chemicalIndex);
+                        Sorter.writeInv(chemicalsList);
+                        deletePopUp.setVisible(false);
+                        remove(newSearchPanel);
+                        newSearchPanel = new SearchResultsPanel(searchedChemical);
+                        add(newSearchPanel, BorderLayout.CENTER);
+                    });
+                    JButton noButton = new JButton("no");
+                    yesButton.addActionListener(e1 ->{
+                        deletePopUp.setVisible(false);
+                    });
+
+                    deletePopUp.add(yesButton);
+                    deletePopUp.add(noButton);
+                    deletePopUp.setVisible(true);
+                }
+                revalidate();
+            }catch (NullPointerException e){
+                System.out.println(" ");
+            }
+        });
+
+        /**Goes through data and displays only what the user Searched depending on
+         which Column they chose to search through.*/
         searchButton.addActionListener(event ->{
             if(newSearchPanel != null){
                 remove(newSearchPanel);
             }
-            ArrayList<Chemical> searchedChemical = new ArrayList<>();
+            searchedChemical = new ArrayList<>();
             String searchResult = searchBar.getText();
             //searches by companies
                 if(Objects.equals(searchCategories.getSelectedItem(), "Company")) {
@@ -133,7 +203,7 @@ public class SearchScreen extends JPanel implements ActionListener {
             add(newSearchPanel, BorderLayout.CENTER);
             revalidate();
         });
-}
+    }
 
     public JButton getLogOutButton() {
         return logOutButton;
@@ -162,5 +232,42 @@ public class SearchScreen extends JPanel implements ActionListener {
 
     public SearchResultsPanel getAllChemicalsPanel() {
         return allChemicalsPanel;
+    }
+
+    public JButton getSearchButton() {
+        return searchButton;
+    }
+
+    public JButton getBackButton() {
+        return backButton;
+    }
+
+    public JButton getDeleteButton() {
+        return deleteButton;
+    }
+
+    public ArrayList<Chemical> getChemicalsList() {
+        return chemicalsList;
+    }
+
+    public ArrayList<Chemical> getSearchedChemical() {
+        return searchedChemical;
+    }
+
+    @Override
+    public String toString() {
+        return "SearchScreen{" +
+                "logOutButton=" + logOutButton +
+                ", searchButton=" + searchButton +
+                ", backButton=" + backButton +
+                ", deleteButton=" + deleteButton +
+                ", searchBar=" + searchBar +
+                ", userName=" + userName +
+                ", searchCategories=" + searchCategories +
+                ", allChemicalsPanel=" + allChemicalsPanel +
+                ", newSearchPanel=" + newSearchPanel +
+                ", chemicalsList=" + chemicalsList +
+                ", searchedChemical=" + searchedChemical +
+                '}';
     }
 }

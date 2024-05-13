@@ -58,4 +58,8 @@ public class SearchResultsPanel extends JPanel {
             data[i] = chemicals.get(i).asArray();
         }
     }
+
+    public JTable getTable() {
+        return table;
+    }
 }

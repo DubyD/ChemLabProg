@@ -67,6 +67,7 @@ public class MainTabbedPane extends JPanel{
         this.addChemicalPane.getChemButton().addActionListener(event ->{
             try {
                 Chemical newChemical = this.addChemicalPane.buildChemical();
+                Sorter.addChemToInv(newChemical);
                 this.searchScreen.addChem(newChemical);
             } catch (Exception e) {
                 throw new RuntimeException(e);
