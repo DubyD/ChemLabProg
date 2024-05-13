@@ -1,6 +1,7 @@
 package com.example.frontend;
 
 import com.example.backend.Chemical;
+import com.example.backend.Sorter;
 
 import java.awt.BorderLayout;
 
@@ -65,11 +66,13 @@ public class MainTabbedPane extends JPanel{
     public void setChemPaneButton(){
         this.addChemicalPane.getChemButton().addActionListener(event ->{
             try {
-                this.searchScreen.addChem(this.addChemicalPane.buildChemical());
+                Chemical newChemical = this.addChemicalPane.buildChemical();
+                this.searchScreen.addChem(newChemical);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-            revalidate();
+            searchScreen.revalidate();
+            searchScreen.getAllChemicalsPanel().revalidate();
         });
     }
 
