@@ -2,8 +2,13 @@ package com.example.frontend;
 
 import com.example.backend.Chemical;
 import com.example.backend.Sorter;
+import com.example.backend.TakeOutSlip;
+import com.example.backend.User;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -11,7 +16,7 @@ public class MainTabbedPane extends JPanel{
     private SearchScreen searchScreen;
     private JTabbedPane tabbedPane;
     private AddChemicalPane addChemicalPane;
-    private ImageIcon topLeft;
+    private User user;
 
     public MainTabbedPane(){
         // Set the layout of the panel
@@ -83,5 +88,43 @@ public class MainTabbedPane extends JPanel{
 
     public JButton getLogoutButton() {
         return searchScreen.getLogOutButton();
+    }
+
+    public void getTable(){
+        public void clickTable(){
+
+            JTable table = new this.searchScreen.getTable();
+            User signingOut = this.user;
+
+
+            table.addMouseListener(new MouseAdapter() {
+                public void mouseClicked(MouseEvent e) {
+                    if (e.getClickCount() == 3) {
+
+
+                        JTable target = (JTable) e.getSource();
+                        int row = target.getSelectedRow();
+
+                        // Get the value of the clicked cell
+                        Chemical value = target.getValueAt(row, 1);
+                        // Show a pop-up with the name
+                        int option = JOptionPane.showConfirmDialog(null, "Would you like to Check out this Chemical?\n"+
+                                value.getName() + "\n" +JOptionPane.YES_NO_OPTION);
+                        if (option == JOptionPane.YES_OPTION) {
+                            // Handle Yes option
+                            TakeOutSlip checkOut = new TakeOutSlip(signingOut, value);
+                                //removes the chemical until returned
+                            searchScreen.removeChem(value);
+
+                        }
+
+                    }
+                }
+            });
+        }
+    }
+
+    public void setUser(User viewer){
+        this.user = viewer;
     }
 }

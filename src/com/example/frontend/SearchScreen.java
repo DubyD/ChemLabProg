@@ -118,7 +118,7 @@ public class SearchScreen extends JPanel implements ActionListener {
                 } else if (Objects.equals(searchCategories.getSelectedItem(), "Hazards")) {
                     for(Chemical currChem: chemicalsList){
                         if (currChem.getHazards().contains(searchResult)) {
-                        searchedChemical.add(currChem);
+                            searchedChemical.add(currChem);
                         }
                     }
                 } else {
@@ -163,4 +163,20 @@ public class SearchScreen extends JPanel implements ActionListener {
     public SearchResultsPanel getAllChemicalsPanel() {
         return allChemicalsPanel;
     }
+
+    public JTable getTable(){
+        return this.allChemicalsPanel.getTable();
+    }
+    public ArrayList<Chemical> getChemicalsList(){
+        return chemicalsList;
+    }
+
+    public void removeChem(Chemical remove){
+        chemicalsList.remove(remove);
+        Sorter.writeInv(Sorter.chemFile, chemicalsList);
+        allChemicalsPanel = new SearchResultsPanel(chemicalsList);
+    }
+
+
+
 }
