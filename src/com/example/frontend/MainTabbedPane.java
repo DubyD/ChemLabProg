@@ -33,6 +33,7 @@ public class MainTabbedPane extends JPanel{
         // Add the panels to the tabbed pane
         this.tabbedPane.addTab("Search", searchScreen);
         this.tabbedPane.addTab("Add Chemical", addChemicalPane);
+        this.getTable();
         
         // Add the tabbed pane to the panel
         this.add(tabbedPane);
@@ -91,35 +92,41 @@ public class MainTabbedPane extends JPanel{
     }
 
     public void getTable(){
-        public void clickTable(){
-
-            JTable table = new this.searchScreen.getTable();
-            User signingOut = this.user;
 
 
-            table.addMouseListener(new MouseAdapter() {
-                public void mouseClicked(MouseEvent e) {
-                    if (e.getClickCount() == 3) {
+        JTable table = this.searchScreen.getTable();
+        User signingOut = this.user;
 
 
-                        JTable target = (JTable) e.getSource();
-                        int row = target.getSelectedRow();
+                //Trying to create a method that when a unit is
+                // clicked on the table, the user is prompet
+        table.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 1) {
 
+
+                    JTable target = (JTable) e.getSource();
+                    int row = target.getSelectedRow();
+
+
+                    /*
                         // Get the value of the clicked cell
-                        Chemical value = target.getValueAt(row, 1);
+                    Chemical value = (Chemical) target.getValueAt(row, 1);
                         // Show a pop-up with the name
-                        int option = JOptionPane.showConfirmDialog(null, "Would you like to Check out this Chemical?\n"+
+                    int option = JOptionPane.showConfirmDialog(null, "Would you like to Check out this Chemical?\n"+
                                 value.getName() + "\n" +JOptionPane.YES_NO_OPTION);
-                        if (option == JOptionPane.YES_OPTION) {
+                    if (option == JOptionPane.YES_OPTION) {
                             // Handle Yes option
-                            TakeOutSlip checkOut = new TakeOutSlip(signingOut, value);
+                        TakeOutSlip checkOut = new TakeOutSlip(signingOut, value);
                                 //removes the chemical until returned
-                            searchScreen.removeChem(value);
-
-                        }
+                        searchScreen.removeChem(value);
 
                     }
+                   
+                     */
+
                 }
+
             });
         }
     }
