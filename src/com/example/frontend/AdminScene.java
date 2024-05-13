@@ -149,7 +149,7 @@ public class AdminScene extends JPanel {
         newButton makeAdminButton = new newButton("admin");
         makeAdminButton.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
         makeAdminButton.setContentAreaFilled(false);
-        makeAdminButton.setToolTipText("Give Admin Privileges");
+        makeAdminButton.setToolTipText("Toggle Admin Privileges");
         makeAdminButton.setVisible(false);
 
         //display user info button
@@ -158,11 +158,11 @@ public class AdminScene extends JPanel {
         infoButton.setContentAreaFilled(false);
         infoButton.setToolTipText("Display Info");
         infoButton.setVisible(false);
-
+        //Add list selection functionality
         ListSelectionModel cListModel = cUserList.getSelectionModel();
         cListModel.addListSelectionListener(e -> {
             if (((ListSelectionModel) e.getSource()).isSelectionEmpty()) {
-                infoButton.setVisible(false);
+                infoButton.setVisible(false); //Buttons visible when selected JList item
                 removeUserButton.setVisible(false);
                 makeAdminButton.setVisible(false);
             } else {
@@ -177,11 +177,11 @@ public class AdminScene extends JPanel {
             frame.revalidate();
         });
         cUserList.setSelectionModel(cListModel);
-
+        
         ListSelectionModel pListModel = pUserList.getSelectionModel();
         pListModel.addListSelectionListener(e -> {
             if (((ListSelectionModel) e.getSource()).isSelectionEmpty()) {
-                infoButton.setVisible(false);
+                infoButton.setVisible(false);//Buttons visible when selected JList item
                 denyUserButton.setVisible(false);
                 approveUserButton.setVisible(false);
             } else {
@@ -298,6 +298,7 @@ public class AdminScene extends JPanel {
         removeUserButton.addActionListener(event -> {
             if (cListScroller.isVisible()) {
                 User user = cUserList.getSelectedValue();
+                if(!user.isAdmin()){
                 user.deleteAccount();
                 approvedUsers.removeElement(user);
 
@@ -313,20 +314,26 @@ public class AdminScene extends JPanel {
                 infoShown = false;
                 this.revalidate();
                 this.repaint();
+                }
+                else{
+                    System.out.println("Cannot delete an admin. Revoke admin privileges first.");
+                }
             }
         });
         //gives admin to a user in current users list
         makeAdminButton.addActionListener(event -> {
             User user = cUserList.getSelectedValue();
             if (cListScroller.isVisible()) {
-                makeAdmin(user);
-
+                toggleAdmin(user);
+                
+                userPanel.repaint();
+                userPanel.revalidate();
                 this.revalidate();
                 this.repaint();
 
             }
         });
-
+        //Different JPanels for formatting
         JPanel topArea = new JPanel();
         BoxLayout topBoxLayout = new BoxLayout(topArea, BoxLayout.X_AXIS);
         topArea.setLayout(topBoxLayout);
@@ -351,13 +358,13 @@ public class AdminScene extends JPanel {
         userPanel = new JPanel();
         userPanel.removeAll();
         userPanel.setBorder(null);
-
+        //user panel intiation
         infoShown = false;
         BoxLayout mainBoxLayout = new BoxLayout(this, BoxLayout.Y_AXIS);
         botArea.add(userPanel);
         userPanel.repaint();
         userPanel.revalidate();
-
+        //User info panel
         infoButton.addActionListener((ActionEvent event) -> {
             User user;
             if (!infoShown) {
@@ -445,8 +452,13 @@ public class AdminScene extends JPanel {
     }
 
     //simply gives admin privileges to a user from current user list
-    private void makeAdmin(User user) {
+    private void toggleAdmin(User user) {
+        if(user.isAdmin()){
+            user.setAdmin(false);
+        }
+        else{
         user.setAdmin(true);
+        }
     }
 
     @Override
@@ -456,7 +468,7 @@ public class AdminScene extends JPanel {
     }
 
 }
-
+//Custom button class for custom graphics
 class newButton extends JButton {
 
     String type;
