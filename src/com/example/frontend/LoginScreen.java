@@ -6,6 +6,7 @@ package com.example.frontend;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 public class LoginScreen extends JPanel {
     private JTextField userField;
@@ -14,8 +15,6 @@ public class LoginScreen extends JPanel {
     private JButton createAccountButton;
     private JButton exitButton;
     private JLabel messageLabel;
-    private ImageIcon flask;
-    private ImageIcon smallFlask;
 
     public LoginScreen(JFrame frame) {
         initializeUI(frame);
@@ -28,14 +27,13 @@ public class LoginScreen extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(10, 30, 10, 30);
         
-
         //Attempting to add image to login
-        this.flask = new ImageIcon("src/resources/images/flask.png");
-        this.smallFlask = new ImageIcon("src/resources/images/flaskIcon.png");
-        JLabel iconLabel = new JLabel(this.flask);
+        ImageIcon flask = new ImageIcon("src/resources/images/flask.png");
+        ImageIcon smallFlask = new ImageIcon("src/resources/images/flaskIcon.png");
+        JLabel iconLabel = new JLabel(flask);
 
         //Changing icon of program
-        frame.setIconImage(this.smallFlask.getImage());
+        frame.setIconImage(smallFlask.getImage());
 
         add(iconLabel, gbc);
 
@@ -98,5 +96,4 @@ public class LoginScreen extends JPanel {
     public JLabel getMessageLabel() {
         return messageLabel;
     }
-
 }

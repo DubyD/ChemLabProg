@@ -1,5 +1,7 @@
 package com.example.frontend;
 
+import com.example.backend.Chemical;
+
 import java.awt.BorderLayout;
 
 import javax.swing.*;
@@ -62,8 +64,12 @@ public class MainTabbedPane extends JPanel{
 
     public void setChemPaneButton(){
         this.addChemicalPane.getChemButton().addActionListener(event ->{
-
-           this.searchScreen.addChem(this.addChemicalPane.getC());
+            try {
+                this.searchScreen.addChem(this.addChemicalPane.buildChemical());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            revalidate();
         });
     }
 
