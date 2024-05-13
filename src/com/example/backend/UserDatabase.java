@@ -61,8 +61,10 @@ public class UserDatabase {
      */
     public void updateUser(User userToUpdate) {
         File tempFile = new File(CSV_FILE_PATH + ".tmp");
-        try (BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH));
-             PrintWriter writer = new PrintWriter(new FileWriter(tempFile))) {
+        PrintWriter writer = null;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(CSV_FILE_PATH));
+            writer = new PrintWriter(new FileWriter(tempFile));
             String line;
             while ((line = reader.readLine()) != null) {
                 User user = User.parseCsv(line);
@@ -72,10 +74,19 @@ public class UserDatabase {
                     writer.println(line);
                 }
             }
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
+            try {
+                Files.move(tempFile.toPath(), new File(CSV_FILE_PATH).toPath(), StandardCopyOption.REPLACE_EXISTING);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        tempFile.renameTo(new File(CSV_FILE_PATH));
     }
 
     /**
