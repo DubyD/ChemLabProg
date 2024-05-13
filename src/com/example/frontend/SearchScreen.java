@@ -258,6 +258,10 @@ public class SearchScreen extends JPanel implements ActionListener {
         return searchedChemical;
     }
 
+    public JTable getTable(){
+        return this.allChemicalsPanel.getTable();
+    }
+
     @Override
     public String toString() {
         return "SearchScreen{" +

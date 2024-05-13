@@ -38,28 +38,8 @@ public class MainTabbedPane extends JPanel{
         // Add the tabbed pane to the panel
         this.add(tabbedPane);
     }
-/*
-     // basic testing stub
-    public static void main(String[] args) {
-        // Create a new JFrame
-        JFrame frame = new JFrame("Science Department Inventory");
 
-        // Set the size of the frame
-        frame.setSize(400, 300);
 
-        // Set the default close operation
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create a new MainTabbedPane
-        MainTabbedPane mainTabbedPane = new MainTabbedPane();
-
-        // Add the MainTabbedPane to the frame
-        frame.add(mainTabbedPane);
-
-        // Set the visibility of the frame
-        frame.setVisible(true);
-    }
-*/
     public void addAdminPane(){
         AdminScene adminScene = new AdminScene();
         this.tabbedPane.addTab("Admin Settings", adminScene);
@@ -126,9 +106,9 @@ public class MainTabbedPane extends JPanel{
                      */
 
                 }
+            }
+        });
 
-            });
-        }
     }
 
     public void setUser(User viewer){
