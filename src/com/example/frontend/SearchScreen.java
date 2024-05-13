@@ -151,6 +151,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
     public void addChem(Chemical next){
         this.chemicalsList.add(next);
+        allChemicalsPanel = new SearchResultsPanel(chemicalsList);
     }
 
         //Puts username in top Right
@@ -159,4 +160,7 @@ public class SearchScreen extends JPanel implements ActionListener {
         revalidate();
     }
 
+    public SearchResultsPanel getAllChemicalsPanel() {
+        return allChemicalsPanel;
+    }
 }
