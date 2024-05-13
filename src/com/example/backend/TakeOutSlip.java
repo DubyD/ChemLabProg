@@ -75,7 +75,7 @@ public class TakeOutSlip {
         }
 
 
-        return String[] {this.user.getUsername(), this.chemical.getName(), String.valueOf(size), this.decision, this.unitSize}
+        return new String[] {this.user.getUsername(), this.chemical.getName(), String.valueOf(size), this.decision, this.unitSize};
     }
 
 
