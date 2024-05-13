@@ -72,8 +72,7 @@ public class MainTabbedPane extends JPanel{
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-            searchScreen.revalidate();
-            searchScreen.getAllChemicalsPanel().revalidate();
+            searchScreen.refreshScreen();
         });
     }
 

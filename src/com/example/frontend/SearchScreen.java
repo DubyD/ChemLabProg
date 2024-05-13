@@ -94,13 +94,7 @@ public class SearchScreen extends JPanel implements ActionListener {
 
         /**used to show allData again after searching*/
         backButton.addActionListener(event ->{
-            try {
-                remove(newSearchPanel);
-            }catch (NullPointerException e){
-                System.out.println(e.getMessage());
-            }
-            add(allChemicalsPanel, BorderLayout.CENTER);
-            revalidate();
+            refreshScreen();
         });
 
         /**Deletes selected chemical and stores into recently_deleted.csv file*/
@@ -203,6 +197,16 @@ public class SearchScreen extends JPanel implements ActionListener {
             add(newSearchPanel, BorderLayout.CENTER);
             revalidate();
         });
+    }
+    public void refreshScreen(){
+        try {
+            remove(allChemicalsPanel);
+            remove(newSearchPanel);
+        } catch (Exception e) {
+            System.out.println("refreshing");
+        }
+        add(allChemicalsPanel);
+        revalidate();
     }
 
     public JButton getLogOutButton() {
