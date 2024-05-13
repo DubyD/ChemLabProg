@@ -51,7 +51,7 @@ public class Sorter{
 
             //Maintaining the original header to not delete the first chemical from the code
             //anytime this program is used
-        String header = ",Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard";
+        String header = ",Chemical,Company,Room,Shelf,Amount of Jars/Containers,Amount,Unit,CAS #s,Hazard\n";
             //Checks to see if a File exists, if not
         File reading = new File(filePath);
         if(!reading.exists()){
