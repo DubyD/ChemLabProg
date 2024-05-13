@@ -5,18 +5,19 @@
 package com.example.frontend;
 
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 import com.example.backend.Chemical;
 import com.example.backend.Room;
 import com.example.backend.Shelf;
+import com.example.backend.TakeOutSlip;
 
 public class SearchResultsPanel extends JPanel {
 
@@ -42,7 +43,14 @@ public class SearchResultsPanel extends JPanel {
 
     private void createTable() {
 
-        table = new JTable(data, columnNames);
+        DefaultTableModel model = new DefaultTableModel(data, columnNames) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Make all cells non-editable
+            }
+        };
+
+        this.table = new JTable(model);
         table.setPreferredScrollableViewportSize(table.getPreferredSize());
 
         scrollPane = new JScrollPane(table);
@@ -57,5 +65,9 @@ public class SearchResultsPanel extends JPanel {
         for(int i = 0; i<data.length; i++){
             data[i] = chemicals.get(i).asArray();
         }
+    }
+
+    public JTable getTable(){
+        return this.table;
     }
 }
