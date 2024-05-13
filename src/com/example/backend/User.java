@@ -91,6 +91,10 @@ public class User {
         setAdmin(admin);
         // setAdmin(!DATABASE.hasAdminUser() || admin);
         setLastLogin(LocalDate.now());
+        if(admin){
+            DATABASE.addUser(this);
+            return true;
+        }
         if(PENDING_DATABASE.userExists(name)){
         DATABASE.addUser(this);
         PENDING_DATABASE.deleteUser(username, password);
