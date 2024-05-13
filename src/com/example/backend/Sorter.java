@@ -274,6 +274,7 @@ public class Sorter{
         String reply = "";
         int endCut = 0;
 
+
         for(String next : deconstruct.asArray()){
             reply = reply + next;
 

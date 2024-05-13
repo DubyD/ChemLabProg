@@ -2,17 +2,23 @@
 @author Salim Jday
 */
 package com.example.frontend;
+import com.example.backend.Chemical;
+import com.example.backend.TakeOutSlip;
 import com.example.backend.User;
 
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SceneSwitcher {
     private JFrame frame;
     private LoginScreen loginScreen;
     private MainTabbedPane mainTabbedPane;
+    private User user;
 
     public SceneSwitcher(JFrame frame) {
         this.frame = frame;
+        this.user = new User();
 
         initializeScreens();
         setupLoginScreenActions();
@@ -40,7 +46,7 @@ public class SceneSwitcher {
     }
 
     private void loginToSearch(){
-        User user = new User();
+        this.user = new User();
         String username = this.loginScreen.getUserField().getText();
         String password = String.valueOf(this.loginScreen.getPassField().getPassword());
         if (user.login(username, password)) {
@@ -49,6 +55,8 @@ public class SceneSwitcher {
             }
                 //Puts the UserName in top right
             this.mainTabbedPane.setUserName(user.getUsername());
+            this.mainTabbedPane.setUser(user);
+
             showMainTabbedPane();
             mainTabbedPane.getLogoutButton().addActionListener(e -> {
                 user.logout();
@@ -93,6 +101,7 @@ public class SceneSwitcher {
         this.frame.revalidate();
         this.frame.repaint();
     }
+
 
 
 }
