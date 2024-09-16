@@ -1,10 +1,6 @@
 /*
 @author Salim Jday
 */
-package com.example.frontend;
-import com.example.backend.Chemical;
-import com.example.backend.TakeOutSlip;
-import com.example.backend.User;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;

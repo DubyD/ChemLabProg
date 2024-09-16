@@ -1,6 +1,3 @@
-package com.example;
-
-import com.example.frontend.SceneSwitcher;
 
 import javax.swing.JFrame;
 
