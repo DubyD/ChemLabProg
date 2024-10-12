@@ -8,7 +8,7 @@ The program displays chemicals by mass, location, shelf, and container.
 Users will be granted limited access which can; check out chemicals, lessen mass of chemicals,
 search for SDS sheets, a saved history of chemical checkouts. A special User named Admin
 is granted unlimited access to the program, getting to search checkout history, add new chemicals to inventory,
-and
+and add new users.
 
 ### How to Run:
 
